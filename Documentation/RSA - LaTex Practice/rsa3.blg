@@ -1,0 +1,45 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: rsa3.aux
+The style file: h-physrev3.bst.bst
+Database file #1: projbib.bib
+You've used 3 entries,
+            1957 wiz_defined-function locations,
+            616 strings with 5042 characters,
+and the built_in function-call counts, 457 in all, are:
+= -- 27
+> -- 22
+< -- 0
++ -- 7
+- -- 4
+* -- 39
+:= -- 64
+add.period$ -- 3
+call.type$ -- 3
+change.case$ -- 2
+chr.to.int$ -- 0
+cite$ -- 3
+duplicate$ -- 24
+empty$ -- 53
+format.name$ -- 7
+if$ -- 101
+int.to.chr$ -- 0
+int.to.str$ -- 3
+missing$ -- 5
+newline$ -- 15
+num.names$ -- 3
+pop$ -- 17
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 16
+stack$ -- 0
+substring$ -- 0
+swap$ -- 8
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 0
+while$ -- 3
+width$ -- 4
+write$ -- 23

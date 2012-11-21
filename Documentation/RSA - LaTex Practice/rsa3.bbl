@@ -1,0 +1,17 @@
+\begin{thebibliography}{1}
+
+\bibitem{rsa}
+A.~Rivest, R.;~Shamir and L.~Adleman,
+\newblock Communications of the ACM  (1978).
+
+\bibitem{bruceschneier}
+B.~Schneier,
+\newblock {\em Applied Cryptography: Protocols, algorithms and source code in
+  C}, Second ed. (Wiley, 1996).
+
+\bibitem{willstallings}
+W.~Stallings,
+\newblock {\em Cryptography and Network Security: Principles and Practice},
+  Fifth ed. (Pearson, 2011).
+
+\end{thebibliography}
