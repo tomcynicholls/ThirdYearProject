@@ -1,0 +1,77 @@
+\documentclass[a4paper,11pt]{article}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+
+\title{The RSA Encyption Algorithm}
+\author{Tom Nicholls}
+
+\begin{document}
+\maketitle
+
+Published in 1978, the Rivest-Shamir-Aldeman (RSA) scheme \cite{rsa} is one of the most widely accepted and implemented approaches to public-key encryption. The RSA algorithm is based upon the difficulty of factoring large integers. It acts as a block cipher in which for some n, the ciphertext and plaintext are integers between 0 and n. Typically, n is less than 1024 bits or 309 decimal digits. Hence, n is less than $2^{1024}$.
+
+The operation of the RSA encryption scheme has three parts: Key generation, Encryption and Decryption. The description of this scheme uses the common placeholder names of Alice and Bob inkeeping with tradition set out by Bruce Schneier \cite{bruceschneier}.
+
+\section{Key Generation}
+
+RSA is an example of an asymmetric key algorithm, in which a \textbf{public} key and a \textbf{private} key are utilised. The public key is shared and known with everyone and used in the encryption process. The messages encrypted with the public key can only be decrypted using the matching private key. The following process is used to generate the required keys:
+
+\begin{enumerate}
+  \item Choose two distinct prime numbers p and q.
+  \begin{itemize}
+    \item These are chosen at random and kept private.
+  \end{itemize}
+  
+  \item Calculate $ n=pq $.
+  
+  \item Calculate $ \phi (n)=(p-1)(q-1) $, where $ \phi (n) $ is the number integers k such that $ 1 \leq k \leq n $ and $ gcd(n,k) = 1 $.
+  
+  \item Choose e such that $ 1 < e < \phi (n) $ and e and $ \phi $ are coprime
+  
+  \item Determine d as $ d = e^{-1} \, (mod \, \phi (n)) $. Here d is the multiplicative inverse of $ e \, mod \, \phi (n) $.
+  \begin{itemize}
+    \item This is the same as solving for d give $ (de) \, = \, 1 \, mod \, \phi (n) $.
+  \end{itemize}
+  
+\end{enumerate}
+
+Therefore the private key consists of [d,n] and the public key consists of [e,n]. The private key must be kepy secret whereas the public key can be shared. p, q and $ \phi $ must also be kept secret as they were used to calculate d.
+
+\section{Encryption}
+
+Bob wants to send a message \textbf{M} to Alice. Alice sends Bob her public key $ K_{a} \, = {e,n} $ and keeps her private key secret. Bob turns \textbf{M} into an integer m, such that $ 0 \leq m < n $ using a previously agreed method. the then computes the ciphertext c corresponding to
+\[ c = m^{e} \, (mod \, n) \]
+Bob then sends c to Alice.
+
+\section{Decryption}
+
+Alice receives ciphertext c from Bob. She can recover the message m from c using her private key d by computing
+\[ m = c^{d} \, (mod \, n) \]
+Given m she can find the original message \textbf{M} by reversing the agreed method.
+
+\section{Explanation}
+
+As can be seen above, encryption and decryption are of the form
+\[ c = m^{e} \, mod(n) \]
+\[ m = c^{d} \, mod(n) = (m^{e})^{d} \, mod n = m^{ed} \, mod(n)\]
+
+For this algorithm to be securely used for public-key encryption, the following requirements must be satisfied.
+\begin{enumerate}
+  \item e, d and m can be found such that $ m^{ed} \, mod(n) = m $ for all $ m < n $.
+  \item $ m^{e} \, mod(n) $ and $ c^{d} \, mod(n) $ are relatively easy to compute, for all values of $ m < n $.
+  \item It is infeasible to determine d given e and n.
+\end{enumerate}
+
+Using the Euler totient function $ \phi (n) $ as described above it can be seen that
+\[ ed \, mod (\phi(n)) = 1 \]
+\[ ed = 1 \, mod(\phi(n)) \]
+\[ d = e^{-1} \, mod(\phi(n)) \]
+which satisfies the first condition. 
+
+\textit{\small The description of this encryption scheme is based upon the description given by William Stallings \cite{willstallings}}
+
+\bibliographystyle{h-physrev3.bst}
+\bibliography{projbib}
+
+\end{document}
