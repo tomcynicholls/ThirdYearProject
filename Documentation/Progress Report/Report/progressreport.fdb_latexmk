@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1353585595 "progressreport.tex" "progressreport.pdf" "progressreport" 
+["pdflatex"] 1353598250 "progressreport.tex" "progressreport.pdf" "progressreport" 
   "/etc/texmf/tex/latex/config/graphics.cfg" 1255993321 3328 2584cfe577535f0a08f3a9717b5152ab ""
   "/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii" 1251025892 71625 fad1c4b52151c234b6873a255b0ad6b3 ""
   "/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty" 1156703163 3535 ce75ca6de8380293f2081dec8ab08a93 ""
@@ -29,10 +29,10 @@
   "/usr/share/texmf/tex/latex/lm/ot1lmr.fd" 1256929440 1880 bae7b659316f7344a86218ad38b01d91 ""
   "/usr/share/texmf/tex/latex/lm/t1lmr.fd" 1256929440 1865 afbfccbe7fda9c2dc5078ad7c486bbed ""
   "designs1.jpg" 1353582156 18033 a71a13c52204fb8615ced773011e8df3 ""
-  "designs2.jpg" 1353582231 20598 71a34bd9926f962e81139eb30e40a42e ""
+  "designs2.jpg" 1353593137 20514 5a77d2381328fa74d610a70f5e83fc24 ""
   "designs3.jpg" 1353582360 27042 b043a74265a40bcd7ab8ca762b332474 ""
-  "progressreport.aux" 1353585595 1358 edd31aaa72501fad83e5f432818b4c1e ""
-  "progressreport.tex" 1353585594 12530 3ef09c3bf3ca144a46f62162523c9bb6 ""
+  "progressreport.aux" 1353598250 1516 521a73296f0e9d8c290fc745261d9f31 ""
+  "progressreport.tex" 1353598249 17316 5996ae800d2364b5c6488c64391a5f67 ""
   (generated)
   "progressreport.log"
   "progressreport.pdf"

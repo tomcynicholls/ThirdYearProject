@@ -104,10 +104,28 @@ In this project, the first task was to perform research (see Objectives section)
   \begin{description}
     \item[Framework Design] 
   \end{description}
-  Research was made into how a system could be set up to facilitate the communication of data messages between any two users of the system. The result of this research, to utilise a multi-client server, can be found in the design section, where an outline of the system to be created is given.
+  Research was made into how a system could be set up to facilitate the communication of data messages between any two users of the system. Socket-based communication will allow networking between a central server and a java based P.C client, whereas HTTP Post and broadcast-receiver methods will be used to allow the Android application to transfer and receive data from the server. The result of this research, to utilise a multi-client server, can be found in the design section, where an outline of the system to be created is given.
   \item
   \begin{description}
     \item[Cryptographic Methods] 
+    The three cryptographic methods that have been researched are AES, RSA and ECC. The schemes will be outlined here, with an indepth analysis and description presented in the project report.
+    \begin{itemize}
+      \item
+      \begin{description}
+        \item[AES] 
+      \end{description}
+      AES is
+      \item
+      \begin{description}
+        \item[RSA] 
+      \end{description}
+      RSA is
+      \item
+      \begin{description}
+        \item[ECC] 
+      \end{description}
+      ECC is
+    \end{itemize}
   \end{description}
   \item
   \begin{description}
@@ -151,11 +169,11 @@ The server creates a session between two clients that wish to communicate. Clien
 \begin{figure}[htb]
 \centering
 \includegraphics[scale=0.35]{designs2.jpg}
-\caption{Inheritance properties of the clients}
+\caption{Basic inheritance hierarchy of the clients}
 \label{fig:designs2}
 \end{figure}
 
-Communication between two clients is facilitated via the server. A client can be either a P.C client or an Android Application (client) allowing data to be sent between these two mediums. Compatibility between the clients will be ensured through the use of the XML file structure. For example, if two cryptographic schemes are implemented; Application 1 and P.C Client 1 will utilise scheme 1 and Application 2 and P.C 2 will utilise scheme 2. This can be easily achieved due to the usage of the model in Figure~\ref{fig:designs1}. The main Android Application sends unencrypted data to the server and receives unencrypted data back. Application 1 (and 2) inherits these features, with the ability to add in their respective methods for encryption. This is the same for the P.C clients.
+The client class contains the methods which allow it to connect to the server and send data to another client in the client base through the server. The P.C client and Android application inherits these abilities from the client but are more specific, so are implemented according to its own rules (e.g sockets or HTTP methods). Hence a P.C client can send a message (unencrypted), via the server, to another P.C client or an application. This can also be achieved by an application client. Compatibility between the clients will be ensured through the use of the XML file structure. P.C client 1 (and 2) are more specific versions of the P.C client class. P.C client 1 has all the capabilities of the P.C client, with an added encryption method. Similarly for P.C client 2 but a different encryption scheme will be implemented. For example, if two cryptographic schemes are implemented; Application 1 and P.C Client 1 will utilise scheme 1 and Application 2 and P.C 2 will utilise scheme 2. 
 
 \begin{figure}[htb]
 \centering
@@ -183,10 +201,55 @@ The encryption schemes used within this project all require the sharing of publi
 (Steps 7, 10 and 11 passed through server and directed straight to client)
 Note: $ \{M\}K_{x}^{-1} $ represents the encryption of message $ M $ with the private key of client $ x $, whilst $ \{M\}K_{x} $ represents the encryption of message $ M $ with the public key of $ x $.
 
-Once this protocol has been completed, each client has the other client’s public key and the communication of encrypted data can commence. Steps 1 to 4 are only required when a connection is made between two previously unconnected clients is made or when requested by the user. The user can request to generate a new public-private key pair which will need to be shared again with any client they wish to communicate with. 
+Once this protocol has been completed, each client has the other client’s public key and the communication of encrypted data can commence. Steps 1 to 4 registers the public keys of the clients with the server, which are only required when a connection is made between two clients that are new to the system or have not yet made a connection to the server. Therefore, these steps will not be required for each new session initialisation. However, for various reasons, a user may wish to generate a new key-pair, which will need to be registered with the server and hence the protocol completed in full when they wish to set up a session with another client. This feature will be fully implemented and available in the final product. 
 
 \section{Project Management}
 
+As described in the project specification, various methods will be adopted to ensure that the project files (code, documentation etc) are constantly backed up and that version control is maintained. The free services of Dropbox and Git/Github have been set up and can be accessed from any computer or workstation that is used in this project allowing a constant back up. These services allow a constant back up of data to an online server which will be initiated periodically. In addition to this an external flash drive has been dedicated to the task of providing a back up of data, as well as the Department of Computer Science machines. Bash scripts have been writen to make the back up of data to these less time consuming.
+
+For documentation, the document preparation system LaTeX will be used. This is because LaTeX allows the inclusion of mathematics into a document in a simple and easy to use way with high typographical quality, which will be extremely beneficial in this project. 
+
+As for the software development section of this project the technique of test driven development in a plan-driven setting will be employed. Plan-driven development is clearly the best choice due to the nature of this project. The other option, agile development, is best suited for a project with a dedicated customer, such that constant communication can be maintained. It also encourages the constant evolution of a system due to changing ideas or specifications and restricts the amount of documentation created. Plan-driven development, on the other hand, has a set plan for development which it follows to produce the end product and a firm set of documentation. 
+
+Test-driven development combines testing and development. Code is developed incrementally, along with a set of tests for that increment. The next increment is not started until the previous increment is fully tested and completed. In the context of this project, the implementation of the cryptographic schemes will not be started until the multi-client server is set up and can transfer data. 
+
 \section{Project Continuation Plan}
+
+A timetable showing the completion dates of main events and milestones in this project, starting from the hand in date of this document, is presented below.
+
+\begin{table}[htbp]
+\begin{tabular}{|c|c|}
+\hline
+Date & Task \\ \hline
+\textbf{Monday Week 9 - Term 1} & \textbf{Submit Progress Report} \\ \hline
+Week 10 - Term 1 & Server Implementation finished \\ \hline
+Christmas Break - Week 1 &  \\ \hline
+Christmas Break - Week 2 & P.C Client finished \\ \hline
+Christmas Break - Week 3 &  \\ \hline
+Christmas Break - Week 4 & Android Application finished \\ \hline
+Week 1 - Term 2 & Complete framework finished \\ \hline
+Week 2 - Term 2 &  \\ \hline
+Week 3 - Term 2 &  \\ \hline
+Week 4 - Term 2 & Implementation finished \\ \hline
+Week 5 - Term 2 &  \\ \hline
+Week 6 - Term 2 & Analysis finished \\ \hline
+Week 7 - Term 2 & Conclusion finished \\ \hline
+Week 8 - Term 2 & Further work finished \\ \hline
+Week 9 - Term 2 & Presentation finished \\ \hline
+Week 10 - Term 2 &  \\ \hline
+\textbf{Week 9 and Week 10 - Term 2} & \textbf{Project Presentations} \\ \hline
+Easter Break - Week 1 &  \\ \hline
+Easter Break - Week 2 &  \\ \hline
+Easter Break - Week 3 &  \\ \hline
+Easter Break - Week 4 & Project Report finished \\ \hline
+Easter Break - Week 5 &  \\ \hline
+\textbf{Thursday Week 1 - Term 3} & \textbf{Submit Project Report} \\ \hline
+\end{tabular}
+\caption{Timetable of completion dates of main objectives}
+\label{timetable}
+\end{table}
+
+
+
 
 \end{document}
