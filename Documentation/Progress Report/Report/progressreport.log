@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.11.15)  22 NOV 2012 15:30
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.11.15)  22 NOV 2012 16:27
 entering extended mode
  %&-line parsing enabled.
 **progressreport.tex
@@ -438,38 +438,37 @@ Overfull \hbox (8.7204pt too wide) in paragraph at lines 111--112
 []\T1/lmr/m/n/10.95 The three cryp-to-graphic meth-ods that have
  []
 
-[4] <designs1.jpg, id=20, 654.445pt x 262.9825pt>
-File: designs1.jpg Graphic file (type jpg)
- <use designs1.jpg>
-<designs2.jpg, id=21, 691.58376pt x 264.99pt>
-File: designs2.jpg Graphic file (type jpg)
- <use designs2.jpg> [5 <./designs1.jpg>] <designs3.jpg, id=25, 715.67375pt x 63
-4.37pt>
-File: designs3.jpg Graphic file (type jpg)
- <use designs3.jpg>
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 188.
-
-[6 <./designs2.jpg> <./designs3.jpg>] [7] [8] [9] (./progressreport.aux) ) 
+(Font)              <10.95> on input line 126.
+[4] <designs1.jpg, id=23, 654.445pt x 262.9825pt>
+File: designs1.jpg Graphic file (type jpg)
+ <use designs1.jpg> [5]
+<designs2.jpg, id=27, 691.58376pt x 264.99pt>
+File: designs2.jpg Graphic file (type jpg)
+ <use designs2.jpg>
+<designs3.jpg, id=28, 715.67375pt x 634.37pt>
+File: designs3.jpg Graphic file (type jpg)
+ <use designs3.jpg> [6 <./designs1.jpg> <./designs2.jpg>] [7 <./designs3.jpg>] 
+[8] [9] (./progressreport.aux) ) 
 Here is how much of TeX's memory you used:
  2069 strings out of 495061
  24471 string characters out of 1182620
- 79922 words of memory out of 3000000
+ 77922 words of memory out of 3000000
  5226 multiletter control sequences out of 15000+50000
  40333 words of font info for 36 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 27i,7n,22p,1039b,270s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr
-/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/
-lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/te
-xmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10
-.pfb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb><
-/usr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm
-/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
-Output written on progressreport.pdf (9 pages, 262696 bytes).
+ 27i,7n,22p,1039b,309s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}
+{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/
+dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/sha
+re/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/
+lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/te
+xmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr
+10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/font
+s/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></
+usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/
+public/lm/lmsy8.pfb>
+Output written on progressreport.pdf (9 pages, 265570 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
