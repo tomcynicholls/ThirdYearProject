@@ -146,7 +146,7 @@ As can be seen from the previous sections in this document, this project include
 \label{fig:designs1}
 \end{figure}
 
-The server creates a session between two clients that wish to communicate. Each session is a new thread within the server. This allows the server to establish any number of sessions, to allow for multiple communication links between any two clients.
+The server creates a session between two clients that wish to communicate. Clients initiate sessions with any client with which they have shared their indentification code (ID number). Each session is a new thread within the server. This allows the server to establish any number of sessions, to allow for multiple communication links between any two clients. As can be seen in Figure \ref{fig:designs1}, any client can have more than one communication session at any one time, with any other client in the client base.
 
 \begin{figure}[htb]
 \centering
@@ -181,9 +181,12 @@ The encryption schemes used within this project all require the sharing of publi
 \end{enumerate}
 
 (Steps 7, 10 and 11 passed through server and directed straight to client)
-Note: $ {M}K_{x}^{-1} $ represents the encryption of message $ M $ with the private key of client $ x $, whilst $ {M}K_{x} $ represents the encryption of message $ M $ with the public key of $ x $.
+Note: $ \{M\}K_{x}^{-1} $ represents the encryption of message $ M $ with the private key of client $ x $, whilst $ \{M\}K_{x} $ represents the encryption of message $ M $ with the public key of $ x $.
 
 Once this protocol has been completed, each client has the other client’s public key and the communication of encrypted data can commence. Steps 1 to 4 are only required when a connection is made between two previously unconnected clients is made or when requested by the user. The user can request to generate a new public-private key pair which will need to be shared again with any client they wish to communicate with. 
 
+\section{Project Management}
+
+\section{Project Continuation Plan}
 
 \end{document}
