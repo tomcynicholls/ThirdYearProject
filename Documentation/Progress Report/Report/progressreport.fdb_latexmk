@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1353521151 "progressreport.tex" "progressreport.pdf" "progressreport" 
+["pdflatex"] 1353580637 "progressreport.tex" "progressreport.pdf" "progressreport" 
   "/usr/share/texmf-texlive/tex/latex/amsmath/amsbsy.sty" 1156703163 3535 ce75ca6de8380293f2081dec8ab08a93 ""
   "/usr/share/texmf-texlive/tex/latex/amsmath/amsgen.sty" 1156703163 5453 08b555fa01ef74ce33d74813d74c2362 ""
   "/usr/share/texmf-texlive/tex/latex/amsmath/amsmath.sty" 1156703163 79756 c9b39210cd9d3168825ff6f880d43821 ""
@@ -16,12 +16,13 @@
   "/usr/share/texmf-texlive/tex/latex/base/utf8.def" 1254151887 6350 d390538f995713c986118b8607d58f49 ""
   "/usr/share/texmf/tex/latex/lm/lmodern.sty" 1256929440 1606 c17281c7cff2bbd7ff0173e1433487ec ""
   "/usr/share/texmf/tex/latex/lm/omllmm.fd" 1256929440 888 44447a3a3af84a22454ef89500942d93 ""
+  "/usr/share/texmf/tex/latex/lm/omslmr.fd" 1256929440 1013 f8133048bddeed1bf1041c9d830a3723 ""
   "/usr/share/texmf/tex/latex/lm/omslmsy.fd" 1256929440 805 af340a8260c447aa315cfc740ff0152f ""
   "/usr/share/texmf/tex/latex/lm/omxlmex.fd" 1256929440 566 a94661f7b66063f191960bb7935b6ba2 ""
   "/usr/share/texmf/tex/latex/lm/ot1lmr.fd" 1256929440 1880 bae7b659316f7344a86218ad38b01d91 ""
   "/usr/share/texmf/tex/latex/lm/t1lmr.fd" 1256929440 1865 afbfccbe7fda9c2dc5078ad7c486bbed ""
-  "progressreport.aux" 1353521151 8 a94a2480d3289e625eea47cd1b285758 ""
-  "progressreport.tex" 1353521149 319 8dacf672c3206b4818afcfd205b335a1 ""
+  "progressreport.aux" 1353580637 549 d320267d3b2eb2f58c66694a75c84237 ""
+  "progressreport.tex" 1353580635 6108 e759cfd6ab493462945d4a5177c969a8 ""
   (generated)
   "progressreport.log"
   "progressreport.pdf"
