@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.11.15)  22 NOV 2012 16:27
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.11.15)  24 NOV 2012 16:55
 entering extended mode
  %&-line parsing enabled.
 **progressreport.tex
@@ -427,29 +427,30 @@ LaTeX Font Info:    External font `lmex10' loaded for size
  [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 38.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 40.
  (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 38.
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 40.
  [2] [3]
-Overfull \hbox (8.7204pt too wide) in paragraph at lines 111--112
+Overfull \hbox (8.7204pt too wide) in paragraph at lines 116--117
 []\T1/lmr/m/n/10.95 The three cryp-to-graphic meth-ods that have
  []
 
+[4]
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 126.
-[4] <designs1.jpg, id=23, 654.445pt x 262.9825pt>
+(Font)              <10.95> on input line 131.
+ [5] <designs1.jpg, id=26, 654.445pt x 262.9825pt>
 File: designs1.jpg Graphic file (type jpg)
- <use designs1.jpg> [5]
+ <use designs1.jpg>
 <designs2.jpg, id=27, 691.58376pt x 264.99pt>
 File: designs2.jpg Graphic file (type jpg)
- <use designs2.jpg>
-<designs3.jpg, id=28, 715.67375pt x 634.37pt>
+ <use designs2.jpg> [6 <./designs1.jpg> <./designs2.jpg>] <designs3.jpg, id=31,
+ 715.67375pt x 634.37pt>
 File: designs3.jpg Graphic file (type jpg)
- <use designs3.jpg> [6 <./designs1.jpg> <./designs2.jpg>] [7 <./designs3.jpg>] 
-[8] [9] (./progressreport.aux) ) 
+
+<use designs3.jpg> [7 <./designs3.jpg>] [8] [9] (./progressreport.aux) ) 
 Here is how much of TeX's memory you used:
  2069 strings out of 495061
  24471 string characters out of 1182620
@@ -457,18 +458,18 @@ Here is how much of TeX's memory you used:
  5226 multiletter control sequences out of 15000+50000
  40333 words of font info for 36 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 27i,7n,22p,1039b,309s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/
-dvips/lm/lm-mathit.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}</usr/sha
-re/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/
-lm/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/te
-xmf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr
-10.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/font
-s/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></
-usr/share/texmf/fonts/type1/public/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/
-public/lm/lmsy8.pfb>
-Output written on progressreport.pdf (9 pages, 265570 bytes).
+ 27i,7n,22p,1042b,325s stack positions out of 5000i,500n,10000p,200000b,50000s
+{/usr/s
+hare/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm
+-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texm
+f/fonts/enc/dvips/lm/lm-ec.enc}</usr/share/texmf/fonts/type1/public/lm/lmbx10.p
+fb></usr/share/texmf/fonts/type1/public/lm/lmbx12.pfb></usr/share/texmf/fonts/t
+ype1/public/lm/lmmi10.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi8.pfb></u
+sr/share/texmf/fonts/type1/public/lm/lmr10.pfb></usr/share/texmf/fonts/type1/pu
+blic/lm/lmr12.pfb></usr/share/texmf/fonts/type1/public/lm/lmr17.pfb></usr/share
+/texmf/fonts/type1/public/lm/lmr8.pfb></usr/share/texmf/fonts/type1/public/lm/l
+msy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb>
+Output written on progressreport.pdf (9 pages, 266498 bytes).
 PDF statistics:
  81 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
