@@ -1,8 +1,8 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.11.15)  25 NOV 2012 22:59
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.11.15)  25 NOV 2012 22:16
 entering extended mode
  %&-line parsing enabled.
-**progressreport.tex
-(./progressreport.tex
+**ProjSpec.tex
+(./ProjSpec.tex
 LaTeX2e <2009/09/24>
 Babel <v3.8l> and hyphenation patterns for english, usenglishmax, dumylang, noh
 yphenation, loaded.
@@ -364,7 +364,8 @@ File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 ))
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
-) (./url.sty
+)
+(/usr/share/texmf-texlive/tex/latex/ltxmisc/url.sty
 \Urlmuskip=\muskip11
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
@@ -400,24 +401,24 @@ File: pppdftex.def 2009/02/07 v0.4g Pdfpages driver for pdfTeX (AM)
 \AM@toc@title=\toks22
 \c@AM@survey=\count103
 \AM@templatesizebox=\box29
-)
-(./progressreport.aux)
-\openout1 = `progressreport.aux'.
+) (./ProjSpec.aux)
+\openout1 = `ProjSpec.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 16.
-LaTeX Font Info:    ... okay on input line 16.
-LaTeX Font Info:    Try loading font information for T1+lmr on input line 16.
- (/usr/share/texmf/tex/latex/lm/t1lmr.fd
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 17.
+LaTeX Font Info:    ... okay on input line 17.
+LaTeX Font Info:    Try loading font information for T1+lmr on input line 17.
+
+(/usr/share/texmf/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
@@ -441,141 +442,70 @@ File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
 )
 Package color Info: Driver file: pdftex.def on input line 130.
 )
-LaTeX Font Info:    Try loading font information for OT1+lmr on input line 18.
+LaTeX Font Info:    Try loading font information for OT1+lmr on input line 19.
 
 (/usr/share/texmf/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OML+lmm on input line 18.
+LaTeX Font Info:    Try loading font information for OML+lmm on input line 19.
 
 (/usr/share/texmf/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 18.
+LaTeX Font Info:    Try loading font information for OMS+lmsy on input line 19.
 
 
 (/usr/share/texmf/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-LaTeX Font Info:    Try loading font information for OMX+lmex on input line 18.
+LaTeX Font Info:    Try loading font information for OMX+lmex on input line 19.
 
 
 (/usr/share/texmf/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 18.
+(Font)              <12> on input line 19.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 18.
+(Font)              <8> on input line 19.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 18.
- (./progressreport.toc
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 3.
-)
-\tf@toc=\write3
-\openout3 = `progressreport.toc'.
-
- [1
-
-{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [2]
-LaTeX Font Info:    Try loading font information for OMS+lmr on input line 48.
+(Font)              <6> on input line 19.
+LaTeX Font Info:    Try loading font information for OMS+lmr on input line 31.
 
 (/usr/share/texmf/tex/latex/lm/omslmr.fd
 File: omslmr.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
-(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 48.
- [3] [4] [5]
-<designs1.jpg, id=26, 654.445pt x 262.9825pt>
-File: designs1.jpg Graphic file (type jpg)
- <use designs1.jpg>
-<designs2.jpg, id=27, 691.58376pt x 264.99pt>
-File: designs2.jpg Graphic file (type jpg)
- <use designs2.jpg> [6]
-<designs3.jpg, id=32, 715.67375pt x 634.37pt>
-File: designs3.jpg Graphic file (type jpg)
- <use designs3.jpg> [7 <./designs1.jpg> <./designs2.jpg>] [8 <./designs3.jpg>] 
-[9]
-<ProgReportChart.jpg, id=45, 1181.41376pt x 692.5875pt>
-File: ProgReportChart.jpg Graphic file (type jpg)
+(Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 31.
+ [1
 
-<use ProgReportChart.jpg> [10] [11 <./ProgReportChart.jpg>] [12]
-<projspec1.pdf, id=63, page=1, 597.23125pt x 845.1575pt>
-File: projspec1.pdf Graphic file (type pdf)
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}]
 
-<use projspec1.pdf, page 1>
-File: projspec1.pdf Graphic file (type pdf)
- <use projspec1.pdf, page 1>
-File: projspec1.pdf Graphic file (type pdf)
+! LaTeX Error: \begin{itemize} on input line 30 ended by \end{document}.
 
-<use projspec1.pdf, page 1>
-File: projspec1.pdf Graphic file (type pdf)
- <use projspec1.pdf, page 1>
-File: projspec1.pdf Graphic file (type pdf)
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.58 \end{document}
+                   
+? 
+! Emergency stop.
+ ...                                              
+                                                  
+l.58 \end{document}
+                   
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
 
-<use projspec1.pdf, page 1> [13 <./projspec1.pdf>]
-<projspec1.pdf, id=95, page=2, 597.23125pt x 845.1575pt>
-File: projspec1.pdf Graphic file (type pdf)
-
-<use projspec1.pdf, page 2>
-File: projspec1.pdf Graphic file (type pdf)
- <use projspec1.pdf, page 2>
-File: projspec1.pdf Graphic file (type pdf)
-
-<use projspec1.pdf, page 2> [14 <./projspec1.pdf>]
-<projspec1.pdf, id=100, page=3, 597.23125pt x 845.1575pt>
-File: projspec1.pdf Graphic file (type pdf)
-
-<use projspec1.pdf, page 3>
-File: projspec1.pdf Graphic file (type pdf)
- <use projspec1.pdf, page 3>
-File: projspec1.pdf Graphic file (type pdf)
-
-<use projspec1.pdf, page 3> [15 <./projspec1.pdf>] (./progressreport.bbl
-LaTeX Font Info:    Try loading font information for T1+lmtt on input line 5.
-
-(/usr/share/texmf/tex/latex/lm/t1lmtt.fd
-File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
-)
-Underfull \hbox (badness 7397) in paragraph at lines 31--35
-[]\T1/lmr/m/n/10.95 Google Play. RSA Ci-pher Cat by Mi-a-soft; 2011.  [On-
- []
-
-
-Underfull \hbox (badness 1715) in paragraph at lines 31--35
-\T1/lmr/m/n/10.95 line](URL $\T1/lmtt/m/n/10.95 https : / / play . google . com
- / store / apps / details ? id = jp .
- []
-
-
-Underfull \hbox (badness 1009) in paragraph at lines 37--41
-[]\T1/lmr/m/n/10.95 Google Play. Cloak SMS Free by Hamish Medlin; 2011.  [On-
- []
-
-) [16] (./progressreport.aux) ) 
+ 
 Here is how much of TeX's memory you used:
- 2956 strings out of 495061
- 37858 string characters out of 1182620
- 96081 words of memory out of 3000000
- 6070 multiletter control sequences out of 15000+50000
- 44915 words of font info for 38 fonts, out of 3000000 for 9000
+ 2847 strings out of 495061
+ 36472 string characters out of 1182620
+ 92976 words of memory out of 3000000
+ 5980 multiletter control sequences out of 15000+50000
+ 34033 words of font info for 33 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 32i,16n,37p,1042b,393s stack positions out of 5000i,500n,10000p,200000b,50000s
-{/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{
-/usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips
-/lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/shar
-e/texmf/fonts/type1/public/lm/lmbx10.pfb></usr/share/texmf/fonts/type1/public/l
-m/lmbx12.pfb></usr/share/texmf/fonts/type1/public/lm/lmmi10.pfb></usr/share/tex
-mf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr1
-0.pfb></usr/share/texmf/fonts/type1/public/lm/lmr12.pfb></usr/share/texmf/fonts
-/type1/public/lm/lmr17.pfb></usr/share/texmf/fonts/type1/public/lm/lmr8.pfb></u
-sr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/p
-ublic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/sha
-re/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on progressreport.pdf (16 pages, 519199 bytes).
-PDF statistics:
- 152 PDF objects out of 1000 (max. 8388607)
- 0 named destinations out of 1000 (max. 500000)
- 56 words of extra memory for PDF output out of 10000 (max. 10000000)
-
+ 28i,6n,22p,485b,260s stack positions out of 5000i,500n,10000p,200000b,50000s
+!  ==> Fatal error occurred, no output PDF file produced!

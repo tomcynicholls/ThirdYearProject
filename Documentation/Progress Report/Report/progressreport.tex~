@@ -1,10 +1,13 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
-\usepackage[utf8]{inputenc}
+
 \usepackage{lmodern}
 \usepackage{amsmath}
 \usepackage{graphicx}
+\usepackage{url}
+\usepackage{biblatex}
 
+\bibliography{projectbib.bib}
 
 \title{Smart Phone Cryptography: A comparison of techniques for encrypted data communication \\ Progress Report}
 \author{Tom Nicholls}
@@ -25,8 +28,10 @@ The main alterations in this project can be best described through a statement o
 
 The privacy of sensitive information has always been an important issue. With the increased popularity and usability of smart phones, tasks from accessing confidential work files or personal bank accounts to communicating with clients and friends, are being completed through applications over mobile, wireless internet connections. 
 
-In this project I will research the various cryptographic schemes used by popular applications available to smart phones running the Android operating system for secure data transmission and communication. Accompanying this research will be a study and comparison of other schemes which could be used instead of those presented previously. A currently used cryptographic technique and an alternative technique will be implemented through a data transmission application. Tests will be carried out to analyse various important factors that need to be considered for a successful encrypted data transmission application, such as mobile data usage or cryptanalytic methods required to break the data encryption. An original conclusion will then be drawn as to whether the current techniques of cryptography available are appropriate or if a new scheme should be encouraged. How this conclusion can be extended to encompass functions other than text transmission will then be presented, for instance secure secret sharing.
+In this project the various cryptographic schemes used by popular applications available to smart phones running the Android operating system for secure data transmission and communication will be researched. Accompanying this research will be a study and comparison of other schemes which could be used instead of those presented previously. A currently used cryptographic technique and an alternative technique will be implemented through a data transmission application. Tests will be carried out to analyse various important factors that need to be considered for a successful encrypted data transmission application, such as mobile data usage or cryptanalytic methods required to break the data encryption. An original conclusion will then be drawn as to whether the current techniques of cryptography available are appropriate or if a new scheme should be encouraged. How this conclusion can be extended to encompass functions other than text transmission will then be presented, for instance secure secret sharing.
 
+As can be seen, the project is now centered around the implementation of currently used schemes and an alternative scheme. Tests will then be used to provide a comparison between the schemes, with which a conclusion over which scheme should be encouraged, can be obtained. The conclusion will be original as no other external results have been found or considered.
+ 
 \subsection{Objectives}
 
 To further explain the adjustments made, the new objectives of the project will be presented.
@@ -85,6 +90,9 @@ To further explain the adjustments made, the new objectives of the project will 
   \item Implement functionality described in the further work objective (Objective 5)
 \end{enumerate}
 
+\vspace{3pt}
+A further breakdown of the objectives can be found by looking at the Gantt chart provided with this document.
+
 \subsection{Additional Changes}
 
 Aside from the adjustments made in the problem definition and objectives sections detailed above, only minimal changes have been made to the rest of the project specification. For example in the 'Methods' section the research phase can still be completed in parallel to the framework development phase, with all other objectives requiring the objective before it to be completed before it can be started. Furthermore, only minor changes been made to the 'Resources' section; a re-wording of the project components to account for the changes mentioned above and the addition of the Google application market place 'Google Play' to the list of resources. This is available through the internet, which I have full access to.
@@ -97,18 +105,18 @@ In this section the work that has been completed in this project so far will be 
 
 \subsection{Research}
 
-In this project, the first task was to perform research (see Objectives section). An overview of the results of the research performed is described below. The results of this research will be formally presented and described in more detail in the final project report.
+In this project, the first task was to perform research (see Objectives section). An overview of the results of the research performed is described below. The results of this research will be formally presented and described in more detail, including a full explanation of any cryptographic schemes, in the final project report.
 
 \begin{enumerate}
   \item
   \begin{description}
     \item[Framework Design] 
   \end{description}
-  Research was made into how a system could be set up to facilitate the communication of data messages between any two users of the system. Socket-based communication will allow networking between a central java based server and P.C client, whereas HTTP Post and broadcast-receiver methods will be used to allow the Android application to transfer and receive data from the server. The result of this research, to utilise a multi-client server, can be found in the design section, where an outline of the system to be created is given.
+  Research was made into how a system could be set up to facilitate the communication of data messages between any two users of the system. Socket-based communication will allow networking between a central java based server and P.C client, whereas HTTP Post and broadcast-receiver methods will be used to allow the Android application to transfer and receive data from the server. The result of this research, to utilise a multi-client server \cite{ydanielliang}, can be found in the design section, where an outline of the system to be created is given.
   \item
   \begin{description}
-    \item[Cryptographic Methods] 
-    The three cryptographic methods that have been researched are AES, RSA and ECC. The schemes will be outlined here, with an indepth analysis and description presented in the project report.
+    \item[Cryptographic Methods]
+  \end{description}
     \begin{itemize}
       \item
       \begin{description}
@@ -130,16 +138,16 @@ where M is the plaintext message and C is the ciphertext.
       \begin{description}
         \item[ECC] 
       \end{description}
-      ECC is another example of public-key cryptography (asymmetric key algorithm) but is based on the algebraic structure of elliptic curves over finite fields. The assumption that finding the discrete logarithm of a random elliptic curve element, with respect to a publicly known base point, is infeasible is the basis for the elliptic curve cryptographic scheme.
+      ECC is another approach to public-key cryptography (asymmetric key algorithm) but is based on the algebraic structure of elliptic curves over finite fields. The assumption that finding the discrete logarithm of a random elliptic curve element, with respect to a publicly known base point, is infeasible is the basis for the elliptic curve cryptographic scheme.
     \end{itemize}
-  \end{description}
+
   \item
   \begin{description}
     \item[Current Applications] 
   \end{description}
   As a result of searching on the Google application marketplace ‘Google Play’, only two different applications currently exist that perform encrypted message communication. These two applications are:
   \begin{itemize}
-    \item RSA Cipher Cat by Miasoft
+    \item RSA Cipher Cat by Miasoft \cite{rsaciphercat}
     \item Cloak SMS Free by Hamish Medlin
   \end{itemize}
   Both applications allow the communication of encrypted messages between two users of the application. RSA Cipher Cat utilises the RSA asymmetric encryption scheme whereas Cloak SMS Free is uses the AES symmetric key encryption scheme.
@@ -188,7 +196,7 @@ The client class contains the methods which allow it to connect to the server an
 \label{fig:designs3}
 \end{figure}
 
-The encryption schemes used within this project all require the sharing of public keys. Figure~\ref{fig:designs3} shows how this will be achieved. The placeholder names ‘Alice’, ‘Bob’ and ‘Trent’ have been used following the tradition set out in most cryptography materials.
+The encryption schemes used within this project all require the sharing of public keys. Figure~\ref{fig:designs3} shows how this will be achieved. The placeholder names Alice (User A), Bob (User B) and Trent (Trusted third-party server) have been used inkeeping with tradition set out by Bruce Schneier \cite{bruceschneier}.
 
 \begin{enumerate}
   \item Alice registers her public key $ K_{A} $ with Trent
@@ -254,6 +262,7 @@ Easter Break - Week 5 &  \\ \hline
 \caption{Timetable of completion dates of main objectives}
 \label{timetable}
 \end{table}
+
 
 
 

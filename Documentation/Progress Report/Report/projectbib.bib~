@@ -15,7 +15,7 @@
 	}
 
 @BOOK{bruceschneier,
-	AUTHOR = {Bruce Schneiers},
+	AUTHOR = {Schneier, Bruce},
 	TITLE = {Applied Cryptography: Protocols, algorithms and source code in C},
 	PUBLISHER = {Wiley},
 	YEAR = {1996},
@@ -51,10 +51,9 @@
 	}
 
 @BOOK{ydanielliang,
-	AUTHOR = {Liang, D},
+	AUTHOR = {Liang, Y. Daniel},
 	TITLE = {Introduction to Java Programming},
 	PUBLISHER = {Pearson},
-	ADDRESS = {Boston},
 	YEAR = {2007},
 	EDITION = {Sixth}
 	}
@@ -69,7 +68,7 @@
 	}
 
 @ARTICLE{ejeta,
-	AUTHOR = {{Jobanputra, N [et al]}},
+	AUTHOR = {Jobanputra, Nirav [et al]},
 	TITLE = {Emerging Security Technologies for Mobile User Accesses},
 	JOURNAL = {eJETA.org},
 	YEAR = {2009},
@@ -79,35 +78,28 @@
 	}
 
 
-@misc{rsaciphercat,
-	author = {{Google Play}},
-	title = {{RSA} Cipher Cat by Miasoft},
+@ONLINE{rsaciphercat,
+	author = {Google Play},
+	title = {RSA Cipher Cat by Miasoft},
 	month = jun,
 	year = {2011},
-	howpublished={{[Online](URL }\url{https://play.google.com/store/apps/details?id=jp.co.Miasoft.RSACipher&feature=search_result}{)}}
-
+	url = {https://play.google.com/store/apps/details?id=jp.co.Miasoft.RSACipher&feature=search_result}
 	}
 
-@misc{cloacksms,
-	author = {{Google Play}},
-	title = {Cloak {SMS} Free by Hamish Medlin},
+@ONLINE{cloacksms,
+	author = {Google Play},
+	title = {Cloak SMS Free by Hamish Medlin},
 	month = nov,
 	year = {2011},
-	howpublished={{[Online](URL }\url{https://play.google.com/store/apps/details?id=sms.encryptor.v2.free&hl=en}{)}}
-	}
-	
-@misc{googleplay,
-	author = {{Google}},
-	title = {Google Play Store},
-	howpublished={{[Online](URL }\url{https://play.google.com/store}{)}}
+	url = {https://play.google.com/store/apps/details?id=sms.encryptor.v2.free&hl=en}
 	}
 
-@misc{pcworldart,
+@ONLINE{pcworldart,
 	author = {Kirk, Jeremy},
 	title = {UK Data Encryption Disclosure Law Takes Effect},
 	month = oct,
 	year = {2007},
-	howpublished={{[Online](URL }\url{http://www.pcworld.com/article/137881/article.html}{)}}
+	url = {http://www.pcworld.com/article/137881/article.html}
 	}
 
 @MISC{dataprotect,
@@ -116,15 +108,12 @@
 	year = {1998},
 	address = {London: Stationery Office}
 	}
+
+@ONLINE{Doe:2009:Online,
+author = {Doe, Ringo},
+title = {This is a test entry of type {@ONLINE}},
+month = jun,
+year = {2009},
+url = {http://www.test.org/doe/}
+}
 	
-@misc{dropbox,
-	author = {{Dropbox, Inc.}},
-	title = {Dropbox},
-	howpublished={{[Online](URL }\url{https://www.dropbox.com}{)}}
-	}
-	
-@misc{github,
-	author = {{GitHub, Inc.}},
-	title = {GitHub - Social Coding},
-	howpublished={{[Online](URL }\url{https://github.com}{)}}
-	}

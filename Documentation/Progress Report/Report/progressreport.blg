@@ -1,0 +1,63 @@
+This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
+The top-level auxiliary file: progressreport.aux
+The style file: vancouver.bst.bst
+Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
+Database file #1: projectbib.bib
+Warning--empty author and editor in googleplay
+Warning--missing publisher in googleplay
+Warning--there's a month but no year in googleplay
+Warning--empty author in dataprotect
+Warning--empty author and editor in dataprotect
+Warning--missing publisher in dataprotect
+Warning--empty author and editor in rsaciphercat
+Warning--missing publisher in rsaciphercat
+Warning--empty author and editor in cloacksms
+Warning--missing publisher in cloacksms
+Warning--empty author and editor in dropbox
+Warning--missing publisher in dropbox
+Warning--there's a month but no year in dropbox
+Warning--empty author and editor in github
+Warning--missing publisher in github
+Warning--there's a month but no year in github
+You've used 13 entries,
+            3169 wiz_defined-function locations,
+            699 strings with 5686 characters,
+and the built_in function-call counts, 7479 in all, are:
+= -- 863
+> -- 55
+< -- 6
++ -- 27
+- -- 12
+* -- 442
+:= -- 902
+add.period$ -- 38
+call.type$ -- 13
+change.case$ -- 8
+chr.to.int$ -- 18
+cite$ -- 29
+duplicate$ -- 647
+empty$ -- 763
+format.name$ -- 12
+if$ -- 1817
+int.to.chr$ -- 0
+int.to.str$ -- 13
+missing$ -- 78
+newline$ -- 62
+num.names$ -- 12
+pop$ -- 216
+preamble$ -- 1
+purify$ -- 0
+quote$ -- 0
+skip$ -- 211
+stack$ -- 0
+substring$ -- 840
+swap$ -- 178
+text.length$ -- 0
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 0
+warning$ -- 16
+while$ -- 54
+width$ -- 15
+write$ -- 131
+(There were 16 warnings)
