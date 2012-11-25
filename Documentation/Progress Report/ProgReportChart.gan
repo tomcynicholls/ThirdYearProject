@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<project name="Third Year Project" company="" webLink="http://" view-date="2012-11-25" view-index="0" gantt-divider-location="353" resource-divider-location="300" version="2.0">
+<project name="Third Year Project" company="" webLink="http://" view-date="2012-11-18" view-index="0" gantt-divider-location="1" resource-divider-location="300" version="2.0">
     <description/>
-    <view zooming-state="default:6" id="gantt-chart"/>
+    <view zooming-state="default:7" id="gantt-chart"/>
     <view id="resource-table">
-        <field id="0" name="Name" width="56" order="0"/>
-        <field id="1" name="Default role" width="43" order="1"/>
+        <field id="0" name="Name" width="50" order="0"/>
+        <field id="1" name="Default role" width="50" order="1"/>
     </view>
     <!-- -->
     <calendars>
@@ -33,43 +33,69 @@
             <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
         </taskproperties>
         <task id="0" name="Build Server" color="#0000ff" meeting="false" start="2012-11-26" duration="12" complete="0" expand="true">
-            <depend id="2" type="2" difference="0" hardness="Strong"/>
+            <depend id="9" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="2" name="Test Server" color="#0000ff" meeting="false" start="2012-12-08" duration="2" complete="0" expand="true">
+        <task id="2" name="Test Server" color="#0000ff" meeting="false" start="2012-12-03" duration="7" complete="0" expand="true">
             <depend id="9" type="2" difference="0" hardness="Strong"/>
         </task>
         <task id="9" name="Develop P.C Client" color="#0000ff" meeting="false" start="2012-12-10" duration="12" complete="0" expand="true">
-            <depend id="16" type="2" difference="0" hardness="Strong"/>
+            <depend id="19" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="16" name="Test P.C Client" color="#0000ff" meeting="false" start="2012-12-22" duration="2" complete="0" expand="true">
+        <task id="16" name="Test P.C Client" color="#0000ff" meeting="false" start="2012-12-17" duration="7" complete="0" expand="true">
             <depend id="19" type="2" difference="0" hardness="Strong"/>
         </task>
         <task id="19" name="Develop Android Application" color="#0000ff" meeting="false" start="2012-12-24" duration="12" complete="0" expand="true">
-            <depend id="22" type="2" difference="0" hardness="Strong"/>
+            <depend id="24" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="22" name="Test Application" color="#0000ff" meeting="false" start="2013-01-05" duration="2" complete="0" expand="true">
+        <task id="22" name="Test Application" color="#0000ff" meeting="false" start="2012-12-31" duration="7" complete="0" expand="true">
             <depend id="24" type="2" difference="0" hardness="Strong"/>
         </task>
         <task id="24" name="Implement AES Scheme" color="#ff0000" meeting="false" start="2013-01-07" duration="7" complete="0" expand="true">
-            <depend id="28" type="2" difference="0" hardness="Strong"/>
             <depend id="30" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="28" name="Test AES" color="#ff0000" meeting="false" start="2013-01-14" duration="2" complete="0" expand="true">
+        <task id="28" name="Test AES" color="#ff0000" meeting="false" start="2013-01-11" duration="5" complete="0" expand="true">
             <depend id="30" type="2" difference="0" hardness="Strong"/>
         </task>
         <task id="30" name="Implement RSA Scheme" color="#ff0000" meeting="false" start="2013-01-16" duration="7" complete="0" expand="true">
-            <depend id="35" type="2" difference="0" hardness="Strong"/>
+            <depend id="34" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="35" name="Test RSA" color="#ff0000" meeting="false" start="2013-01-23" duration="2" complete="0" expand="false">
+        <task id="35" name="Test RSA" color="#ff0000" meeting="false" start="2013-01-20" duration="5" complete="0" expand="false">
             <depend id="34" type="2" difference="0" hardness="Strong"/>
         </task>
         <task id="34" name="Implement ECC Based Scheme" color="#ff0000" meeting="false" start="2013-01-25" duration="6" complete="0" expand="false">
-            <depend id="39" type="2" difference="0" hardness="Strong"/>
-        </task>
-        <task id="39" name="Test ECC" color="#ff0000" meeting="false" start="2013-01-31" duration="2" complete="0" expand="false">
             <depend id="47" type="2" difference="0" hardness="Strong"/>
         </task>
-        <task id="47" name="Perform Comparison tests" color="#00ff00" meeting="false" start="2013-02-02" duration="14" complete="0" expand="true"/>
+        <task id="39" name="Test ECC" color="#ff0000" meeting="false" start="2013-01-28" duration="5" complete="0" expand="false">
+            <depend id="47" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="47" name="Perform Comparison tests" color="#00ff00" meeting="false" start="2013-02-02" duration="13" complete="0" expand="true">
+            <depend id="51" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="48" name="Compile test results" color="#00ff00" meeting="false" start="2013-02-09" duration="7" complete="0" expand="true">
+            <depend id="51" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="51" name="Analyse results to suggest possible adjustments" color="#ffff00" meeting="false" start="2013-02-16" duration="1" complete="0" expand="true">
+            <depend id="55" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="55" name="Implement adjustments to current scheme" color="#ffff00" meeting="false" start="2013-02-17" duration="3" complete="0" expand="true">
+            <depend id="58" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="58" name="Re-test scheme to improvements" color="#ffff00" meeting="false" start="2013-02-20" duration="3" complete="0" expand="true">
+            <depend id="60" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="60" name="Detail possible extensions" color="#ff00ff" meeting="false" start="2013-02-23" duration="4" complete="0" expand="true">
+            <depend id="65" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="65" name="Implement additional functionality" color="#ff00ff" meeting="false" start="2013-02-27" duration="3" complete="0" expand="true">
+            <depend id="70" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="70" name="Create project presentation" color="#00ffff" meeting="false" start="2013-03-02" duration="7" complete="0" expand="true">
+            <depend id="67" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="75" name="Documentation" color="#00ffff" meeting="false" start="2012-11-26" duration="133" complete="0" expand="true">
+            <depend id="67" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="67" name="Proof read full documentation" color="#00ffff" meeting="false" start="2013-04-08" duration="5" complete="0" expand="true"/>
     </tasks>
     <resources/>
     <allocations/>
@@ -83,9 +109,9 @@
         <displaycolumn property-id="tpd9" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd1" order="-1" width="75" visible="false"/>
         <displaycolumn property-id="tpd0" order="-1" width="75" visible="false"/>
-        <displaycolumn property-id="tpd3" order="0" width="199" visible="true"/>
-        <displaycolumn property-id="tpd4" order="1" width="75" visible="true"/>
-        <displaycolumn property-id="tpd5" order="2" width="75" visible="true"/>
+        <displaycolumn property-id="tpd3" order="0" width="15" visible="true"/>
+        <displaycolumn property-id="tpd4" order="1" width="15" visible="true"/>
+        <displaycolumn property-id="tpd5" order="2" width="15" visible="true"/>
     </taskdisplaycolumns>
     <previous/>
     <roles roleset-name="Default"/>
