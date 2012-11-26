@@ -33,9 +33,9 @@ The main alterations in this project can be best described through a statement o
 
 The privacy of sensitive information has always been an important issue. With the increased popularity and usability of smart phones, tasks from accessing confidential work files or personal bank accounts to communicating with clients and friends, are being completed through applications over mobile, wireless internet connections. 
 
-In this project the various cryptographic schemes used by popular applications available to smart phones running the Android operating system for secure data transmission and communication will be researched. Accompanying this research will be a study and comparison of other schemes which could be used instead of those presented previously. A currently used cryptographic technique and an alternative technique will be implemented through a data transmission application. Tests will be carried out to analyse various important factors that need to be considered for a successful encrypted data transmission application, such as mobile data usage or cryptanalytic methods required to break the data encryption. An original conclusion will then be drawn as to whether the current techniques of cryptography available are appropriate or if a new scheme should be encouraged. How this conclusion can be extended to encompass functions other than text transmission will then be presented, for instance secure secret sharing.
+In this project the various cryptographic schemes used by popular applications available to smart phones running the Android operating system for secure data transmission and communication will be researched. Accompanying this research will be a study and comparison of other schemes which could be used instead of those presented previously. Currently used cryptographic techniques and an alternative technique will be implemented through a data transmission application. Tests will be carried out to analyse various important factors that need to be considered for a successful encrypted data transmission application, such as mobile data usage or cryptanalytic methods required to break the data encryption. An original conclusion will then be drawn as to whether the current techniques of cryptography available are appropriate or if a new scheme should be encouraged. How this conclusion can be extended to encompass functions other than text transmission will then be presented, for instance secure secret sharing.
 
-As can be seen, the project is now centered around the implementation of currently used schemes and an alternative scheme. Tests will then be used to provide a comparison between the schemes, with which a conclusion over which scheme should be encouraged, can be obtained. The conclusion will be original as no other external results have been found or considered.
+As can be seen, the project is now centred around the implementation of currently used schemes and an alternative scheme, in a mobile application setting. Tests will then be used to provide a comparison between the schemes, with which a conclusion over which scheme should be encouraged, can be obtained. The conclusion will be original as no other external results have been found or considered.
  
 \subsection{Objectives}
 
@@ -75,7 +75,7 @@ To further explain the adjustments made, the new objectives of the project will 
   \end{itemize}
   \item Conclusion
   \begin{itemize}
-    \item Present and justify the findings and conlusions that can be made form the completed tests
+    \item Present and justify the findings and conclusions that can be made form the completed tests
     \item Show possible adjustments to the implemented schemes which would increase their usability
   \end{itemize}
   \item Further Work
@@ -96,13 +96,13 @@ To further explain the adjustments made, the new objectives of the project will 
 \end{enumerate}
 
 \vspace{3pt}
-A further breakdown of the objectives can be found by looking at the Gantt chart provided with this document.
+A further breakdown of the objectives can be found by looking at the Gantt chart provided with this document (Appendix \ref{A}).
 
 \subsection{Additional Changes}
 
-Aside from the adjustments made in the problem definition and objectives sections detailed above, only minimal changes have been made to the rest of the project specification. For example in the 'Methods' section the research phase can still be completed in parallel to the framework development phase, with all other objectives requiring the objective before it to be completed before it can be started. Furthermore, only minor changes been made to the 'Resources' section; a re-wording of the project components to account for the changes mentioned above and the addition of the Google application market place 'Google Play'\cite{googleplay} to the list of resources. This is available through the internet, which I have full access to.
+Aside from the adjustments made in the problem definition and objectives sections detailed above, only minimal changes have been made to the rest of the project specification. For example, in the 'Methods' section the research phase can still be completed in parallel to the framework development phase, with all other objectives requiring the objective before it to be completed before it can be started. The testing phase for each section of the project can also be completed in parallel to its development, as I will describe later in this document. Furthermore, only minor changes been made to the 'Resources' section; a re-wording of the project components to account for the changes mentioned above and the addition of the Google application market place Google Play\cite{googleplay} to the list of resources. This is available through the internet, which I have full access to.
 
-A final addition to the specification that should be noted is the inclusion of another legal issue surrounding the project. The resulting product of this project facilitates the secure and secret communication of messages which, in the wrong hands, could be used to aid a number of illegal operations such as crime organisation or terrorism. To avoid this issue in a legal sense I will not publish the final application to the Google market place and I will also present a legal disclaimer attached to this product incase someone does obtain a copy of the application \cite{dataprotect}. The issue could also be viewed as an ethical issue, but the actions taken to escape the legal issue should ensure the avoidence of the issue viewed in an ethical sense. 
+A final addition to the specification that should be noted is the inclusion of another legal issue surrounding the project. The resulting product of this project facilitates the secure and secret communication of messages which, in the wrong hands, could be used to aid a number of illegal operations such as crime organisation or terrorism. To avoid this issue in a legal sense I will not publish the final application to the Google market place and I will also present a legal disclaimer attached to this product in case someone does obtain a copy of the application \cite{dataprotect}. The issue could also be viewed as an ethical issue, but the actions taken to escape the legal issue should ensure the avoidance of the issue viewed in an ethical sense. 
 
 \section{Work Completed}
 
@@ -117,11 +117,11 @@ In this project, the first task was to perform research (see Objectives section)
   \begin{description}
     \item[Framework Design] 
   \end{description}
-  Research was made into how a system could be set up to facilitate the communication of data messages between any two users of the system. Socket-based communication will allow networking between a central java based server and P.C client, whereas HTTP Post and broadcast-receiver methods will be used to allow the Android application to transfer and receive data from the server \cite{markogargenta}. The result of this research, to utilise a multi-client server \cite{ydanielliang}, can be found in the design section, where an outline of the system to be created is given.
+  Research was made into how a system could be set up to facilitate the communication of data messages between any two users of the system. Socket-based communication will allow networking between a central Java based server and P.C client, whereas HTTP Post and broadcast-receiver methods will be used to allow the Android application to transfer and receive data from the server \cite{markogargenta}. The result of this research, to utilise a multi-client server \cite{ydanielliang}, can be found in the design section, where an outline of the system to be created is given.
   \item
   \begin{description}
     \item[Cryptographic Methods]
-    Research was completed using the books written by Wenbo Mao \cite{wenbomao} and William Stallings \cite{willstallings}.
+    Research was completed using books by Wenbo Mao \cite{wenbomao} and William Stallings \cite{willstallings}.
   \end{description}
     \begin{itemize}
       \item
@@ -151,7 +151,7 @@ where M is the plaintext message and C is the ciphertext.
   \begin{description}
     \item[Current Applications] 
   \end{description}
-  As a result of searching on the Google application marketplace ‘Google Play’, only two different applications currently exist that perform encrypted message communication. These two applications are:
+  As a result of searching on the Google application marketplace Google Play, only two different applications currently exist that perform encrypted message communication. These two applications are:
   \begin{itemize}
     \item RSA Cipher Cat by Miasoft \cite{rsaciphercat}
     \item Cloak SMS Free by Hamish Medlin \cite{cloacksms}
@@ -161,7 +161,7 @@ where M is the plaintext message and C is the ciphertext.
   \begin{description}
     \item[Mobile device application comparison factors] 
   \end{description}
-  As the third section of this project is concerned with the analysis and comparison of cryptographic schemes, research was performed to discover which factors impact how successful and useful an encryption scheme on a mobile device is. The discovered factors are, mostly found in a article by Nirav Jobanputra, \textit{et al} \cite{ejeta}:
+  As the third section of this project is concerned with the analysis and comparison of cryptographic schemes, research was performed to discover which factors impact how successful and useful an encryption scheme on a mobile device is. The discovered factors were largely found in a article by Nirav Jobanputra, \textit{et al} \cite{ejeta}:
   \begin{itemize}
     \item Difficulty of techniques required to break encryption
     \item Energy Consumption/Battery power required
@@ -184,7 +184,7 @@ As can be seen from the previous sections in this document, this project include
 \label{fig:designs1}
 \end{figure}
 
-The server creates a session between two clients that wish to communicate. Clients initiate sessions with any other client with which they have shared their indentification code (ID number). Each session is a new thread within the server. This allows the server to establish any number of sessions, to allow for multiple communication links between any two clients. As can be seen in Figure \ref{fig:designs1}, any client can have more than one communication session at any one time, with any other client in the client base.
+The server creates a session between two clients that wish to communicate. Clients initiate sessions with any other client with which they have shared their identification code (ID number). Each session is a new thread within the server. This allows the server to establish any number of sessions, to allow for multiple communication links between any two clients. As can be seen in Figure \ref{fig:designs1}, any client can have more than one communication session at any one time, with any other client in the client base.
 
 \begin{figure}[htb]
 \centering
@@ -193,7 +193,7 @@ The server creates a session between two clients that wish to communicate. Clien
 \label{fig:designs2}
 \end{figure}
 
-The client class contains the methods which allow it to connect to the server and send data to another client in the client base through the server. The P.C client and Android application inherits these abilities from the client but are more specific, so are implemented according to its own rules (e.g sockets or HTTP methods). Hence, a P.C client can send a message (unencrypted), via the server, to another P.C client or an application. This can also be achieved by an application client. Compatibility between the clients will be ensured through the use of the XML file structure. P.C client 1 (and 2) are more specific versions of the P.C client class. P.C client 1 has all the capabilities of the P.C client, with an added encryption method. Similarly for P.C client 2, but a different encryption scheme will be implemented. For example, if two cryptographic schemes are implemented; Application 1 and P.C client 1 will utilise scheme 1 and Application 2 and P.C client 2 will utilise scheme 2. 
+The Client class contains the methods which allow it to connect to the server and send data to another client in the client base through the server. The P.C client and Android application inherits these abilities from the client but are more specific, so are implemented according to its own rules (e.g. sockets or HTTP methods). Hence, a P.C client can send a message (unencrypted), via the server, to another P.C client or an application. This can also be achieved by an application client. Compatibility between the clients will be ensured through the use of the XML file structure. P.C client 1 (and 2) are more specific versions of the P.C client class. P.C client 1 has all the capabilities of the P.C client, with an added encryption method. Similarly for P.C client 2, but a different encryption scheme will be implemented. For example, if two cryptographic schemes are implemented; Application 1 and P.C client 1 will utilise scheme 1 and Application 2 and P.C client 2 will utilise scheme 2. P.C clients are required in this project to simulate the process of a user sending an encrypted message to a company, for example, their account details to their bank, via their mobile application. 
 
 \begin{figure}[htb]
 \centering
@@ -202,7 +202,7 @@ The client class contains the methods which allow it to connect to the server an
 \label{fig:designs3}
 \end{figure}
 
-The encryption schemes used within this project all require the sharing of public keys. Figure~\ref{fig:designs3} shows how this will be achieved as described by Wenbo Mao \cite{wenbomao}. The placeholder names Alice (User A), Bob (User B) and Trent (Trusted third-party server) have been used inkeeping with tradition set out by Bruce Schneier \cite{bruceschneier}.
+The encryption schemes used within this project all require the sharing of public keys. Figure~\ref{fig:designs3} shows how this will be achieved as described by Wenbo Mao \cite{wenbomao}. The place-holder names Alice (User A), Bob (User B) and Trent (Trusted third-party server) have been used in keeping with tradition set out by Bruce Schneier \cite{bruceschneier}.
 
 \begin{enumerate}
   \item Alice registers her public key $ K_{A} $ with Trent
@@ -225,11 +225,11 @@ Once this protocol has been completed, each client has the other client’s publ
 
 \section{Project Management}
 
-As described in the project specification, various methods will be adopted to ensure that the project files (code, documentation etc) are constantly backed up and that version control is maintained. The free services of Dropbox\cite{dropbox} and Git/Github\cite{github} have been set up and can be accessed from any computer or workstation that is used in this project, allowing a constant back up. These services allow a constant back up of data to an online server which will be initiated periodically. In addition to this an external flash drive has been dedicated to the task of providing a back up of data, as well as the Department of Computer Science machines. Bash scripts have been writen to make the back up of data to these services less time consuming.
+As described in the project specification, various methods will be adopted to ensure that the project files (code, documentation etc.) are constantly backed up and that version control is maintained. The free services of Dropbox\cite{dropbox} and Git/Github\cite{github} have been set up and can be accessed from any computer or workstation that is used in this project, allowing a constant back up. In addition to this an external flash drive has been dedicated to the task of providing a back up of data, as well as the Department of Computer Science machines. Bash scripts have been written to make the back up of data to all of these services less time consuming.
 
 For documentation, the document preparation system LaTeX will be used. This is because LaTeX allows the inclusion of mathematics into a document in a simple and easy to use way with high typographical quality, which will be extremely beneficial in this project. 
 
-As for the software development section of this project the technique of test driven development in a plan-driven setting will be employed as described by Ian Sommerville \cite{iansommerville}. Plan-driven development is clearly the best choice due to the nature of this project. The other option, agile development, is best suited for a project with a dedicated customer, such that constant communication can be maintained. It also encourages the constant evolution of a system due to changing ideas or specifications and restricts the amount of documentation created. Plan-driven development, on the other hand, has a set plan for development which it follows to produce the end product and a firm set of documentation. 
+As for the software development section of this project, the technique of test driven development in a plan-driven setting will be employed as described by Ian Sommerville \cite{iansommerville}. Plan-driven development is clearly the best choice due to the nature of this project. The other option, agile development, is best suited for a project with a dedicated customer, such that constant communication can be maintained. It also encourages the constant evolution of a system due to changing ideas or specifications and restricts the amount of documentation created. Plan-driven development, on the other hand, has a set plan for development which it follows to produce the end product and a firm set of documentation. 
 
 Test-driven development combines testing and development. Code is developed incrementally, along with a set of tests for that increment. The next increment is not started until the previous increment is fully tested and completed. In the context of this project, the implementation of the cryptographic schemes will not be started until the multi-client server is set up and can transfer data, for example. 
 

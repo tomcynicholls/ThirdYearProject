@@ -1,13 +1,14 @@
 \documentclass[a4paper,11pt]{article}
 \usepackage[T1]{fontenc}
-
+\usepackage[utf8]{inputenc}
 \usepackage{lmodern}
 \usepackage{amsmath}
 \usepackage{graphicx}
 \usepackage{url}
-\usepackage{biblatex}
+\usepackage{pdfpages}
 
-\bibliography{projectbib.bib}
+\bibliographystyle{vancouver.bst}
+
 
 \title{Smart Phone Cryptography: A comparison of techniques for encrypted data communication \\ Progress Report}
 \author{Tom Nicholls}
@@ -15,8 +16,12 @@
 \begin{document}
 
 \maketitle
+\tableofcontents
+\newpage
 
-In this progress report document, details will be given as to how this project has evolved from the description presented in the project specification, outlining and justifying any changes made. The state in which the project is currently in will be shown, including a presentation of the work completed up to this point. This will included any design and project choices that have been made. The document will be finished with a timetabled plan of how the project will continue over the next term, up to completion. 
+\section{Introduction}
+
+In this progress report, details will be given as to how this project has evolved from the description presented in the project specification (Appendix \ref{B}), outlining and justifying any changes made. The state in which the project is currently in will be shown, including a presentation of the work completed up to this point. This will included any design and project choices that have been made. The document will be finished with a timetabled plan of how the project will continue over the next term, up to completion.
 
 \section{Project Alterations}
 
@@ -95,9 +100,9 @@ A further breakdown of the objectives can be found by looking at the Gantt chart
 
 \subsection{Additional Changes}
 
-Aside from the adjustments made in the problem definition and objectives sections detailed above, only minimal changes have been made to the rest of the project specification. For example in the 'Methods' section the research phase can still be completed in parallel to the framework development phase, with all other objectives requiring the objective before it to be completed before it can be started. Furthermore, only minor changes been made to the 'Resources' section; a re-wording of the project components to account for the changes mentioned above and the addition of the Google application market place 'Google Play' to the list of resources. This is available through the internet, which I have full access to.
+Aside from the adjustments made in the problem definition and objectives sections detailed above, only minimal changes have been made to the rest of the project specification. For example in the 'Methods' section the research phase can still be completed in parallel to the framework development phase, with all other objectives requiring the objective before it to be completed before it can be started. Furthermore, only minor changes been made to the 'Resources' section; a re-wording of the project components to account for the changes mentioned above and the addition of the Google application market place 'Google Play'\cite{googleplay} to the list of resources. This is available through the internet, which I have full access to.
 
-A final addition to the specification that should be noted is the inclusion of another legal issue surrounding the project. The resulting product of this project facilitates the secure and secret communication of messages which, in the wrong hands, could be used to aid a number of illegal operations such as crime organisation or terrorism. To avoid this issue in a legal sense I will not publish the final application to the Google market place and I will also present a legal disclaimer attached to this product incase someone does obtain a copy of the application. The issue could also be viewed as an ethical issue, but the actions taken to escape the legal issue should ensure the avoidence of the issue viewed in an ethical sense. 
+A final addition to the specification that should be noted is the inclusion of another legal issue surrounding the project. The resulting product of this project facilitates the secure and secret communication of messages which, in the wrong hands, could be used to aid a number of illegal operations such as crime organisation or terrorism. To avoid this issue in a legal sense I will not publish the final application to the Google market place and I will also present a legal disclaimer attached to this product incase someone does obtain a copy of the application \cite{dataprotect}. The issue could also be viewed as an ethical issue, but the actions taken to escape the legal issue should ensure the avoidence of the issue viewed in an ethical sense. 
 
 \section{Work Completed}
 
@@ -112,10 +117,11 @@ In this project, the first task was to perform research (see Objectives section)
   \begin{description}
     \item[Framework Design] 
   \end{description}
-  Research was made into how a system could be set up to facilitate the communication of data messages between any two users of the system. Socket-based communication will allow networking between a central java based server and P.C client, whereas HTTP Post and broadcast-receiver methods will be used to allow the Android application to transfer and receive data from the server. The result of this research, to utilise a multi-client server \cite{ydanielliang}, can be found in the design section, where an outline of the system to be created is given.
+  Research was made into how a system could be set up to facilitate the communication of data messages between any two users of the system. Socket-based communication will allow networking between a central java based server and P.C client, whereas HTTP Post and broadcast-receiver methods will be used to allow the Android application to transfer and receive data from the server \cite{markogargenta}. The result of this research, to utilise a multi-client server \cite{ydanielliang}, can be found in the design section, where an outline of the system to be created is given.
   \item
   \begin{description}
     \item[Cryptographic Methods]
+    Research was completed using the books written by Wenbo Mao \cite{wenbomao} and William Stallings \cite{willstallings}.
   \end{description}
     \begin{itemize}
       \item
@@ -148,14 +154,14 @@ where M is the plaintext message and C is the ciphertext.
   As a result of searching on the Google application marketplace ‘Google Play’, only two different applications currently exist that perform encrypted message communication. These two applications are:
   \begin{itemize}
     \item RSA Cipher Cat by Miasoft \cite{rsaciphercat}
-    \item Cloak SMS Free by Hamish Medlin
+    \item Cloak SMS Free by Hamish Medlin \cite{cloacksms}
   \end{itemize}
   Both applications allow the communication of encrypted messages between two users of the application. RSA Cipher Cat utilises the RSA asymmetric encryption scheme whereas Cloak SMS Free is uses the AES symmetric key encryption scheme.
   \item
   \begin{description}
     \item[Mobile device application comparison factors] 
   \end{description}
-  As the third section of this project is concerned with the analysis and comparison of cryptographic schemes, research was performed to discover which factors impact how successful and useful an encryption scheme on a mobile device is. The discovered factors are:
+  As the third section of this project is concerned with the analysis and comparison of cryptographic schemes, research was performed to discover which factors impact how successful and useful an encryption scheme on a mobile device is. The discovered factors are, mostly found in a article by Nirav Jobanputra, \textit{et al} \cite{ejeta}:
   \begin{itemize}
     \item Difficulty of techniques required to break encryption
     \item Energy Consumption/Battery power required
@@ -196,7 +202,7 @@ The client class contains the methods which allow it to connect to the server an
 \label{fig:designs3}
 \end{figure}
 
-The encryption schemes used within this project all require the sharing of public keys. Figure~\ref{fig:designs3} shows how this will be achieved. The placeholder names Alice (User A), Bob (User B) and Trent (Trusted third-party server) have been used inkeeping with tradition set out by Bruce Schneier \cite{bruceschneier}.
+The encryption schemes used within this project all require the sharing of public keys. Figure~\ref{fig:designs3} shows how this will be achieved as described by Wenbo Mao \cite{wenbomao}. The placeholder names Alice (User A), Bob (User B) and Trent (Trusted third-party server) have been used inkeeping with tradition set out by Bruce Schneier \cite{bruceschneier}.
 
 \begin{enumerate}
   \item Alice registers her public key $ K_{A} $ with Trent
@@ -219,17 +225,17 @@ Once this protocol has been completed, each client has the other client’s publ
 
 \section{Project Management}
 
-As described in the project specification, various methods will be adopted to ensure that the project files (code, documentation etc) are constantly backed up and that version control is maintained. The free services of Dropbox and Git/Github have been set up and can be accessed from any computer or workstation that is used in this project, allowing a constant back up. These services allow a constant back up of data to an online server which will be initiated periodically. In addition to this an external flash drive has been dedicated to the task of providing a back up of data, as well as the Department of Computer Science machines. Bash scripts have been writen to make the back up of data to these services less time consuming.
+As described in the project specification, various methods will be adopted to ensure that the project files (code, documentation etc) are constantly backed up and that version control is maintained. The free services of Dropbox\cite{dropbox} and Git/Github\cite{github} have been set up and can be accessed from any computer or workstation that is used in this project, allowing a constant back up. These services allow a constant back up of data to an online server which will be initiated periodically. In addition to this an external flash drive has been dedicated to the task of providing a back up of data, as well as the Department of Computer Science machines. Bash scripts have been writen to make the back up of data to these services less time consuming.
 
 For documentation, the document preparation system LaTeX will be used. This is because LaTeX allows the inclusion of mathematics into a document in a simple and easy to use way with high typographical quality, which will be extremely beneficial in this project. 
 
-As for the software development section of this project the technique of test driven development in a plan-driven setting will be employed. Plan-driven development is clearly the best choice due to the nature of this project. The other option, agile development, is best suited for a project with a dedicated customer, such that constant communication can be maintained. It also encourages the constant evolution of a system due to changing ideas or specifications and restricts the amount of documentation created. Plan-driven development, on the other hand, has a set plan for development which it follows to produce the end product and a firm set of documentation. 
+As for the software development section of this project the technique of test driven development in a plan-driven setting will be employed as described by Ian Sommerville \cite{iansommerville}. Plan-driven development is clearly the best choice due to the nature of this project. The other option, agile development, is best suited for a project with a dedicated customer, such that constant communication can be maintained. It also encourages the constant evolution of a system due to changing ideas or specifications and restricts the amount of documentation created. Plan-driven development, on the other hand, has a set plan for development which it follows to produce the end product and a firm set of documentation. 
 
 Test-driven development combines testing and development. Code is developed incrementally, along with a set of tests for that increment. The next increment is not started until the previous increment is fully tested and completed. In the context of this project, the implementation of the cryptographic schemes will not be started until the multi-client server is set up and can transfer data, for example. 
 
 \section{Project Continuation Plan}
 
-A timetable showing the completion dates of main events and milestones in this project, starting from the hand in date of this document, is presented below.
+A timetable showing the completion dates of main events and milestones in this project, starting from the hand in date of this document, is presented below. Please refer to Appendix \ref{A} for a Gantt chart showing a more detailed plan.
 
 \begin{table}[htbp]
 \begin{tabular}{|c|c|}
@@ -264,7 +270,15 @@ Easter Break - Week 5 &  \\ \hline
 \end{table}
 
 
+\appendix
+\section{Gantt Chart}\label{A}
+\includegraphics[scale=0.45, angle=270]{ProgReportChart.jpg}
 
+\section{Project Specification}\label{B}
+\includepdf[pages={1,2,3}]{projspec1}
+\newpage
+
+\bibliography{projectbib}
 
 
 \end{document}

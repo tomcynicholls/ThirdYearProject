@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.11.15)  25 NOV 2012 22:59
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.11.15)  26 NOV 2012 08:59
 entering extended mode
  %&-line parsing enabled.
 **progressreport.tex
@@ -489,10 +489,10 @@ LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <10.95> not available
  [3] [4] [5]
 <designs1.jpg, id=26, 654.445pt x 262.9825pt>
 File: designs1.jpg Graphic file (type jpg)
- <use designs1.jpg>
-<designs2.jpg, id=27, 691.58376pt x 264.99pt>
+ <use designs1.jpg> [6]
+<designs2.jpg, id=31, 691.58376pt x 264.99pt>
 File: designs2.jpg Graphic file (type jpg)
- <use designs2.jpg> [6]
+ <use designs2.jpg>
 <designs3.jpg, id=32, 715.67375pt x 634.37pt>
 File: designs3.jpg Graphic file (type jpg)
  <use designs3.jpg> [7 <./designs1.jpg> <./designs2.jpg>] [8 <./designs3.jpg>] 
@@ -538,19 +538,15 @@ LaTeX Font Info:    Try loading font information for T1+lmtt on input line 5.
 (/usr/share/texmf/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2009/10/30 v1.6 Font defs for Latin Modern
 )
-Underfull \hbox (badness 7397) in paragraph at lines 31--35
-[]\T1/lmr/m/n/10.95 Google Play. RSA Ci-pher Cat by Mi-a-soft; 2011.  [On-
+Underfull \hbox (badness 6236) in paragraph at lines 37--41
+[]\T1/lmr/m/n/10.95 Medlin H. Cloak SMS Free; 2011.  [On-line](URL $\T1/lmtt/m/
+n/10.95 https :
  []
 
 
-Underfull \hbox (badness 1715) in paragraph at lines 31--35
-\T1/lmr/m/n/10.95 line](URL $\T1/lmtt/m/n/10.95 https : / / play . google . com
- / store / apps / details ? id = jp .
- []
-
-
-Underfull \hbox (badness 1009) in paragraph at lines 37--41
-[]\T1/lmr/m/n/10.95 Google Play. Cloak SMS Free by Hamish Medlin; 2011.  [On-
+Underfull \hbox (badness 10000) in paragraph at lines 37--41
+\T1/lmtt/m/n/10.95 / / play . google . com / store / apps / details ? id = sms 
+. encryptor .
  []
 
 ) [16] (./progressreport.aux) ) 
@@ -561,7 +557,7 @@ Here is how much of TeX's memory you used:
  6070 multiletter control sequences out of 15000+50000
  44915 words of font info for 38 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 32i,16n,37p,1042b,393s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,16n,37p,1221b,393s stack positions out of 5000i,500n,10000p,200000b,50000s
 {/usr/share/texmf/fonts/enc/dvips/lm/lm-ec.enc}{
 /usr/share/texmf/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texmf/fonts/enc/dvips
 /lm/lm-mathsy.enc}{/usr/share/texmf/fonts/enc/dvips/lm/lm-mathit.enc}</usr/shar
@@ -573,7 +569,7 @@ mf/fonts/type1/public/lm/lmmi8.pfb></usr/share/texmf/fonts/type1/public/lm/lmr1
 sr/share/texmf/fonts/type1/public/lm/lmri10.pfb></usr/share/texmf/fonts/type1/p
 ublic/lm/lmsy10.pfb></usr/share/texmf/fonts/type1/public/lm/lmsy8.pfb></usr/sha
 re/texmf/fonts/type1/public/lm/lmtt10.pfb>
-Output written on progressreport.pdf (16 pages, 519199 bytes).
+Output written on progressreport.pdf (16 pages, 519267 bytes).
 PDF statistics:
  152 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

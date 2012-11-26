@@ -5,7 +5,7 @@
 \contentsline {paragraph}{Main Objectives}{3}
 \contentsline {paragraph}{Secondary Objectives}{4}
 \contentsline {subsection}{\numberline {2.3}Additional Changes}{4}
-\contentsline {section}{\numberline {3}Work Completed}{4}
+\contentsline {section}{\numberline {3}Work Completed}{5}
 \contentsline {subsection}{\numberline {3.1}Research}{5}
 \contentsline {subsection}{\numberline {3.2}Design}{6}
 \contentsline {section}{\numberline {4}Project Management}{9}
