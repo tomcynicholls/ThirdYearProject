@@ -36,29 +36,33 @@
 <part id="1"/>
 <part id="0"/>
 <part id="2"/>
+<part id="3"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
 <editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" partName="Client.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/ThirdYearProject/src/Client.java" title="Client.java" tooltip="ThirdYearProject/src/Client.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ThirdYearProject/src/Client.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1298" selectionTopPixel="401"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="324" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Server.java" partName="Server.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/ThirdYearProject/src/Server.java" title="Server.java" tooltip="ThirdYearProject/src/Server.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ThirdYearProject/src/Server.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="1480" selectionOffset="0" selectionTopPixel="131"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="767" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MultiThreadServer.java" partName="MultiThreadServer.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/ThirdYearProject/src/MultiThreadServer.java" title="MultiThreadServer.java" tooltip="ThirdYearProject/src/MultiThreadServer.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ThirdYearProject/src/MultiThreadServer.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1284" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1695" selectionTopPixel="806"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XmlWriter.java" partName="XmlWriter.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/ThirdYearProject/src/XmlWriter.java" title="XmlWriter.java" tooltip="ThirdYearProject/src/XmlWriter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/ThirdYearProject/src/XmlWriter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2406" selectionTopPixel="620"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Errors"/>
-<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Warnings (3 items)"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -276,160 +280,163 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ThirdYearProject/src/Client.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ThirdYearProject/src/Server.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ThirdYearProject/src/Server.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ThirdYearProject/src/XmlTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ThirdYearProject/src/XmlWriter.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ThirdYearProject/src/MultiThreadServer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ThirdYearProject/src/MultiThreadServer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ThirdYearProject/src/Client.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/ThirdYearProject/src/XmlWriter.java"/>
 </editors>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="559" y="0"/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position info="not_deleted" x="1824" y="0"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="225" y="0"/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position info="not_deleted" x="1824" y="0"/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Server.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position info="not_deleted" x="866" y="0"/>
-</item>
-<item historyLabel="Server.java" index="2">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2647" y="0"/>
-</item>
-<item historyLabel="Server.java" index="2">
-<position info="not_deleted" x="0" y="1480"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2647" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="908" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1035" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1014" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1027" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1034" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1035" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2647" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1206" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1234" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1241" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2647" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1269" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1341" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1333" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1340" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1444" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1495" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2647" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1616" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1923" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2059" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2060" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2146" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2203" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2289" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2442" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2513" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2569" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2560" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2561" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2599" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2627" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="2638" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1494" y="0"/>
-</item>
-<item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1503" y="0"/>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="825" y="83"/>
 </item>
 <item historyLabel="MultiThreadServer.java" index="3">
 <position info="not_deleted" x="1284" y="0"/>
 </item>
-<item historyLabel="Client.java" index="0">
-<position info="not_deleted" x="182" y="0"/>
+<item historyLabel="MultiThreadServer.java" index="3">
+<position info="not_deleted" x="2750" y="0"/>
+</item>
+<item historyLabel="XmlTest.java" index="1">
+<position info="not_deleted" x="1314" y="0"/>
 </item>
 <item historyLabel="MultiThreadServer.java" index="3">
-<position info="not_deleted" x="1284" y="0"/>
+<position info="not_deleted" x="2750" y="0"/>
 </item>
-<item active="true" historyLabel="Client.java" index="0">
-<position info="not_deleted" x="182" y="0"/>
+<item historyLabel="XmlWriter.java" index="2">
+<position info="not_deleted" x="633" y="0"/>
+</item>
+<item historyLabel="XmlWriter.java" index="2">
+<position info="not_deleted" x="2527" y="0"/>
+</item>
+<item historyLabel="XmlWriter.java" index="2">
+<position info="not_deleted" x="2487" y="0"/>
+</item>
+<item historyLabel="XmlWriter.java" index="2">
+<position info="not_deleted" x="1665" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="913" y="0"/>
+</item>
+<item historyLabel="MultiThreadServer.java" index="3">
+<position info="not_deleted" x="2750" y="0"/>
+</item>
+<item historyLabel="XmlWriter.java" index="2">
+<position info="not_deleted" x="547" y="60"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="913" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position/>
+</item>
+<item historyLabel="XmlWriter.java" index="2">
+<position info="not_deleted" x="547" y="60"/>
+</item>
+<item historyLabel="XmlWriter.java" index="2">
+<position info="not_deleted" x="850" y="0"/>
+</item>
+<item historyLabel="XmlWriter.java" index="2">
+<position info="not_deleted" x="1353" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position/>
+</item>
+<item historyLabel="XmlWriter.java" index="2">
+<position info="not_deleted" x="1353" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="789" y="4"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="787" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="789" y="4"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="719" y="0"/>
+</item>
+<item historyLabel="XmlWriter.java" index="2">
+<position info="not_deleted" x="1353" y="0"/>
+</item>
+<item historyLabel="MultiThreadServer.java" index="3">
+<position info="not_deleted" x="2750" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="719" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="913" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="141" y="0"/>
+</item>
+<item historyLabel="XmlWriter.java" index="2">
+<position info="not_deleted" x="1353" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="141" y="0"/>
+</item>
+<item historyLabel="MultiThreadServer.java" index="4">
+<position info="not_deleted" x="2783" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="1077" y="0"/>
+</item>
+<item historyLabel="Client.java" index="5">
+<position info="not_deleted" x="1298" y="0"/>
+</item>
+<item historyLabel="XmlWriter.java" index="6">
+<position info="not_deleted" x="1353" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="1077" y="0"/>
+</item>
+<item historyLabel="MultiThreadServer.java" index="4">
+<position info="not_deleted" x="2338" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="1077" y="0"/>
+</item>
+<item historyLabel="XmlWriter.java" index="6">
+<position info="not_deleted" x="2406" y="0"/>
+</item>
+<item historyLabel="Server.java" index="0">
+<position info="not_deleted" x="767" y="0"/>
+</item>
+<item historyLabel="MultiThreadServer.java" index="4">
+<position info="not_deleted" x="2338" y="0"/>
+</item>
+<item historyLabel="MultiThreadServer.java" index="4">
+<position info="not_deleted" x="2679" y="0"/>
+</item>
+<item historyLabel="MultiThreadServer.java" index="4">
+<position info="not_deleted" x="2825" y="0"/>
+</item>
+<item historyLabel="MultiThreadServer.java" index="4">
+<position info="not_deleted" x="2834" y="0"/>
+</item>
+<item historyLabel="MultiThreadServer.java" index="4">
+<position info="not_deleted" x="2612" y="0"/>
+</item>
+<item historyLabel="Client.java" index="5">
+<position info="not_deleted" x="1298" y="0"/>
+</item>
+<item historyLabel="XmlWriter.java" index="6">
+<position info="not_deleted" x="2406" y="0"/>
+</item>
+<item historyLabel="MultiThreadServer.java" index="4">
+<position info="not_deleted" x="1695" y="0"/>
+</item>
+<item active="true" historyLabel="Client.java" index="5">
+<position info="not_deleted" x="1298" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -437,9 +444,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@fe2254a"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 <trimItem IMemento.internal.id="org.eclipse.mylyn.tasks.ui.trim.container"/>
@@ -452,6 +456,12 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="xmlwriter.java" tooltip="ThirdYearProject/src/xmlwriter.java">
+<persistable path="/ThirdYearProject/src/xmlwriter.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XmlTest.java" tooltip="ThirdYearProject/src/XmlTest.java">
+<persistable path="/ThirdYearProject/src/XmlTest.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MultiThreadServer.java" tooltip="ThirdYearProject/src/MultiThreadServer.java">
 <persistable path="/ThirdYearProject/src/MultiThreadServer.java"/>
 </file>

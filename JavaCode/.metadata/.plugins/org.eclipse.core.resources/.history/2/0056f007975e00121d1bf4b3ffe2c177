@@ -28,13 +28,9 @@ public class Server extends JFrame {
 			jta.append("Server started at " + new Date() + '\n');
 			
 			String test = "test";
-			String testa = "tom";
-			String testb = "liz";
-			String testc = "yyy";
 			
 			XmlWriter writer = new XmlWriter();
-			writer.WriteToFile(test,testa,testb,testc);
-			
+			writer.WriteToFile(test);
 			
 			//listen for a connection request
 			Socket socket = serverSocket.accept();

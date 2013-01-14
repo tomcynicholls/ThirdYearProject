@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename compilation unit &apos;xmlwriter.java&apos; to &apos;XmlWriter.java&apos;&#x0D;&#x0A;- Original project: &apos;ThirdYearProject&apos;&#x0D;&#x0A;- Original element: &apos;xmlwriter.java&apos;&#x0D;&#x0A;- Renamed element: &apos;XmlWriter.java&apos;" description="Rename compilation unit &apos;xmlwriter.java&apos;" flags="2" id="org.eclipse.jdt.ui.rename.compilationunit" input="/src&lt;{xmlwriter.java" name="XmlWriter.java" references="false" stamp="1358200070821" version="1.0"/>
+</session>

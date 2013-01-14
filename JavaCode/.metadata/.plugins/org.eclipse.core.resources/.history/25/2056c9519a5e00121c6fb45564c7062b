@@ -90,12 +90,12 @@ class HandleAClient implements Runnable {
 				
 				XmlWriter writer = new XmlWriter();
 				String strradius = Double.toString(radius);
-				writer.WriteToFile(strradius,"client","server","clientserver");
+				writer.WriteToFile(strradius);
 				
 				jta.append("Area found: " + area + '\n');
 				
 				String strarea = Double.toString(area);
-				writer.WriteToFile(strarea,"server","client","serverclient");
+				writer.WriteToFile(strarea);
 				}
 			}
 		catch(IOException e) {
