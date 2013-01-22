@@ -1,21 +1,21 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="17" version="2.0">
 <workbenchAdvisor/>
-<window height="768" maximized="true" width="1024" x="2086" y="-19">
+<window height="768" maximized="true" width="1024" x="326" y="256">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
 </perspectiveBar>
 <coolbarLayout>
 <coolItem id="group.file" itemType="typeGroupMarker"/>
-<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="153" y="22"/>
+<coolItem id="org.eclipse.ui.workbench.file" itemType="typeToolBarContribution" x="122" y="22"/>
 <coolItem id="additions" itemType="typeGroupMarker"/>
 <coolItem id="adt.actionSet.avdManager" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="adt.actionSet.lint" itemType="typeToolBarContribution" x="53" y="22"/>
 <coolItem id="adt.actionSet.wizards" itemType="typeToolBarContribution" x="38" y="22"/>
 <coolItem id="com.android.ide.eclipse.editors.layout.LayoutEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
-<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="org.eclipse.jdt.ui.CompilationUnitEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.jdt.ui.JavaElementCreationActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
@@ -36,10 +36,36 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+</presentation>
 </folder>
 </info>
 </editorArea>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" partName="Client.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/Client.java" title="Client.java" tooltip="TwoWayXmlSend/src/Client.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/Client.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1980" selectionTopPixel="251"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Server.java" partName="Server.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/Server.java" title="Server.java" tooltip="TwoWayXmlSend/src/Server.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/Server.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2118" selectionTopPixel="450"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XmlWriter.java" partName="XmlWriter.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/XmlWriter.java" title="XmlWriter.java" tooltip="TwoWayXmlSend/src/XmlWriter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/XmlWriter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="78" selectionOffset="658" selectionTopPixel="30"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XmlManip.java" partName="XmlManip.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/XmlManip.java" title="XmlManip.java" tooltip="TwoWayXmlSend/src/XmlManip.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/XmlManip.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1396" selectionTopPixel="150"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ShowMessageXml.java" partName="ShowMessageXml.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/ShowMessageXml.java" title="ShowMessageXml.java" tooltip="TwoWayXmlSend/src/ShowMessageXml.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/ShowMessageXml.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="595" selectionTopPixel="0"/>
+</editor>
 </editors>
 <views>
 <view id="com.android.ide.eclipse.ddms.views.LogCatView" partName="LogCat">
@@ -91,9 +117,11 @@
 <view id="org.eclipse.jdt.ui.SourceView" partName="Declaration">
 <viewState/>
 </view>
-<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc"/>
+<view id="org.eclipse.jdt.ui.JavadocView" partName="Javadoc">
+<viewState/>
+</view>
 </views>
-<perspectives activePart="org.eclipse.jdt.ui.PackageExplorer" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -189,7 +217,7 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.25" ratioLeft="250" ratioRight="750" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.7496136" ratioLeft="485" ratioRight="162" relationship="4" relative="org.eclipse.ui.editorss">
+<info folder="true" part="bottom" ratio="0.8261803" ratioLeft="770" ratioRight="162" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
@@ -232,7 +260,167 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/Client.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/Server.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/XmlWriter.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/XmlManip.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/ShowMessageXml.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/GossipServer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/ShowMessageXml.java"/>
+</editors>
+<item historyLabel="ShowMessageXml.java" index="4">
+<position info="not_deleted" x="1009" y="0"/>
+</item>
+<item historyLabel="XmlWriter.java" index="2">
+<position info="not_deleted" x="1910" y="0"/>
+</item>
+<item historyLabel="ShowMessageXml.java" index="4">
+<position info="not_deleted" x="1009" y="0"/>
+</item>
+<item historyLabel="ShowMessageXml.java" index="4">
+<position info="not_deleted" x="1019" y="139"/>
+</item>
+<item historyLabel="XmlWriter.java" index="2">
+<position info="not_deleted" x="1910" y="0"/>
+</item>
+<item historyLabel="ShowMessageXml.java" index="4">
+<position info="not_deleted" x="811" y="0"/>
+</item>
+<item historyLabel="XmlWriter.java" index="2">
+<position info="not_deleted" x="1910" y="0"/>
+</item>
+<item historyLabel="ShowMessageXml.java" index="4">
+<position info="not_deleted" x="318" y="916"/>
+</item>
+<item historyLabel="XmlManip.java" index="3">
+<position info="not_deleted" x="1122" y="138"/>
+</item>
+<item historyLabel="ShowMessageXml.java" index="4">
+<position info="not_deleted" x="989" y="0"/>
+</item>
+<item historyLabel="XmlManip.java" index="3">
+<position/>
+</item>
+<item historyLabel="ShowMessageXml.java" index="4">
+<position info="not_deleted" x="989" y="0"/>
+</item>
+<item historyLabel="XmlManip.java" index="3">
+<position/>
+</item>
+<item historyLabel="ShowMessageXml.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="XmlManip.java" index="3">
+<position info="not_deleted" x="392" y="0"/>
+</item>
+<item historyLabel="XmlWriter.java" index="2">
+<position info="not_deleted" x="1910" y="0"/>
+</item>
+<item historyLabel="XmlManip.java" index="3">
+<position info="not_deleted" x="316" y="0"/>
+</item>
+<item historyLabel="ShowMessageXml.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ShowMessageXml.java" index="4">
+<position info="not_deleted" x="596" y="0"/>
+</item>
+<item historyLabel="XmlManip.java" index="3">
+<position info="not_deleted" x="359" y="0"/>
+</item>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="1137" y="0"/>
+</item>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="1453" y="0"/>
+</item>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="2118" y="0"/>
+</item>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="1453" y="0"/>
+</item>
+<item historyLabel="XmlManip.java" index="3">
+<position info="not_deleted" x="967" y="0"/>
+</item>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="1453" y="0"/>
+</item>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="1652" y="0"/>
+</item>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="1477" y="0"/>
+</item>
+<item historyLabel="XmlManip.java" index="3">
+<position info="not_deleted" x="967" y="0"/>
+</item>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="2118" y="0"/>
+</item>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="1477" y="0"/>
+</item>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="2118" y="0"/>
+</item>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="1922" y="0"/>
+</item>
+<item historyLabel="XmlManip.java" index="3">
+<position info="not_deleted" x="967" y="0"/>
+</item>
+<item historyLabel="XmlManip.java" index="3">
+<position info="not_deleted" x="1396" y="0"/>
+</item>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="2118" y="0"/>
+</item>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="1922" y="0"/>
+</item>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="2118" y="0"/>
+</item>
+<item historyLabel="XmlManip.java" index="3">
+<position info="not_deleted" x="1396" y="0"/>
+</item>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="2118" y="0"/>
+</item>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="1922" y="0"/>
+</item>
+<item historyLabel="GossipServer.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="1922" y="0"/>
+</item>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="1896" y="0"/>
+</item>
+<item historyLabel="XmlWriter.java" index="2">
+<position info="not_deleted" x="658" y="78"/>
+</item>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="2118" y="0"/>
+</item>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="1679" y="0"/>
+</item>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="2118" y="0"/>
+</item>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="1679" y="0"/>
+</item>
+<item active="true" historyLabel="ShowMessageXml.java" index="6">
+<position info="not_deleted" x="595" y="0"/>
+</item>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -253,20 +441,32 @@
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GossipServer.java" tooltip="TwoWayXmlSend/src/GossipServer.java">
 <persistable path="/TwoWayXmlSend/src/GossipServer.java"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ShowMessageXml.java" tooltip="TwoWayXmlSend/src/ShowMessageXml.java">
+<persistable path="/TwoWayXmlSend/src/ShowMessageXml.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XmlManip.java" tooltip="TwoWayXmlSend/src/XmlManip.java">
+<persistable path="/TwoWayXmlSend/src/XmlManip.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XmlWriter.java" tooltip="TwoWayXmlSend/src/XmlWriter.java">
+<persistable path="/TwoWayXmlSend/src/XmlWriter.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FileClient.java" tooltip="TwoWayXmlSend/src/FileClient.java">
+<persistable path="/TwoWayXmlSend/src/FileClient.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Server.java" tooltip="TwoWayXmlSend/src/Server.java">
+<persistable path="/TwoWayXmlSend/src/Server.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" tooltip="TwoWayXmlSend/src/Client.java">
+<persistable path="/TwoWayXmlSend/src/Client.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="GossipClient.java" tooltip="TwoWayXmlSend/src/GossipClient.java">
 <persistable path="/TwoWayXmlSend/src/GossipClient.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XmlWriter.java" tooltip="ServerClient/src/XmlWriter.java">
 <persistable path="/ServerClient/src/XmlWriter.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Server.java" tooltip="TwoWayXmlSend/src/Server.java">
-<persistable path="/TwoWayXmlSend/src/Server.java"/>
-</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.DefaultTextEditor" name="Server" tooltip="TwoWayXmlSend/src/Server">
 <persistable path="/TwoWayXmlSend/src/Server"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" tooltip="TwoWayXmlSend/src/Client.java">
-<persistable path="/TwoWayXmlSend/src/Client.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" tooltip="TwoWayXmlSend/Client.java">
 <persistable path="/TwoWayXmlSend/Client.java"/>
@@ -282,18 +482,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="MultiThreadServer.java" tooltip="ServerClient/src/MultiThreadServer.java">
 <persistable path="/ServerClient/src/MultiThreadServer.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SendFile.java" tooltip="Testing/src/SendFile.java">
-<persistable path="/Testing/src/SendFile.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TCPServer.java" tooltip="Testing/src/TCPServer.java">
-<persistable path="/Testing/src/TCPServer.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TCPClient.java" tooltip="Testing/src/TCPClient.java">
-<persistable path="/Testing/src/TCPClient.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ViewXmlWriter.java" tooltip="App/src/com/thirdyearproject/app/ViewXmlWriter.java">
-<persistable path="/App/src/com/thirdyearproject/app/ViewXmlWriter.java"/>
 </file>
 </mruList>
 </workbench>
