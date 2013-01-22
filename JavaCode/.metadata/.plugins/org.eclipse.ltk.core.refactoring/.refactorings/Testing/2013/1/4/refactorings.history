@@ -1,0 +1,3 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">&#x0A;<refactoring comment="Rename resource &apos;Testing/src/TCPClient&apos; to &apos;TCPClient.java&apos;" description="Rename resource &apos;TCPClient&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/TCPClient" name="TCPClient.java" stamp="1358781996759" updateReferences="true"/>&#x0A;<refactoring comment="Rename resource &apos;Testing/src/TCPServer&apos; to &apos;TCPServer.java&apos;" description="Rename resource &apos;TCPServer&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/TCPServer" name="TCPServer.java" stamp="1358782007499" updateReferences="true"/>
+</session>

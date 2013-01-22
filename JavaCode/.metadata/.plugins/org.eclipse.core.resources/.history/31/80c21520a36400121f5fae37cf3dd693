@@ -1,0 +1,15 @@
+
+public class XmlManip {
+
+	
+	public XmlManip(){
+		
+	}
+	
+	public String returnMsg(String filepath) {
+		
+		//Document doc = 
+				return "yes";
+		
+	}
+}

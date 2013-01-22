@@ -1,0 +1,12 @@
+public class ReceiveFile {
+	
+	public ReceiveFile() {
+		
+	}
+	
+	public void ReceiveAFile() {
+		
+		
+	}
+	
+}

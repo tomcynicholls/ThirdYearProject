@@ -1,8 +1,24 @@
-import java.io.*;
-import java.net.*;
-import java.awt.*;
-import java.awt.event.*;
-import javax.swing.*;
+import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.Socket;
+
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+import javax.swing.JTextField;
 
 public class Client extends JFrame {
 	//Text field for receiving radius
@@ -12,8 +28,8 @@ public class Client extends JFrame {
 	private JTextArea jta = new JTextArea();
 	
 	//IOStreams
-	private DataOutputStream toServer;
-	private DataInputStream fromServer;
+	private OutputStream toServer;
+	private InputStream fromServer;
 	
 	public static void main(String[] args) {
 		new Client();
@@ -40,13 +56,13 @@ public class Client extends JFrame {
 		
 		try {
 			//create a socket to connect to the server
-			Socket socket = new Socket("192.168.1.11", 8000);
+			Socket socket = new Socket("localhost", 8000);
 			
 			//create an input stream to receive data from the server
-			fromServer = new DataInputStream(socket.getInputStream());
+			fromServer = socket.getInputStream();
 			
 			//create an output stream to send data to the server
-			toServer = new DataOutputStream(socket.getOutputStream());
+			toServer = socket.getOutputStream();
 		}
 		catch (IOException ex) {
 			jta.append(ex.toString() + '\n');
@@ -55,24 +71,70 @@ public class Client extends JFrame {
 	
 	private class ButtonListener implements ActionListener {
 		public void actionPerformed(ActionEvent e) {
+			while (true) {
 			try {
 				//get the radius from the text field
 				double radius = Double.parseDouble(jtf.getText().trim());
+				byte[] aByte = new byte[1];
+		        int bytesRead;
 				
-				//send the radius to the server
-				toServer.writeDouble(radius);
-				toServer.flush();
-				
+				//RECEIVE FILE FROM SERVER
+				ByteArrayOutputStream baos = new ByteArrayOutputStream();
+
+		            FileOutputStream fos = null;
+		            BufferedOutputStream bos = null;
+		           
+		                fos = new FileOutputStream("C:\\Users/Tom/TestDoc/yyyFromServer.xml");
+		                bos = new BufferedOutputStream(fos);
+		                bytesRead = fromServer.read(aByte, 0, aByte.length);
+
+		                do {
+		                        baos.write(aByte);
+		                        bytesRead = fromServer.read(aByte);
+		                } while (bytesRead != -1);
+
+		                bos.write(baos.toByteArray());
+		                bos.flush();
+		                bos.close();
+		                
+		         //SEND FILE TO SERVER
+		               /* File myFile = new File("C:\\Users/Tom/TestDoc/xxx.xml");
+		                byte[] mybytearray = new byte[(int) myFile.length()];
+
+		                FileInputStream fis = null;
+
+		                try {
+		                    fis = new FileInputStream(myFile);
+		                } catch (FileNotFoundException ex) {
+		                    // Do exception handling
+		                }
+		                BufferedInputStream bis = new BufferedInputStream(fis);
+
+		                try {
+		                    bis.read(mybytearray, 0, mybytearray.length);
+		                    toServer.write(mybytearray, 0, mybytearray.length);
+		                    toServer.flush();
+		                    //toServer.close();
+		                    
+
+		                    // File sent, exit the main method
+		                    return;
+		                } catch (IOException ex) {
+		                    // Do exception handling
+		                }      
+		           
+				*/
 				//get area from the server
-				double area = fromServer.readDouble();
+				//double area = fromServer.readDouble();
 				
 				//display to the text area
-				jta.append("Radius is " + radius + '\n');
-				jta.append("Area recieved from the server is " + area + '\n');	
+				//jta.append("Radius is " + radius + '\n');
+				//jta.append("Area recieved from the server is " + area + '\n');	
 			}
 			catch (IOException ex) {
 				System.err.println(ex);
 			}
+		}
 		}
 	}	
 }

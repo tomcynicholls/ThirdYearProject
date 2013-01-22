@@ -71,18 +71,40 @@ class HandleAClient implements Runnable {
 	//run a thread
 	public void run() {
 		try {
+			System.out.println("here1");
+			long start = System.currentTimeMillis();
+			int current = 0;
+			int bytesRead;
 			//create data input and output streams
-			DataInputStream inputFromClient = new DataInputStream(socket.getInputStream());
-			DataOutputStream outputToClient = new DataOutputStream(socket.getOutputStream());
-			
-			//continuosly serve the client
+			InputStream inputFromClient = socket.getInputStream();
+			OutputStream outputToClient = socket.getOutputStream();
+			System.out.println("here2");
+			//set up reading input from client into file
+			byte[] mybytearray = new byte[6022386];
+			FileOutputStream fos = new FileOutputStream("C:\\Users/Tom/TestDoc/source-copy.xml");
+			BufferedOutputStream bos = new BufferedOutputStream(fos);
+			bytesRead = inputFromClient.read(mybytearray,0,mybytearray.length);
+			current = bytesRead;
+			System.out.println("here3");
+			//write input into file byte by byte
 			while(true) {
-				//recieve radius from client
-				double radius = inputFromClient.readDouble();
-				
-				//compute area
-				double area = radius * radius * Math.PI;
-				
+				 while (bytesRead > -1) {
+					 	System.out.print("1");
+					 	
+				       bytesRead = inputFromClient.read(mybytearray, current, ((mybytearray.length)-current));
+				       if(bytesRead >= 0) current += bytesRead;
+				    }
+			
+			//clean up stream for file
+				 System.out.println("here4");
+			bos.write(mybytearray, 0 , current);
+			bos.flush();
+			long end = System.currentTimeMillis();
+			System.out.println("here5");
+			System.out.println(end-start);
+			bos.close();
+			
+			/*
 				//send area back to the client
 				outputToClient.writeDouble(area);
 				
@@ -96,6 +118,7 @@ class HandleAClient implements Runnable {
 				
 				String strarea = Double.toString(area);
 				writer.WriteToFile(strarea,"server","client","serverclient");
+				*/
 				}
 			}
 		catch(IOException e) {
