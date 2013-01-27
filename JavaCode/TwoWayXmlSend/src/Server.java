@@ -1,5 +1,15 @@
-import java.net.*;
-import java.io.*;
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.InetAddress;
+import java.net.ServerSocket;
+import java.net.Socket;
+import java.util.Date;
 
 public class Server {
   public static void main (String [] args ) throws IOException {
@@ -10,7 +20,7 @@ public class Server {
     int filesize=6022386; // filesize temporary hardcoded
 
     //create array to temporarily store sending message filenames
-    String[] filenamestore = new String[5];
+    String[] filenamestore = new String[30];
     //create xml writer
     XmlWriter xmlwriter = new XmlWriter();
     
@@ -31,10 +41,21 @@ public class Server {
 
       Socket sock = servsock.accept();
       System.out.println("Accepted connection : " + sock);
-
+      
+      //server gets clients ip address
+      InetAddress inetAddress = sock.getInetAddress();
+      String stringip = inetAddress.getHostAddress();
+     int arraypos = returnArrayPos(stringip);
+      
+      System.out.println("IP Address is: " + stringip + " Array assignment " + arraypos);
+      
+      //if the user has no message (first time connecting) associate no message file with client
+      if (filenamestore[arraypos] == null) {
+    	  filenamestore[arraypos] = "nomessagefile.xml";
+      }
       
    // sendfile
-	String filepath = pathwaystart.concat(filenamestore[1]);
+	String filepath = pathwaystart.concat(filenamestore[arraypos]);
     File myFile = new File (filepath);
       byte [] mybytearray  = new byte [(int)myFile.length()];
       FileInputStream fis = new FileInputStream(myFile);
@@ -44,17 +65,27 @@ public class Server {
       System.out.println("Sending...");
       os.write(mybytearray,0,mybytearray.length);
       os.flush();
-      //add in to try and fix
-      //os.close();
-      //fis.close();
-      //bis.close();
-      //os.flush();
-      //sock.close();
+      
+      //message sent so replace with no message file association
+      filenamestore[arraypos] = "nomessagefile.xml";
       
       //receive file
+      //create file name in format: from ip address date and time
+      	String from = "from ";
+      	Date date = new Date();
+      	String sdate = date.toString();
+      	String rsdate = sdate.replaceAll(":"," ");
+      	String fromip = from.concat(stringip);
+      	String filename = fromip.concat(rsdate);
+      	
+      	String fromfilepath = filename.concat(".xml");
+      	String path = pathwaystart.concat(fromfilepath);
+		System.out.println(path);
+      
+      
       byte [] mybytearray2  = new byte [filesize];
       InputStream is = sock.getInputStream();
-      FileOutputStream fos = new FileOutputStream("C:\\Users/Tom/TestDoc/fromclient.xml");
+      FileOutputStream fos = new FileOutputStream(path);
       BufferedOutputStream bos = new BufferedOutputStream(fos);
       bytesRead = is.read(mybytearray2,0,mybytearray2.length);
       current = bytesRead;
@@ -72,10 +103,27 @@ public class Server {
       bos.close();
       sock.close();
       
-      //save received filename
-      filenamestore[1] = "fromclient.xml";
+      //server reads ip address from file
+      XmlManip xmlmanip = new XmlManip();
+      String returnedresult = xmlmanip.returnRequired(path,"receiver");
+      System.out.println("receiver is:" + returnedresult); 
+     
+      //and saves filename in appropriate array position
+      int rpos = returnArrayPos(returnedresult);
+      filenamestore[rpos] = fromfilepath;
       
        
       }
    }
+  //strip the last digits of the ip address and return
+  public static int returnArrayPos(String ip){
+	 //probably have to change this value for across the network
+	  //localhost - 8 otherwise 10	
+	  String sub = ip.substring(10);
+	    int arraypos = Integer.parseInt(sub);
+	    
+	    return arraypos;
+	  
+  }
+  
 }

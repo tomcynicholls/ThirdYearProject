@@ -43,7 +43,6 @@ public String returnRequired(String filepath, String required) {
 					Element eElement = (Element) nNode;
 		 
 					returnrequired = eElement.getElementsByTagName(required).item(0).getTextContent();
-					System.out.println("Message : " + returnrequired);
 					
 				}
 			}
