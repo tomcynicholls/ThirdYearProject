@@ -50,17 +50,14 @@ public class DisplayMessageActivity extends Activity {
     }
     
     /** Called when the user clicks the Send button */
-    public void returnButton(View view) {
-    	//changed to return instead of show xml using below code
-    	/*Intent intent = new Intent(this, ViewXmlWriter.class);
+    public void sendMessage(View view) {
+    	Intent intent = new Intent(this, ViewXmlWriter.class);
     	String message = ((TextView)findViewById(R.id.show_message)).getText().toString();
     	String mreceiver = ((TextView)findViewById(R.id.show_receiver)).getText().toString();
     	intent.putExtra(AppActivity.EXTRA_MESSAGE, message);
     	intent.putExtra(AppActivity.EXTRA_RECEIVER, mreceiver);
-    	startActivity(intent);*/
-    	
-    	Intent intent = new Intent(this, AppActivity.class);
     	startActivity(intent);
+        
     }
     
 }
