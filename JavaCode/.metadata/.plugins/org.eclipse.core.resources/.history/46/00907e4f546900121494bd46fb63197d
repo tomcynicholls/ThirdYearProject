@@ -1,0 +1,112 @@
+package com.thirdyearproject.app;
+
+import java.io.BufferedInputStream;
+import java.io.BufferedOutputStream;
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileOutputStream;
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.Socket;
+
+import android.os.AsyncTask;
+import android.util.Log;
+
+public class ConnectionHandler extends AsyncTask<String, Void, String>{
+
+//public static String serverip = "192.168.1.11";
+public static int serverport = 8003;
+Socket s;
+public int filesize=6022386; // filesize temporary hardcoded
+public int bytesRead;
+public int current = 0;
+public InputStream is;
+public OutputStream os;
+
+@Override
+protected String doInBackground(String... params) {
+
+    try {
+        Log.i("AsyncTank", "doInBackground: Creating Socket");
+        //InetAddress serverAddr = InetAddress.getByName(serverip);
+        s = new Socket("192.168.1.10", serverport);
+    } catch (Exception e) {
+        Log.i("AsyncTank", "doInBackground: Cannot create Socket");
+    }
+    if (s.isConnected()) {
+        try {
+        	is = s.getInputStream();
+        	os = s.getOutputStream();
+            Log.i("AsyncTank", "doInBackground: Socket created, Streams assigned");
+
+        } catch (IOException e) {
+            // TODO Auto-generated catch block
+            Log.i("AsyncTank", "doInBackground: Cannot assign Streams, Socket not connected");
+            e.printStackTrace();
+        }
+    } else {
+        Log.i("AsyncTank", "doInBackground: Cannot assign Streams, Socket is closed");
+    }
+    return null;
+}
+
+@Override
+protected void onPostExecute(String result) {
+    Log.i("HERE","BACKGROUND FINISHED");
+}
+
+public void writeToStream(String toserverpath) {
+    try {
+        if (s.isConnected()){
+            Log.i("AsynkTask", "writeToStream : Writing lat, lon");
+            
+            File myFile = new File (toserverpath);
+            byte [] mybytearray2  = new byte [(int)myFile.length()];
+            FileInputStream fis = new FileInputStream(myFile);
+            BufferedInputStream bis = new BufferedInputStream(fis);
+            bis.read(mybytearray2,0,mybytearray2.length);
+            //OutputStream os = s.getOutputStream();
+            System.out.println("Sending...");
+            os.write(mybytearray2,0,mybytearray2.length);
+            os.flush();
+            s.close();
+            
+            
+            
+        } else {
+            Log.i("AsynkTask", "writeToStream : Cannot write to stream, Socket is closed");
+        }
+    } catch (Exception e) {
+        Log.i("AsynkTask", "writeToStream : Writing failed");
+    }
+}
+
+public void readFromStream(String fromserverpath) {
+    try {
+        if (s.isConnected()) {
+            Log.i("AsynkTask", "readFromStream : Reading message");
+            
+            byte [] mybytearray  = new byte [filesize];
+            //InputStream is = s.getInputStream();
+            FileOutputStream fos = new FileOutputStream(fromserverpath);
+            BufferedOutputStream bos = new BufferedOutputStream(fos);
+            bytesRead = is.read(mybytearray,0,mybytearray.length);
+            current = bytesRead;
+
+            bos.write(mybytearray, 0 , current);
+            bos.flush();
+            bos.close();
+            
+            
+            
+        } else {
+            Log.i("AsynkTask", "readFromStream : Cannot Read, Socket is closed");
+        }
+    } catch (Exception e) {
+        Log.i("AsynkTask", "readFromStream : Writing failed");
+    }
+
+}
+
+}

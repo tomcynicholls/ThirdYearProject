@@ -31,10 +31,10 @@ public class DisplayMessageActivity extends Activity {
      // Get the message from the intent
         Intent intent = getIntent();
         String message = intent.getStringExtra(AppActivity.EXTRA_MESSAGE);
-
+        String mreceiver = intent.getStringExtra(AppActivity.EXTRA_RECEIVER);
         // Create the text view
         ((TextView)findViewById(R.id.show_message)).setText(message);
-
+        ((TextView)findViewById(R.id.show_receiver)).setText(mreceiver);
         // Set the text view as the activity layout
        // setContentView(textView);
     }
@@ -53,7 +53,9 @@ public class DisplayMessageActivity extends Activity {
     public void sendMessage(View view) {
     	Intent intent = new Intent(this, ViewXmlWriter.class);
     	String message = ((TextView)findViewById(R.id.show_message)).getText().toString();
+    	String mreceiver = ((TextView)findViewById(R.id.show_receiver)).getText().toString();
     	intent.putExtra(AppActivity.EXTRA_MESSAGE, message);
+    	intent.putExtra(AppActivity.EXTRA_RECEIVER, mreceiver);
     	startActivity(intent);
         
     }

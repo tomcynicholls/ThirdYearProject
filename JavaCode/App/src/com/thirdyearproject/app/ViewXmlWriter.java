@@ -1,6 +1,7 @@
 package com.thirdyearproject.app;
 
 import java.io.ByteArrayOutputStream;
+import java.io.File;
 import java.io.OutputStream;
 import java.util.Properties;
 
@@ -24,7 +25,9 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.support.v4.app.NavUtils;
+import android.util.Log;
 import android.view.MenuItem;
 import android.widget.TextView;
 
@@ -45,55 +48,19 @@ public class ViewXmlWriter extends Activity {
      // Get the message from the intent
         Intent intent = getIntent();
         String message = intent.getStringExtra(AppActivity.EXTRA_MESSAGE);
+        String mreceiver = intent.getStringExtra(AppActivity.EXTRA_RECEIVER);
         
         //xml writer and display
         TextView xmlResult = (TextView) findViewById(R.id.xmlresult);
         
         String messagetext = message;
     	String sendertext = "sender";
-    	String receivertext = "receiver";
+    	String receivertext = mreceiver;
 
         try {
         	DocumentBuilderFactory documentBuilderFactory = DocumentBuilderFactory.newInstance();
         	DocumentBuilder documentBuilder = documentBuilderFactory.newDocumentBuilder();
             Document document = documentBuilder.newDocument();
-
-            /*
-             * Element rootElement = document.createElement("catalog");
-           rootElement.setAttribute("journal", "Oracle Magazine");
-            rootElement.setAttribute("publisher", "Oracle Publishing");
-            document.appendChild(rootElement);
-
-            Element articleElement = document.createElement("article");
-            rootElement.appendChild(articleElement);
-
-            Element editionElement = document.createElement("edition");
-            articleElement.appendChild(editionElement);
-            editionElement.appendChild(document.createTextNode("Sept-Oct 2005"));
-
-            Element titleElement = document.createElement("title");
-            articleElement.appendChild(titleElement);
-            titleElement.appendChild(document.createTextNode("Creating Search Pages"));
-
-            Element authorElement = document.createElement("author");
-            articleElement.appendChild(authorElement);
-            authorElement.appendChild(document.createTextNode("Steve Muench"));
-
-            articleElement = document.createElement("article");
-            rootElement.appendChild(articleElement);
-
-            editionElement = document.createElement("edition");
-            articleElement.appendChild(editionElement);
-            editionElement.appendChild(document.createTextNode("November - December 2010"));
-
-            titleElement = document.createElement("title");
-            articleElement.appendChild(titleElement);
-            titleElement.appendChild(document.createTextNode("Agile Enterprise Architecture"));
-
-            authorElement = document.createElement("author");
-            articleElement.appendChild(authorElement);
-            authorElement.appendChild(document.createTextNode("Bob Rhubart"));
-            */
             
             //same as server xmlwriter.java
             Element rootElement = document.createElement("xmlmessage");
@@ -131,6 +98,41 @@ public class ViewXmlWriter extends Activity {
     		mainmessage.appendChild(other);
     		//end similarity
 
+    		//here
+    		/*TransformerFactory transformerFactory = TransformerFactory.newInstance();
+       		Transformer stransformer = transformerFactory.newTransformer();
+       		DOMSource ssource = new DOMSource(document);
+       		
+       		String path = "typoutput.xml";
+       		
+       		StreamResult sresult = new StreamResult(new File(path));
+       		stransformer.transform(ssource, sresult);
+       		//to here*/
+    		
+    		//method straight from developer android
+    		
+    		String state = Environment.getExternalStorageState();
+    	    if (Environment.MEDIA_MOUNTED.equals(state))
+    	    {
+    	    	
+    	    	TransformerFactory transformerFactory = TransformerFactory.newInstance();
+           		Transformer stransformer = transformerFactory.newTransformer();
+           		DOMSource ssource = new DOMSource(document);
+           		
+           		String path = "typoutputs.xml";
+           		
+           		
+           		StreamResult sresult = new StreamResult(new File(this.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS), path));
+           		stransformer.transform(ssource, sresult);
+           	
+           		Log.d("here",this.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath());
+    	    }
+    	    else
+    	    {
+    	    	Log.i("EXTERNAL STORAGE ERROR","ERROR");
+    	    }
+    		//until here
+    		    		
             TransformerFactory factory = TransformerFactory.newInstance();
             Transformer transformer = factory.newTransformer();
             Properties outFormat = new Properties();
@@ -147,11 +149,44 @@ public class ViewXmlWriter extends Activity {
             transformer.transform(domSource, result);
             String xmlString = output.toString();
             xmlResult.setText(xmlString);
+            
+            //FileOutputStream fOut = openFileOutput("samplefile3.txt",MODE_PRIVATE);
+           // OutputStreamWriter osw = new OutputStreamWriter(fOut); 
 
+			// Write the string to the file
+			//osw.write(xmlString);
+			
+			/* ensure that everything is
+			* really written out and close */
+			//osw.flush();
+			//osw.close();
+         
+			//FileInputStream fIn = openFileInput("samplefile3.txt");
+	       // InputStreamReader isr = new InputStreamReader(fIn);
+
+	        /* Prepare a char-Array that will
+	         * hold the chars we read back in. */
+	        //char[] inputBuffer = new char[xmlString.length()];
+
+	        // Fill the Buffer with data from the file
+	        //isr.read(inputBuffer);
+
+	        // Transform the chars to a String
+	        //String readString = new String(inputBuffer);
+
+	        // Check if we read back the same chars that we had written out
+	        //boolean isTheSame = xmlString.equals(readString);
+
+	       // Log.i("File Reading stuff", "success = " + isTheSame);
+	        
+	       // xmlResult.setText(readString);
+			
+			
         } catch (ParserConfigurationException e) {
         } catch (TransformerConfigurationException e) {
         } catch (TransformerException e) {
-        }
+        } //catch (IOException ioe) 
+       // {ioe.printStackTrace();}
 
         
     }

@@ -11,11 +11,19 @@
             android:layout_height="wrap_content"
             android:orientation="vertical" >
             
+     <TextView android:id="@+id/show_receiver"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp" 
+        android:text="@string/holder"/>   
+    
     <TextView android:id="@+id/show_message"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="20sp" 
         android:text="@string/holder"/>
+    
+    
     </LinearLayout>
     
 <RelativeLayout
