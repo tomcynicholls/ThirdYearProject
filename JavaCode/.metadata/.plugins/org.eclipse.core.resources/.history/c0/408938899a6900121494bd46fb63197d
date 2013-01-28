@@ -18,6 +18,5 @@
     <string name="message">Message</string>
     <string name="fromtitle">From:</string>
     <string name="messagetitle">Message:</string>
-    <string name="sent_title">Message Sent</string>
 
 </resources>
