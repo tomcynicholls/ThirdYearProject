@@ -14,7 +14,7 @@ public class Client{
   public static void main (String [] args ) throws IOException {
    int filesize=6022386; // filesize temporary hardcoded
 
-    //long start = System.currentTimeMillis();
+    long start = System.currentTimeMillis();
     int bytesRead;
     int current = 0;
     //localhost for testing
@@ -32,7 +32,7 @@ public class Client{
   	
   	String fromserverfilepath = fromserverfilename.concat(".xml");
   	String fromserverpath = pathwaystart.concat(fromserverfilepath);
-	System.out.println("File will be saved at: " + fromserverpath);
+	System.out.println(fromserverpath);
     
     
     // receive file
@@ -51,14 +51,14 @@ public class Client{
 
     bos.write(mybytearray, 0 , current);
     bos.flush();
-    //long end = System.currentTimeMillis();
-    //System.out.println(end-start);
+    long end = System.currentTimeMillis();
+    System.out.println(end-start);
     bos.close();
     
     XmlManip xmlmanip = new XmlManip();
     String returnedresult = xmlmanip.returnRequired(fromserverpath,"text");
-    System.out.println("message is: " + returnedresult);
-    String returnedsender = xmlmanip.returnRequired(fromserverpath,"sender");
+    System.out.println("message is:" + returnedresult);
+    String returnedsender = xmlmanip.returnRequired(fromserverpath,"receiver");
     System.out.println("from: " + returnedsender);
     
     //user inputs message
@@ -84,7 +84,7 @@ public class Client{
   	
   	String toserverfilepath = toserverfilename.concat(".xml");
   	String toserverpath = pathwaystart.concat(toserverfilepath);
-	System.out.println("File to be sent saved locally at: " + toserverpath);
+	System.out.println(toserverpath);
     
     xmlwriter.WriteToFile(s,"client", r, toserverfilename);
     
@@ -97,7 +97,6 @@ public class Client{
     OutputStream os = sock.getOutputStream();
     System.out.println("Sending...");
     os.write(mybytearray2,0,mybytearray2.length);
-    System.out.println("Sent");
     os.flush();
     sock.close();
   }

@@ -33,7 +33,7 @@ public class Server {
     	filenamestore[1] = "nomessagefile.xml";
     }
     
-    //long start = System.currentTimeMillis();
+    long start = System.currentTimeMillis();
     
     //start server loop
     while (true) {

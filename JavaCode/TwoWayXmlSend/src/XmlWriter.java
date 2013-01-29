@@ -82,7 +82,7 @@ public class XmlWriter {
 		String pathwaystart = "C:\\Users/Tom/TestDoc/";
 		String filepath = pathwaystart.concat(filename);
 		String path = filepath.concat(".xml");
-		System.out.println(filepath);
+		//System.out.println(filepath);
 		
 		StreamResult result = new StreamResult(new File(path));
  

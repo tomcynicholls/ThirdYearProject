@@ -58,7 +58,7 @@ public class Client{
     XmlManip xmlmanip = new XmlManip();
     String returnedresult = xmlmanip.returnRequired(fromserverpath,"text");
     System.out.println("message is: " + returnedresult);
-    String returnedsender = xmlmanip.returnRequired(fromserverpath,"sender");
+    String returnedsender = xmlmanip.returnRequired(fromserverpath,"receiver");
     System.out.println("from: " + returnedsender);
     
     //user inputs message

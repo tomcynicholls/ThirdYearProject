@@ -33,7 +33,7 @@ public class Server {
     	filenamestore[1] = "nomessagefile.xml";
     }
     
-    //long start = System.currentTimeMillis();
+    long start = System.currentTimeMillis();
     
     //start server loop
     while (true) {
@@ -81,7 +81,7 @@ public class Server {
       	
       	String fromfilepath = filename.concat(".xml");
       	String path = pathwaystart.concat(fromfilepath);
-		System.out.println("Will save data from client/app at: " + path);
+		System.out.println(path);
       
       
       byte [] mybytearray2  = new byte [filesize];
@@ -99,8 +99,8 @@ public class Server {
 
       bos.write(mybytearray2, 0 , current);
       bos.flush();
-      //long end = System.currentTimeMillis();
-      //System.out.println(end-start);
+      long end = System.currentTimeMillis();
+      System.out.println(end-start);
       bos.close();
       sock.close();
       
