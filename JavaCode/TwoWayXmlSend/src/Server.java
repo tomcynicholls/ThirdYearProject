@@ -14,7 +14,7 @@ import java.util.Date;
 public class Server {
   public static void main (String [] args ) throws IOException {
     // create socket
-    ServerSocket servsock = new ServerSocket(8003);
+    ServerSocket servsock = new ServerSocket(8500);
     int bytesRead;
     int current = 0;
     int filesize=6022386; // filesize temporary hardcoded
@@ -119,8 +119,8 @@ public class Server {
   //strip the last digits of the ip address and return
   public static int returnArrayPos(String ip){
 	 //probably have to change this value for across the network
-	  //localhost - 8 otherwise 10	
-	  String sub = ip.substring(10);
+	  //localhost - 8 home - 10 uni - 11
+	  String sub = ip.substring(11);
 	    int arraypos = Integer.parseInt(sub);
 	    
 	    return arraypos;

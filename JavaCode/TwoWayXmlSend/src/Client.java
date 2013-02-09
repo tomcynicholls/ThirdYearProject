@@ -18,7 +18,7 @@ public class Client{
     int bytesRead;
     int current = 0;
     //localhost for testing
-    Socket sock = new Socket("192.168.1.10",8003);
+    Socket sock = new Socket("172.31.214.26",8500);
     System.out.println("Connecting...");
     
     String pathwaystart = "C:\\Users/Tom/TestDoc/";

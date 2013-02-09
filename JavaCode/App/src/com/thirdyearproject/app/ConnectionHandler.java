@@ -16,7 +16,7 @@ import android.util.Log;
 public class ConnectionHandler extends AsyncTask<String, Void, String>{
 
 //public static String serverip = "192.168.1.11";
-public static int serverport = 8003;
+public static int serverport = 8500;
 Socket s;
 public int filesize=6022386; // filesize temporary hardcoded
 public int bytesRead;
@@ -30,7 +30,7 @@ protected String doInBackground(String... params) {
     try {
         Log.i("AsyncTank", "doInBackground: Creating Socket");
         //InetAddress serverAddr = InetAddress.getByName(serverip);
-        s = new Socket("192.168.1.10", serverport);
+        s = new Socket("172.31.214.26", 8500);
     } catch (Exception e) {
         Log.i("AsyncTank", "doInBackground: Cannot create Socket");
     }
