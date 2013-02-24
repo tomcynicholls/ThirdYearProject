@@ -1,0 +1,49 @@
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.ServerSocket;
+import java.net.Socket;
+
+
+public class TestServer {
+
+	public static void main(String[] args) throws IOException {
+		
+		ServerSocket servsock = new ServerSocket(8000);
+	
+		System.out.println("Waiting...");
+
+	      //accept socket connection
+	      	Socket sock = servsock.accept();
+	      	System.out.println("Accepted connection : " + sock);
+	      	
+	      	DataInputStream inputFromClient = new DataInputStream(sock.getInputStream());
+	      	DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
+		
+		while (true) {
+		     
+			char isUser = inputFromClient.readChar();
+			System.out.println("Is a user? " + isUser);
+		    //if not user - create  	
+			//if user - receive user id from client
+			
+			if (isUser == 'y'){
+	  			System.out.println("YES");
+	  		
+	  		}
+	  		else {
+	  			if (isUSer == 'n') {
+	  				System.out.println("NO");
+	  				
+	  			}
+	  			else {
+	  				System.out.println("ERROR - NOT Y OR N");
+	  			}
+	  		}
+		      	
+		}
+		
+		
+	}
+
+}
