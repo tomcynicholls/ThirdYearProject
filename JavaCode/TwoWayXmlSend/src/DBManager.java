@@ -88,6 +88,33 @@ public class DBManager {
 		
 	}
 	
+	public String returnFirstMessagefromID(int id) {
+		
+		String ip = null;
+		Statement stmt = null;
+		String messloc = null;
+		String query = " SELECT * FROM typdb.typusers WHERE id=" + id;
+		try {
+		stmt = connection.createStatement();
+		ResultSet rs = stmt.executeQuery(query);
+		rs.next();
+		//while (rs.next()) {
+		int ids = rs.getInt(1); // or rs.getString("NAME");
+		ip = rs.getString(2);
+		String pubkeyloc = rs.getString(3);
+		messloc = rs.getString(4);
+		System.out.println(ids + ip + pubkeyloc + messloc);
+		//}
+			
+		stmt.close();
+		} catch (SQLException e ) {
+			System.out.println("ERROR! 1");
+		}
+		
+		return messloc;
+		
+	}
+	
 	public Boolean userIDExists(int id) {
 		String query = "SELECT EXISTS (SELECT 1 FROM typdb.typusers WHERE id=" + id + ");";
 		Statement stmt;
@@ -190,6 +217,7 @@ public class DBManager {
 		Statement stmt = null;
 		stmt = connection.createStatement();
 		String sql = "UPDATE `typdb`.`typusers` SET `" + field + "`='" + data + "' WHERE `id`='" + userid + "'";
+		System.out.println(sql);
 		stmt.executeUpdate(sql);
 		stmt.close();
 		} catch (SQLException e ) {

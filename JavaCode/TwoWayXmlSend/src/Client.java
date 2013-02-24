@@ -1,14 +1,23 @@
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Date;
 import java.util.Scanner;
 
 public class Client{
+	
+	public static DataInputStream fromServer;
+	public static DataOutputStream toServer;
+	
   public static void main (String [] args ) throws IOException {
     //localhost for testing
 	  Socket sock = new Socket("localhost",8000);
 	  System.out.println("Connecting...");
     
+	  
+	  clientLoginProtocol(sock);
+	  
     //sending receiving class initiated
 	  SendReceiveSocket sendrecsock = new SendReceiveSocket(sock);
     
@@ -43,7 +52,7 @@ public class Client{
     
     //user inputs receiver ip address
   		String r;
-  		System.out.println("Enter receiver ip address");
+  		System.out.println("Enter receiver user ID");
   		r = in.nextLine();
     
     //create message xml file writer
@@ -66,6 +75,78 @@ public class Client{
     //send file
   		sendrecsock.SendViaSocket(toserverpath);
     
+  		DataInputStream fromServer = new DataInputStream(sock.getInputStream());
+  		char success;
+  		success = fromServer.readChar();
+  		if (success == 'y') {
+  			System.out.println("Message sending successful");
+  		} else {
+  			System.out.println("Message sending unsuccessful. Please try again");
+  		}
+  		
   		sock.close();
+  }
+  
+  public static void clientLoginProtocol(Socket sock) throws IOException {
+	  	
+	  	fromServer = new DataInputStream(sock.getInputStream());
+    	toServer = new DataOutputStream(sock.getOutputStream());
+    	
+    	Boolean finished = false;
+    	
+    	while(!finished) {
+    	
+    	String s;
+		Scanner in = new Scanner(System.in);
+		while(true) {
+		System.out.println("Do you have a user ID? [y/n]");
+		s = in.nextLine();
+		char c;
+		int userID;
+		char qisUser;
+		
+		if (s.equals("y")){
+			System.out.println("YES");
+			c = s.charAt(0);
+			toServer.writeChar(c);
+			
+			System.out.println("What is you user ID? ");
+			s = in.nextLine();
+			userID = Integer.parseInt(s);
+			toServer.writeInt(userID);
+			qisUser = fromServer.readChar();
+			System.out.println("Is user? " + qisUser);
+			if (qisUser == 'y') {
+				System.out.println("Successful log-in");
+				System.out.print("LOG IN PROTOCOL FINISHED");
+				finished = true;
+				break;
+			} else {
+				System.out.println("Unsuccessful log-in - Please restart");
+				//sock.close();
+				finished = true;
+				break;
+			}
+			//break;
+		}
+		else {
+			if (s.equals("n")) {
+				System.out.println("NO");
+				c = s.charAt(0);
+	  			toServer.writeChar(c);
+	  			userID = fromServer.readInt();
+	  			System.out.println("userID is: " + userID);
+				break;
+			}
+			else {
+				System.out.println("Please enter y or n");
+			}
+		}
+		
+		}
+    	}
+    	
+    	//fromServer.close();
+    	//toServer.close();
   }
 }

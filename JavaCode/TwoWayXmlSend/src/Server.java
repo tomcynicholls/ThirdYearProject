@@ -1,3 +1,5 @@
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.net.InetAddress;
@@ -10,9 +12,6 @@ public class Server {
     
 	// create socket
     ServerSocket servsock = new ServerSocket(8000);
-     
-    //create array to temporarily store sending message filenames
-    String[] filenamestore = new String[30];
     
     //create xml writer
     XmlWriter xmlwriter = new XmlWriter();
@@ -20,13 +19,14 @@ public class Server {
     String pathwaystart = "C:\\Users/Tom/TestDoc/";
     String nomessagefile = pathwaystart.concat("nomessagefile.xml");
     File f = new File(nomessagefile);
-    
-    if (filenamestore[0] == null) { 
-    	System.out.println("store empty"); 
-    	//store no message file
-    		xmlwriter.WriteToFile("no message","server","client","nomessagefile");
-    		filenamestore[0] = "nomessagefile.xml";
+    if(!(f.exists())){
+    	xmlwriter.WriteToFile("no message","server","client","nomessagefile");
     }
+    
+    DBManager con = new DBManager(); 
+  	System.out.println("Connection : " +con.doConnection());
+    
+    int currentID;
         
     //start server loop
     while (true) {
@@ -36,6 +36,9 @@ public class Server {
       	Socket sock = servsock.accept();
       	System.out.println("Accepted connection : " + sock);
       
+      	currentID = serverLoginProtocol(sock,con);
+      	
+      	
       //sending receiving class initiated
       	SendReceiveSocket sendrecsock = new SendReceiveSocket(sock);
       
@@ -48,18 +51,18 @@ public class Server {
       	System.out.println("IP Address is: " + stringip + " Array assignment " + arraypos);
       
       //if the user has no message (first time connecting) associate no message file with client
-      	if (filenamestore[arraypos] == null) {
-      		filenamestore[arraypos] = "nomessagefile.xml";
+      	if (con.returnFirstMessagefromID(currentID) == null) {
+      		con.updateUser(currentID,"messloc1","nomessagefile.xml");
       	}
       
       //get filepath from array store
-      	String filepath = pathwaystart.concat(filenamestore[arraypos]);
+      	String filepath = pathwaystart.concat(con.returnFirstMessagefromID(currentID));
       //sendfile
       	sendrecsock.SendViaSocket(filepath);
 
       //message sent so replace with no message file association
-      	filenamestore[arraypos] = "nomessagefile.xml";
-      
+      	con.updateUser(currentID,"messloc1","nomessagefile.xml");
+      	
       //receive file start
       //create file name in format: from ip address date and time
       	String from = "from ";
@@ -76,16 +79,28 @@ public class Server {
       //actually receive file
 		sendrecsock.ReceiveViaSocket(path);
      
-		sock.close();
+		//sock.close();
       
       //server reads ip address from file
 		XmlManip xmlmanip = new XmlManip();
 		String returnedresult = xmlmanip.returnRequired(path,"receiver");
 		System.out.println("receiver is:" + returnedresult); 
      
-      //and saves filename in appropriate array position
-		int rpos = returnArrayPos(returnedresult);
-		filenamestore[rpos] = fromfilepath;
+      //and saves filename in appropriate array position		
+		int recuser = Integer.parseInt(returnedresult);
+		
+		DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
+		
+		if (con.userIDExists(recuser)) {
+			con.updateUser(recuser,"messloc1",fromfilepath);
+			outputToClient.writeChar('y');
+		} else {
+			System.out.println("Not registered!");
+		
+			outputToClient.writeChar('n');
+		}
+		
+		sock.close();
       
        
       }
@@ -127,6 +142,70 @@ public class Server {
 		return result;
 		
 		
+  }
+  
+  public static int serverLoginProtocol(Socket sock, DBManager con) throws IOException {
+	  InetAddress inetAddress = sock.getInetAddress();
+    	
+    	DataInputStream inputFromClient = new DataInputStream(sock.getInputStream());
+    	DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
+    	
+    	
+    	
+    	int currentID = -1;
+    	
+    	Boolean finished = false;
+	
+	while (!finished) {
+	     
+		char isUser = inputFromClient.readChar();
+		System.out.println("Is a user? " + isUser);
+		String stringip;
+		int userID = 0;
+		char qisUser = 'n';
+		boolean userCorrect;
+	    //if not user - create  	
+		//if user - receive user id from client
+		
+		if (isUser == 'y'){
+			System.out.println("YES");
+			userID = inputFromClient.readInt();
+			System.out.println("User ID is: " + userID);
+			//server queries - respond to client
+			userCorrect = con.userIDExists(userID);
+			System.out.println("con.userIDExists result =" + userCorrect);
+			if (userCorrect) {
+			qisUser = 'y';
+			currentID = userID;
+			outputToClient.writeChar(qisUser);
+			finished = true;
+			} else {
+			outputToClient.writeChar(qisUser);
+			//sock.close();
+			finished = true;
+			}
+		
+		}
+		else {
+			if (isUser == 'n') {
+				System.out.println("NO");
+				stringip = inetAddress.getHostAddress();
+	  			System.out.println("ip address is: ");
+	  			//create new user in db and return user id
+	  			userID = con.addNewUser(stringip);
+	  			currentID = userID;
+	  			outputToClient.writeInt(userID);
+	  			
+			}
+			else {
+				System.out.println("ERROR - NOT Y OR N");
+			}
+		}
+	      	
+	}
+	//inputFromClient.close();
+	//outputToClient.close();
+	return currentID;
   }
   
 }

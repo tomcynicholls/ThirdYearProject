@@ -49,7 +49,7 @@ public class TestClient {
   				break;
   			} else {
   				System.out.println("Unsuccessful log-in - Please restart");
-  				sock.close();
+  				//sock.close();
   				finished = true;
   				break;
   			}

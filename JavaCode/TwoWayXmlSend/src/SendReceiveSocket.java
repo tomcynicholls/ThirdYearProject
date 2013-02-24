@@ -37,6 +37,7 @@ public class SendReceiveSocket {
 	      System.out.println("Sent");
 	      os.flush();
 	      
+	      
 		 } catch (Exception e) {
 				e.printStackTrace();
 			    }
@@ -56,7 +57,8 @@ public class SendReceiveSocket {
 		      bos.write(mybytearray2, 0 , current);
 		      bos.flush();
 		      bos.close();
-			
+		      
+		      
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

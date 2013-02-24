@@ -1,4 +1,3 @@
-import java.util.Scanner;
 
 
 public class test {
@@ -47,7 +46,7 @@ public class test {
 		}*/
 		
 		//THIS WORKS
-		String s;
+		/*String s;
 		Scanner in = new Scanner(System.in);
 		while(true) {
   		System.out.println("Do you have a username? [y/n]");
@@ -68,6 +67,8 @@ public class test {
   			}
   		}
   		
-		}
+		}*/
+		 XmlWriter xmlwriter = new XmlWriter();
+		xmlwriter.WriteToFile("no message","server","client","nomessagefile");
 	}
 }
