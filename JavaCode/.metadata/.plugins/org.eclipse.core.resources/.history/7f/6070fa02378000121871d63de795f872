@@ -118,14 +118,14 @@ public class secondtest {
         //  generateKey();
        // }
 
-        ObjectInputStream inputStream = null;
+       // ObjectInputStream inputStream = null;
 
         // Encrypt the string using the public key
         inputStream = new ObjectInputStream(new FileInputStream(PUBLIC_KEY_FILE));
         final PublicKey publicKey = (PublicKey) inputStream.readObject();
     	
-       inputStream = new ObjectInputStream(new FileInputStream(PRIVATE_KEY_FILE));
-       final PrivateKey privateKey = (PrivateKey) inputStream.readObject();
+       // inputStream = new ObjectInputStream(new FileInputStream(PRIVATE_KEY_FILE));
+       // final PrivateKey privateKey = (PrivateKey) inputStream.readObject();
         
         cipher = Cipher.getInstance(ALGORITHM);
         

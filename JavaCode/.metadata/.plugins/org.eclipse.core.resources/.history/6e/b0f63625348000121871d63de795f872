@@ -112,11 +112,11 @@ public class secondtest {
     try {
 
     	// Check if the pair of keys are present else generate those.
-        //if (!areKeysPresent()) {
+        if (!areKeysPresent()) {
           // Method generates a pair of keys using the RSA algorithm and stores it
           // in their respective files
-        //  generateKey();
-       // }
+          generateKey();
+        }
 
         ObjectInputStream inputStream = null;
 
@@ -124,8 +124,8 @@ public class secondtest {
         inputStream = new ObjectInputStream(new FileInputStream(PUBLIC_KEY_FILE));
         final PublicKey publicKey = (PublicKey) inputStream.readObject();
     	
-       inputStream = new ObjectInputStream(new FileInputStream(PRIVATE_KEY_FILE));
-       final PrivateKey privateKey = (PrivateKey) inputStream.readObject();
+        inputStream = new ObjectInputStream(new FileInputStream(PRIVATE_KEY_FILE));
+        final PrivateKey privateKey = (PrivateKey) inputStream.readObject();
         
         cipher = Cipher.getInstance(ALGORITHM);
         

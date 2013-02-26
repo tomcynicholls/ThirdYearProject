@@ -5,14 +5,14 @@ public class test {
 		
 		
 		EncryptDecrypt ende = new EncryptDecrypt();
-		String cleartextFile = "cleartext.xml";
-		String ciphertextFile = "ciphertextRSA.xml";
+		String cleartextFile = "cleartext.txt";
+		String ciphertextFile = "ciphertextRSA.txt";
 		
 		ende.encrypt("mypublickey.key",cleartextFile,ciphertextFile);
 		 
 		
 		
-		String cleartextAgainFile = "cleartextAgainRSA.xml";
+		String cleartextAgainFile = "cleartextAgainRSA.txt";
 		
 		ende.decrypt(ciphertextFile,cleartextAgainFile);
 	}
