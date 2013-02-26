@@ -63,6 +63,73 @@ public class Server {
       //message sent so replace with no message file association
       	con.updateUser(currentID,"messloc1","nomessagefile.xml");
       	
+      	
+      	Boolean recmessage = true;
+      	DataInputStream inputFromClient = new DataInputStream(sock.getInputStream());
+      	
+      	while (recmessage) {
+      		char cont = inputFromClient.readChar();
+      		
+      		if (cont == 'y'){
+	  			System.out.println("YES");
+	  			//receive file
+	  			 //receive file start
+	  	      //create file name in format: from ip address date and time
+	  	      	String from = "from ";
+	  	      	Date date = new Date();
+	  	      	String sdate = date.toString();
+	  	      	String rsdate = sdate.replaceAll(":"," ");
+	  	      	String fromip = from.concat(stringip);
+	  	      	String filename = fromip.concat(rsdate);
+	  	      	String fromfilepath = filename.concat(".xml");
+	  	      	String path = pathwaystart.concat(fromfilepath);
+	  	      //final filepath holder is path
+	  			System.out.println("Will save data from client/app at: " + path);
+	  	      
+	  	      //actually receive file
+	  			sendrecsock.ReceiveViaSocket(path);
+	  	     
+	  			//sock.close();
+	  	      
+	  	      //server reads ip address from file
+	  			XmlManip xmlmanip = new XmlManip();
+	  			String returnedresult = xmlmanip.returnRequired(path,"receiver");
+	  			System.out.println("receiver is:" + returnedresult); 
+	  	     
+	  	      //and saves filename in appropriate array position		
+	  			int recuser = Integer.parseInt(returnedresult);
+	  			
+	  			DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
+	  			
+	  			if (con.userIDExists(recuser)) {
+	  				con.updateUser(recuser,"messloc1",fromfilepath);
+	  				outputToClient.writeChar('y');
+	  			} else {
+	  				System.out.println("Not registered!");
+	  			
+	  				outputToClient.writeChar('n');
+	  			}
+	  			}
+	  		
+	  		else {
+	  			if (cont == 'n') {
+	  				System.out.println("NO");
+	  				recmessage = false;
+	  				break;
+		  			
+	  			}
+	  			else {
+	  				System.out.println("ERROR - NOT Y OR N");
+	  			}
+	  		}
+      	}
+      	
+      	
+      	
+      	
+      	
+      	
+      	/*
       //receive file start
       //create file name in format: from ip address date and time
       	String from = "from ";
@@ -99,7 +166,7 @@ public class Server {
 		
 			outputToClient.writeChar('n');
 		}
-		
+		*/
 		sock.close();
       
        

@@ -9,6 +9,7 @@ public class Client{
 	
 	public static DataInputStream fromServer;
 	public static DataOutputStream toServer;
+	public static int currentUserID;
 	
   public static void main (String [] args ) throws IOException {
     //localhost for testing
@@ -17,6 +18,9 @@ public class Client{
     
 	  
 	  clientLoginProtocol(sock);
+	  
+	  
+	  
 	  
     //sending receiving class initiated
 	  SendReceiveSocket sendrecsock = new SendReceiveSocket(sock);
@@ -42,8 +46,83 @@ public class Client{
   		String returnedresult = xmlmanip.returnRequired(fromserverpath,"text");
   		System.out.println("message is: " + returnedresult);
   		String returnedsender = xmlmanip.returnRequired(fromserverpath,"sender");
-  		System.out.println("from: " + returnedsender);
+  		System.out.println("from user: " + returnedsender);
     
+  		
+  		Boolean sendmessage = true;
+  		
+  		while (sendmessage) {
+  			Scanner in = new Scanner(System.in);
+  	  		String sm;
+  	  		System.out.println("Do you wish to send a message? y/n");
+  	  		sm = in.nextLine();	
+  	  		char c;
+  	  		
+  	  		if (sm.equals("y")){
+  	  			System.out.println("YES");
+  	  			c = sm.charAt(0);
+  	  			toServer.writeChar(c);
+  	  			
+  	  		  //user inputs message
+  	    		//Scanner in = new Scanner(System.in);
+  	    		String s;
+  	    		System.out.println("Enter a message");
+  	    		s = in.nextLine();
+  	      
+  	      //user inputs receiver ip address
+  	    		String r;
+  	    		System.out.println("Enter receiver user ID");
+  	    		r = in.nextLine();
+  	      
+  	      //create message xml file writer
+  	    		XmlWriter xmlwriter = new XmlWriter();
+  	      
+  	      //save file to send in format: toserver date and time
+  	    		String toserver = "toserver ";
+  	    		Date date = new Date();
+  	    		String sdate = date.toString();
+  	    		String rsdate = sdate.replaceAll(":"," ");
+  	    		String toserverfilename = toserver.concat(rsdate);
+  	    		String toserverfilepath = toserverfilename.concat(".xml");
+  	    		String toserverpath = pathwaystart.concat(toserverfilepath);
+  	    	//final file path holder is toserverfilepath
+  	    		System.out.println("File to be sent saved locally at: " + toserverpath);
+  	      
+  	  	//create xml file
+  	    		xmlwriter.WriteToFile(s,Integer.toString(currentUserID), r, toserverfilename);
+  	      
+  	      //send file
+  	    		sendrecsock.SendViaSocket(toserverpath);
+  	      
+  	    		DataInputStream fromServer = new DataInputStream(sock.getInputStream());
+  	    		char success;
+  	    		success = fromServer.readChar();
+  	    		if (success == 'y') {
+  	    			System.out.println("Message sending successful");
+  	    		} else {
+  	    			System.out.println("Message sending unsuccessful. Please try again");
+  	    		}
+  	    		
+  	    		//sock.close();
+  	  			
+  	  		} else {
+  	  			if (sm.equals("n")) {
+  	  				System.out.println("NO");
+  	  				c = sm.charAt(0);
+  	  				toServer.writeChar(c);
+  	  				sendmessage = false;
+  	  				break;
+  	  			} else {
+  				System.out.println("Please enter y or n");
+  	  			}
+  	  		}
+  		}
+  		
+  		
+  		
+  		
+  		/*
+  		
     //user inputs message
   		Scanner in = new Scanner(System.in);
   		String s;
@@ -83,8 +162,8 @@ public class Client{
   		} else {
   			System.out.println("Message sending unsuccessful. Please try again");
   		}
-  		
-  		sock.close();
+  		*/
+  		sock.close(); 
   }
   
   public static void clientLoginProtocol(Socket sock) throws IOException {
@@ -119,6 +198,7 @@ public class Client{
 			if (qisUser == 'y') {
 				System.out.println("Successful log-in");
 				System.out.print("LOG IN PROTOCOL FINISHED");
+				currentUserID = userID;
 				finished = true;
 				break;
 			} else {
