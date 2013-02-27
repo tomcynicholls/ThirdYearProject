@@ -1,5 +1,3 @@
-import java.io.DataInputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
@@ -18,65 +16,25 @@ public class TestServer {
 	      	Socket sock = servsock.accept();
 	      	System.out.println("Accepted connection : " + sock);
 	      	InetAddress inetAddress = sock.getInetAddress();
+	      	System.out.println(inetAddress);
+	      	int userID = 1;
 	      	
-	      	DataInputStream inputFromClient = new DataInputStream(sock.getInputStream());
-	      	DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
+	      	EncryptDecrypt ende = new EncryptDecrypt("server/mypublickey.key","server/myprivatekey.key");
+	      	SendReceiveSocket sendrec = new SendReceiveSocket(sock);
 	      	
-	      	DBManager con = new DBManager(); 
-	    	System.out.println("Connection : " +con.doConnection());
+	      	String pubkeyloc = "server/pubkey" + Integer.toString(userID) + ".key";
+	      	sendrec.ReceiveViaSocket(pubkeyloc);
 	      	
-	      	int currentID;
+	      	ende.encrypt(pubkeyloc,"server/toencrypt.xml","server/encryptedtosend.xml");
 	      	
-	      	Boolean finished = false;
-		
-		while (!finished) {
-		     
-			char isUser = inputFromClient.readChar();
-			System.out.println("Is a user? " + isUser);
-			String stringip;
-			int userID = 0;
-			char qisUser = 'n';
-			boolean userCorrect;
-		    //if not user - create  	
-			//if user - receive user id from client
-			
-			if (isUser == 'y'){
-	  			System.out.println("YES");
-	  			userID = inputFromClient.readInt();
-	  			System.out.println("User ID is: " + userID);
-	  			//server queries - respond to client
-	  			userCorrect = con.userIDExists(userID);
-	  			System.out.println("con.userIDExists result =" + userCorrect);
-	  			if (userCorrect) {
-	  			qisUser = 'y';
-	  			currentID = userID;
-	  			outputToClient.writeChar(qisUser);
-	  			finished = true;
-	  			} else {
-	  			outputToClient.writeChar(qisUser);
-	  			sock.close();
-	  			finished = true;
-	  			}
-	  		
-	  		}
-	  		else {
-	  			if (isUser == 'n') {
-	  				System.out.println("NO");
-	  				stringip = inetAddress.getHostAddress();
-		  			System.out.println("ip address is: ");
-		  			//create new user in db and return user id
-		  			userID = con.addNewUser(stringip);
-		  			currentID = userID;
-		  			outputToClient.writeInt(userID);
-		  			
-	  			}
-	  			else {
-	  				System.out.println("ERROR - NOT Y OR N");
-	  			}
-	  		}
-		      	
-		}
-		
+	      	sendrec.SendViaSocket("server/encryptedtosend.xml");
+	      	
+	      	sendrec.SendViaSocket("server/mypublickey.key");
+	      	
+	      	sendrec.ReceiveViaSocket("server/encryptedfromclient.xml");
+	      	
+	      	ende.decrypt("server/encryptedfromclient.xml","server/decryptedfromclient.xml");
+	      	
 		
 	}
 

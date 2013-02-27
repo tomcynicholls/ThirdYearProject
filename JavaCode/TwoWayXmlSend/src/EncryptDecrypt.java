@@ -17,9 +17,9 @@ public class EncryptDecrypt {
 
 	public static final String ALGORITHM = "RSA";
 
-	  public static final String PRIVATE_KEY_FILE = "myprivatekey.key";
+	  public static String PRIVATE_KEY_FILE = "myprivatekey.key";
 	
-	  public static final String PUBLIC_KEY_FILE = "mypublickey.key";
+	  public static String PUBLIC_KEY_FILE = "mypublickey.key";
 	
 	  public static Cipher cipher;
 	  public static FileInputStream fis;
@@ -30,18 +30,21 @@ public class EncryptDecrypt {
 	  public static ObjectInputStream inputStream;
 	
 	  
-	  public EncryptDecrypt() {
+	  public EncryptDecrypt(String pub, String priv) {
+		  
+		  PRIVATE_KEY_FILE = priv;
+		  PUBLIC_KEY_FILE = pub;
+		  
 		// Check if the pair of keys are present else generate those.
 	        if (!areKeysPresent()) {
 	          // Method generates a pair of keys using the RSA algorithm and stores it
 	          // in their respective files
 	          generateKey();
-	          
+	        } 
 	          try {
 	          cipher = Cipher.getInstance(ALGORITHM);
 	          } catch (Exception e) {
 	              e.printStackTrace();
-	          }
 	          }
 	  }
 	  
@@ -99,7 +102,7 @@ public class EncryptDecrypt {
 		  }
 		  
   
-  public static void encrypt(String pubkeyloc,String input,String output){
+  public void encrypt(String pubkeyloc,String input,String output){
 		try{
 		
 		inputStream = new ObjectInputStream(new FileInputStream(pubkeyloc));
@@ -128,7 +131,7 @@ public class EncryptDecrypt {
 		}
 	}
 
-	public static void decrypt(String input,String output){
+	public void decrypt(String input,String output){
 			try{
 				
 			inputStream = new ObjectInputStream(new FileInputStream(PRIVATE_KEY_FILE));

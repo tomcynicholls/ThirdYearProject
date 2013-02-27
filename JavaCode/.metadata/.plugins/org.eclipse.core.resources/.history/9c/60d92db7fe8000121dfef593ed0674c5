@@ -1,0 +1,24 @@
+import java.io.DataInputStream;
+import java.io.DataOutputStream;
+import java.io.IOException;
+import java.net.Socket;
+import java.util.Scanner;
+
+
+public class TestClient {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) throws IOException {
+		
+		Socket sock = new Socket("localhost",8000);
+		System.out.println("Connecting...");
+
+		
+      	
+      	
+		
+	}
+
+}
