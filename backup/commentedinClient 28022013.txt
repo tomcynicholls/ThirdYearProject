@@ -1,0 +1,42 @@
+/*
+  		
+    //user inputs message
+  		Scanner in = new Scanner(System.in);
+  		String s;
+  		System.out.println("Enter a message");
+  		s = in.nextLine();
+    
+    //user inputs receiver ip address
+  		String r;
+  		System.out.println("Enter receiver user ID");
+  		r = in.nextLine();
+    
+    //create message xml file writer
+  		XmlWriter xmlwriter = new XmlWriter();
+    
+    //save file to send in format: toserver date and time
+  		String toserver = "toserver ";
+  		Date date = new Date();
+  		String sdate = date.toString();
+  		String rsdate = sdate.replaceAll(":"," ");
+  		String toserverfilename = toserver.concat(rsdate);
+  		String toserverfilepath = toserverfilename.concat(".xml");
+  		String toserverpath = pathwaystart.concat(toserverfilepath);
+  	//final file path holder is toserverfilepath
+  		System.out.println("File to be sent saved locally at: " + toserverpath);
+    
+	//create xml file
+  		xmlwriter.WriteToFile(s,"client", r, toserverfilename);
+    
+    //send file
+  		sendrecsock.SendViaSocket(toserverpath);
+    
+  		DataInputStream fromServer = new DataInputStream(sock.getInputStream());
+  		char success;
+  		success = fromServer.readChar();
+  		if (success == 'y') {
+  			System.out.println("Message sending successful");
+  		} else {
+  			System.out.println("Message sending unsuccessful. Please try again");
+  		}
+  		*/

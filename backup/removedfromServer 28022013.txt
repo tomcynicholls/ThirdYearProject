@@ -1,0 +1,37 @@
+//strip the last digits of the ip address and return
+  public static int returnArrayPos(String ip){
+	 //probably have to change this value for across the network
+	  //localhost - 8 home - 10 uni - 11
+	  	String sub = ip.substring(8);
+	    int arraypos = Integer.parseInt(sub);
+	    
+	    return arraypos;
+	  
+  }
+  
+  //return string ip as long (with . removed)
+  public static Long returnLongIP(String ip){
+	  
+		System.out.println(ip);
+		char[] charip = ip.toCharArray();
+		char[] fcharip = new char[charip.length];
+		int count = 0;
+		
+		for (int i = 0; i<charip.length; i++) {
+			if (charip[i] != '.') { 
+				fcharip[count] = charip[i];
+				count++;
+			}
+		}
+		
+		String finalip = String.valueOf(fcharip);
+				
+		String trimmed = finalip.trim();
+		
+		Long result = Long.valueOf(trimmed);
+		System.out.println(result);
+		
+		return result;
+		
+		
+  }

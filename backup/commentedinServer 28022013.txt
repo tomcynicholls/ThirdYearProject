@@ -1,0 +1,38 @@
+	/*
+      //receive file start
+      //create file name in format: from ip address date and time
+      	String from = "from ";
+      	Date date = new Date();
+      	String sdate = date.toString();
+      	String rsdate = sdate.replaceAll(":"," ");
+      	String fromip = from.concat(stringip);
+      	String filename = fromip.concat(rsdate);
+      	String fromfilepath = filename.concat(".xml");
+      	String path = pathwaystart.concat(fromfilepath);
+      //final filepath holder is path
+		System.out.println("Will save data from client/app at: " + path);
+      
+      //actually receive file
+		sendrecsock.ReceiveViaSocket(path);
+     
+		//sock.close();
+      
+      //server reads ip address from file
+		XmlManip xmlmanip = new XmlManip();
+		String returnedresult = xmlmanip.returnRequired(path,"receiver");
+		System.out.println("receiver is:" + returnedresult); 
+     
+      //and saves filename in appropriate array position		
+		int recuser = Integer.parseInt(returnedresult);
+		
+		DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
+		
+		if (con.userIDExists(recuser)) {
+			con.updateUser(recuser,"messloc1",fromfilepath);
+			outputToClient.writeChar('y');
+		} else {
+			System.out.println("Not registered!");
+		
+			outputToClient.writeChar('n');
+		}
+		*/
