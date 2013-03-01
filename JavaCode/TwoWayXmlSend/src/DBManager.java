@@ -84,7 +84,7 @@ public class DBManager {
 
 	}
 
-	public String returnFirstMessagefromID(int id) {
+	public String returnFirstMessagefromID(int id, int loc) {
 
 		String ip = null;
 		Statement stmt = null;
@@ -98,7 +98,7 @@ public class DBManager {
 			int ids = rs.getInt(1); // or rs.getString("NAME");
 			ip = rs.getString(2);
 			String pubkeyloc = rs.getString(3);
-			messloc = rs.getString(4);
+			messloc = rs.getString(loc);
 			//System.out.println(ids + ip + pubkeyloc + messloc);
 			// }
 

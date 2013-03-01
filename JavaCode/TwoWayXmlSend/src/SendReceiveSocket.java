@@ -34,7 +34,12 @@ public class SendReceiveSocket {
 			System.out.println("Sending...");
 			os.write(mybytearray, 0, mybytearray.length);
 			System.out.println("Sent");
+			
+			
+			//bis.close();
+			//fis.close();
 			os.flush();
+			//os.close();
 
 		} catch (Exception e) {
 			e.printStackTrace();
@@ -43,23 +48,40 @@ public class SendReceiveSocket {
 	}
 
 	public void ReceiveViaSocket(String path) {
-
+		
+		
 		try {
-
+			//System.out.println("here1");
 			byte[] mybytearray2 = new byte[filesize];
+			//System.out.println("here2");
 			InputStream is = sock.getInputStream();
+			//System.out.println(is.available());
+			//System.out.println("here3");
 			FileOutputStream fos = new FileOutputStream(path);
+			//System.out.println("here4");
 			BufferedOutputStream bos = new BufferedOutputStream(fos);
+			//System.out.println("here5");
 			bytesRead = is.read(mybytearray2, 0, mybytearray2.length);
+			//System.out.println("here6");
 			current = bytesRead;
+			//System.out.println("here7");
 			bos.write(mybytearray2, 0, current);
+			//System.out.println("here8");
+			
+			//is.close();
 			bos.flush();
-			bos.close();
+			fos.flush();
+			//bos.close();
+			//fos.close();
+			//bos.close();
+			//is.reset();
+			
+			
+			
 
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-
 	}
 
 }

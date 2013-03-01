@@ -37,6 +37,14 @@ public class test {
 		String[] test2 = fromfile.split(" ");
 		System.out.println(fromfile);
 		System.out.println(test2[1] + test2[1] + test2[0] + test2[3]);
+		
+		String[] testing = new String[4];
+		testing[1] = "hello";
+		testing[2] = null;
+		String here = null;
+		if (here == null) {
+			System.out.println("IT WORKS");
+		}
 
 	}
 }

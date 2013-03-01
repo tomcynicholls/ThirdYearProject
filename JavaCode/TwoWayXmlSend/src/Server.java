@@ -5,7 +5,9 @@ import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
 import java.net.Socket;
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
 
 public class Server {
 	
@@ -59,20 +61,65 @@ public class Server {
 
 			// if the user has no message (first time connecting) associate
 			// nomessage file with client
-			if (con.returnFirstMessagefromID(currentID) == null) {
+			if (con.returnFirstMessagefromID(currentID,1) == null) {
 				con.updateUser(currentID, "messloc1", "nomessagefile.xml");
 			}
 
-			// get filepath from array store
-			String filepath = pathwaystart.concat(con.returnFirstMessagefromID(currentID));
+			// get filepath from database
+			String filepath = pathwaystart.concat(con.returnFirstMessagefromID(currentID,4));
 			// sendfile
 			sendrecsock.SendViaSocket(filepath);
-
+			System.out.println(filepath + "sent");
+			sendrecsock.ReceiveViaSocket(pathwaystart.concat("servack.txt"));
+			System.out.println("ack received");
+			
+			//System.out.println(filepath);
+			//filepath = pathwaystart.concat(con.returnFirstMessagefromID(currentID,3));
+			//System.out.println(filepath);
+			//sendrecsock.ReceiveViaSocket("C:\\Users/Tom/TestDoc/testserv.xml");
+			//sendrecsock.SendViaSocket(filepath);
+			
+			//send all possible files
+			DataInputStream inputFromClient = new DataInputStream(sock.getInputStream());
+			DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
+			String[] fparray = new String[3];
+			String holder;
+			String test = "xxx.xml";
+			
+			for (int i = 0; i<3; i++) {
+				//fparray[i] = con.returnFirstMessagefromID(currentID,i+5);
+				holder = con.returnFirstMessagefromID(currentID,i+5);
+				System.out.println("here " + holder + " here");
+				if (holder.equals(test)) {
+					outputToClient.writeChar('n');
+					System.out.println("outputing n");
+					
+				} else {
+					System.out.println("outputing y");
+					outputToClient.writeChar('y');
+					System.out.println(holder);
+					sendrecsock.SendViaSocket(pathwaystart.concat(holder));
+					sendrecsock.ReceiveViaSocket(pathwaystart.concat("servack.txt"));
+				}
+			}	
+			
+			sendrecsock.SendViaSocket(pathwaystart.concat("servack.txt"));
+			
+			/*if (con.returnFirstMessagefromID(currentID,2) == null) {
+				System.out.println("SENDING N");
+				outputToClient.writeChar('n');
+				outputToClient.flush();
+			} else {
+				outputToClient.writeChar('y');
+				outputToClient.flush();
+				System.out.println("SENDING Y");
+			}*/
+			
 			// message sent so replace with no message file association
 			con.updateUser(currentID, "messloc1", "nomessagefile.xml");
 
 			Boolean recmessage = true;
-			DataInputStream inputFromClient = new DataInputStream(sock.getInputStream());
+			//DataInputStream inputFromClient = new DataInputStream(sock.getInputStream());
 
 			while (recmessage) {
 				char cont = inputFromClient.readChar();
@@ -106,7 +153,7 @@ public class Server {
 					// and saves filename in appropriate array position
 					int recuser = Integer.parseInt(returnedresult);
 
-					DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
+					//DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
 
 					if (con.userIDExists(recuser)) {
 						con.updateUser(recuser, "messloc1", fromfilepath);

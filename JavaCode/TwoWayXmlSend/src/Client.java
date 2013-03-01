@@ -1,5 +1,7 @@
+import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Date;
@@ -42,7 +44,11 @@ public class Client {
 
 		// receive file
 		sendrecsock.ReceiveViaSocket(fromserverpath);
-
+		System.out.println(fromserverpath + "received");
+		sendrecsock.SendViaSocket("C:\\Users/Tom/TestDoc/ack.txt");
+		System.out.println("ack sent");
+		
+		
 		// get the message and sender from the received file and display
 		XmlManip xmlmanip = new XmlManip();
 		String returnedresult = xmlmanip.returnRequired(fromserverpath, "text");
@@ -50,6 +56,38 @@ public class Client {
 		String returnedsender = xmlmanip.returnRequired(fromserverpath, "sender");
 		System.out.println("from user: " + returnedsender);
 
+		
+		
+		
+		String otherfilepath;
+		char sendingfile;
+		String otherfp;
+		String[] recfromserv = new String[3];
+		for (int i = 2; i<5; i++) {
+			sendingfile = fromServer.readChar();
+			if (sendingfile == 'y') {
+				otherfilepath = Integer.toString(i);
+				otherfp = pathwaystart+otherfilepath+".xml";
+				sendrecsock.ReceiveViaSocket(otherfp);
+				sendrecsock.SendViaSocket("C:\\Users/Tom/TestDoc/ack.txt");
+				recfromserv[i-2] = otherfp;
+			} 
+		}
+		
+		sendrecsock.ReceiveViaSocket("C:\\Users/Tom/TestDoc/clientack.txt");
+		
+		for (int j = 0; j < 3; j++) {
+			System.out.println("array pos is" + recfromserv[j] + "!!");
+			if (recfromserv[j] != null) {
+				System.out.println("DO PART " + j);
+			}
+		}
+		
+		
+		/*char sendingfile;
+		sendingfile = fromServer.readChar();
+		System.out.println("From server: " + sendingfile);*/
+		
 		Boolean sendmessage = true;
 
 		while (sendmessage) {
