@@ -66,33 +66,51 @@ public class Server {
 			}
 
 			// get filepath from database
-			String filepath = pathwaystart.concat(con.returnFirstMessagefromID(currentID,1));
+			String filepath = pathwaystart.concat(con.returnFirstMessagefromID(currentID,4));
 			// sendfile
 			sendrecsock.SendViaSocket(filepath);
-
+			System.out.println(filepath + "sent");
+			sendrecsock.ReceiveViaSocket(pathwaystart.concat("servack.txt"));
+			System.out.println("ack received");
+			
+			//System.out.println(filepath);
+			//filepath = pathwaystart.concat(con.returnFirstMessagefromID(currentID,3));
+			//System.out.println(filepath);
+			//sendrecsock.ReceiveViaSocket("C:\\Users/Tom/TestDoc/testserv.xml");
+			//sendrecsock.SendViaSocket(filepath);
 			
 			//send all possible files
 			DataInputStream inputFromClient = new DataInputStream(sock.getInputStream());
 			DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
 			String[] fparray = new String[3];
+			String holder;
+			String test = "xxx.xml";
 			
 			for (int i = 0; i<3; i++) {
-				fparray[i] = con.returnFirstMessagefromID(currentID,i+2);
-				//System.out.println(filepath);
-				if (fparray[i] == null) {
+				//fparray[i] = con.returnFirstMessagefromID(currentID,i+5);
+				holder = con.returnFirstMessagefromID(currentID,i+5);
+				System.out.println("here " + holder + " here");
+				if (holder.equals(test)) {
 					outputToClient.writeChar('n');
 					System.out.println("outputing n");
 					
 				} else {
 					System.out.println("outputing y");
 					outputToClient.writeChar('y');
-					sendrecsock.SendViaSocket(pathwaystart.concat(fparray[i]));
+					System.out.println(holder);
+					sendrecsock.SendViaSocket(pathwaystart.concat(holder));
+					sendrecsock.ReceiveViaSocket(pathwaystart.concat("servack.txt"));
 				}
-			}		
+			}	
+			
+			sendrecsock.SendViaSocket(pathwaystart.concat("servack.txt"));
 			
 			
 			// message sent so replace with no message file association
 			con.updateUser(currentID, "messloc1", "nomessagefile.xml");
+			con.updateUser(currentID, "messloc2", "xxx.xml");
+			con.updateUser(currentID, "messloc3", "xxx.xml");
+			con.updateUser(currentID, "messloc4", "xxx.xml");
 
 			Boolean recmessage = true;
 			//DataInputStream inputFromClient = new DataInputStream(sock.getInputStream());

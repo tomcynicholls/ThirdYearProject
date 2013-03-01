@@ -148,6 +148,23 @@ public class Client {
 					// send file
 					sendrecsock.SendViaSocket(pathwaystart+"tosend.xml");
 
+					
+					try{
+						System.out.println(toserverpath);
+			    		File file = new File(toserverpath);
+			    		System.out.println(file.getPath());
+			    		if(file.delete()){
+			    			System.out.println(file.getName() + " is deleted!");
+			    		}else{
+			    			System.out.println("Delete operation is failed.");
+			    		}
+			 
+			    	}catch(Exception e){
+			 
+			    		e.printStackTrace();
+			 
+			    	}
+					
 					DataInputStream fromServer = new DataInputStream(sock.getInputStream());
 					char success;
 					success = fromServer.readChar();

@@ -105,64 +105,75 @@ public class Server {
 			
 			sendrecsock.SendViaSocket(pathwaystart.concat("servack.txt"));
 			
-			/*if (con.returnFirstMessagefromID(currentID,2) == null) {
-				System.out.println("SENDING N");
-				outputToClient.writeChar('n');
-				outputToClient.flush();
-			} else {
-				outputToClient.writeChar('y');
-				outputToClient.flush();
-				System.out.println("SENDING Y");
-			}*/
 			
 			// message sent so replace with no message file association
 			con.updateUser(currentID, "messloc1", "nomessagefile.xml");
+			con.updateUser(currentID, "messloc2", "xxx.xml");
+			con.updateUser(currentID, "messloc3", "xxx.xml");
+			con.updateUser(currentID, "messloc4", "xxx.xml");
 
 			Boolean recmessage = true;
 			//DataInputStream inputFromClient = new DataInputStream(sock.getInputStream());
 
 			while (recmessage) {
 				char cont = inputFromClient.readChar();
-
+				//System.out.println("sending to client");
+				//outputToClient.write('y');
 				if (cont == 'y') {
 					System.out.println("YES");
-					// receive file
-					// receive file start
-					// create file name in format: from ip address date and time
-					String from = "from ";
-					Date date = new Date();
-					String sdate = date.toString();
-					String rsdate = sdate.replaceAll(":", " ");
-					String fromip = from.concat(stringip);
-					String filename = fromip.concat(rsdate);
-					String fromfilepath = filename.concat(".xml");
-					String path = pathwaystart.concat(fromfilepath);
-					// final filepath holder is path
-					System.out.println("Will save data from client/app at: " + path);
-
-					// actually receive file
-					sendrecsock.ReceiveViaSocket(path);
-
-					// sock.close();
-
-					// server reads ip address from file
-					XmlManip xmlmanip = new XmlManip();
-					String returnedresult = xmlmanip.returnRequired(path, "receiver");
-					System.out.println("receiver is:" + returnedresult);
-
-					// and saves filename in appropriate array position
-					int recuser = Integer.parseInt(returnedresult);
-
-					//DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
-
-					if (con.userIDExists(recuser)) {
-						con.updateUser(recuser, "messloc1", fromfilepath);
-						outputToClient.writeChar('y');
+					
+					
+					char rec = inputFromClient.readChar();
+					
+					if (rec == 'n') {
+						//user doesn't have pub key so register
+						System.out.println("Register user key initiated");
 					} else {
-						System.out.println("Not registered!");
+						//user will send file
+						// receive file
+						// receive file start
+						// create file name in format: from ip address date and time
+						
+						int receiver = inputFromClient.readInt();
+						
+						String from = "from ";
+						Date date = new Date();
+						String sdate = date.toString();
+						String rsdate = sdate.replaceAll(":", " ");
+						String fromip = from.concat(stringip);
+						String filename = fromip.concat(rsdate);
+						String fromfilepath = filename.concat(".xml");
+						String path = pathwaystart.concat(fromfilepath);
+						// final filepath holder is path
+						System.out.println("Will save data from client/app at: " + path);
 
-						outputToClient.writeChar('n');
+						// actually receive file
+						sendrecsock.ReceiveViaSocket(path);
+
+						// sock.close();
+
+						// server reads ip address from file
+						//XmlManip xmlmanip = new XmlManip();
+						//String returnedresult = xmlmanip.returnRequired(path, "receiver");
+						//System.out.println("receiver is:" + returnedresult);
+
+						// and saves filename in appropriate array position
+						//int recuser = Integer.parseInt(returnedresult);
+
+						//DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
+
+						if (con.userIDExists(receiver)) {
+							con.updateUser(receiver, "messloc1", fromfilepath);
+							outputToClient.writeChar('y');
+						} else {
+							System.out.println("Not registered!");
+
+							outputToClient.writeChar('n');
+						}
 					}
+					
+					
+					
 				}
 
 				else {

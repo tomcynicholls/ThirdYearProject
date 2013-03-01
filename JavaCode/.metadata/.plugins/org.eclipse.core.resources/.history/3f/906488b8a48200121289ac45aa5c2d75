@@ -1,5 +1,7 @@
+import java.io.BufferedReader;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.FileReader;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Date;
@@ -13,6 +15,8 @@ public class Client {
 	public static EncryptDecrypt encryptdecrypt;
 	public static String PUB_KEY_LOC;
 	public static String PRIV_KEY_LOC;
+	public static String SERV_PUB_KEY_LOC;
+	public static SendReceiveSocket sendrecsock;
 
 	public static void main(String[] args) throws IOException {
 
@@ -20,10 +24,10 @@ public class Client {
 		Socket sock = new Socket("localhost", 8000);
 		System.out.println("Connecting...");
 
-		clientLoginProtocol(sock);
-
 		// sending receiving class initiated
-		SendReceiveSocket sendrecsock = new SendReceiveSocket(sock);
+		sendrecsock = new SendReceiveSocket(sock);
+		
+		clientLoginProtocol(sock);
 
 		String pathwaystart = "C:\\Users/Tom/TestDoc/";
 
@@ -40,7 +44,11 @@ public class Client {
 
 		// receive file
 		sendrecsock.ReceiveViaSocket(fromserverpath);
-
+		System.out.println(fromserverpath + "received");
+		sendrecsock.SendViaSocket("C:\\Users/Tom/TestDoc/ack.txt");
+		System.out.println("ack sent");
+		
+		
 		// get the message and sender from the received file and display
 		XmlManip xmlmanip = new XmlManip();
 		String returnedresult = xmlmanip.returnRequired(fromserverpath, "text");
@@ -48,6 +56,38 @@ public class Client {
 		String returnedsender = xmlmanip.returnRequired(fromserverpath, "sender");
 		System.out.println("from user: " + returnedsender);
 
+		
+		
+		
+		String otherfilepath;
+		char sendingfile;
+		String otherfp;
+		String[] recfromserv = new String[3];
+		for (int i = 2; i<5; i++) {
+			sendingfile = fromServer.readChar();
+			if (sendingfile == 'y') {
+				otherfilepath = Integer.toString(i);
+				otherfp = pathwaystart+otherfilepath+".xml";
+				sendrecsock.ReceiveViaSocket(otherfp);
+				sendrecsock.SendViaSocket("C:\\Users/Tom/TestDoc/ack.txt");
+				recfromserv[i-2] = otherfp;
+			} 
+		}
+		
+		sendrecsock.ReceiveViaSocket("C:\\Users/Tom/TestDoc/clientack.txt");
+		
+		for (int j = 0; j < 3; j++) {
+			System.out.println("array pos is" + recfromserv[j] + "!!");
+			if (recfromserv[j] != null) {
+				System.out.println("DO PART " + j);
+			}
+		}
+		
+		
+		/*char sendingfile;
+		sendingfile = fromServer.readChar();
+		System.out.println("From server: " + sendingfile);*/
+		
 		Boolean sendmessage = true;
 
 		while (sendmessage) {
@@ -151,8 +191,20 @@ public class Client {
 					System.out.println("Is user? " + qisUser);
 					if (qisUser == 'y') {
 						System.out.println("Successful log-in");
-						System.out.print("LOG IN PROTOCOL FINISHED");
+						System.out.println("LOG IN PROTOCOL FINISHED");
 						currentUserID = userID;
+						//create encryption/decryption object
+						
+						if (encryptdecrypt == null ) {
+							System.out.println("IT'S NULL");
+							PUB_KEY_LOC = "client"+currentUserID+"/mypublickey.key";
+							PRIV_KEY_LOC = "client"+currentUserID+"/myprivatekey.key";
+							SERV_PUB_KEY_LOC = "client"+currentUserID+"/serverpublickey.key";
+							encryptdecrypt = new EncryptDecrypt(PUB_KEY_LOC,PRIV_KEY_LOC);
+						}
+						
+						
+						
 						finished = true;
 						break;
 					} else {
@@ -169,6 +221,17 @@ public class Client {
 						toServer.writeChar(c);
 						userID = fromServer.readInt();
 						System.out.println("userID is: " + userID);
+						currentUserID = userID;
+						//create encryptoin/decryption object
+						PUB_KEY_LOC = "client"+currentUserID+"/mypublickey.key";
+						PRIV_KEY_LOC = "client"+currentUserID+"/myprivatekey.key";
+						encryptdecrypt = new EncryptDecrypt(PUB_KEY_LOC,PRIV_KEY_LOC);
+						//send public key to server
+						SERV_PUB_KEY_LOC = "client"+currentUserID+"/serverpublickey.key";
+						sendrecsock.SendViaSocket(PUB_KEY_LOC);
+						sendrecsock.ReceiveViaSocket(SERV_PUB_KEY_LOC);
+						
+						
 						break;
 					} else {
 						System.out.println("Please enter y or n");

@@ -1,5 +1,6 @@
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
+import java.io.File;
 import java.io.IOException;
 import java.net.Socket;
 import java.util.Date;
@@ -42,7 +43,11 @@ public class Client {
 
 		// receive file
 		sendrecsock.ReceiveViaSocket(fromserverpath);
-
+		System.out.println(fromserverpath + "received");
+		sendrecsock.SendViaSocket("C:\\Users/Tom/TestDoc/ack.txt");
+		System.out.println("ack sent");
+		
+		
 		// get the message and sender from the received file and display
 		XmlManip xmlmanip = new XmlManip();
 		String returnedresult = xmlmanip.returnRequired(fromserverpath, "text");
@@ -50,6 +55,38 @@ public class Client {
 		String returnedsender = xmlmanip.returnRequired(fromserverpath, "sender");
 		System.out.println("from user: " + returnedsender);
 
+		
+		
+		
+		String otherfilepath;
+		char sendingfile;
+		String otherfp;
+		String[] recfromserv = new String[3];
+		for (int i = 2; i<5; i++) {
+			sendingfile = fromServer.readChar();
+			if (sendingfile == 'y') {
+				otherfilepath = Integer.toString(i);
+				otherfp = pathwaystart+otherfilepath+".xml";
+				sendrecsock.ReceiveViaSocket(otherfp);
+				sendrecsock.SendViaSocket("C:\\Users/Tom/TestDoc/ack.txt");
+				recfromserv[i-2] = otherfp;
+			} 
+		}
+		
+		sendrecsock.ReceiveViaSocket("C:\\Users/Tom/TestDoc/clientack.txt");
+		
+		for (int j = 0; j < 3; j++) {
+			System.out.println("array pos is" + recfromserv[j] + "!!");
+			if (recfromserv[j] != null) {
+				System.out.println("DO PART " + j);
+			}
+		}
+		
+		
+		/*char sendingfile;
+		sendingfile = fromServer.readChar();
+		System.out.println("From server: " + sendingfile);*/
+		
 		Boolean sendmessage = true;
 
 		while (sendmessage) {
@@ -64,45 +101,65 @@ public class Client {
 				c = sm.charAt(0);
 				toServer.writeChar(c);
 
-				// user inputs message
-				// Scanner in = new Scanner(System.in);
-				String s;
-				System.out.println("Enter a message");
-				s = in.nextLine();
-
 				// user inputs receiver user id
 				String r;
 				System.out.println("Enter receiver user ID");
 				r = in.nextLine();
-
-				// create message xml file writer
-				XmlWriter xmlwriter = new XmlWriter();
-
-				// save file to send in format: toserver date and time
-				String toserver = "toserver ";
-				Date date = new Date();
-				String sdate = date.toString();
-				String rsdate = sdate.replaceAll(":", " ");
-				String toserverfilename = toserver.concat(rsdate);
-				String toserverfilepath = toserverfilename.concat(".xml");
-				String toserverpath = pathwaystart.concat(toserverfilepath);
-				// final file path holder is toserverfilepath
-				System.out.println("File to be sent saved locally at: " + toserverpath);
-
-				// create xml file
-				xmlwriter.WriteToFile(s, Integer.toString(currentUserID), r, toserverfilename);
-
-				// send file
-				sendrecsock.SendViaSocket(toserverpath);
-
-				DataInputStream fromServer = new DataInputStream(sock.getInputStream());
-				char success;
-				success = fromServer.readChar();
-				if (success == 'y') {
-					System.out.println("Message sending successful");
+				//System.out.println("receiving char from server");
+				//char fs = fromServer.readChar();
+				String keypath = pathwaystart+"client/"+r+"pubkey.key";
+				System.out.println("keypath is: " + keypath);
+				File f = new File(keypath);
+				if (!(f.exists())) {
+					
+					System.out.println("You do not have user " + r + "registered. Registration protocol will now be initiated");
+					toServer.writeChar('n');
+					//register
 				} else {
-					System.out.println("Message sending unsuccessful. Please try again");
+					toServer.writeChar('y');
+					
+					toServer.writeInt(Integer.parseInt(r));
+					// user inputs message
+					// Scanner in = new Scanner(System.in);
+					String s;
+					System.out.println("Enter a message");
+					s = in.nextLine();
+
+					// create message xml file writer
+					XmlWriter xmlwriter = new XmlWriter();
+
+					// save file to send in format: toserver date and time
+					String toserver = "toserver ";
+					Date date = new Date();
+					String sdate = date.toString();
+					String rsdate = sdate.replaceAll(":", " ");
+					String toserverfilename = toserver.concat(rsdate);
+					String toserverfilepath = toserverfilename.concat(".xml");
+					String toserverpath = pathwaystart.concat(toserverfilepath);
+					// final file path holder is toserverfilepath
+					System.out.println("File to be sent saved locally at: " + toserverpath);
+
+					// create xml file
+					xmlwriter.WriteToFile(s, Integer.toString(currentUserID), r, toserverfilename);
+
+					//TO DO - encrypt
+					
+					// send file
+					sendrecsock.SendViaSocket(toserverpath);
+
+					DataInputStream fromServer = new DataInputStream(sock.getInputStream());
+					char success;
+					success = fromServer.readChar();
+					if (success == 'y') {
+						System.out.println("Message sending successful");
+					} else {
+						System.out.println("Message sending unsuccessful. Please try again");
+					}
+					
 				}
+				
+				
+				
 
 				// sock.close();
 
