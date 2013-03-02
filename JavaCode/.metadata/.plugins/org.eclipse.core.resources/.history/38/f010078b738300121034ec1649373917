@@ -72,17 +72,8 @@ public class Server {
 				con.updateUser(currentID, "messloc1", "nomessagefile.xml");
 			}
 
-			DataInputStream inputFromClient = new DataInputStream(sock.getInputStream());
-			DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
-			
 			// get filepath from database
-			String prefilepath = con.returnFirstMessagefromID(currentID, 4);
-			String filepath = pathwaystart.concat(prefilepath);
-			
-			if (prefilepath.equals("nomessagefile.xml")){
-				outputToClient.writeChar('n');
-			} else {
-				outputToClient.writeChar('y');
+			String filepath = pathwaystart.concat(con.returnFirstMessagefromID(currentID, 4));
 			// sendfile
 			sendrecsock.SendViaSocket(filepath);
 			System.out.println(filepath + "sent");
@@ -95,9 +86,10 @@ public class Server {
 			// System.out.println(filepath);
 			// sendrecsock.ReceiveViaSocket("C:\\Users/Tom/TestDoc/testserv.xml");
 			// sendrecsock.SendViaSocket(filepath);
-			}
+
 			// send all possible files
-			
+			DataInputStream inputFromClient = new DataInputStream(sock.getInputStream());
+			DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
 			String[] fparray = new String[3];
 			String holder;
 			String test = "xxx.xml";
@@ -147,7 +139,7 @@ public class Server {
 				
 				// encrypt and send
 				//encryptdecrypt.encrypt(pubkeytouse,filename,pathwaystart+"tosend.key");
-				sendrecsock.SendViaSocket(pathwaystart+filename);
+				sendrecsock.SendViaSocket(pathwaystart+"tosend.key");
 				sendrecsock.ReceiveViaSocket(pathwaystart.concat("servack.txt"));
 				
 				// create file using string2 and string3
@@ -156,8 +148,8 @@ public class Server {
 				out.close();
 				
 				// encrypt and send
-				encryptdecrypt.encrypt(pathwaystart+pubkeytouse,pathwaystart+"tosend.txt", pathwaystart+"encryptedtosend.txt");
-				sendrecsock.SendViaSocket(pathwaystart+"encryptedtosend.txt");
+				encryptdecrypt.encrypt(pubkeytouse,pathwaystart+"tosend.txt", pathwaystart+"encryptedtosend.txt");
+				sendrecsock.SendViaSocket(pathwaystart+"encryptedtosend.key");
 				sendrecsock.ReceiveViaSocket(pathwaystart.concat("servack.txt"));
 
 				// receive y or n
@@ -170,40 +162,34 @@ public class Server {
 					// receive file from client
 					sendrecsock.ReceiveViaSocket(pathwaystart.concat("messloc3for"+Integer.toString(receiveruserID)+".txt"));
 					// save file in messloc3 user id receiveruserID
-					con.updateUser(currentID, "messloc3","messloc3for"+Integer.toString(receiveruserID)+".txt");
-					sendrecsock.SendViaSocket(pathwaystart+"servack.txt");
+					con.updateUser(currentID, "messloc3",pathwaystart.concat("messloc3for"+Integer.toString(receiveruserID)+".txt"));
+					sendrecsock.SendViaSocket(pathwaystart+"encryptedtosend.key");
 					
 				} else {
 					// if no show error and exit
 					System.out.println("ERROR");
 				}
 				
-				con.updateUser(currentID, "messloc2", "xxx.xml");
+				
 			}
 			if (!(fparray[1].equals("xxx.xml"))) {
 				System.out.println("DO PART 2");
 				
 				//receive int user
-				int user = inputFromClient.readInt();
 				//receive file
-				sendrecsock.ReceiveViaSocket(pathwaystart.concat("messloc4for"+Integer.toString(user)+".txt"));
 				//save file in messloc4 user db
-				con.updateUser(currentID, "messloc4","messloc4for"+Integer.toString(user)+".txt");
 				//send ack
-				sendrecsock.SendViaSocket(pathwaystart+"servack.txt");
-				con.updateUser(currentID, "messloc3", "xxx.xml");
 				
 			}
 			if (!(fparray[2].equals("xxx.xml"))) {
 				System.out.println("DO PART 3");
-				con.updateUser(currentID, "messloc4", "xxx.xml");
 			}
 
 			// message sent so replace with no message file association
 			con.updateUser(currentID, "messloc1", "nomessagefile.xml");
-			//con.updateUser(currentID, "messloc2", "xxx.xml");
-			//con.updateUser(currentID, "messloc3", "xxx.xml");
-			//con.updateUser(currentID, "messloc4", "xxx.xml");
+			con.updateUser(currentID, "messloc2", "xxx.xml");
+			con.updateUser(currentID, "messloc3", "xxx.xml");
+			con.updateUser(currentID, "messloc4", "xxx.xml");
 
 			Boolean recmessage = true;
 			// DataInputStream inputFromClient = new

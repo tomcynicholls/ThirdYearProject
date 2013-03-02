@@ -76,10 +76,10 @@ public class Server {
 			DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
 			
 			// get filepath from database
-			String prefilepath = con.returnFirstMessagefromID(currentID, 4);
+			String prefilepath = con.returnFirstMessagefromID(currentID, 4)
 			String filepath = pathwaystart.concat(prefilepath);
 			
-			if (prefilepath.equals("nomessagefile.xml")){
+			if (filepath.equals("nomessagefile.xml")){
 				outputToClient.writeChar('n');
 			} else {
 				outputToClient.writeChar('y');

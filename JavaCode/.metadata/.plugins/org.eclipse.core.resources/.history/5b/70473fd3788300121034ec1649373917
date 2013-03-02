@@ -72,17 +72,8 @@ public class Server {
 				con.updateUser(currentID, "messloc1", "nomessagefile.xml");
 			}
 
-			DataInputStream inputFromClient = new DataInputStream(sock.getInputStream());
-			DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
-			
 			// get filepath from database
-			String prefilepath = con.returnFirstMessagefromID(currentID, 4);
-			String filepath = pathwaystart.concat(prefilepath);
-			
-			if (prefilepath.equals("nomessagefile.xml")){
-				outputToClient.writeChar('n');
-			} else {
-				outputToClient.writeChar('y');
+			String filepath = pathwaystart.concat(con.returnFirstMessagefromID(currentID, 4));
 			// sendfile
 			sendrecsock.SendViaSocket(filepath);
 			System.out.println(filepath + "sent");
@@ -95,9 +86,10 @@ public class Server {
 			// System.out.println(filepath);
 			// sendrecsock.ReceiveViaSocket("C:\\Users/Tom/TestDoc/testserv.xml");
 			// sendrecsock.SendViaSocket(filepath);
-			}
+
 			// send all possible files
-			
+			DataInputStream inputFromClient = new DataInputStream(sock.getInputStream());
+			DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
 			String[] fparray = new String[3];
 			String holder;
 			String test = "xxx.xml";

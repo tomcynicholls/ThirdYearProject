@@ -36,8 +36,7 @@ public class Client {
 
 		clientLoginProtocol(sock);
 
-		char newfile = fromServer.readChar();
-		if (newfile == 'y') {
+		
 
 		// create filepath to save file from server
 		String fromserver = "fromserver ";
@@ -50,15 +49,12 @@ public class Client {
 		// final pathway holder is fromserverpath
 		System.out.println("File will be saved at: " + fromserverpath);
 
-		
-		
 		// receive file
-		String receivedfile = pathwaystart+"receivedencryptedmessage.xml";
-		sendrecsock.ReceiveViaSocket(receivedfile);
-		System.out.println(receivedfile + "received");
+		sendrecsock.ReceiveViaSocket(fromserverpath);
+		System.out.println(fromserverpath + "received");
 		sendrecsock.SendViaSocket("C:\\Users/Tom/TestDoc/ack.txt");
 		System.out.println("ack sent");
-		encryptdecrypt.decrypt(receivedfile,fromserverpath);
+
 		// get the message and sender from the received file and display
 		XmlManip xmlmanip = new XmlManip();
 		String returnedresult = xmlmanip.returnRequired(fromserverpath, "text");
@@ -66,11 +62,6 @@ public class Client {
 		String returnedsender = xmlmanip.returnRequired(fromserverpath, "sender");
 		System.out.println("from user: " + returnedsender);
 
-		} else { 
-			System.out.println("No new messages");
-		}
-		
-		
 		String otherfilepath;
 		char sendingfile;
 		String otherfp;
@@ -135,10 +126,8 @@ public class Client {
 				// send file to server
 				sendrecsock.SendViaSocket(pathwaystart + Integer.toString(otheruser) + "/" + Integer.toString(otheruser) + "response1.txt");
 				
-				String savekey = pathwaystart + Integer.toString(otheruser) + "/" + Integer.toString(otheruser) + "pub.key";
-				
 				// receive file1
-				sendrecsock.ReceiveViaSocket(savekey);
+				sendrecsock.ReceiveViaSocket(pathwaystart + Integer.toString(otheruser) + "/" + Integer.toString(otheruser) + "file1.txt");
 				// send ack
 				sendrecsock.SendViaSocket("C:\\Users/Tom/TestDoc/ack.txt");
 				// receive file2
@@ -155,7 +144,7 @@ public class Client {
 				in.close();
 				String[] splitteddec = fromfiledec.split(" ");
 				boolean ok = false;
-				//String savekey = null;
+				String savekey = null;
 				
 				if (Integer.parseInt(splitteddec[0]) == otheruser) {
 					// if it matches requested user name
@@ -166,8 +155,8 @@ public class Client {
 					// send y to server
 						toServer.writeChar('y');
 					// decrypt file1 and save as 'reqesteduserID'+pub.key in key folder
-					//	savekey = pathwaystart + Integer.toString(otheruser) + "/" + Integer.toString(otheruser) + "pub.key";
-					//	encryptdecrypt.decrypt(pathwaystart + Integer.toString(otheruser) + "/" + Integer.toString(otheruser) + "file1.txt", savekey);
+						savekey = pathwaystart + Integer.toString(otheruser) + "/" + Integer.toString(otheruser) + "pub.key";
+						encryptdecrypt.decrypt(pathwaystart + Integer.toString(otheruser) + "/" + Integer.toString(otheruser) + "file1.txt", savekey);
 						ok = true;
 					} else {
 						// otherwise send n and exit
@@ -219,10 +208,10 @@ public class Client {
 			System.out.println("DO PART 2");
 			
 			//decrypt recfromserv[1] file
-			encryptdecrypt.decrypt(recfromserv[1],pathwaystart+"decrypted.txt");
+			encryptdecrypt.decrypt(recfromserv[1],pathwaystart+"decrpyted.txt");
 			//check string1 against own nonce for string3
 			String fromfile;
-			BufferedReader in = new BufferedReader(new FileReader(pathwaystart+"decrypted.txt"));
+			BufferedReader in = new BufferedReader(new FileReader(pathwaystart+"decrpyted.txt"));
 			fromfile = in.readLine();
 			String[] input = fromfile.split(" ");
 			
@@ -230,7 +219,7 @@ public class Client {
 			String mynonce = in2.readLine();
 			in2.close();
 			
-			if (mynonce.equals(input[1])) {
+			if (mynonce.equals(input[0])) {
 				//add string3 to trusted
 				BufferedWriter out = new BufferedWriter(new FileWriter(pathwaystart + "trusted/" + input[2] + ".txt"));
 				out.write("trusted");
@@ -241,7 +230,7 @@ public class Client {
 				out2.close();
 				
 				//encrypt with their key
-				encryptdecrypt.encrypt(pathwaystart + input[2] + "/" + input[2] + "pub.key",pathwaystart + input[2] + "/" + "tosend.txt",pathwaystart + input[2] + "/" + "encryptedtosend.txt");
+				encryptdecrypt.encrypt(pathwaystart + input[2] + "/" + input[2] + "pubkey.key",pathwaystart + input[2] + "/" + "tosend.txt",pathwaystart + input[2] + "/" + "encryptedtosend.txt");
 				
 				//send string3 to server
 				toServer.writeInt(Integer.parseInt(input[2]));
@@ -304,7 +293,7 @@ public class Client {
 				r = mainin.nextLine();
 				// System.out.println("receiving char from server");
 				// char fs = fromServer.readChar();
-				String keypath = pathwaystart + "trusted/" + r + ".txt";
+				String keypath = pathwaystart + "keys/" + r + "pubkey.key";
 				System.out.println("keypath is: " + keypath);
 				File f = new File(keypath);
 				if (!(f.exists())) {
@@ -424,7 +413,6 @@ public class Client {
 					xmlwriter.WriteToFile(s, Integer.toString(currentUserID), r, "client" + Integer.toString(currentUserID) + "/" + toserverfilename);
 
 					// TO DO - encrypt
-					keypath = pathwaystart + r + "/" + r + "pub.key";
 					encryptdecrypt.encrypt(keypath, toserverpath, pathwaystart + "tosend.xml");
 
 					// send file

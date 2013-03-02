@@ -36,8 +36,7 @@ public class Client {
 
 		clientLoginProtocol(sock);
 
-		char newfile = fromServer.readChar();
-		if (newfile == 'y') {
+		
 
 		// create filepath to save file from server
 		String fromserver = "fromserver ";
@@ -50,15 +49,12 @@ public class Client {
 		// final pathway holder is fromserverpath
 		System.out.println("File will be saved at: " + fromserverpath);
 
-		
-		
 		// receive file
-		String receivedfile = pathwaystart+"receivedencryptedmessage.xml";
-		sendrecsock.ReceiveViaSocket(receivedfile);
-		System.out.println(receivedfile + "received");
+		sendrecsock.ReceiveViaSocket(fromserverpath);
+		System.out.println(fromserverpath + "received");
 		sendrecsock.SendViaSocket("C:\\Users/Tom/TestDoc/ack.txt");
 		System.out.println("ack sent");
-		encryptdecrypt.decrypt(receivedfile,fromserverpath);
+
 		// get the message and sender from the received file and display
 		XmlManip xmlmanip = new XmlManip();
 		String returnedresult = xmlmanip.returnRequired(fromserverpath, "text");
@@ -66,11 +62,6 @@ public class Client {
 		String returnedsender = xmlmanip.returnRequired(fromserverpath, "sender");
 		System.out.println("from user: " + returnedsender);
 
-		} else { 
-			System.out.println("No new messages");
-		}
-		
-		
 		String otherfilepath;
 		char sendingfile;
 		String otherfp;
@@ -241,7 +232,7 @@ public class Client {
 				out2.close();
 				
 				//encrypt with their key
-				encryptdecrypt.encrypt(pathwaystart + input[2] + "/" + input[2] + "pub.key",pathwaystart + input[2] + "/" + "tosend.txt",pathwaystart + input[2] + "/" + "encryptedtosend.txt");
+				encryptdecrypt.encrypt(pathwaystart + input[2] + "/" + input[2] + "pubkey.key",pathwaystart + input[2] + "/" + "tosend.txt",pathwaystart + input[2] + "/" + "encryptedtosend.txt");
 				
 				//send string3 to server
 				toServer.writeInt(Integer.parseInt(input[2]));
@@ -304,7 +295,7 @@ public class Client {
 				r = mainin.nextLine();
 				// System.out.println("receiving char from server");
 				// char fs = fromServer.readChar();
-				String keypath = pathwaystart + "trusted/" + r + ".txt";
+				String keypath = pathwaystart + "keys/" + r + "pubkey.key";
 				System.out.println("keypath is: " + keypath);
 				File f = new File(keypath);
 				if (!(f.exists())) {
@@ -424,7 +415,6 @@ public class Client {
 					xmlwriter.WriteToFile(s, Integer.toString(currentUserID), r, "client" + Integer.toString(currentUserID) + "/" + toserverfilename);
 
 					// TO DO - encrypt
-					keypath = pathwaystart + r + "/" + r + "pub.key";
 					encryptdecrypt.encrypt(keypath, toserverpath, pathwaystart + "tosend.xml");
 
 					// send file
