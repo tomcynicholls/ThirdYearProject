@@ -16,7 +16,6 @@ public class Client {
 	public static String PRIV_KEY_LOC;
 	public static String SERV_PUB_KEY_LOC;
 	public static SendReceiveSocket sendrecsock;
-	public static String pathwaystart = "C:\\Users/Tom/TestDoc/";
 
 	public static void main(String[] args) throws IOException {
 
@@ -29,7 +28,7 @@ public class Client {
 
 		clientLoginProtocol(sock);
 
-		
+		String pathwaystart = "C:\\Users/Tom/TestDoc/";
 
 		// create filepath to save file from server
 		String fromserver = "fromserver ";
@@ -123,15 +122,10 @@ public class Client {
 			//encrypt with their key
 			//send string3 to server
 			//send encrypted file to server
-			//receive ack
 			
 		}
 		if (recfromserv[2] != null) {
 			System.out.println("DO PART 3");
-			
-			//decrypt recfromserv[2] file
-			//check string1 with own nonce for string2
-			//add string2 to trusted
 		}
 		/*
 		 * char sendingfile; sendingfile = fromServer.readChar();
@@ -158,7 +152,7 @@ public class Client {
 				r = in.nextLine();
 				// System.out.println("receiving char from server");
 				// char fs = fromServer.readChar();
-				String keypath = pathwaystart + "keys/" + r + "pubkey.key";
+				String keypath = pathwaystart + "client/" + r + "pubkey.key";
 				System.out.println("keypath is: " + keypath);
 				File f = new File(keypath);
 				if (!(f.exists())) {
@@ -215,7 +209,7 @@ public class Client {
 					System.out.println("File to be sent saved locally at: " + toserverpath);
 
 					// create xml file
-					xmlwriter.WriteToFile(s, Integer.toString(currentUserID), r, "client" + Integer.toString(currentUserID) + "/" + toserverfilename);
+					xmlwriter.WriteToFile(s, Integer.toString(currentUserID), r, toserverfilename);
 
 					// TO DO - encrypt
 					encryptdecrypt.encrypt(keypath, toserverpath, pathwaystart + "tosend.xml");
@@ -285,14 +279,13 @@ public class Client {
 						System.out.println("Successful log-in");
 						System.out.println("LOG IN PROTOCOL FINISHED");
 						currentUserID = userID;
-						pathwaystart = pathwaystart + "client" + Integer.toString(currentUserID) + "/";
 						// create encryption/decryption object
 
 						if (encryptdecrypt == null) {
 							System.out.println("IT'S NULL");
-							PUB_KEY_LOC = pathwaystart + "keys/mypublickey.key";
-							PRIV_KEY_LOC = pathwaystart + "keys/myprivatekey.key";
-							SERV_PUB_KEY_LOC = pathwaystart + "keys/serverpublickey.key";
+							PUB_KEY_LOC = "client" + currentUserID + "/mypublickey.key";
+							PRIV_KEY_LOC = "client" + currentUserID + "/myprivatekey.key";
+							SERV_PUB_KEY_LOC = "client" + currentUserID + "/serverpublickey.key";
 							encryptdecrypt = new EncryptDecrypt(PUB_KEY_LOC, PRIV_KEY_LOC);
 						}
 
@@ -313,13 +306,12 @@ public class Client {
 						userID = fromServer.readInt();
 						System.out.println("userID is: " + userID);
 						currentUserID = userID;
-						pathwaystart = pathwaystart + "client" + Integer.toString(currentUserID) + "/";
 						// create encryptoin/decryption object
-						PUB_KEY_LOC = pathwaystart + "keys/mypublickey.key";
-						PRIV_KEY_LOC = pathwaystart + "keys/myprivatekey.key";
+						PUB_KEY_LOC = "client" + currentUserID + "/mypublickey.key";
+						PRIV_KEY_LOC = "client" + currentUserID + "/myprivatekey.key";
 						encryptdecrypt = new EncryptDecrypt(PUB_KEY_LOC, PRIV_KEY_LOC);
 						// send public key to server
-						SERV_PUB_KEY_LOC = pathwaystart + "keys/serverpublickey.key";
+						SERV_PUB_KEY_LOC = "client" + currentUserID + "/serverpublickey.key";
 						sendrecsock.SendViaSocket(PUB_KEY_LOC);
 						sendrecsock.ReceiveViaSocket(SERV_PUB_KEY_LOC);
 

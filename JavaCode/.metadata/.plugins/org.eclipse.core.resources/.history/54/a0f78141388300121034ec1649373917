@@ -12,8 +12,8 @@ import java.util.List;
 public class Server {
 
 	public static EncryptDecrypt encryptdecrypt;
-	public static final String SERV_PUB_KEY_LOC = "C:\\Users/Tom/TestDoc/server/keys/servpubkey.key";
-	public static final String SERV_PRIV_KEY_LOC = "C:\\Users/Tom/TestDoc/server/keys/servprivkey.key";
+	public static final String SERV_PUB_KEY_LOC = "server/servpubkey.key";
+	public static final String SERV_PRIV_KEY_LOC = "server/servprivkey.key";
 	public static SendReceiveSocket sendrecsock;
 	public static String pathwaystart = "C:\\Users/Tom/TestDoc/server/";
 
@@ -30,10 +30,9 @@ public class Server {
 
 		
 		String nomessagefile = pathwaystart.concat("nomessagefile.xml");
-		System.out.println(nomessagefile);
 		File f = new File(nomessagefile);
 		if (!(f.exists())) {
-			xmlwriter.WriteToFile("no message", "server", "client", "server/nomessagefile");
+			xmlwriter.WriteToFile("no message", "server", "client", "nomessagefile");
 		}
 
 		DBManager con = new DBManager();
@@ -297,7 +296,7 @@ public class Server {
 					currentID = userID;
 					outputToClient.writeInt(userID);
 
-					String currentuserpubkeyloc = pathwaystart + "keys/user" + Integer.toString(currentID) + "pubkey.key";
+					String currentuserpubkeyloc = pathwaystart + "user" + Integer.toString(currentID) + "pubkey.key";
 					sendrecsock.ReceiveViaSocket(currentuserpubkeyloc);
 					sendrecsock.SendViaSocket(SERV_PUB_KEY_LOC);
 

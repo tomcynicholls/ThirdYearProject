@@ -54,18 +54,5 @@ public class test {
 		String thefinal = userID + " " + requserID + " " + thetime;
 		System.out.println(thefinal);
 
-		BufferedWriter out = new BufferedWriter(new FileWriter("test.txt"));
-		out.write(thefinal);
-		out.close();
-
-		String fromfile;
-		BufferedReader in = new BufferedReader(new FileReader("test.txt"));
-		fromfile = in.readLine();
-		in.close();
-
-		String[] test2 = fromfile.split(" ");
-		System.out.println(fromfile);
-		System.out.println(test2[0] + test2[1] + test2[2]);
-		
 	}
 }
