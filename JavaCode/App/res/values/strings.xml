@@ -4,6 +4,8 @@
     <string name="app_name">TYP App</string>
     <string name="edit_message">Enter a message</string>
     <string name="edit_receiver">To</string>
+    <string name="edit_infosend">Info</string>
+    <string name="button_infosend">Send</string>
     <string name="button_send">Send</string>
     <string name="button_return">Return</string>
     <string name="button_receive">Receive</string>
