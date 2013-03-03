@@ -4,6 +4,7 @@ import java.util.Date;
 
 import android.app.Activity;
 import android.content.Intent;
+import android.os.BatteryManager;
 import android.os.Bundle;
 import android.os.Environment;
 import android.util.Log;
@@ -19,9 +20,15 @@ public class AppActivity extends Activity {
 	public final static String EXTRA_RECEIVER = "com.thirdyearproject.app.RECEIVER";
 	public static String fromserverpath;
 	public static Boolean gogogo;
+	public static String privkeyloc;
+	public static String pubkeyloc;
+	public static String servkeyloc;
 	
 	public static String recsender;
 	public static String recmessage;
+	public static int myuserID = 4;
+	public static String fullpathwaystart;
+	public static AppEncryptDecryptAES ende;
 	
 	public ConnectionHandler conhandler = new ConnectionHandler();
     @Override
@@ -29,10 +36,26 @@ public class AppActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
+        BatteryManager battery = new BatteryManager()
+        
+        int level = battery.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+        int scale = battery.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+        
+        Log.i("Battery level",Integer.toString(level));
+        Log.i("Battery scale",Integer.toString(scale));
+        
         gogogo = false;
         
         String pathwaystart = this.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath();
-        String fullpathwaystart = pathwaystart.concat("/");
+        fullpathwaystart = pathwaystart.concat("/");
+        
+        privkeyloc = fullpathwaystart + "myprivatekey.key"; 
+    	pubkeyloc = fullpathwaystart + "mypublickey.key"; 
+    	servkeyloc = fullpathwaystart + "servkey.key";
+        
+        //ende = new AppEncryptDecryptAES(privkeyloc);
+        
+        //ende.encrypt(privkeyloc,fullpathwaystart+"typoutput.xml",fullpathwaystart+"typ.xml");
         
         //create received file pathway
         String fromserver = "fromserver ";
@@ -96,7 +119,9 @@ public class AppActivity extends Activity {
       	String toserverpath = sfullpathwaystart.concat(toserverfilepath);
     	Log.i("to server path is: " , toserverpath);
         
-        xmlwriter.WriteToFile(message,"app", receiver, toserverpath);
+    	String sender = "User: " + Integer.toString(myuserID); 
+    	
+        xmlwriter.WriteToFile(message,sender, receiver, toserverpath);
         
         //send file
         Log.i("calling:","writeToStream");
@@ -108,6 +133,7 @@ public class AppActivity extends Activity {
     }
     
     public void receiveMessage(View view) {
+    	Log.i("User ID is: ",Integer.toString(myuserID));
     	((TextView)findViewById(R.id.textview_from)).setText(recsender);
         ((TextView)findViewById(R.id.textview_message)).setText(recmessage);
     }

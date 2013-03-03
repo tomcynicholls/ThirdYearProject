@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="14" version="2.0">
+<workbench progressCount="17" version="2.0">
 <workbenchAdvisor/>
 <window height="768" maximized="true" width="1024" x="326" y="256">
 <fastViewData fastViewLocation="1024">
@@ -22,14 +22,15 @@
 <coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="107" y="22"/>
 <coolItem id="org.eclipse.wst.xml.ui.perspective.NewFileToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
-<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.wst.xml.ui.design.DesignToolBar" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launch.toolbar" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="org.eclipse.debug.ui.main.toolbar" itemType="typeToolBarContribution" x="284" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.jdt.ui.ClassFileEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
-<coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typePlaceholder" x="-1" y="-1"/>
+<coolItem id="com.android.ide.eclipse.editors.CommonXmlEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -39,64 +40,112 @@
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="5"/>
-<part id="0"/>
 <part id="1"/>
+<part id="0"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
+<part id="5"/>
 <part id="6"/>
 <part id="7"/>
 <part id="8"/>
 <part id="9"/>
-<part id="4"/>
 <part id="10"/>
+<part id="12"/>
+<part id="13"/>
+<part id="14"/>
+<part id="15"/>
+<part id="16"/>
+<part id="11"/>
+<part id="17"/>
+<part id="18"/>
+<part id="19"/>
+<part id="20"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Server.java" partName="Server.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Server.java" title="Server.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/Server.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Server.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2707" selectionTopPixel="690"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EncryptDecrypt.java" partName="EncryptDecrypt.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecrypt.java" title="EncryptDecrypt.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecrypt.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecrypt.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="978" selectionTopPixel="30"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XmlWriter.java" partName="XmlWriter.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/XmlWriter.java" title="XmlWriter.java" tooltip="TwoWayXmlSend/src/XmlWriter.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/XmlWriter.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2131" selectionTopPixel="180"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SendReceiveSocket.java" partName="SendReceiveSocket.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/SendReceiveSocket.java" title="SendReceiveSocket.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/SendReceiveSocket.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/SendReceiveSocket.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="39" selectionOffset="1863" selectionTopPixel="645"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XmlManip.java" partName="XmlManip.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/XmlManip.java" title="XmlManip.java" tooltip="TwoWayXmlSend/src/XmlManip.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/XmlManip.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="661" selectionTopPixel="44"/>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AppActivity.java" partName="AppActivity.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/App/src/com/thirdyearproject/app/AppActivity.java" title="AppActivity.java" tooltip="App/src/com/thirdyearproject/app/AppActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/App/src/com/thirdyearproject/app/AppActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1221" selectionTopPixel="180"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SendReceiveSocket.java" partName="SendReceiveSocket.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/SendReceiveSocket.java" title="SendReceiveSocket.java" tooltip="TwoWayXmlSend/src/SendReceiveSocket.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/SendReceiveSocket.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="53" selectionOffset="694" selectionTopPixel="135"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ConnectionHandler.java" partName="ConnectionHandler.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/App/src/com/thirdyearproject/app/ConnectionHandler.java" title="ConnectionHandler.java" tooltip="App/src/com/thirdyearproject/app/ConnectionHandler.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/App/src/com/thirdyearproject/app/ConnectionHandler.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1836" selectionTopPixel="1283"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="test.java" partName="test.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/test.java" title="test.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/test.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/test.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="108" selectionOffset="1625" selectionTopPixel="374"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DisplayMessageActivity.java" partName="DisplayMessageActivity.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/App/src/com/thirdyearproject/app/DisplayMessageActivity.java" title="DisplayMessageActivity.java" tooltip="App/src/com/thirdyearproject/app/DisplayMessageActivity.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/App/src/com/thirdyearproject/app/DisplayMessageActivity.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" partName="Client.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Client.java" title="Client.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/Client.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Client.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1231" selectionTopPixel="315"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XmlManipApp.java" partName="XmlManipApp.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/App/src/com/thirdyearproject/app/XmlManipApp.java" title="XmlManipApp.java" tooltip="App/src/com/thirdyearproject/app/XmlManipApp.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/App/src/com/thirdyearproject/app/XmlManipApp.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XmlWriterApp.java" partName="XmlWriterApp.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/App/src/com/thirdyearproject/app/XmlWriterApp.java" title="XmlWriterApp.java" tooltip="App/src/com/thirdyearproject/app/XmlWriterApp.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/App/src/com/thirdyearproject/app/XmlWriterApp.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="main.xml" partName="main.xml" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/App/res/layout/main.xml" title="main.xml" tooltip="App/res/layout/main.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/App/res/layout/main.xml"/>
+</editor>
+<editor id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" partName="strings.xml" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/App/res/values/strings.xml" title="strings.xml" tooltip="App/res/values/strings.xml" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/App/res/values/strings.xml"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AppServer.java" partName="AppServer.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/AppServer.java" title="AppServer.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/AppServer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/AppServer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5758" selectionTopPixel="1920"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DBManager.java" partName="DBManager.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/DBManager.java" title="DBManager.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/DBManager.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/DBManager.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="24" selectionOffset="2582" selectionTopPixel="1155"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EncryptDecrypt.java" partName="EncryptDecrypt.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecrypt.java" title="EncryptDecrypt.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecrypt.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecrypt.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="71" selectionOffset="2985" selectionTopPixel="1290"/>
+<editorState selectionHorizontalPixel="0" selectionLength="24" selectionOffset="2582" selectionTopPixel="1200"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestServer.java" partName="TestServer.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestServer.java" title="TestServer.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestServer.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestServer.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="102" selectionOffset="578" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1362" selectionTopPixel="366"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" partName="Client.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Client.java" title="Client.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/Client.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Client.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Server.java" partName="Server.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Server.java" title="Server.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/Server.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Server.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1362" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AppEncryptDecrypt.java" partName="AppEncryptDecrypt.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/App/src/com/thirdyearproject/app/AppEncryptDecrypt.java" title="AppEncryptDecrypt.java" tooltip="App/src/com/thirdyearproject/app/AppEncryptDecrypt.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/App/src/com/thirdyearproject/app/AppEncryptDecrypt.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="44" selectionOffset="2143" selectionTopPixel="765"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EncryptDecryptAES.java" partName="EncryptDecryptAES.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptAES.java" title="EncryptDecryptAES.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptAES.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptAES.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="10364" selectionTopPixel="2792"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AppEncryptDecryptAES.java" partName="AppEncryptDecryptAES.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/App/src/com/thirdyearproject/app/AppEncryptDecryptAES.java" title="AppEncryptDecryptAES.java" tooltip="App/src/com/thirdyearproject/app/AppEncryptDecryptAES.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/App/src/com/thirdyearproject/app/AppEncryptDecryptAES.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1838" selectionTopPixel="420"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestClient.java" partName="TestClient.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestClient.java" title="TestClient.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestClient.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestClient.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="360" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="42" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EncryptDecryptECC.java" partName="EncryptDecryptECC.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptECC.java" title="EncryptDecryptECC.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptECC.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptECC.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1307" selectionTopPixel="150"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AES.java" partName="AES.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/AES.java" title="AES.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/AES.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/AES.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="42" selectionTopPixel="156"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ECIES.java" partName="ECIES.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/ECIES.java" title="ECIES.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/ECIES.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/ECIES.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1298" selectionTopPixel="360"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RSA.java" partName="RSA.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/RSA.java" title="RSA.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/RSA.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/RSA.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1791" selectionTopPixel="72"/>
 </editor>
 </editors>
 <views>
@@ -123,7 +172,7 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (8 items)"/>
+<category IMemento.internal.id="Warnings (10 items)"/>
 <category IMemento.internal.id="Warnings"/>
 <category IMemento.internal.id="Errors"/>
 </expanded>
@@ -244,6 +293,7 @@
 <view id="org.eclipse.ui.console.ConsoleView:Console View #2"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
+<view id="org.eclipse.ui.console.ConsoleView"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -270,8 +320,8 @@
 </folder>
 </info>
 <info part="org.eclipse.ui.editorss" ratio="0.15557884" ratioLeft="297" ratioRight="1612" relationship="2" relative="left"/>
-<info folder="true" part="bottom" ratio="0.7746781" ratioLeft="722" ratioRight="210" relationship="4" relative="org.eclipse.ui.editorss">
-<folder activePageID="org.eclipse.ui.console.ConsoleView:Console View #2" appearance="2" expanded="2">
+<info folder="true" part="bottom" ratio="0.832618" ratioLeft="776" ratioRight="156" relationship="4" relative="org.eclipse.ui.editorss">
+<folder activePageID="com.android.ide.eclipse.ddms.views.LogCatView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
 <page content="org.eclipse.jdt.ui.JavadocView" label="Javadoc"/>
 <page content="org.eclipse.jdt.ui.SourceView" label="Declaration"/>
@@ -308,9 +358,11 @@
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@4c2a67cc" ratio="0.8271144" ratioLeft="665" ratioRight="139" relationship="4" relative="org.eclipse.ui.editorss">
-<folder appearance="2" expanded="2">
-<page content="org.eclipse.ui.console.ConsoleView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
+<page content="org.eclipse.ui.console.ConsoleView" label="Console"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
 </folder>
 </info>
 <info part="org.eclipse.egit.ui.RepositoriesView" ratio="0.59969085" ratioLeft="388" ratioRight="259" relationship="4" relative="left"/>
@@ -440,162 +492,167 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Client.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Server.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecrypt.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/App/src/com/thirdyearproject/app/AppActivity.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/App/src/com/thirdyearproject/app/ConnectionHandler.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/AppServer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptAES.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/App/src/com/thirdyearproject/app/AppEncryptDecryptAES.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestClient.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestServer.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptECC.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/AES.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/ECC.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/ECIES.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/RSA.java"/>
 </editors>
-<item historyLabel="Client.java" index="0">
-<position info="not_deleted" x="6695" y="0"/>
+<item historyLabel="EncryptDecryptAES.java" index="3">
+<position info="not_deleted" x="1509" y="0"/>
 </item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="4950" y="77"/>
+<item historyLabel="AppEncryptDecryptAES.java" index="4">
+<position info="not_deleted" x="1495" y="9"/>
 </item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="5622" y="0"/>
+<item historyLabel="EncryptDecryptAES.java" index="3">
+<position info="not_deleted" x="1458" y="0"/>
 </item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="5080" y="0"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="5394" y="115"/>
-</item>
-<item historyLabel="EncryptDecrypt.java" index="2">
-<position info="not_deleted" x="2985" y="71"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="5434" y="0"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="5574" y="0"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="6150" y="59"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="6526" y="0"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="6850" y="0"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="6461" y="0"/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position info="not_deleted" x="6695" y="0"/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position info="not_deleted" x="9036" y="0"/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position info="not_deleted" x="9817" y="0"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="7243" y="0"/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position info="not_deleted" x="9817" y="0"/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position info="not_deleted" x="17040" y="0"/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position info="not_deleted" x="17042" y="0"/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position info="not_deleted" x="2202" y="74"/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position info="not_deleted" x="2091" y="0"/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position info="not_deleted" x="1840" y="0"/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position info="not_deleted" x="2523" y="0"/>
-</item>
-<item historyLabel="Client.java" index="0">
-<position info="not_deleted" x="1231" y="0"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="7243" y="0"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="2741" y="0"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="2742" y="0"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="2743" y="0"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="2778" y="0"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="2779" y="0"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="2827" y="0"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="2828" y="0"/>
-</item>
-<item historyLabel="Server.java" index="1">
-<position info="not_deleted" x="2707" y="0"/>
-</item>
-<item historyLabel="TestClient.java" index="3">
-<position info="not_deleted" x="360" y="0"/>
-</item>
-<item historyLabel="TestServer.java" index="4">
-<position info="not_deleted" x="626" y="0"/>
-</item>
-<item historyLabel="EncryptDecryptECC.java" index="5">
+<item historyLabel="TestClient.java" index="5">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="EncryptDecryptECC.java" index="5">
-<position info="not_deleted" x="1639" y="0"/>
+<item historyLabel="EncryptDecryptAES.java" index="3">
+<position info="not_deleted" x="1847" y="0"/>
 </item>
-<item historyLabel="TestServer.java" index="4">
-<position info="not_deleted" x="626" y="0"/>
+<item historyLabel="AppEncryptDecryptAES.java" index="4">
+<position info="not_deleted" x="1838" y="0"/>
 </item>
-<item historyLabel="EncryptDecryptECC.java" index="5">
-<position info="not_deleted" x="1639" y="0"/>
+<item historyLabel="EncryptDecryptAES.java" index="3">
+<position info="not_deleted" x="1874" y="0"/>
 </item>
-<item historyLabel="EncryptDecryptECC.java" index="5">
-<position info="not_deleted" x="1069" y="0"/>
+<item historyLabel="AppServer.java" index="2">
+<position info="not_deleted" x="3375" y="51"/>
 </item>
-<item historyLabel="EncryptDecryptECC.java" index="5">
-<position info="not_deleted" x="1070" y="0"/>
+<item historyLabel="EncryptDecryptAES.java" index="3">
+<position info="not_deleted" x="4848" y="0"/>
 </item>
-<item historyLabel="EncryptDecryptECC.java" index="5">
-<position info="not_deleted" x="1072" y="0"/>
+<item historyLabel="AppServer.java" index="2">
+<position info="not_deleted" x="3375" y="51"/>
 </item>
-<item historyLabel="EncryptDecryptECC.java" index="5">
-<position info="not_deleted" x="1042" y="8"/>
+<item historyLabel="AppActivity.java" index="0">
+<position info="not_deleted" x="2046" y="0"/>
 </item>
-<item historyLabel="EncryptDecryptECC.java" index="5">
-<position info="not_deleted" x="1028" y="8"/>
+<item historyLabel="AppActivity.java" index="0">
+<position info="not_deleted" x="2016" y="0"/>
 </item>
-<item historyLabel="EncryptDecryptECC.java" index="5">
-<position info="not_deleted" x="1130" y="0"/>
+<item historyLabel="AppActivity.java" index="0">
+<position info="not_deleted" x="2044" y="0"/>
 </item>
-<item historyLabel="TestServer.java" index="4">
-<position info="not_deleted" x="578" y="102"/>
+<item historyLabel="AppActivity.java" index="0">
+<position info="not_deleted" x="1961" y="0"/>
 </item>
-<item active="true" historyLabel="EncryptDecryptECC.java" index="5">
-<position info="not_deleted" x="1344" y="17"/>
+<item historyLabel="EncryptDecryptAES.java" index="3">
+<position info="not_deleted" x="4538" y="0"/>
+</item>
+<item historyLabel="TestClient.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TestServer.java" index="6">
+<position info="not_deleted" x="1915" y="0"/>
+</item>
+<item historyLabel="TestClient.java" index="5">
+<position info="not_deleted" x="1611" y="0"/>
+</item>
+<item historyLabel="TestServer.java" index="6">
+<position info="not_deleted" x="1362" y="0"/>
+</item>
+<item historyLabel="TestClient.java" index="5">
+<position info="not_deleted" x="1007" y="0"/>
+</item>
+<item historyLabel="EncryptDecryptAES.java" index="3">
+<position info="not_deleted" x="11494" y="0"/>
+</item>
+<item historyLabel="TestServer.java" index="6">
+<position info="not_deleted" x="1362" y="0"/>
+</item>
+<item historyLabel="TestClient.java" index="5">
+<position info="not_deleted" x="1461" y="86"/>
+</item>
+<item historyLabel="EncryptDecryptAES.java" index="3">
+<position info="not_deleted" x="10191" y="44"/>
+</item>
+<item historyLabel="EncryptDecryptAES.java" index="3">
+<position info="not_deleted" x="7644" y="0"/>
+</item>
+<item historyLabel="EncryptDecryptAES.java" index="3">
+<position info="not_deleted" x="10364" y="0"/>
+</item>
+<item historyLabel="AppActivity.java" index="0">
+<position info="not_deleted" x="1961" y="0"/>
+</item>
+<item historyLabel="ConnectionHandler.java" index="1">
+<position info="not_deleted" x="1833" y="0"/>
+</item>
+<item historyLabel="AppServer.java" index="2">
+<position info="not_deleted" x="5966" y="0"/>
+</item>
+<item historyLabel="ConnectionHandler.java" index="1">
+<position info="not_deleted" x="1836" y="0"/>
+</item>
+<item historyLabel="AppServer.java" index="2">
+<position info="not_deleted" x="5966" y="0"/>
+</item>
+<item historyLabel="AppServer.java" index="2">
+<position info="not_deleted" x="2505" y="0"/>
+</item>
+<item historyLabel="AppServer.java" index="2">
+<position info="not_deleted" x="5758" y="0"/>
+</item>
+<item historyLabel="AppActivity.java" index="0">
+<position info="not_deleted" x="858" y="0"/>
+</item>
+<item historyLabel="AES.java" index="7">
+<position info="not_deleted" x="1478" y="0"/>
+</item>
+<item historyLabel="TestClient.java" index="5">
+<position info="not_deleted" x="0" y="42"/>
+</item>
+<item historyLabel="AES.java" index="7">
+<position info="not_deleted" x="42" y="0"/>
+</item>
+<item historyLabel="AppServer.java" index="2">
+<position info="not_deleted" x="5758" y="0"/>
+</item>
+<item historyLabel="EncryptDecryptAES.java" index="3">
+<position info="not_deleted" x="10364" y="0"/>
+</item>
+<item historyLabel="AES.java" index="7">
+<position info="not_deleted" x="42" y="0"/>
+</item>
+<item historyLabel="ECC.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ECIES.java" index="9">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ECIES.java" index="9">
+<position info="not_deleted" x="720" y="0"/>
+</item>
+<item historyLabel="ECIES.java" index="9">
+<position info="not_deleted" x="1298" y="0"/>
+</item>
+<item historyLabel="RSA.java" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="RSA.java" index="10">
+<position/>
+</item>
+<item historyLabel="RSA.java" index="10">
+<position info="not_deleted" x="1791" y="0"/>
+</item>
+<item historyLabel="AppActivity.java" index="0">
+<position info="not_deleted" x="858" y="0"/>
+</item>
+<item historyLabel="AppActivity.java" index="0">
+<position info="not_deleted" x="1438" y="0"/>
+</item>
+<item active="true" historyLabel="AppActivity.java" index="0">
+<position info="not_deleted" x="1220" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -603,9 +660,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="131072">
-<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
-</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -614,55 +668,54 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EncryptDecryptECC.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptECC.java">
-<persistable path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptECC.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="RSA.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/RSA.java">
+<persistable path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/RSA.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ECC.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/ECC.java">
+<persistable path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/ECC.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AES.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/AES.java">
+<persistable path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/AES.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestClient.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestClient.java">
 <persistable path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestClient.java"/>
 </file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AppEncryptDecryptAES.java" tooltip="App/src/com/thirdyearproject/app/AppEncryptDecryptAES.java">
+<persistable path="/App/src/com/thirdyearproject/app/AppEncryptDecryptAES.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EncryptDecryptAES.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptAES.java">
+<persistable path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptAES.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EncryptDecrypt.java" tooltip="App/src/com/thirdyearproject/app/EncryptDecrypt.java">
+<persistable path="/App/src/com/thirdyearproject/app/EncryptDecrypt.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Server.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/Server.java">
+<persistable path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Server.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/Client.java">
+<persistable path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Client.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestServer.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestServer.java">
 <persistable path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestServer.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EncryptDecrypt.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecrypt.java">
-<persistable path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecrypt.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DBManager.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/DBManager.java">
 <persistable path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/DBManager.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" tooltip="TwoWayXmlSend/src/Client.java">
-<persistable path="/TwoWayXmlSend/src/Client.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AppServer.java" tooltip="TwoWayXmlSend/src/AppServer.java">
+<persistable path="/TwoWayXmlSend/src/AppServer.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="test.java" tooltip="TwoWayXmlSend/src/test.java">
-<persistable path="/TwoWayXmlSend/src/test.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" tooltip="App/res/values/strings.xml">
+<persistable path="/App/res/values/strings.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DBManager.java" tooltip="TwoWayXmlSend/src/DBManager.java">
-<persistable path="/TwoWayXmlSend/src/DBManager.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="main.xml" tooltip="App/res/layout/main.xml">
+<persistable path="/App/res/layout/main.xml"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EncryptDecrypt.java" tooltip="TwoWayXmlSend/src/EncryptDecrypt.java">
-<persistable path="/TwoWayXmlSend/src/EncryptDecrypt.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="secondtest.java" tooltip="TwoWayXmlSend/src/secondtest.java">
-<persistable path="/TwoWayXmlSend/src/secondtest.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestClient.java" tooltip="TwoWayXmlSend/src/TestClient.java">
-<persistable path="/TwoWayXmlSend/src/TestClient.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestServer.java" tooltip="TwoWayXmlSend/src/TestServer.java">
-<persistable path="/TwoWayXmlSend/src/TestServer.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SendReceiveSocket.java" tooltip="TwoWayXmlSend/src/SendReceiveSocket.java">
-<persistable path="/TwoWayXmlSend/src/SendReceiveSocket.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="FileClient.java" tooltip="TwoWayXmlSend/src/FileClient.java">
-<persistable path="/TwoWayXmlSend/src/FileClient.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ShowMessageXml.java" tooltip="TwoWayXmlSend/src/ShowMessageXml.java">
-<persistable path="/TwoWayXmlSend/src/ShowMessageXml.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XmlWriterApp.java" tooltip="App/src/com/thirdyearproject/app/XmlWriterApp.java">
+<persistable path="/App/src/com/thirdyearproject/app/XmlWriterApp.java"/>
 </file>
 </mruList>
 </workbench>

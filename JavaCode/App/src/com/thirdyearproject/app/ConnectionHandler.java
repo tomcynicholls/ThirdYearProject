@@ -2,6 +2,7 @@ package com.thirdyearproject.app;
 
 import java.io.BufferedInputStream;
 import java.io.BufferedOutputStream;
+import java.io.DataInputStream;
 import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
@@ -23,6 +24,7 @@ public int bytesRead;
 public int current = 0;
 public InputStream is;
 public OutputStream os;
+public DataInputStream dis;
 
 @Override
 protected String doInBackground(String... params) {
@@ -30,7 +32,7 @@ protected String doInBackground(String... params) {
     try {
         Log.i("AsyncTank", "doInBackground: Creating Socket");
         //InetAddress serverAddr = InetAddress.getByName(serverip);
-        s = new Socket("172.31.214.26", 8500);
+        s = new Socket("192.168.1.9", 8000);
     } catch (Exception e) {
         Log.i("AsyncTank", "doInBackground: Cannot create Socket");
     }
@@ -38,7 +40,9 @@ protected String doInBackground(String... params) {
         try {
         	is = s.getInputStream();
         	os = s.getOutputStream();
+        	dis = new DataInputStream(s.getInputStream());
             Log.i("AsyncTank", "doInBackground: Socket created, Streams assigned");
+            //AppActivity.myuserID = dis.readInt();
 
         } catch (IOException e) {
             // TODO Auto-generated catch block
@@ -50,6 +54,7 @@ protected String doInBackground(String... params) {
     }
     
     Log.i("HERE",AppActivity.fromserverpath);
+    //writeToStream(AppActivity.privkeyloc);
     readFromStream(AppActivity.fromserverpath);
     
     
@@ -86,7 +91,7 @@ public void writeToStream(String toserverpath) {
             os.write(mybytearray2,0,mybytearray2.length);
             Log.i("testing","1");
             os.flush();
-            s.close();
+            //s.close();
             
             
             
@@ -134,6 +139,9 @@ public void readFromStream(String fromserverpath) {
             Log.i("testing","6");
             bos.flush();
             bos.close();
+            
+            //String decrypted = AppActivity.fullpathwaystart + "decrypted.xml";
+            //AppActivity.ende.decrypt(AppActivity.privkeyloc,fromserverpath,decrypted);
             
             XmlManipApp xmlmanip = new XmlManipApp();
             String returnedresult = xmlmanip.returnRequired(fromserverpath,"text");

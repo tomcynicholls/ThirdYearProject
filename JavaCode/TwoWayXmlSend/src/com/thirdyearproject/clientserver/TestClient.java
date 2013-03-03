@@ -11,7 +11,7 @@ public class TestClient {
 
 		Socket sock = new Socket("localhost", 8000);
 		System.out.println("Connecting...");
-
+/*
 		String privkeyloc = "client/myprivatekey.key"; 
 		String pubkeyloc = "client/mypublickey.key"; 
 		String servkeyloc = "client/serverkey.key"; 
@@ -31,7 +31,28 @@ public class TestClient {
 		ende.encrypt(servkeyloc, "client/sendtoserver.xml", "client/sendtoserverencrypted.xml");
 
 		sendrec.SendViaSocket("client/sendtoserverencrypted.xml");
+		
+		
+*/
+		
 
+		String keyloc = "client/myprivatekey.txt"; 
+		
+		EncryptDecryptAES ende = new EncryptDecryptAES(keyloc);
+
+		SendReceiveSocket sendrec = new SendReceiveSocket(sock);
+
+		sendrec.SendViaSocket("client/myprivatekey.txt");
+
+		sendrec.ReceiveViaSocket("client/fromserverencrypted.xml");
+
+		ende.decrypt(keyloc, "client/fromserverencrypted.xml", "client/fromserverdecrypted.xml");
+
+		//sendrec.ReceiveViaSocket("client/serverprivkey.txt");
+
+		ende.encrypt(keyloc, "client/sendtoserver.xml", "client/sendtoserverencrypted.xml");
+
+		sendrec.SendViaSocket("client/sendtoserverencrypted.xml");
 	}
 
 }
