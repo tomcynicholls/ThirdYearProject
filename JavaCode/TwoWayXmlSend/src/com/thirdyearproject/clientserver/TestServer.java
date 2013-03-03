@@ -18,18 +18,23 @@ public class TestServer {
 		InetAddress inetAddress = sock.getInetAddress();
 		System.out.println(inetAddress);
 		int userID = 1;
+		
+		String privkeyloc = "server/myprivatekey.key"; 
+		String pubkeyloc = "server/mypublickey.key"; 
+		//String clientkeyloc = "server/serverkey.key"; 
 
-		EncryptDecrypt ende = new EncryptDecrypt("server/mypublickey.key", "server/myprivatekey.key");
+		EncryptDecryptECC ende = new EncryptDecryptECC(pubkeyloc,privkeyloc);
 		SendReceiveSocket sendrec = new SendReceiveSocket(sock);
 
-		String pubkeyloc = "server/pubkey" + Integer.toString(userID) + ".key";
-		sendrec.ReceiveViaSocket(pubkeyloc);
+		String keyloc = "server/key" + Integer.toString(userID) + ".key";
+		
+		sendrec.ReceiveViaSocket(keyloc);
 
-		ende.encrypt(pubkeyloc, "server/toencrypt.xml", "server/encryptedtosend.xml");
+		ende.encrypt(keyloc,"server/toencrypt.xml", "server/encryptedtosend.xml");
 
 		sendrec.SendViaSocket("server/encryptedtosend.xml");
 
-		sendrec.SendViaSocket("server/mypublickey.key");
+		sendrec.SendViaSocket(pubkeyloc);
 
 		sendrec.ReceiveViaSocket("server/encryptedfromclient.xml");
 

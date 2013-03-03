@@ -1,0 +1,35 @@
+package com.thirdyearproject.clientserver;
+import java.io.IOException;
+import java.net.Socket;
+
+public class TestClient {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) throws IOException {
+
+		Socket sock = new Socket("localhost", 8000);
+		System.out.println("Connecting...");
+
+		String keyloc = "client/myprivatekey.txt" 
+		
+		EncryptDecryptAES ende = new EncryptDecryptAES("client/myprivatekey.txt");
+
+		SendReceiveSocket sendrec = new SendReceiveSocket(sock);
+
+		sendrec.SendViaSocket("client/myprivatekey.txt");
+
+		sendrec.ReceiveViaSocket("client/fromserverencrypted.xml");
+
+		ende.decrypt("client/fromserverencrypted.xml", "client/fromserverdecrypted.xml");
+
+		sendrec.ReceiveViaSocket("client/serverprivkey.txt");
+
+		ende.encrypt("client/sendtoserver.xml", "client/sendtoserverencrypted.xml");
+
+		sendrec.SendViaSocket("client/sendtoserverencrypted.xml");
+
+	}
+
+}

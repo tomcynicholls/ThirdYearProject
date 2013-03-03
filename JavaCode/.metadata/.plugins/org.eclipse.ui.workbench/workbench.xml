@@ -39,23 +39,24 @@
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="9"/>
+<part id="5"/>
 <part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
 <part id="6"/>
-<part id="4"/>
-<part id="5"/>
 <part id="7"/>
 <part id="8"/>
+<part id="9"/>
+<part id="4"/>
+<part id="10"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Server.java" partName="Server.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/Server.java" title="Server.java" tooltip="TwoWayXmlSend/src/Server.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/Server.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="7211" selectionTopPixel="2636"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Server.java" partName="Server.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Server.java" title="Server.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/Server.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Server.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2707" selectionTopPixel="690"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XmlWriter.java" partName="XmlWriter.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/XmlWriter.java" title="XmlWriter.java" tooltip="TwoWayXmlSend/src/XmlWriter.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/XmlWriter.java"/>
@@ -69,29 +70,33 @@
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/SendReceiveSocket.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="53" selectionOffset="694" selectionTopPixel="135"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestServer.java" partName="TestServer.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/TestServer.java" title="TestServer.java" tooltip="TwoWayXmlSend/src/TestServer.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/TestServer.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="511" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="test.java" partName="test.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/test.java" title="test.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/test.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/test.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="108" selectionOffset="1625" selectionTopPixel="374"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestClient.java" partName="TestClient.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/TestClient.java" title="TestClient.java" tooltip="TwoWayXmlSend/src/TestClient.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/TestClient.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="112" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" partName="Client.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Client.java" title="Client.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/Client.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Client.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1231" selectionTopPixel="315"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EncryptDecrypt.java" partName="EncryptDecrypt.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/EncryptDecrypt.java" title="EncryptDecrypt.java" tooltip="TwoWayXmlSend/src/EncryptDecrypt.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/EncryptDecrypt.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="14" selectionOffset="865" selectionTopPixel="1125"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DBManager.java" partName="DBManager.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/DBManager.java" title="DBManager.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/DBManager.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/DBManager.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="24" selectionOffset="2582" selectionTopPixel="1155"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DBManager.java" partName="DBManager.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/DBManager.java" title="DBManager.java" tooltip="TwoWayXmlSend/src/DBManager.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/DBManager.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2946" selectionTopPixel="1020"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EncryptDecrypt.java" partName="EncryptDecrypt.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecrypt.java" title="EncryptDecrypt.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecrypt.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecrypt.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="71" selectionOffset="2985" selectionTopPixel="1290"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="test.java" partName="test.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/test.java" title="test.java" tooltip="TwoWayXmlSend/src/test.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/test.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1243" selectionTopPixel="29"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestServer.java" partName="TestServer.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestServer.java" title="TestServer.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestServer.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestServer.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="102" selectionOffset="578" selectionTopPixel="0"/>
 </editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" partName="Client.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/Client.java" title="Client.java" tooltip="TwoWayXmlSend/src/Client.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/Client.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="4959" selectionTopPixel="2084"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestClient.java" partName="TestClient.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestClient.java" title="TestClient.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestClient.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestClient.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="360" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EncryptDecryptECC.java" partName="EncryptDecryptECC.java" path="C:/Users/Tom/Documents/University/Coursework/Third Year/ThirdYearProject/JavaCode/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptECC.java" title="EncryptDecryptECC.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptECC.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptECC.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1307" selectionTopPixel="150"/>
 </editor>
 </editors>
 <views>
@@ -118,7 +123,9 @@
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (10 items)"/>
+<category IMemento.internal.id="Warnings (8 items)"/>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -165,7 +172,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.console.ConsoleView:Console View #2" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
+<perspectives activePart="org.eclipse.jdt.ui.CompilationUnitEditor" activePerspective="org.eclipse.jdt.ui.JavaPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.jdt.internal.ui.JavaPerspectiveFactory" id="org.eclipse.jdt.ui.JavaPerspective" label="Java"/>
 <alwaysOnActionSet id="org.eclipse.ui.cheatsheets.actionSet"/>
@@ -229,6 +236,7 @@
 <perspective_action id="com.android.ide.eclipse.hierarchyviewer.TreeViewPerspective"/>
 <hide_toolbar_item_id id="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
 <hide_toolbar_item_id id="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+<view id="org.eclipse.jdt.ui.PackageExplorer"/>
 <view id="org.eclipse.ui.views.ProblemView"/>
 <view id="org.eclipse.jdt.ui.JavadocView"/>
 <view id="org.eclipse.jdt.ui.SourceView"/>
@@ -236,7 +244,6 @@
 <view id="org.eclipse.ui.console.ConsoleView:Console View #2"/>
 <view id="org.eclipse.debug.ui.DebugView"/>
 <view id="org.eclipse.ui.views.ContentOutline"/>
-<view id="org.eclipse.jdt.ui.PackageExplorer"/>
 <fastViewBars/>
 <layout>
 <mainWindow>
@@ -262,7 +269,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.078051336" ratioLeft="149" ratioRight="1760" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.15557884" ratioLeft="297" ratioRight="1612" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.7746781" ratioLeft="722" ratioRight="210" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView:Console View #2" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
@@ -294,13 +301,10 @@
 </folder>
 </info>
 <info folder="true" part="right" ratio="0.49896908" ratioLeft="242" ratioRight="243" relationship="4" relative="org.eclipse.ui.internal.ViewStack@4b0bc3c9">
-<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
-<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<folder appearance="2" expanded="2">
 <page content="org.eclipse.ui.texteditor.TemplatesView" label="LabelNotFound"/>
 <page content="org.eclipse.ant.ui.views.AntView" label="LabelNotFound"/>
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
-<part id="0"/>
-</presentation>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
 <info folder="true" part="org.eclipse.ui.internal.ViewStack@4c2a67cc" ratio="0.8271144" ratioLeft="665" ratioRight="139" relationship="4" relative="org.eclipse.ui.editorss">
@@ -310,6 +314,14 @@
 </folder>
 </info>
 <info part="org.eclipse.egit.ui.RepositoriesView" ratio="0.59969085" ratioLeft="388" ratioRight="259" relationship="4" relative="left"/>
+<info folder="true" part="org.eclipse.ui.internal.ViewStack@4681c36e" ratio="0.49946523" ratioLeft="467" ratioRight="468" relationship="4" relative="left">
+<folder activePageID="org.eclipse.ui.views.ContentOutline" appearance="2" expanded="2">
+<page content="org.eclipse.ui.views.ContentOutline" label="Outline"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+</presentation>
+</folder>
+</info>
 </mainWindow>
 </layout>
 </perspective>
@@ -428,159 +440,162 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/Server.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/Client.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/EncryptDecrypt.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Client.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/Server.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecrypt.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestClient.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestServer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptECC.java"/>
 </editors>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3801" y="0"/>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="6695" y="0"/>
 </item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="5961" y="0"/>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="4950" y="77"/>
 </item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3801" y="0"/>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="5622" y="0"/>
 </item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="4216" y="0"/>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="5080" y="0"/>
 </item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3801" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="4216" y="0"/>
-</item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3801" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="4216" y="0"/>
-</item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3801" y="0"/>
-</item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3490" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="4216" y="0"/>
-</item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3490" y="0"/>
-</item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3386" y="0"/>
-</item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3389" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="4216" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="4179" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="4142" y="0"/>
-</item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3397" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="4142" y="0"/>
-</item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3397" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="4142" y="0"/>
-</item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3397" y="0"/>
-</item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="4142" y="0"/>
-</item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3397" y="0"/>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="5394" y="115"/>
 </item>
 <item historyLabel="EncryptDecrypt.java" index="2">
-<position info="not_deleted" x="865" y="14"/>
+<position info="not_deleted" x="2985" y="71"/>
 </item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3644" y="0"/>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="5434" y="0"/>
 </item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3822" y="0"/>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="5574" y="0"/>
 </item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="4142" y="0"/>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="6150" y="59"/>
 </item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="5745" y="0"/>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="6526" y="0"/>
 </item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3822" y="0"/>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="6850" y="0"/>
 </item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="5745" y="0"/>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="6461" y="0"/>
 </item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3572" y="0"/>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="6695" y="0"/>
 </item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="7977" y="0"/>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="9036" y="0"/>
 </item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3572" y="0"/>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="9817" y="0"/>
 </item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="7977" y="0"/>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="7243" y="0"/>
 </item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="3572" y="0"/>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="9817" y="0"/>
 </item>
-<item historyLabel="Client.java" index="1">
-<position info="not_deleted" x="4830" y="0"/>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="17040" y="0"/>
 </item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="7977" y="0"/>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="17042" y="0"/>
 </item>
-<item historyLabel="Client.java" index="1">
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="2202" y="74"/>
+</item>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="2091" y="0"/>
+</item>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="1840" y="0"/>
+</item>
+<item historyLabel="Client.java" index="0">
 <position/>
 </item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="7977" y="0"/>
-</item>
-<item historyLabel="Client.java" index="1">
+<item historyLabel="Client.java" index="0">
 <position/>
 </item>
-<item historyLabel="Client.java" index="1">
+<item historyLabel="Client.java" index="0">
 <position/>
 </item>
-<item historyLabel="Client.java" index="1">
-<position/>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="2523" y="0"/>
 </item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="7977" y="0"/>
+<item historyLabel="Client.java" index="0">
+<position info="not_deleted" x="1231" y="0"/>
 </item>
-<item historyLabel="Client.java" index="1">
-<position/>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="7243" y="0"/>
 </item>
-<item historyLabel="Client.java" index="1">
-<position/>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="2741" y="0"/>
 </item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="7977" y="0"/>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="2742" y="0"/>
 </item>
-<item historyLabel="Client.java" index="1">
-<position/>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="2743" y="0"/>
 </item>
-<item historyLabel="Server.java" index="0">
-<position info="not_deleted" x="7211" y="0"/>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="2778" y="0"/>
 </item>
-<item active="true" historyLabel="Client.java" index="1">
-<position/>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="2779" y="0"/>
+</item>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="2827" y="0"/>
+</item>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="2828" y="0"/>
+</item>
+<item historyLabel="Server.java" index="1">
+<position info="not_deleted" x="2707" y="0"/>
+</item>
+<item historyLabel="TestClient.java" index="3">
+<position info="not_deleted" x="360" y="0"/>
+</item>
+<item historyLabel="TestServer.java" index="4">
+<position info="not_deleted" x="626" y="0"/>
+</item>
+<item historyLabel="EncryptDecryptECC.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="EncryptDecryptECC.java" index="5">
+<position info="not_deleted" x="1639" y="0"/>
+</item>
+<item historyLabel="TestServer.java" index="4">
+<position info="not_deleted" x="626" y="0"/>
+</item>
+<item historyLabel="EncryptDecryptECC.java" index="5">
+<position info="not_deleted" x="1639" y="0"/>
+</item>
+<item historyLabel="EncryptDecryptECC.java" index="5">
+<position info="not_deleted" x="1069" y="0"/>
+</item>
+<item historyLabel="EncryptDecryptECC.java" index="5">
+<position info="not_deleted" x="1070" y="0"/>
+</item>
+<item historyLabel="EncryptDecryptECC.java" index="5">
+<position info="not_deleted" x="1072" y="0"/>
+</item>
+<item historyLabel="EncryptDecryptECC.java" index="5">
+<position info="not_deleted" x="1042" y="8"/>
+</item>
+<item historyLabel="EncryptDecryptECC.java" index="5">
+<position info="not_deleted" x="1028" y="8"/>
+</item>
+<item historyLabel="EncryptDecryptECC.java" index="5">
+<position info="not_deleted" x="1130" y="0"/>
+</item>
+<item historyLabel="TestServer.java" index="4">
+<position info="not_deleted" x="578" y="102"/>
+</item>
+<item active="true" historyLabel="EncryptDecryptECC.java" index="5">
+<position info="not_deleted" x="1344" y="17"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -588,6 +603,9 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
+<trimArea IMemento.internal.id="131072">
+<trimItem IMemento.internal.id="org.eclipse.ui.editorss"/>
+</trimArea>
 <trimArea IMemento.internal.id="128">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.WorkbenchWindow.topBar"/>
 </trimArea>
@@ -596,10 +614,26 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
+<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EncryptDecryptECC.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptECC.java">
+<persistable path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecryptECC.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestClient.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestClient.java">
+<persistable path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestClient.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TestServer.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestServer.java">
+<persistable path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/TestServer.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="EncryptDecrypt.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecrypt.java">
+<persistable path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/EncryptDecrypt.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DBManager.java" tooltip="TwoWayXmlSend/src/com/thirdyearproject/clientserver/DBManager.java">
+<persistable path="/TwoWayXmlSend/src/com/thirdyearproject/clientserver/DBManager.java"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Client.java" tooltip="TwoWayXmlSend/src/Client.java">
 <persistable path="/TwoWayXmlSend/src/Client.java"/>
 </file>
@@ -629,21 +663,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ShowMessageXml.java" tooltip="TwoWayXmlSend/src/ShowMessageXml.java">
 <persistable path="/TwoWayXmlSend/src/ShowMessageXml.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="activity_display_message.xml" tooltip="App/res/layout/activity_display_message.xml">
-<persistable path="/App/res/layout/activity_display_message.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="strings.xml" tooltip="App/res/values/strings.xml">
-<persistable path="/App/res/values/strings.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XmlManip.java" tooltip="TwoWayXmlSend/src/XmlManip.java">
-<persistable path="/TwoWayXmlSend/src/XmlManip.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="XmlWriter.java" tooltip="TwoWayXmlSend/src/XmlWriter.java">
-<persistable path="/TwoWayXmlSend/src/XmlWriter.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.android.ide.eclipse.editors.CommonXmlEditor" name="main.xml" tooltip="App/res/layout/main.xml">
-<persistable path="/App/res/layout/main.xml"/>
 </file>
 </mruList>
 </workbench>

@@ -12,19 +12,23 @@ public class TestClient {
 		Socket sock = new Socket("localhost", 8000);
 		System.out.println("Connecting...");
 
-		EncryptDecrypt ende = new EncryptDecrypt("client/mypublickey.key", "client/myprivatekey.key");
+		String privkeyloc = "client/myprivatekey.key"; 
+		String pubkeyloc = "client/mypublickey.key"; 
+		String servkeyloc = "client/serverkey.key"; 
+		
+		EncryptDecryptECC ende = new EncryptDecryptECC(pubkeyloc,privkeyloc);
 
 		SendReceiveSocket sendrec = new SendReceiveSocket(sock);
 
-		sendrec.SendViaSocket("client/mypublickey.key");
+		sendrec.SendViaSocket(pubkeyloc);
 
 		sendrec.ReceiveViaSocket("client/fromserverencrypted.xml");
 
 		ende.decrypt("client/fromserverencrypted.xml", "client/fromserverdecrypted.xml");
 
-		sendrec.ReceiveViaSocket("client/serverpubkey.key");
+		sendrec.ReceiveViaSocket(servkeyloc);
 
-		ende.encrypt("client/serverpubkey.key", "client/sendtoserver.xml", "client/sendtoserverencrypted.xml");
+		ende.encrypt(servkeyloc, "client/sendtoserver.xml", "client/sendtoserverencrypted.xml");
 
 		sendrec.SendViaSocket("client/sendtoserverencrypted.xml");
 
