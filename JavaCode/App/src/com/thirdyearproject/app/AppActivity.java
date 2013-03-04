@@ -36,13 +36,13 @@ public class AppActivity extends Activity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         
-        BatteryManager battery = new BatteryManager()
+       // BatteryManager battery = new BatteryManager()
         
-        int level = battery.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
-        int scale = battery.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
+       // int level = battery.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
+        //int scale = battery.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
         
-        Log.i("Battery level",Integer.toString(level));
-        Log.i("Battery scale",Integer.toString(scale));
+       // Log.i("Battery level",Integer.toString(level));
+      //  Log.i("Battery scale",Integer.toString(scale));
         
         gogogo = false;
         

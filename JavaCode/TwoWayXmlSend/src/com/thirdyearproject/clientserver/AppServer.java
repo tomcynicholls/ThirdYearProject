@@ -25,10 +25,10 @@ public class AppServer {
     //String pathwaystart = "C:\\Users/Tom/TestDoc/";
     String pathwaystart = "server/";
     
-    String privkeyloc = "server/myprivatekey.key"; 
-	String pubkeyloc = "server/mypublickey.key"; 
+    //String privkeyloc = "server/myprivatekey.key"; 
+	//String pubkeyloc = "server/mypublickey.key"; 
     
-    EncryptDecryptAES ende = new EncryptDecryptAES(privkeyloc);
+    //EncryptDecryptAES ende = new EncryptDecryptAES(privkeyloc);
     
     //create array to temporarily store sending message filenames
     String[] filenamestore = new String[30];
@@ -38,7 +38,7 @@ public class AppServer {
     
     
     if (filenamestore[1] == null) { 
-    	System.out.println("store empty"); 
+    	//System.out.println("store empty"); 
     	//store no message file
     	xmlwriter.WriteToFile("no message","server","client","nomessagefile");
     	filenamestore[1] = "nomessagefile.xml";
@@ -50,10 +50,10 @@ public class AppServer {
     
     //start server loop
     while (true) {
-      System.out.println("Waiting...");
+      //System.out.println("Waiting...");
 
       Socket sock = servsock.accept();
-      System.out.println("Accepted connection : " + sock);
+      //System.out.println("Accepted connection : " + sock);
       
       //server gets clients ip address
       InetAddress inetAddress = sock.getInetAddress();
@@ -78,7 +78,7 @@ public class AppServer {
    		//dbman.updateUser(currentuserID,"messloc1","nomessagefile.xml");
    //	}
      
-      System.out.println("IP Address is: " + stringip + " Array assignment " + arraypos);
+      //System.out.println("IP Address is: " + stringip + " Array assignment " + arraypos);
       
       //if the user has no message (first time connecting) associate no message file with client
       if (filenamestore[arraypos] == null) {
@@ -97,9 +97,9 @@ public class AppServer {
       BufferedInputStream bis = new BufferedInputStream(fis);
       bis.read(mybytearray,0,mybytearray.length);
       OutputStream os = sock.getOutputStream();
-      System.out.println("Sending...");
+      //System.out.println("Sending...");
       os.write(mybytearray,0,mybytearray.length);
-      System.out.println("Sent");
+     // System.out.println("Sent");
       os.flush();
       
       //message sent so replace with no message file association
@@ -118,7 +118,7 @@ public class AppServer {
       	
       	String fromfilepath = filename.concat(".xml");
       	String path = pathwaystart.concat(fromfilepath);
-		System.out.println("Will save data from client/app at: " + path);
+		//System.out.println("Will save data from client/app at: " + path);
       
       
       byte [] mybytearray2  = new byte [filesize];
@@ -144,7 +144,7 @@ public class AppServer {
       //server reads ip address from file
       XmlManip xmlmanip = new XmlManip();
       String returnedresult = xmlmanip.returnRequired(path,"receiver");
-      System.out.println("receiver is:" + returnedresult); 
+      //System.out.println("receiver is:" + returnedresult); 
       
       //dbman.updateUser(currentuserID,"messloc1",fromfilepath);
      

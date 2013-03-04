@@ -16,11 +16,15 @@ public final class AES {
 
 public static void main(String[] args) throws Exception {
 
-Security.addProvider(new FlexiCoreProvider());
+//Security.addProvider(new FlexiCoreProvider());
 
-Cipher cipher = Cipher.getInstance("AES128_CBC", "FlexiCore");
+//Cipher cipher = Cipher.getInstance("AES128_CBC", "FlexiCore");
 
-KeyGenerator keyGen = KeyGenerator.getInstance("AES", "FlexiCore");
+//KeyGenerator keyGen = KeyGenerator.getInstance("AES", "FlexiCore");
+	
+	Cipher cipher = Cipher.getInstance("AES");	
+	KeyGenerator keyGen = KeyGenerator.getInstance("AES");
+
 SecretKey secKey = keyGen.generateKey();
 cipher.init(Cipher.ENCRYPT_MODE, secKey);
 

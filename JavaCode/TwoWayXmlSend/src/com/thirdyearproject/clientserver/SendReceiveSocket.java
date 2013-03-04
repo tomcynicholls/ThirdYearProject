@@ -32,9 +32,9 @@ public class SendReceiveSocket {
 			BufferedInputStream bis = new BufferedInputStream(fis);
 			bis.read(mybytearray, 0, mybytearray.length);
 			OutputStream os = sock.getOutputStream();
-			System.out.println("Sending...");
+			//System.out.println("Sending...");
 			os.write(mybytearray, 0, mybytearray.length);
-			System.out.println("Sent");
+			//System.out.println("Sent");
 			
 			
 			//bis.close();

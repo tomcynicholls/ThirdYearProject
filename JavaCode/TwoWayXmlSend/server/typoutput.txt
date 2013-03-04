@@ -1,0 +1,1 @@
+<?xml version="1.0" encoding="UTF-8"?><xmlmessage><mainmessage id="1"><sender>sender</sender><receiver>f</receiver><text>d</text><other>19191919191</other></mainmessage></xmlmessage>
