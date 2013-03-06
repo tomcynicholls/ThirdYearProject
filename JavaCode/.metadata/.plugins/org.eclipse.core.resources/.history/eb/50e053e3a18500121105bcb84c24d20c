@@ -1,15 +1,15 @@
 package com.thirdyearproject.app;
 
-//import java.security.InvalidAlgorithmParameterException;
-//import java.security.KeyPair;
-//import java.security.KeyPairGenerator;
-//import java.security.NoSuchAlgorithmException;
-//import java.security.NoSuchProviderException;
-//import java.security.Security;
-//import java.security.spec.ECGenParameterSpec;
+import java.security.InvalidAlgorithmParameterException;
+import java.security.KeyPair;
+import java.security.KeyPairGenerator;
+import java.security.NoSuchAlgorithmException;
+import java.security.NoSuchProviderException;
+import java.security.Security;
+import java.security.spec.ECGenParameterSpec;
 import java.util.Date;
 
-//import org.spongycastle.jce.provider.BouncyCastleProvider;
+import org.spongycastle.jce.provider.BouncyCastleProvider;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -40,9 +40,9 @@ public class AppActivity extends Activity {
 	
 	public ConnectionHandler conhandler = new ConnectionHandler();
 	
-	//static {
-	//	Security.addProvider(new BouncyCastleProvider());
-	//}
+	static {
+		Security.addProvider(new BouncyCastleProvider());
+	}
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -57,7 +57,7 @@ public class AppActivity extends Activity {
        // Log.i("Battery level",Integer.toString(level));
       //  Log.i("Battery scale",Integer.toString(scale));
         
-       /* try {
+        try {
         Log.i("Start - Current time: ", Long.toString(System.currentTimeMillis()));
         ECGenParameterSpec ecParamSpec = new ECGenParameterSpec("secp224k1");
         Log.i("Start - Current time: ", Long.toString(System.currentTimeMillis()));
@@ -74,7 +74,7 @@ public class AppActivity extends Activity {
         } catch (NoSuchProviderException ex) {
         	Log.i("ERROR","No such provider exception");
         }   
-        Log.i("Start - Current time: ", Long.toString(System.currentTimeMillis()));*/
+        Log.i("Start - Current time: ", Long.toString(System.currentTimeMillis()));
         gogogo = false;
         
         String pathwaystart = this.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath();
