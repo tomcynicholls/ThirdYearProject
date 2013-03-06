@@ -32,7 +32,7 @@ protected String doInBackground(String... params) {
     try {
         Log.i("AsyncTank", "doInBackground: Creating Socket");
         //InetAddress serverAddr = InetAddress.getByName(serverip);
-        s = new Socket("192.168.1.9", 8000);
+        s = new Socket("192.168.1.8", 8000);
     } catch (Exception e) {
         Log.i("AsyncTank", "doInBackground: Cannot create Socket");
     }
@@ -73,6 +73,7 @@ public void writeToStream(String toserverpath) {
     try {
         if (s.isConnected()){
             Log.i("AsynkTask", "writeToStream : Writing");
+            Log.i("Sending file start: ", Long.toString(System.currentTimeMillis()));
             String percenttoservpath = toserverpath.replaceAll(" ","%20");
             File myFile = new File (percenttoservpath);
             Log.i("testing","1");
@@ -91,6 +92,7 @@ public void writeToStream(String toserverpath) {
             os.write(mybytearray2,0,mybytearray2.length);
             Log.i("testing","1");
             os.flush();
+            Log.i("Sending file start: ", Long.toString(System.currentTimeMillis()));
             //s.close();
             
             

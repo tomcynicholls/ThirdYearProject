@@ -119,7 +119,8 @@ public class Server {
 				}
 			}
 
-			sendrecsock.SendViaSocket(pathwaystart.concat("servack.txt"));
+			System.out.println("Sending ack");
+			//sendrecsock.SendViaSocket(pathwaystart.concat("servack.txt"));
 
 			/*
 			 * for (int j = 0; j<3; j++) { if (fparray[j] != "xxx.xml") {
@@ -200,6 +201,7 @@ public class Server {
 			}
 
 			// message sent so replace with no message file association
+			System.out.println("Doing it here");
 			con.updateUser(currentID, "messloc1", "nomessagefile.xml");
 			//con.updateUser(currentID, "messloc2", "xxx.xml");
 			//con.updateUser(currentID, "messloc3", "xxx.xml");
@@ -389,9 +391,9 @@ public class Server {
 					userID = con.addNewUser(stringip);
 					currentID = userID;
 					outputToClient.writeInt(userID);
-
+//HERE CHANGED
 					String currentuserpubkeyloc = "keys/user" + Integer.toString(currentID) + "pubkey.key";
-					sendrecsock.ReceiveViaSocket(currentuserpubkeyloc);
+					sendrecsock.ReceiveViaSocket(pathwaystart + "server/" + currentuserpubkeyloc);
 					sendrecsock.SendViaSocket(SERV_PUB_KEY_LOC);
 
 					con.updateUser(currentID, "pubkeyloc", currentuserpubkeyloc);

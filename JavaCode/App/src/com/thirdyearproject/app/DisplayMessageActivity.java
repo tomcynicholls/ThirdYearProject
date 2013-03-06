@@ -32,6 +32,25 @@ import android.widget.TextView;
 
 public class DisplayMessageActivity extends Activity {
 	
+	public static Long rsagenstart;
+	public static Long rsagenfin;
+	public static Long rsaenstart;
+	public static Long rsaenfin;
+	public static Long rsadestart;
+	public static Long rsadefin;
+	public static Long rsagen;
+	public static Long rsaen;
+	public static Long rsade;
+	
+	public static Long aesgenstart;
+	public static Long aesgenfin;
+	public static Long aesenstart;
+	public static Long aesenfin;
+	public static Long aesdestart;
+	public static Long aesdefin;
+	public static Long aesgen;
+	public static Long aesen;
+	public static Long aesde;
 	
     @SuppressLint("NewApi")
     @Override
@@ -71,6 +90,15 @@ public class DisplayMessageActivity extends Activity {
            // } catch (Exception ex){
             //	Log.i("ERROR WITH AES","ERROR WITH AES");
            // }
+            
+            ((TextView)findViewById(R.id.rsa)).setText("RSA");
+            ((TextView)findViewById(R.id.aes)).setText("AES");
+            ((TextView)findViewById(R.id.rsa_gen)).setText("Generate Keys: " + Long.toString(rsagenfin - rsagenstart));
+            ((TextView)findViewById(R.id.rsa_en)).setText("Encryption: " + Long.toString(rsaenfin - rsaenstart));
+            ((TextView)findViewById(R.id.rsa_de)).setText("Decryption: " + Long.toString(rsadefin - rsadestart));
+            ((TextView)findViewById(R.id.aes_gen)).setText("Generate Keys: " + Long.toString(aesgenfin - aesgenstart));
+            ((TextView)findViewById(R.id.aes_en)).setText("Encryption: " + Long.toString(aesenfin - aesenstart));
+            ((TextView)findViewById(R.id.aes_de)).setText("Decryption: " + Long.toString(aesdefin - aesdestart));
         
     }
 
@@ -103,6 +131,7 @@ public class DisplayMessageActivity extends Activity {
     	try {
     	//Security.addProvider(new FlexiCoreProvider());
     	Log.i("RSA Start - Current time: ", Long.toString(System.currentTimeMillis()));
+    	rsagenstart = System.currentTimeMillis();
     	//KeyPairGenerator kpg = KeyPairGenerator.getInstance("RSA", "FlexiCore");
     	//Cipher cipher = Cipher.getInstance("RSA", "FlexiCore");
     	
@@ -115,10 +144,12 @@ public class DisplayMessageActivity extends Activity {
     	PublicKey pubKey = keyPair.getPublic();
     	
     	Log.i("Generated keys - Current time: ", Long.toString(System.currentTimeMillis()));
+    	rsagenfin = System.currentTimeMillis();
     	//System.out.println(System.currentTimeMillis());
     	cipher.init(Cipher.ENCRYPT_MODE, pubKey);
     	
     	Log.i("Cipher initialised for encryption - Current time: ", Long.toString(System.currentTimeMillis()));
+    	rsaenstart = System.currentTimeMillis();
     	
     	String cleartextFile = AppActivity.fullpathwaystart + "typoutput.txt";
     	String ciphertextFile = AppActivity.fullpathwaystart + "ciphertextRSA.txt";
@@ -137,11 +168,12 @@ public class DisplayMessageActivity extends Activity {
     	cos.close();
     	
     	Log.i("Encrypted - Current time: ", Long.toString(System.currentTimeMillis()));
+    	rsaenfin = System.currentTimeMillis();
     	//System.out.println(System.currentTimeMillis());
     	
     	
     	String cleartextAgainFile = AppActivity.fullpathwaystart +  "cleartextAgainRSA.txt";
-
+    	rsadestart = System.currentTimeMillis();
     	cipher.init(Cipher.DECRYPT_MODE, privKey);
     	
     	Log.i("Cipher initilised for decryption - Current time: ", Long.toString(System.currentTimeMillis()));
@@ -157,6 +189,7 @@ public class DisplayMessageActivity extends Activity {
     	}
     	fos.close();
     	Log.i("Decrypted - Current time: ", Long.toString(System.currentTimeMillis()));
+    	rsadefin = System.currentTimeMillis();
     	
     } catch (FileNotFoundException ex) {
     	Log.i("EXCEPTION", "FILE NOT FOUND EXCEPTION");
@@ -181,17 +214,19 @@ public class DisplayMessageActivity extends Activity {
 
     	//KeyGenerator keyGen = KeyGenerator.getInstance("AES", "FlexiCore");
     	Log.i("AES Start - Current time: ", Long.toString(System.currentTimeMillis()));
-    	
+    	aesgenstart = System.currentTimeMillis();
     		Cipher cipher = Cipher.getInstance("AES");	
     		KeyGenerator keyGen = KeyGenerator.getInstance("AES");
 
     	SecretKey secKey = keyGen.generateKey();
     	
     	Log.i("Generated key - Current time: ", Long.toString(System.currentTimeMillis()));
+    	aesgenfin = System.currentTimeMillis();
     	
     	cipher.init(Cipher.ENCRYPT_MODE, secKey);
 
     	Log.i("Initialised Cipher for encryption - Current time: ", Long.toString(System.currentTimeMillis()));
+    	aesenstart = System.currentTimeMillis();
     	
     	String cleartextFile = AppActivity.fullpathwaystart + "typoutput.txt";
     	String ciphertextFile = AppActivity.fullpathwaystart + "ciphertextSymm.txt";
@@ -219,7 +254,9 @@ public class DisplayMessageActivity extends Activity {
     	String cleartextAgainFile = AppActivity.fullpathwaystart +"cleartextAgainSymm.txt";
 
     	Log.i("File encrypted - Current time: ", Long.toString(System.currentTimeMillis()));
+    	aesenfin = System.currentTimeMillis();
     	
+    	aesdestart = System.currentTimeMillis();
     	cipher.init(Cipher.DECRYPT_MODE, secKey);
 
     	Log.i("Initialised cipher for decryption - Current time: ", Long.toString(System.currentTimeMillis()));
@@ -234,6 +271,7 @@ public class DisplayMessageActivity extends Activity {
     	fos.close();
     	
     	Log.i("File decrypted - Current time: ", Long.toString(System.currentTimeMillis()));
+    	aesdefin = System.currentTimeMillis();
  
     } catch (FileNotFoundException ex) {
     	Log.i("EXCEPTION", "FILE NOT FOUND EXCEPTION");

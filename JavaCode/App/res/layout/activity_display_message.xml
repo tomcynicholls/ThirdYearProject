@@ -29,6 +29,53 @@
         android:textSize="20sp" 
         android:text="@string/holder"/>
     
+    <TextView android:id="@+id/rsa"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12pt"
+        android:text="@string/holder"/>
+    
+     <TextView android:id="@+id/rsa_gen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp" 
+        android:text="@string/holder"/>
+     
+     <TextView android:id="@+id/rsa_en"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp" 
+        android:text="@string/holder"/>
+     
+     <TextView android:id="@+id/rsa_de"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp" 
+        android:text="@string/holder"/>
+     
+      <TextView android:id="@+id/aes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12pt"
+        android:text="@string/holder"/>
+     
+     <TextView android:id="@+id/aes_gen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp" 
+        android:text="@string/holder"/>
+     
+     <TextView android:id="@+id/aes_en"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp" 
+        android:text="@string/holder"/>
+     
+     <TextView android:id="@+id/aes_de"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp" 
+        android:text="@string/holder"/>
     
     </LinearLayout>
     

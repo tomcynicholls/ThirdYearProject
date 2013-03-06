@@ -14,21 +14,29 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int edit_message=0x7f06000d;
-        public static final int edit_receiver=0x7f06000c;
+        public static final int aes=0x7f060008;
+        public static final int aes_de=0x7f06000b;
+        public static final int aes_en=0x7f06000a;
+        public static final int aes_gen=0x7f060009;
+        public static final int edit_message=0x7f060015;
+        public static final int edit_receiver=0x7f060014;
         public static final int innerlin=0x7f060000;
-        public static final int innerrel=0x7f060004;
-        public static final int menu_settings=0x7f06000e;
+        public static final int innerrel=0x7f06000c;
+        public static final int menu_settings=0x7f060016;
+        public static final int rsa=0x7f060004;
+        public static final int rsa_de=0x7f060007;
+        public static final int rsa_en=0x7f060006;
+        public static final int rsa_gen=0x7f060005;
         public static final int show_message=0x7f060003;
         public static final int show_receiver=0x7f060002;
-        public static final int textview_from=0x7f060008;
-        public static final int textview_fromtitle=0x7f060007;
-        public static final int textview_message=0x7f06000a;
-        public static final int textview_messagetitle=0x7f060009;
-        public static final int textview_sendtitle=0x7f06000b;
+        public static final int textview_from=0x7f060010;
+        public static final int textview_fromtitle=0x7f06000f;
+        public static final int textview_message=0x7f060012;
+        public static final int textview_messagetitle=0x7f060011;
+        public static final int textview_sendtitle=0x7f060013;
         public static final int textview_sent=0x7f060001;
-        public static final int textview_title=0x7f060006;
-        public static final int xmlresult=0x7f060005;
+        public static final int textview_title=0x7f06000e;
+        public static final int xmlresult=0x7f06000d;
     }
     public static final class layout {
         public static final int activity_display_message=0x7f030000;

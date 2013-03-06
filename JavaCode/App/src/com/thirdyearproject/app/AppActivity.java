@@ -38,7 +38,7 @@ public class AppActivity extends Activity {
 	public static String fullpathwaystart;
 	public static AppEncryptDecryptAES ende;
 	
-	public ConnectionHandler conhandler = new ConnectionHandler();
+	//public ConnectionHandler conhandler = new ConnectionHandler();
 	
 	//static {
 	//	Security.addProvider(new BouncyCastleProvider());
@@ -99,7 +99,7 @@ public class AppActivity extends Activity {
     	Log.i("from server path is: ",fromserverpath);
         
     	
-        conhandler.execute();
+       // conhandler.execute();
        
         /*while (gogogo == false)
         {
@@ -156,7 +156,7 @@ public class AppActivity extends Activity {
         
         //send file
         Log.i("calling:","writeToStream");
-        conhandler.writeToStream(toserverpath);
+        //conhandler.writeToStream(toserverpath);
     	
     	intent.putExtra(EXTRA_MESSAGE, message);
     	intent.putExtra(EXTRA_RECEIVER, receiver);
@@ -165,8 +165,8 @@ public class AppActivity extends Activity {
     
     public void receiveMessage(View view) {
     	Log.i("User ID is: ",Integer.toString(myuserID));
-    	((TextView)findViewById(R.id.textview_from)).setText(recsender);
-        ((TextView)findViewById(R.id.textview_message)).setText(recmessage);
+    	((TextView)findViewById(R.id.textview_from)).setText("User 8");
+        ((TextView)findViewById(R.id.textview_message)).setText("How are you?");
     }
     
 }
