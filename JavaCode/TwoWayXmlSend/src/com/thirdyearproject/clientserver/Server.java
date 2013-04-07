@@ -25,7 +25,7 @@ public class Server {
 	public static void main(String[] args) throws IOException {
 
 		// create socket
-		ServerSocket servsock = new ServerSocket(8000);
+		ServerSocket servsock = new ServerSocket(8500);
 
 		// create xml writer
 		XmlWriter xmlwriter = new XmlWriter();
@@ -191,7 +191,7 @@ public class Server {
 				//save file in messloc4 user db
 				con.updateUser(currentID, "messloc4","messloc4for"+Integer.toString(user)+".txt");
 				//send ack
-				sendrecsock.SendViaSocket(pathwaystart+"servack.txt");
+				//sendrecsock.SendViaSocket(pathwaystart+"servack.txt");
 				con.updateUser(currentID, "messloc3", "xxx.xml");
 				
 			}

@@ -1,63 +1,8 @@
-This is BibTeX, Version 0.99c (TeX Live 2009/Debian)
-The top-level auxiliary file: progressreport.aux
-The style file: vancouver.bst.bst
-Reallocated wiz_functions (elt_size=4) to 6000 items from 3000.
-Database file #1: projectbib.bib
-Warning--empty author and editor in googleplay
-Warning--missing publisher in googleplay
-Warning--there's a month but no year in googleplay
-Warning--empty author in dataprotect
-Warning--empty author and editor in dataprotect
-Warning--missing publisher in dataprotect
-Warning--empty author and editor in rsaciphercat
-Warning--missing publisher in rsaciphercat
-Warning--empty author and editor in cloacksms
-Warning--missing publisher in cloacksms
-Warning--empty author and editor in dropbox
-Warning--missing publisher in dropbox
-Warning--there's a month but no year in dropbox
-Warning--empty author and editor in github
-Warning--missing publisher in github
-Warning--there's a month but no year in github
-You've used 13 entries,
-            3169 wiz_defined-function locations,
-            700 strings with 5651 characters,
-and the built_in function-call counts, 7335 in all, are:
-= -- 841
-> -- 55
-< -- 6
-+ -- 27
-- -- 12
-* -- 429
-:= -- 889
-add.period$ -- 38
-call.type$ -- 13
-change.case$ -- 8
-chr.to.int$ -- 18
-cite$ -- 29
-duplicate$ -- 629
-empty$ -- 750
-format.name$ -- 12
-if$ -- 1782
-int.to.chr$ -- 0
-int.to.str$ -- 13
-missing$ -- 78
-newline$ -- 62
-num.names$ -- 12
-pop$ -- 216
-preamble$ -- 1
-purify$ -- 0
-quote$ -- 0
-skip$ -- 211
-stack$ -- 0
-substring$ -- 810
-swap$ -- 178
-text.length$ -- 0
-text.prefix$ -- 0
-top$ -- 0
-type$ -- 0
-warning$ -- 16
-while$ -- 54
-width$ -- 15
-write$ -- 131
-(There were 16 warnings)
+This is BibTeX, Version 0.99dThe top-level auxiliary file: progressreport.aux
+I couldn't open style file vancouver.bst.bst
+---line 2 of file progressreport.aux
+ : \bibstyle{vancouver.bst
+ :                        }
+I'm skipping whatever remains of this command
+I found no style file---while reading file progressreport.aux
+(There were 2 error messages)

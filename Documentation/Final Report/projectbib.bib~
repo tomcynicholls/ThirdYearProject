@@ -1,0 +1,154 @@
+@BOOK{willstallings,
+	AUTHOR = {Stallings, William},
+	TITLE = {Cryptography and Network Security: Principles and Practice},
+	PUBLISHER = {Pearson},
+	YEAR = {2011},
+	EDITION = {Fifth}
+	}
+
+@BOOK{richardmollin,
+	AUTHOR = {Mollin, Richard A.},
+	TITLE = {An Introduction to Cryptography},
+	PUBLISHER = {Chapman \& Hall},
+	YEAR = {2007},
+	EDITION = {Second}
+	}
+
+@BOOK{bruceschneier,
+	AUTHOR = {Bruce Schneiers},
+	TITLE = {Applied Cryptography: Protocols, algorithms and source code in C},
+	PUBLISHER = {Wiley},
+	YEAR = {1996},
+	EDITION = {Second}
+	}
+
+@BOOK{wenbomao,
+	AUTHOR = {Mao, Wenbo},
+	TITLE = {Modern Cryptography: Theory and Practice},
+	PUBLISHER = {Prentice Hall},
+	YEAR = {2004}
+	}
+
+@BOOK{chrisswenson,
+	AUTHOR = {Swenson, Christopher},
+	TITLE = {Modern Cryptanalysis: Techniques for Advanced Code Breaking},
+	PUBLISHER = {Wiley},
+	YEAR = {2008}
+	}
+
+@BOOK{bertholdvocking,
+	AUTHOR = {Berthold Vocking [et al]},
+	TITLE = {Algorithms Unplugged},
+	PUBLISHER = {Springer},
+	YEAR = {2011}
+	}
+
+@BOOK{markogargenta,
+	AUTHOR = {Gargenta, Marko},
+	TITLE = {Learning Android},
+	PUBLISHER = {O'Reilly},
+	YEAR = {2011}
+	}
+
+@BOOK{ydanielliang,
+	AUTHOR = {Liang, D},
+	TITLE = {Introduction to Java Programming},
+	PUBLISHER = {Pearson},
+	ADDRESS = {Boston},
+	YEAR = {2007},
+	EDITION = {Sixth}
+	}
+
+
+@BOOK{iansommerville,
+	AUTHOR = {Sommerville, Ian},
+	TITLE = {Software Engineering},
+	PUBLISHER = {Pearson},
+	YEAR = {2011},
+	EDITION = {Ninth}	
+	}
+
+@ARTICLE{ejeta,
+	AUTHOR = {{Jobanputra, N [et al]}},
+	TITLE = {Emerging Security Technologies for Mobile User Accesses},
+	JOURNAL = {eJETA.org},
+	YEAR = {2009},
+	VOLUME = {2},
+	NUMBER = {4},
+	URL = {http://www.ejeta.org/issue-v2-n4/ejeta-v2-n4-2.pdf}
+	}
+
+
+@misc{rsaciphercat,
+	author = {{Miasoft}},
+	title = {{RSA} Cipher Cat},
+	year = {2011},
+	howpublished={{[Online](URL }\url{https://play.google.com/store/apps/details?id=jp.co.Miasoft.RSACipher&hl=en}{)}}
+
+	}
+
+@misc{cloacksms,
+	author = {Hamish Medlin},
+	title = {Cloak {SMS} Free},
+	year = {2011},
+	howpublished={{[Online](URL }\url{https://play.google.com/store/apps/details?id=sms.encryptor.v2.free&hl=en}{)}}
+	}
+	
+@misc{googleplay,
+	author = {{Google Inc.}},
+	title = {Google Play Store},
+	howpublished={{[Online](URL }\url{https://play.google.com/store}{)}}
+	}
+
+@misc{pcworldart,
+	author = {Kirk, Jeremy},
+	title = {UK Data Encryption Disclosure Law Takes Effect},
+	month = oct,
+	year = {2007},
+	howpublished={{[Online](URL }\url{http://www.pcworld.com/article/137881/article.html}{)}}
+	}
+
+@MISC{dataprotect,
+	title = {Data Protection Act 1998},
+	chapter = {29},
+	year = {1998},
+	address = {London: Stationery Office}
+	}
+	
+@misc{dropbox,
+	author = {{Dropbox, Inc.}},
+	title = {Dropbox},
+	howpublished={{[Online](URL }\url{https://www.dropbox.com}{)}}
+	}
+	
+@misc{github,
+	author = {{GitHub, Inc.}},
+	title = {GitHub - Social Coding},
+	howpublished={{[Online](URL }\url{https://github.com}{)}}
+	}
+
+@BOOK{whatisasmartphone,
+	AUTHOR = {{Allen, S [et al]}},
+	TITLE = {Pro Smartphone Cross-Platform Development: iPhone, Blackberry, Windows Mobile and Android Development and Distribution},
+	PUBLISHER = {Apress},
+	YEAR = {2010},
+	EDITION = {First}	
+	}
+
+@misc{appleios,
+	author = {{Apple Inc.}},
+	title = {Apple iPhone iOS},
+	howpublished={{[Online](URL }\url{http://www.apple.com/uk/ios/}{)}}
+	}
+
+@misc{googleandroid,
+	author = {{Google Inc.}},
+	title = {Android},
+	howpublished={{[Online](URL }\url{http://www.android.com/}{)}}
+	}
+
+@misc{windowsphone,
+	author = {{Microsoft Coporation}},
+	title = {Windows Phone 8},
+	howpublished={{[Online](URL }\url{http://www.windowsphone.com/en-gb}{)}}
+	}

@@ -1,0 +1,25 @@
+\begin{thebibliography}{1}
+
+\bibitem{whatisasmartphone}
+{Allen, S [et al]}.
+\newblock Pro Smartphone Cross-Platform Development: iPhone, Blackberry,
+  Windows Mobile and Android Development and Distribution.
+\newblock 1st ed. Apress; 2010.
+
+\bibitem{appleios}
+{Apple Inc }. Apple iPhone iOS;.
+\newblock {[Online](URL }\url{http://www.apple.com/uk/ios/}{)}.
+
+\bibitem{windowsphone}
+{Microsoft Coporation}. Windows Phone 8;.
+\newblock {[Online](URL }\url{http://www.windowsphone.com/en-gb}{)}.
+
+\bibitem{googleandroid}
+{Google Inc }. Android;.
+\newblock {[Online](URL }\url{http://www.android.com/}{)}.
+
+\bibitem{googleplay}
+{Google Inc }. Google Play Store;.
+\newblock {[Online](URL }\url{https://play.google.com/store}{)}.
+
+\end{thebibliography}

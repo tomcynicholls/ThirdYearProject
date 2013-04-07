@@ -1,6 +1,11 @@
+package com.thirdyearproject.clientserver;
+import java.io.BufferedReader;
+import java.io.BufferedWriter;
 import java.io.DataInputStream;
 import java.io.DataOutputStream;
 import java.io.File;
+import java.io.FileReader;
+import java.io.FileWriter;
 import java.io.IOException;
 import java.net.InetAddress;
 import java.net.ServerSocket;
@@ -63,12 +68,21 @@ public class Server {
 
 			// if the user has no message (first time connecting) associate
 			// nomessage file with client
-			if (con.returnFirstMessagefromID(currentID, 1) == null) {
+			if (con.returnFirstMessagefromID(currentID, 4) == null) {
 				con.updateUser(currentID, "messloc1", "nomessagefile.xml");
 			}
 
+			DataInputStream inputFromClient = new DataInputStream(sock.getInputStream());
+			DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
+			
 			// get filepath from database
-			String filepath = pathwaystart.concat(con.returnFirstMessagefromID(currentID, 4));
+			String prefilepath = con.returnFirstMessagefromID(currentID, 4);
+			String filepath = pathwaystart.concat(prefilepath);
+			
+			if (prefilepath.equals("nomessagefile.xml")){
+				outputToClient.writeChar('n');
+			} else {
+				outputToClient.writeChar('y');
 			// sendfile
 			sendrecsock.SendViaSocket(filepath);
 			System.out.println(filepath + "sent");
@@ -81,10 +95,9 @@ public class Server {
 			// System.out.println(filepath);
 			// sendrecsock.ReceiveViaSocket("C:\\Users/Tom/TestDoc/testserv.xml");
 			// sendrecsock.SendViaSocket(filepath);
-
+			}
 			// send all possible files
-			DataInputStream inputFromClient = new DataInputStream(sock.getInputStream());
-			DataOutputStream outputToClient = new DataOutputStream(sock.getOutputStream());
+			
 			String[] fparray = new String[3];
 			String holder;
 			String test = "xxx.xml";
@@ -106,7 +119,8 @@ public class Server {
 				}
 			}
 
-			sendrecsock.SendViaSocket(pathwaystart.concat("servack.txt"));
+			System.out.println("Sending ack");
+			//sendrecsock.SendViaSocket(pathwaystart.concat("servack.txt"));
 
 			/*
 			 * for (int j = 0; j<3; j++) { if (fparray[j] != "xxx.xml") {
@@ -116,39 +130,82 @@ public class Server {
 			if (!(fparray[0].equals("xxx.xml"))) {
 				System.out.println("DO PART 1");
 				
+				
 				// receive file from client
+				sendrecsock.ReceiveViaSocket(pathwaystart+"received.txt");
+				
 				// take second string
+				String fromfile;
+				BufferedReader in = new BufferedReader(new FileReader(pathwaystart+"received.txt"));
+				fromfile = in.readLine();
+				in.close();
+
+				String[] splitted = fromfile.split(" ");
+				
 				// get key filename from db using second string
+				String filename = con.returnFirstMessagefromID(Integer.parseInt(splitted[1]), 3);
+				String pubkeytouse = con.returnFirstMessagefromID(Integer.parseInt(splitted[0]), 3);
+				
 				// encrypt and send
+				//encryptdecrypt.encrypt(pubkeytouse,filename,pathwaystart+"tosend.key");
+				sendrecsock.SendViaSocket(pathwaystart+filename);
+				sendrecsock.ReceiveViaSocket(pathwaystart.concat("servack.txt"));
+				
 				// create file using string2 and string3
+				BufferedWriter out = new BufferedWriter(new FileWriter(pathwaystart+"tosend.txt"));
+				out.write(splitted[1] + " " + splitted[2]);
+				out.close();
+				
 				// encrypt and send
+				encryptdecrypt.encrypt(pathwaystart+pubkeytouse,pathwaystart+"tosend.txt", pathwaystart+"encryptedtosend.txt");
+				sendrecsock.SendViaSocket(pathwaystart+"encryptedtosend.txt");
+				sendrecsock.ReceiveViaSocket(pathwaystart.concat("servack.txt"));
 
 				// receive y or n
-				// if y
-				// receive int receiveruserID
-				// receive file from client
-				// save file in messloc3 user id receiveruserID
-				// if no show error and exit
+				char rec = inputFromClient.readChar();
 				
+				// if y
+				if (rec == 'y') {
+					// receive int receiveruserID
+					int receiveruserID = inputFromClient.readInt();
+					// receive file from client
+					sendrecsock.ReceiveViaSocket(pathwaystart.concat("messloc3for"+Integer.toString(receiveruserID)+".txt"));
+					// save file in messloc3 user id receiveruserID
+					con.updateUser(currentID, "messloc3","messloc3for"+Integer.toString(receiveruserID)+".txt");
+					sendrecsock.SendViaSocket(pathwaystart+"servack.txt");
+					
+				} else {
+					// if no show error and exit
+					System.out.println("ERROR");
+				}
+				
+				con.updateUser(currentID, "messloc2", "xxx.xml");
 			}
 			if (!(fparray[1].equals("xxx.xml"))) {
 				System.out.println("DO PART 2");
 				
 				//receive int user
+				int user = inputFromClient.readInt();
 				//receive file
+				sendrecsock.ReceiveViaSocket(pathwaystart.concat("messloc4for"+Integer.toString(user)+".txt"));
 				//save file in messloc4 user db
+				con.updateUser(currentID, "messloc4","messloc4for"+Integer.toString(user)+".txt");
 				//send ack
+				sendrecsock.SendViaSocket(pathwaystart+"servack.txt");
+				con.updateUser(currentID, "messloc3", "xxx.xml");
 				
 			}
 			if (!(fparray[2].equals("xxx.xml"))) {
 				System.out.println("DO PART 3");
+				con.updateUser(currentID, "messloc4", "xxx.xml");
 			}
 
 			// message sent so replace with no message file association
+			System.out.println("Doing it here");
 			con.updateUser(currentID, "messloc1", "nomessagefile.xml");
-			con.updateUser(currentID, "messloc2", "xxx.xml");
-			con.updateUser(currentID, "messloc3", "yyy.xml");
-			con.updateUser(currentID, "messloc4", "xxx.xml");
+			//con.updateUser(currentID, "messloc2", "xxx.xml");
+			//con.updateUser(currentID, "messloc3", "xxx.xml");
+			//con.updateUser(currentID, "messloc4", "xxx.xml");
 
 			Boolean recmessage = true;
 			// DataInputStream inputFromClient = new
@@ -168,18 +225,56 @@ public class Server {
 						System.out.println("Register user key initiated");
 
 						// receive file from client
+						sendrecsock.ReceiveViaSocket(pathwaystart+"received.txt");
+						
 						// take second string
+						String fromfile;
+						BufferedReader in = new BufferedReader(new FileReader(pathwaystart+"received.txt"));
+						fromfile = in.readLine();
+						in.close();
+
+						String[] splitted = fromfile.split(" ");
+						
 						// get key filename from db using second string
+						String filename = con.returnFirstMessagefromID(Integer.parseInt(splitted[1]), 3);
+						String pubkeytouse = con.returnFirstMessagefromID(Integer.parseInt(splitted[0]), 3);
+						//System.out.println("pubkeytouse: " + pubkeytouse);
+						String publoc = pathwaystart.concat(pubkeytouse);
+						//System.out.println("publoc: " + publoc);
+						System.out.println("filename :" + filename);
 						// encrypt and send
+						//System.out.println("publoc: " + publoc + "filename: " + (pathwaystart+filename) );
+						//encryptdecrypt.encrypt(publoc,pathwaystart+filename,pathwaystart+"tosend.key");
+						sendrecsock.SendViaSocket(pathwaystart+filename);
+						sendrecsock.ReceiveViaSocket(pathwaystart.concat("servack.txt"));
+						
 						// create file using string2 and string3
+						BufferedWriter out = new BufferedWriter(new FileWriter(pathwaystart+"tosend.txt"));
+						out.write(splitted[1] + " " + splitted[2]);
+						out.close();
+						
 						// encrypt and send
+						encryptdecrypt.encrypt(publoc,pathwaystart+"tosend.txt", pathwaystart+"encryptedtosend.txt");
+						sendrecsock.SendViaSocket(pathwaystart+"encryptedtosend.txt");
+						sendrecsock.ReceiveViaSocket(pathwaystart.concat("servack.txt"));
 
 						// receive y or n
+						char rec2 = inputFromClient.readChar();
+						
 						// if y
-						// receive int receiveruserID
-						// receive file from client
-						// save file in messloc2 user id receiveruserID
-						// if no show error and exit
+						if (rec2 == 'y') {
+							// receive int receiveruserID
+							int receiveruserID = inputFromClient.readInt();
+							// receive file from client
+							sendrecsock.ReceiveViaSocket(pathwaystart.concat("messloc2for"+Integer.toString(receiveruserID)+".txt"));
+							// save file in messloc2 user id receiveruserID
+							con.updateUser(currentID, "messloc2","messloc2for"+Integer.toString(receiveruserID)+".txt");
+							sendrecsock.SendViaSocket(pathwaystart+"encryptedtosend.txt");
+							
+						} else {
+							// if no show error and exit
+							System.out.println("ERROR");
+						}
 
 					} else {
 						// user will send file
@@ -296,12 +391,16 @@ public class Server {
 					userID = con.addNewUser(stringip);
 					currentID = userID;
 					outputToClient.writeInt(userID);
-
-					String currentuserpubkeyloc = pathwaystart + "keys/user" + Integer.toString(currentID) + "pubkey.key";
-					sendrecsock.ReceiveViaSocket(currentuserpubkeyloc);
+//HERE CHANGED
+					String currentuserpubkeyloc = "keys/user" + Integer.toString(currentID) + "pubkey.key";
+					sendrecsock.ReceiveViaSocket(pathwaystart + "server/" + currentuserpubkeyloc);
 					sendrecsock.SendViaSocket(SERV_PUB_KEY_LOC);
 
 					con.updateUser(currentID, "pubkeyloc", currentuserpubkeyloc);
+					con.updateUser(currentID, "messloc1", "nomessagefile.xml");
+					con.updateUser(currentID, "messloc2", "xxx.xml");
+					con.updateUser(currentID, "messloc3", "xxx.xml");
+					con.updateUser(currentID, "messloc4", "xxx.xml");
 
 				} else {
 					System.out.println("ERROR - NOT Y OR N");

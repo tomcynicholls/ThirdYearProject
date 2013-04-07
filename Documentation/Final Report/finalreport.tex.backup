@@ -1,0 +1,56 @@
+\documentclass[a4paper,10pt]{report}
+\usepackage[utf8x]{inputenc}
+\usepackage{url}
+
+\usepackage{titling}
+
+\bibliographystyle{vancouver.bst}
+
+% Title Page
+\pretitle{\begin{center}\Huge CS344 - Final Report \end{center}\begin{center}}
+\title{\Huge Smart Phone Cryptography}
+\posttitle{\end{center}\begin{center}\LARGE A comparison of techniques for encrypted data communication \end{center}}
+
+
+\preauthor{\begin{center}\LARGE Tom Nicholls - 1006007\end{center}\begin{center}}
+\author{Discrete Mathematics - Year 3}
+\postauthor{\end{center}\begin{center}\large Marcin Jurdzinski\end{center}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+%Should be 200 words - check before final proof read
+
+Protecting sensitive or secret information has always been an important issue. With the increased popularity and usability of smartphones, tasks from accessing confidential work files or personal bank accounts to communicating with clients and friends, are being completed through applications over mobile or wireless internet connections. In this project the various cryptographic schemes used by popular applications available to Android based smartphones for secure data communication will be researched. Accompanying this will be a study of other cryptographic schemes. These techniques will be implemented through a data transmission application. Tests will be carried out to analyse various important factors that need to be considered for a successful encrypted data transmission application. An original conclusion will then be drawn as to whether the current techniques of cryptography available are appropriate or if a new scheme should be encouraged. The results of the described implementation and analysis were that the currently used cryptographic techniques are appropriate for the current state of smartphone usage and capabilities. These techniques, however, should be combined to create a new application. A different technique, which has increased security for a smaller resource cost, exists that can easily be used in the event that the requirements of the current cryptographic schemes surpass the available resources of current smartphones. 
+
+{\bf Keywords:} Cryptography, Encryption, Decryption, Smartphone, Android, AES, RSA, ECC
+\end{abstract}
+
+\tableofcontents
+
+
+\chapter{Introduction}
+
+
+\section{Background}
+
+To start this project report, all relevant background information will be presented allowing the reader to fully understand all aspects of the project. An overview of basic techniques and topics will be given, with a greater explanation for more specialised areas. 
+
+\subsection{Smartphones}
+
+In this section, the basics of the smartphone will be introduced and described. As smartphones are a prominent part of modern culture, and therefore known in some degree to everybody, only an overview will be given. The book by Sarah Allen et al. \cite{whatisasmartphone} was used as reference material.
+
+'Mobile' or 'Cell' phones have been available for commercial use since the beginning of the 1980s. The most popular functions of these phones are for telephone calls, text or multi-media message sending or even basic internet access and games. With the development of the smartphone these older devices are considered low-end phones. Higher-end phones, universally named the 'smartphone' provide the same basic features (telephone calls, messaging etc) but with a plethora of added functions such as full internet access, as well as increased computing capabilities through more powerful processors and other hardware. Smartphones also utilise the QWERTY keyboard and a larger, higher-resolution, screen. 
+
+
+Compared to desktop computers, smartphones have a diverse set of operating systems, determined by the manufacturer of the smartphone. Smartphone operating systems include the; Apple iPhone, Windows Mobile and the Google Android. Each operating system, unlike that of a desktop, determines which programming language a developer must use if they are to develop an app for a particular smartphone. This leads to a separate application marketplace, a database where users can download and install new applications, for each smartphone operating system. Whilst applications can be developed in a cross-platform manner, through the use of HTML and CSS, this is not yet standard, so the various marketplaces are individual in the applications that are on offer. 
+
+The message sending capabilities of smartphones is the feature that is most important for this project, whether it be using the in-built standard messaging service (SMS) or through the use of an installed application. Message sending allows the specification of a recipient and a user entered message for that recipient, with a near instant sending and receiving of that message. On average, the message is of a short length and can be described as an easier, more basic form of simple email exchange. This is advantageous for those who do not want to or cannot open a browser or email client
+
+\subsection{Cryptography}
+
+
+\bibliography{projectbib}
+
+\end{document}          

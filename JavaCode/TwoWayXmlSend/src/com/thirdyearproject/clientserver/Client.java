@@ -30,7 +30,7 @@ public class Client {
 	public static void main(String[] args) throws IOException {
 
 		// localhost for testing
-		Socket sock = new Socket("localhost", 8000);
+		Socket sock = new Socket("localhost", 8500);
 		System.out.println("Connecting...");
 
 		// sending receiving class initiated
@@ -283,7 +283,7 @@ public class Client {
 			        filesizesize = filesizefile.length();
 					System.out.println("Sending encrypted file. " + Long.toString(filesizesize) + " bytes");
 					
-					sendrecsock.ReceiveViaSocket("C:\\Users/Tom/TestDoc/clientack.txt");
+					//sendrecsock.ReceiveViaSocket("C:\\Users/Tom/TestDoc/clientack.txt");
 					
 					filesizefile = new File("C:\\Users/Tom/TestDoc/clientack.txt");
 			        filesizesize = filesizefile.length();
