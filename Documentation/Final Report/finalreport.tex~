@@ -3,6 +3,9 @@
 \usepackage{url}
 
 \usepackage{titling}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{graphicx}
 
 \bibliographystyle{vancouver.bst}
 
@@ -47,10 +50,157 @@ Compared to desktop computers, smartphones have a diverse set of operating syste
 
 The message sending capabilities of smartphones is the feature that is most important for this project, whether it be using the in-built standard messaging service (SMS) or through the use of an installed application. Message sending allows the specification of a recipient and a user entered message for that recipient, with a near instant sending and receiving of that message. On average, the message is of a short length and can be described as an easier, more lightweight form of simple email exchange. 
 
-
-
 \subsection{Cryptography}
 
+Taken from the book by Richard A. Mollin \cite{richardmollin}, the meaning of cryptography is 'the study of methods for sending messages in secret (namely, in enciphered or disguised form) so that only the intended recipient can remove the disguise and read the message (or decipher it).' Many keywords are used in the study of cryptography and help to give an introduction to the field; 
+
+\begin{itemize}
+ \item Plaintext - The original message, input by the initiating user.
+ \item Ciphertext - The disguised message, created using the plaintext.
+ \item Encryption - The process of transforming the plaintext into the ciphertext.
+ \item Decryption - The process of turning the ciphertext into the original plaintext. Accomplished by the recipient, who has the knowledge to remove the disguise.
+ \item Cipher - The Method for enciphering and deciphering.
+ \item Cryptanalysis - The study of mathematical techniques for attempting to break the cryptographic methods.
+ \item Cryptographic Key - A tool for encryption or decryption
+\end{itemize}
+
+\noindent
+This shows that basic cryptography has the following form:
+
+\begin{center}
+
+  \textbf{Plaintext} $\rightarrow$ \emph{Encryption} $\rightsquigarrow$ \textbf{Ciphertext} $\rightsquigarrow$ \emph{Decryption} $\rightarrow$ \textbf{Plaintext}
+
+\end{center}
+
+\noindent
+Two very basic examples of cryptography, which can and have been expanded into many different, more elaborate, techniques, are the substitution and transposition ciphers. Substitution ciphers replace symbols in the plaintext with other symbols, using a given rule (the key), to produce the ciphertext. For example, the key may be; a $\rightarrow$ q, b $\rightarrow$  f, c $\rightarrow$  m, and so on. A transposition cipher, on the other hand, transposes the places in which the plaintext letters are situated. This means that no new letters are introduced. The key for this cipher is a permutation that describes how the letters should be transposed. For a plaintext that consists of 10 letters, the key could be:
+
+\begin{center}
+$
+\begin{pmatrix}
+  1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+  1 & 2 & 5 & 7 & 6 & 4 & 9 & 10 & 3 & 8
+ \end{pmatrix}
+$
+\end{center}
+
+where the symbol in the position number in the top row, is replaced by the symbol in the position number below it (in the second row). Using these techniques as a basis, other more advanced cryptographic schemes can be created and are defined by the cipher (and key) that is used for the particular method.
+
+Cryptography has been used in some form or another to exchange secret message throughout history. For example, the first use of of cryptography in a military setting was by the Spartans in 475 B.C. In the modern age, cryptography is most commonly used when sending or storing data using a computer system, such as sending an email across a network, or saving a file on a company server. 
+
+\section{Motivation}
+
+Protecting important and secret information is big issue, particularly when data such as bank accounts details or private work related conversations are taking place or being exchanged. When new devices or computer systems are developed and deployed, the security of that system is always considered and studied. Smartphones, on the other hand, have a substantial amount of user-input in the form of publicly developed applications. With smartphones becoming the most popular tool for communicating and completing other tasks with the transfer of sensitive information combined with the fact that there are a vast number of tools for completing such tasks, the study of the strength and current state of security of smartphones is an ever evolving field. This creates a number of questions, the answers to which form the basis of this project:
+
+\begin{itemize}
+ \item Do applications that facilitate the secure transfer of messages exist?
+ \item What are the cryptographic techniques behind these applications?
+ \item Are there other techniques which could also be used for this purpose?
+ \item What is the performance of these styles applications?
+ \item Can these applications or methods be improved upon?
+ \item Can a conclusion be made about the current state of secure message communication and its future? 
+\end{itemize}
+
+The results of this project will contribute an original conclusion to the field of cryptography within smartphones. Preliminary research showed that the questions set out to be answered in this project have not been answered before for the current, present-day state of smartphones. This is important because even in the last few years significant improvements and developments have been made concerning the design and processing power of smartphones which has had a tremendous affect on smartphone usability, for example the more advanced and widely available use of GPS in direction planning. 
+
+\section{Scope and Limitations}
+
+It is important to set out in the introduction to this project report what the scope of the project is and to describe any limitations that have been placed on the project.
+
+Firstly, as will be detailed later in this report, the choice was made that any developed software will be in the Java programming language and that the Android operating system will be the focus of study and application development. This is so that the project can be accomplished within the given time frame, to the standard required and with the hardware that is more easily available. It also ensures that the project does to try to encompass an area that is so huge that any conclusion loses focus and therefore its value.
+
+This project also focuses on the use of cryptography in sending secure messages between users as opposed to other issues regarding smartphone security. A few examples of other forms of security related to smartphones could be a study of stored data protection, techniques to retrieve data from a smartphone wirelessly and protecting a smartphone from attacks or viruses. The reasons that this project is focused on one particular aspect of security with smartphones is much that same as the reasons given for the previous point. Furthermore, narrowing the scope of the project in this way means that a full solution and conclusion can be found for this particular aspect, as opposed to giving brief or vague conclusions for a number of aspects. Cryptography, particularly in this setting, also allows for a project that encompasses both computer science and mathematics and therefore is appropriate for a Discrete Mathematics student. 
+
+Lastly, this goal of this project is not to design and develop a product (application) that meets industry and user requires and can be sold or released to the general public. A project of that type would focus more on human-computer interactions, product design and marketing, as opposed to focusing on the mathematically based computer science areas of smartphones and cryptography. Therefore, the project can be categorised as a combination of both a research based and software development based project, each emphasising and reinforcing the other. 
+
+\section{Issues}
+
+Every project is faced with issues regarding the projects final goals and outcomes, or the techniques or methods used to reach these outcomes. This section will discuss the issues faced or considered with this project. 
+
+\subsection{Legal}
+
+Legal issues are the main issues that need to be considered with this project. As a large section of this project is research based, it needs to be ensured that all materials used are correctly and appropriately referenced. Furthermore, as this project is centred on the issues of computer security, in the form of cryptography, legal issues need to be discussed \cite{dataprotect} \cite{internetlaw}. As long as any material that is encrypted is legal in its own rights and that only data that is solely owned by myself is used in the cryptographic processes, then any legal issues will be avoided in this case. Also, the resulting product facilitates the secure communication of messages which, in the wrong hands, could be used to aid a number of illegal operations. To avoid the direct use of the final application for illegal purposes, it will not be published to the Google Play application marketplace and will therefore not be available to the public. This also means that a disclaimer or end-user license agreement (EULA) will not be required, which would included the consultation of a professional lawyer. If the software created in this project was obtained by a malicious user, then any data required by the police could and would be given to break the illegal encryption by the author.
+
+\subsection{Ethical}
+
+In almost all modern technical advances, ethical issues can be found, posing unique problems depending on the perception or views of the topic by various groups or persons. For this topic, the legal issues presented above can also be viewed as ethical issues. Should an application be developed, or a field be advanced, that could be used to facilitate illegal operations? This question, and many like it, could and are constantly discussed and argued by professionals and amateurs alike, from almost all academic backgrounds. Because of this, a universally agreed upon set of ethics will never be concretely reached. However, through the actions taken to escape any legal issues, the avoidance of any major ethical issues are avoided. 
+
+As no interviews, questionnaires or experiments will be taken place in this project, other ethical issues regarding this do not need to be considered. 
+
+\subsection{Social and Professional}
+
+With smartphones and text messaging services already being a central part of society, this project does not face any social issues. %not really sure where to go from here or what to talk about for professional issues
+
+\section{Report Structure}
+
+The structure of the report from this point onwards will be as follows:
+
+\begin{description}
+  \item[Objectives] A discussion of the objectives and goals of the project.
+  \item[Research] Presentation and thorough explanation of all research completed.
+  \item[Design] Full system design, outlining and explaining choices made and tools used. 
+  \item[Development] Implementation and software development aspect of the project presented, including the testing phase.
+  \item[Results] Analysis of the developed system accompanied with all conclusions and results found. 
+  \item[Further Work] All further work completed for this project and a suggestion and discussion of any improvements that could be made.
+  \item[Project Conclusion] A conclusion of the project as a whole, including self-assessment.
+  \item[Acknowledgements] A list of acknowledgements relating to this project.
+  \item[References] All reference material used through the project.
+\end{description}
+
+Theorems, proofs, code snippets, diagrams and screen shots will be used throughout, as required, to improve understanding and to help explain various sections of this report. 
+
+
+\chapter{Objectives}
+
+In order to answer the questions described previously, certain goals and objectives must be met. The main objectives of this project where: 
+
+\begin{enumerate}
+  \item Research
+  \begin{itemize}
+    \item Framework design
+    \item Cryptographic Techniques
+    \item Currently Available Applications
+    \item Relevant factors that can be used to compare schemes implemented on a mobile device
+  \end{itemize}
+  \item Development
+  \begin{itemize}
+    \item Framework
+    \begin{itemize} 
+      \item Design Data Communication framework
+      \begin{itemize}
+        \item Server
+        \item Mobile Application
+        \item P.C Client
+      \end{itemize}
+    \end{itemize}
+  \item Encrypted Data Communication
+  \begin{itemize}
+    \item Design and implement cryptographic techniques
+  \end{itemize}
+  \end{itemize}
+  \item Analysis
+  \begin{itemize}
+    \item Perform tests from research
+    \item Collect and present results
+  \end{itemize}
+  \item Conclusion
+  \begin{itemize}
+    \item Present and justify the findings and conclusions that can be made form the completed tests
+    \item Show possible adjustments to the implemented schemes which would increase their usability
+  \end{itemize}
+  \item Further Work
+  \begin{itemize}
+    \item Detail possible extensions that can be made to the systems to include other possible functions
+  \end{itemize}
+\end{enumerate}
+
+All aspects of software development are accompanied by thorough testing and are completed using a test driven development technique in a plan-driven setting, as de-
+scribed by Ian Sommerville \cite{iansommerville}. A further breakdown of the objectives, together with a thorough project task timetable, can be found in the form of a Gantt chart in Appendix \ref{A}.
+
+\appendix
+\chapter{Gantt Chart}\label{A}
+\includegraphics[scale=0.35, angle=270]{ProgReportChart.jpg}
 
 \bibliography{projectbib}
 

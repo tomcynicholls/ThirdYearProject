@@ -131,8 +131,7 @@
 	AUTHOR = {{Allen, S [et al]}},
 	TITLE = {Pro Smartphone Cross-Platform Development: iPhone, Blackberry, Windows Mobile and Android Development and Distribution},
 	PUBLISHER = {Apress},
-	YEAR = {2010},
-	EDITION = {First}	
+	YEAR = {2010}	
 	}
 
 @misc{appleios,
@@ -151,4 +150,11 @@
 	author = {{Microsoft Coporation}},
 	title = {Windows Phone 8},
 	howpublished={{[Online](URL }\url{http://www.windowsphone.com/en-gb}{)}}
+	}
+
+@BOOK{internetlaw,
+	AUTHOR = {{Rowland, D [et al]}},
+	TITLE = {Information Technology Law},
+	PUBLISHER = {Taylor and Francis},
+	YEAR = {2011}
 	}

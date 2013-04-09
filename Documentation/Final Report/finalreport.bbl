@@ -4,7 +4,7 @@
 {Allen, S [et al]}.
 \newblock Pro Smartphone Cross-Platform Development: iPhone, Blackberry,
   Windows Mobile and Android Development and Distribution.
-\newblock 1st ed. Apress; 2010.
+\newblock Apress; 2010.
 
 \bibitem{appleios}
 {Apple Inc }. Apple iPhone iOS;.
@@ -21,5 +21,23 @@
 \bibitem{googleplay}
 {Google Inc }. Google Play Store;.
 \newblock {[Online](URL }\url{https://play.google.com/store}{)}.
+
+\bibitem{richardmollin}
+Mollin RA.
+\newblock An Introduction to Cryptography.
+\newblock 2nd ed. Chapman \& Hall; 2007.
+
+\bibitem{dataprotect}
+Data Protection Act 1998. London: Stationery Office; 1998.
+
+\bibitem{internetlaw}
+{Rowland, D [et al]}.
+\newblock Information Technology Law.
+\newblock Taylor and Francis; 2011.
+
+\bibitem{iansommerville}
+Sommerville I.
+\newblock Software Engineering.
+\newblock Ninth ed. Pearson; 2011.
 
 \end{thebibliography}

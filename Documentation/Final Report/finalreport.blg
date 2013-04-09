@@ -15,45 +15,48 @@ Warning--there's a month but no year in googleandroid
 Warning--empty author and editor in googleplay
 Warning--missing publisher in googleplay
 Warning--there's a month but no year in googleplay
-You've used 5 entries,
+Warning--empty author in dataprotect
+Warning--empty author and editor in dataprotect
+Warning--missing publisher in dataprotect
+You've used 9 entries,
             3169 wiz_defined-function locations,
-            659 strings with 4975 characters,
-and the built_in function-call counts, 3172 in all, are:
-= -- 366
-> -- 21
-< -- 1
-+ -- 13
-- -- 5
-* -- 206
-:= -- 393
-add.period$ -- 12
-call.type$ -- 5
-change.case$ -- 2
-chr.to.int$ -- 3
-cite$ -- 17
-duplicate$ -- 279
-empty$ -- 318
-format.name$ -- 5
-if$ -- 750
+            679 strings with 5264 characters,
+and the built_in function-call counts, 5349 in all, are:
+= -- 615
+> -- 36
+< -- 3
++ -- 21
+- -- 8
+* -- 334
+:= -- 639
+add.period$ -- 23
+call.type$ -- 9
+change.case$ -- 4
+chr.to.int$ -- 9
+cite$ -- 24
+duplicate$ -- 461
+empty$ -- 549
+format.name$ -- 8
+if$ -- 1289
 int.to.chr$ -- 0
-int.to.str$ -- 5
-missing$ -- 30
-newline$ -- 24
-num.names$ -- 5
-pop$ -- 78
+int.to.str$ -- 9
+missing$ -- 52
+newline$ -- 42
+num.names$ -- 8
+pop$ -- 148
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 86
+skip$ -- 148
 stack$ -- 0
-substring$ -- 400
-swap$ -- 59
+substring$ -- 651
+swap$ -- 112
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 12
-while$ -- 21
-width$ -- 6
-write$ -- 49
-(There were 12 warnings)
+warning$ -- 15
+while$ -- 34
+width$ -- 10
+write$ -- 87
+(There were 15 warnings)
