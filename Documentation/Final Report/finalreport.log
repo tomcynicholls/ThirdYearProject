@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.11.15)  8 APR 2013 16:01
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.11.15)  11 APR 2013 19:08
 entering extended mode
  %&-line parsing enabled.
 **finalreport.tex
@@ -145,37 +145,86 @@ File: pdftex.def 2010/03/12 v0.04p Graphics/color for pdfTeX
 ))
 \Gin@req@height=\dimen112
 \Gin@req@width=\dimen113
+)
+(/usr/share/texmf-texlive/tex/latex/listings/listings.sty
+\lst@mode=\count102
+\lst@gtempboxa=\box28
+\lst@token=\toks25
+\lst@length=\count103
+\lst@currlwidth=\dimen114
+\lst@column=\count104
+\lst@pos=\count105
+\lst@lostspace=\dimen115
+\lst@width=\dimen116
+\lst@newlines=\count106
+\lst@lineno=\count107
+\lst@maxwidth=\dimen117
+
+(/usr/share/texmf-texlive/tex/latex/listings/lstmisc.sty
+File: lstmisc.sty 2007/02/22 1.4 (Carsten Heinz)
+\c@lstnumber=\count108
+\lst@skipnumbers=\count109
+\lst@framebox=\box29
+)
+(/usr/share/texmf-texlive/tex/latex/listings/listings.cfg
+File: listings.cfg 2007/02/22 1.4 listings configuration
+))
+Package: listings 2007/02/22 1.4 (Carsten Heinz)
+
+(/usr/share/texmf-texlive/tex/latex/caption/caption.sty
+Package: caption 2009/10/09 v3.1k Customizing captions (AR)
+
+(/usr/share/texmf-texlive/tex/latex/caption/caption3.sty
+Package: caption3 2009/10/09 v3.1k caption3 kernel (AR)
+\captionmargin=\dimen118
+\captionmargin@=\dimen119
+\captionwidth=\dimen120
+\caption@indent=\dimen121
+\caption@parindent=\dimen122
+\caption@hangindent=\dimen123
+)
+\c@ContinuedFloat=\count110
+Package caption Info: listings package is loaded.
+)
+(/usr/share/texmf-texlive/tex/latex/caption/subcaption.sty
+Package: subcaption 2008/08/31 v1.0b Adding subcaptions (AR)
+\c@subfigure=\count111
+\c@subtable=\count112
 ) (./finalreport.aux)
 \openout1 = `finalreport.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 22.
-LaTeX Font Info:    ... okay on input line 22.
- (/usr/share/texmf-texlive/tex/latex/ucs/ucsencs.def
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 25.
+LaTeX Font Info:    ... okay on input line 25.
+(/usr/share/texmf-texlive/tex/latex/ucs/ucsencs.def
 File: ucsencs.def 2003/11/29 Fixes to fontencodings LGR, T3
 )
 (/usr/share/texmf-texlive/tex/context/base/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count102
-\scratchdimen=\dimen114
-\scratchbox=\box28
-\nofMPsegments=\count103
-\nofMParguments=\count104
-\everyMPshowfont=\toks25
-\MPscratchCnt=\count105
-\MPscratchDim=\dimen115
-\MPnumerator=\count106
-\everyMPtoPDFconversion=\toks26
-) [1
+\scratchcounter=\count113
+\scratchdimen=\dimen124
+\scratchbox=\box30
+\nofMPsegments=\count114
+\nofMParguments=\count115
+\everyMPshowfont=\toks26
+\MPscratchCnt=\count116
+\MPscratchDim=\dimen125
+\MPnumerator=\count117
+\everyMPtoPDFconversion=\toks27
+)
+\c@lstlisting=\count118
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: End \AtBeginDocument code.
+ [1
 
 {/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] [1] (./finalreport.toc
 LaTeX Font Info:    Try loading font information for U+msa on input line 2.
@@ -197,47 +246,79 @@ Chapter 1.
 [2
 
 ]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 58.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 61.
  (/usr/share/texmf-texlive/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 58.
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 61.
  [3] [4] [5] [6]
 Chapter 2.
 [7
 
 ] [8]
+Chapter 3.
+[9
+
+] [10] <nodetree.jpg, id=48, 487.8225pt x 276.03125pt>
+File: nodetree.jpg Graphic file (type jpg)
+ <use nodetree.jpg>
+(./xmlexample.xml) [11 <./nodetree.jpg>] [12]
+(/usr/share/texmf-texlive/tex/latex/ucs/data/uni-0.def
+File: uni-0.def 2004/10/17 UCS: Unicode data U+0000..U+00FF
+)
+<cloaksms.jpg, id=58, 321.2pt x 481.8pt>
+File: cloaksms.jpg Graphic file (type jpg)
+ <use cloaksms.jpg> [13 <./cloaksms.jpg>] <cat2.jpg, id=63, 321.2pt x 481.8pt>
+File: cat2.jpg Graphic file (type jpg)
+ <use cat2.jpg>
+<cat1.jpg, id=64, 321.2pt x 481.8pt>
+File: cat1.jpg Graphic file (type jpg)
+ <use cat1.jpg> [14 <./cat2.jpg> <./cat1.jpg>] [15]
 Appendix A.
-<ProgReportChart.jpg, id=42, 1181.41376pt x 692.5875pt>
+<ProgReportChart.jpg, id=72, 1181.41376pt x 692.5875pt>
 File: ProgReportChart.jpg Graphic file (type jpg)
 
-<use ProgReportChart.jpg> (./finalreport.bbl [9
+<use ProgReportChart.jpg> (./finalreport.bbl [16
 
- <./ProgReportChart.jpg>])
-[10
+ <./ProgReportChart.jpg>]
+Underfull \hbox (badness 6396) in paragraph at lines 87--91
+[]\OT1/cmr/m/n/10 Gemalto. Are SMS text mes-sages safer than emails?;.  [On-
+ []
 
-] (./finalreport.aux) ) 
+
+Underfull \hbox (badness 2359) in paragraph at lines 87--91
+\OT1/cmr/m/n/10 line](URL $\OT1/cmtt/m/n/10 http : / / www . justaskgemalto . c
+om / us / communicating / tips /
+ []
+
+[17
+
+]) [18] (./finalreport.aux) ) 
 Here is how much of TeX's memory you used:
- 2235 strings out of 495061
- 28505 string characters out of 1182620
- 93209 words of memory out of 3000000
- 5394 multiletter control sequences out of 15000+50000
- 8882 words of font info for 34 fonts, out of 3000000 for 9000
+ 5363 strings out of 495061
+ 72795 string characters out of 1182620
+ 147870 words of memory out of 3000000
+ 8488 multiletter control sequences out of 15000+50000
+ 9644 words of font info for 37 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
- 27i,8n,24p,1482b,270s stack positions out of 5000i,500n,10000p,200000b,50000s
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm
-/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx12.pfb
-></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/shar
-e/texmf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texl
-ive/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/ty
-pe1/public/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/a
-msfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/
-cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-</usr/share/texmf-texlive/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on finalreport.pdf (12 pages, 274265 bytes).
+ 36i,8n,38p,2592b,1110s stack positions out of 5000i,500n,10000p,200000b,50000s
+</usr/share/texmf-texlive/fonts/type1/public/amsfo
+nts/cm/cmbx10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmbx
+12.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmex10.pfb></us
+r/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/tex
+mf-texlive/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texmf-texlive/f
+onts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-texlive/fonts/type1/p
+ublic/amsfonts/cm/cmr17.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfon
+ts/cm/cmr9.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmsy10.
+pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmti10.pfb></usr/s
+hare/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb></usr/share/texmf-
+texlive/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share/texmf-texlive/font
+s/type1/public/amsfonts/cm/cmu10.pfb></usr/share/texmf-texlive/fonts/type1/publ
+ic/amsfonts/symbols/msam10.pfb>
+Output written on finalreport.pdf (20 pages, 453814 bytes).
 PDF statistics:
- 82 PDF objects out of 1000 (max. 8388607)
+ 128 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 26 words of extra memory for PDF output out of 10000 (max. 10000000)
 

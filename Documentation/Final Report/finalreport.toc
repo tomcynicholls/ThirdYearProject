@@ -10,4 +10,16 @@
 \contentsline {subsection}{\numberline {1.4.3}Social and Professional}{6}
 \contentsline {section}{\numberline {1.5}Report Structure}{6}
 \contentsline {chapter}{\numberline {2}Objectives}{7}
-\contentsline {chapter}{\numberline {A}Gantt Chart}{9}
+\contentsline {chapter}{\numberline {3}Research}{9}
+\contentsline {section}{\numberline {3.1}Framework}{9}
+\contentsline {subsection}{\numberline {3.1.1}System setup}{9}
+\contentsline {subsection}{\numberline {3.1.2}Data Communication}{10}
+\contentsline {subsection}{\numberline {3.1.3}Android Application}{11}
+\contentsline {subsection}{\numberline {3.1.4}Data Storage}{12}
+\contentsline {section}{\numberline {3.2}Available Applications}{12}
+\contentsline {subsection}{\numberline {3.2.1}Short Messaging Service}{12}
+\contentsline {subsection}{\numberline {3.2.2}Cloak SMS}{12}
+\contentsline {subsection}{\numberline {3.2.3}RSA Cipher Cat}{13}
+\contentsline {section}{\numberline {3.3}Cryptographic Techniques}{14}
+\contentsline {section}{\numberline {3.4}Comparison Factors}{14}
+\contentsline {chapter}{\numberline {A}Gantt Chart}{16}

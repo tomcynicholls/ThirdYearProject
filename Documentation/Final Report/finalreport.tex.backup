@@ -6,6 +6,9 @@
 \usepackage{amsmath}
 \usepackage{amssymb}
 \usepackage{graphicx}
+\usepackage{listings}
+\usepackage{caption}
+\usepackage{subcaption}
 
 \bibliographystyle{vancouver.bst}
 
@@ -48,7 +51,7 @@ In this section, the basics of the smartphone will be introduced and described. 
 
 Compared to desktop computers, smartphones have a diverse set of operating systems, determined by the manufacturer of the smartphone. Smartphone operating systems include; Apple iPhone iOS \cite{appleios}, Windows Phone \cite{windowsphone} and Google Android \cite{googleandroid}. Each operating system, unlike that of a desktop, determines which programming language a developer must use if they are to develop an app for a particular smartphone. This leads to a separate application marketplace, a database where users can download and install new applications, for each smartphone operating system. Whilst applications can be developed in a cross-platform manner, through the use of HTML and CSS, this is not yet standard, so the various marketplaces are individual in the applications that are on offer. The Android operating system, developed by Google and mostly found on devices by Samsung, HTC or Google themselves, use the Google Play marketplace \cite{googleplay} for application distribution with applications being developed using the Java programming language.
 
-The message sending capabilities of smartphones is the feature that is most important for this project, whether it be using the in-built standard messaging service (SMS) or through the use of an installed application. Message sending allows the specification of a recipient and a user entered message for that recipient, with a near instant sending and receiving of that message. On average, the message is of a short length and can be described as an easier, more lightweight form of simple email exchange. 
+The message sending capabilities of smartphones is the feature that is most important for this project, whether it be using the in-built short messaging service (SMS) or through the use of an installed application. Message sending allows the specification of a recipient and a user entered message for that recipient, with a near instant sending and receiving of that message. On average, the message is of a short length and can be described as an easier, more lightweight form of simple email exchange. 
 
 \subsection{Cryptography}
 
@@ -120,7 +123,7 @@ Every project is faced with issues regarding the projects final goals and outcom
 
 \subsection{Legal}
 
-Legal issues are the main issues that need to be considered with this project. As a large section of this project is research based, it needs to be ensured that all materials used are correctly and appropriately referenced. Furthermore, as this project is centred on the issues of computer security, in the form of cryptography, legal issues need to be discussed \cite{dataprotect} \cite{internetlaw}. As long as any material that is encrypted is legal in its own rights and that only data that is solely owned by myself is used in the cryptographic processes, then any legal issues will be avoided in this case. Also, the resulting product facilitates the secure communication of messages which, in the wrong hands, could be used to aid a number of illegal operations. To avoid the direct use of the final application for illegal purposes, it will not be published to the Google Play application marketplace and will therefore not be available to the public. This also means that a disclaimer or end-user license agreement (EULA) will not be required, which would included the consultation of a professional lawyer. If the software created in this project was obtained by a malicious user, then any data required by the police could and would be given to break the illegal encryption by the author.
+Legal issues are the main issues that need to be considered with this project. As a large section of this project is research based, it needs to be ensured that all materials used are correctly and appropriately referenced. Furthermore, as this project is centred on the issues of computer security, in the form of cryptography, legal issues need to be discussed \cite{dataprotect} \cite{internetlaw}. As long as any material that is encrypted is legal in its own rights and that only data that is solely owned by myself is used in the cryptographic processes, then any legal issues will be avoided in this case. Also, the resulting product facilitates the secure communication of messages which, in the wrong hands, could be used to aid a number of illegal operations. To avoid the direct use of the final application for illegal purposes, it will not be published to the Google Play application marketplace and will therefore not be available to the public. This also means that a disclaimer or end-user license agreement (EULA) will not be required, which would included the consultation of a professional lawyer. If the software created in this project was obtained by a malicious user, then any data required by the police could and would be given to break the illegal encryption by the author \cite{pcworldart}.
 
 \subsection{Ethical}
 
@@ -151,7 +154,7 @@ The structure of the report from this point onwards will be as follows:
 Theorems, proofs, code snippets, diagrams and screen shots will be used throughout, as required, to improve understanding and to help explain various sections of this report. 
 
 
-\chapter{Objectives}
+\chapter{Objectives} %Could be expanded upon???
 
 In order to answer the questions described previously, certain goals and objectives must be met. The main objectives of this project where: 
 
@@ -159,8 +162,8 @@ In order to answer the questions described previously, certain goals and objecti
   \item Research
   \begin{itemize}
     \item Framework design
-    \item Cryptographic Techniques
     \item Currently Available Applications
+    \item Cryptographic Techniques
     \item Relevant factors that can be used to compare schemes implemented on a mobile device
   \end{itemize}
   \item Development
@@ -195,15 +198,131 @@ In order to answer the questions described previously, certain goals and objecti
   \end{itemize}
 \end{enumerate}
 
-All aspects of software development are accompanied by thorough testing and are completed using a test driven development technique in a plan-driven setting, as de-
-scribed by Ian Sommerville \cite{iansommerville}. A further breakdown of the objectives, together with a thorough project task timetable, can be found in the form of a Gantt chart in Appendix \ref{A}.
+All aspects of software development are accompanied by thorough testing and are completed using a test driven development technique in a plan-driven setting, as described by Ian Sommerville \cite{iansommerville}. A further breakdown of the objectives, together with a thorough project task timetable, can be found in the form of a Gantt chart in Appendix \ref{A}.
 
 \chapter{Research}
 
-\appendix
+All completed research will now be presented, corresponding with the goals included in the Objectives section of this report. 
 
-\section{Gantt Chart}\label{A}
-\includegraphics[scale=0.45, angle=270]{ProgReportChart.jpg}
+\section{Framework}
+
+The system framework refers to the developed software that will facilitate the communication of data messages between any two users of the system, whilst not including any form of encryption or decryption. The research required to design a system framework was fairly minimal as most aspects of the software development for this project has already been covered, however how a full system should be set up had not. As the Java programming language had already been determined as the language that would be used in this project, the finer points of data communication required research. Android application development in this setting, along with how user data should be stored, also required some research. 
+
+\subsection{System setup}
+
+%big java book - multi client server
+%possibly add to this when back at uni
+%add in multi-threading etc
+
+The backbone of the developed system was the sending and receiving of data messages between two clients. An initial approach could be that a client, be it a P.C or Android application based client, would send the user input message directly to the recipient. This, however, would required a constant link between all clients of the system, which is not practical due to users having different access habits or varied availability. It also requires a lot more computational power and resources, as each client has to track and directly communicate with each other client, which also is very fragile and prone to errors. Another approach, the approach used in this project, was found whilst researching using the book by Daniel Liang \cite{ydanielliang}. The method revolves around the development or a central server, which can be connected to by clients of the system, also known as a multi-client server. Data messages can then be sent to the server by each client, accompanied by the user ID of the intended recipient of the message. This message is then saved and can be sent to the intended user the next time the user logs on to the system or, if the user is already logged on to the system, the next time they 'refresh', asking the server to send any new messages. This is a slight adaptation to the method described by the reference material, which describes each communication link be created as a separate 'session' but, as with the initial approach, requires both users to be logged on to the system at the same time and simulates a more 'instant' messaging service. The adaptation to the researched method allows users to send and retrieve messages independently and is a more practical approach. This is particularly more practical for smartphone users where connection to the internet or a server can be indeterminate. Consideration was made as to how more than two users of the system could simultaneously communicate, but it was decided that as this is a feature not present in standard, unencrypted message communication for smartphones, it would not be required for this developed system. Utilising a central server creates a much more robust system, as the server will not be prone to failure (due to the nature of a server) and has the resources to handle almost all of the data management and tasks required for the system to function, as opposed to forcing the clients to complete this computation. It also acts as the central point of the system, allowing for development and updates to be made without a complete overhaul of the system. 
+
+%add diagram from book
+
+\subsection{Data Communication}
+
+%networking book - sockets - have a look through for ideas
+The book 'An Introduction to Network Programming with Java' \cite{javanetworking} was used as reference material for this section of research. 
+
+The two main entities used in network communications are ports and sockets. A port is a dedicated logical connection to a particular server or service across a network. This, however, has no relation to the number of physical connections to the specified computer, which is normally only one. Ports in the range 1-1023 are normally reserved for specified standard services. For example, port 80 is normally used by Web servers. Ports 1024-65535 are not reserved or for non-standard services so can therefore be used for network application programming. When a connection to a particular server program is attempted by a user, the host machine address and server port number is provided. The transmission is then passed to the appropriate service that is waiting for requests. For the majority of applications, multiple users are likely to request communication access at the same time. To keep the communication dialogues separate, sockets are used. As with ports, sockets are an abstract concept and not a physical piece of hardware. Sockets are used to indicate each end-point of a communication link between two processes. Once a communication request has been established for the particular port, the server and client will each create their socket, dedicated for the communication of data for that purpose. The sockets used are described as TCP/IP sockets as they follow the Transmission Control Protocol, a higher level protocol placed over the Internet Protocol. This link is therefore connection-orientated which, although slower, is more reliable than the connectionless User Datagram Protocol (UDP) based sockets. Data, in the form of characters or files, can be transmitted across this link using data streams, which 'feed' the data through the sockets to the recipient, be it the client or the server. Acknowledgement files will be implemented to check that the correct data has been sent and received.
+
+\subsection{Android Application}
+
+%android developers and android book
+
+With the availability of various resources \cite{androiddevelopers} \cite{markogargenta}, the research into android application development for this project could be completed efficiently. Although various methods for data communication with android applications existed, it was found that socket-based network programming could be used in the same was as for P.C clients (as described above). Other methods involved using HTTP Get and Post commands, a completely different technique to that used for the P.C based clients. Using the same technique for both clients was the logical choice for the development of the framework for this project.
+
+Data compatibility between the clients will be ensured through the use of the Extensible Markup Language (XML) file structure. This file structure can be received and parsed by software developed for both platforms. 'A typical xml document contains sequences of nested tags describing and evaluating a multitude of objects and structures without any constraints, apart from those imposed by basic xml grammar' \cite{xmlbook}. The hierarchy of the information contained in an XML document can be accurately and correctly shown through the creation of a conceptual data tree. This allows the XML document to be precisely and efficiently parsed.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[scale=0.4]{nodetree.jpg}
+\vspace{-10pt}
+\caption{Tree structure representing an XML file for a bookstore.}
+\vspace{-10pt}
+\label{fig:exampleimg1}
+\end{figure}
+
+\begin{figure}[htb]
+\centering
+\lstinputlisting[basicstyle=\ttfamily\scriptsize]{xmlexample.xml}
+\vspace{-10pt}
+\caption{The corresponding XML file for a bookstore.}
+\label{fig:xml}
+\end{figure}
+
+An example, taken from w3schools.com \cite{w3schoolsxmlexample}, of a basic XML document more clearly shows the structure and formatting used. Figure \ref{fig:exampleimg1} and Figure \ref{fig:xml} show that $<$bookstore$>$ is the root element of the document, and that all $<$book$>$ elements are contained within $<$bookstore$>$. The book element has 4 'children': $<$title$>$, $<$author$>$, $<$year$>$ and $<$price$>$. These children as used to describe and give properties to the associated book. Within this project, the XML files will be set out quite similar, with the full document set up displayed in the design section of this report. 
+
+\subsection{Data Storage}
+
+%mysql - website and book - look for ideas
+In order to store and manage the data for each user (I.D, encryption information, messages), MySQL \cite{mysql} will be used. MySQL is the most popular and highly used open source relational database management system (RDBMS). It provides user access to a server which hosts a number of databases. This server can be set up locally on through an external provider. In order to connect, access and edit the database through the developed system, JDBC will be used. 'JDBC is a set of programming APIs that allows easy connection to a wide range of databases (especially relational databases) through Java programs' \cite{jdbcmysql}. JDBC programming involves creating and executing SQL queries or 'statements' and processing the returned ResultSet objects. Statements contain the commands to select or edit particular entries in the database. A full description of the design of the database system in this project will be included in the following chapter. 
+
+\section{Available Applications}
+
+The research completed into the applications for encrypted message transfer that are currently available will now be presented. The two 'non-standard' applications were the only applications that could be found on the google play marketplace \cite{googleplay} through the use of various related search keywords. Most applications that where returned focused on encrypting stored data on the smarphone, as opposed to encrypting messages for sending or receiving, showing that there is a requirement in the market for more secure message communication applications. A full explanation and study of the relevant encryption methods will be displayed in the next section.
+
+\subsection{Short Messaging Service}
+
+The short messaging service is a text messaging service featured on all makes and models of mobile and smart phone. The user enters the recipients mobile telephone number and can send a short message (of only text) to the recipient. These messages are encrypted between the phone and base station however, it is required by law that government enforcement agencies can and should be able to conduct lawful surveillance of SMS messages when required \cite{aresmssafe}. Because of this, unlawful access to SMS messages is possible, by means other than actually breaking the encryption on the messages.
+
+\subsection{Cloak SMS}
+
+Cloak SMS \cite{cloaksms} is an Android application developed by Hamish Medlin. The features of this application are: 
+
+\begin{itemize}
+ \item Send and Receive AES Encrypted SMS messages
+ \item Threaded Conversations
+ \item Application lock
+ \item Custom themes
+ \item File Encryption
+\end{itemize}
+
+Figure \ref{fig:cloaksms} shows the screen used for inputting a message and recipient information. The password is used in the key creation for the cencryption method. The main feature of this application, which is the goal of this research to find out, is that it utilises the AES encryption method. Application locking and file encryption are integrated features which are provided by other applications developed by Hamish and whilst useful in practice, are not relevant to this project. Custom themes and threaded conversations are present for marketability and design as opposed to increasing the security of the application. The cost of this application is £1.00, with a free version available with limited features. Overall the application has generally positive feedback, with an average rating of 4.8/5.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[scale=0.5]{cloaksms.jpg}
+\caption{A screen capture of the application in use.}
+\vspace{-10pt}
+\label{fig:cloaksms}
+\end{figure}
+
+\subsection{RSA Cipher Cat}
+
+RSA Cipher Cat is an application developed by Miasoft \cite{rsaciphercat}, which makes use of the RSA public-key encryption scheme. Figure \ref{fig:ciphercat} shows the two main screens of the application, one for encryption (\ref{fig:cat2}) and one for decryption (\ref{fig:cat1}). The disadvantage of this application is that it very basic, as it does not facilitate the sending of the messages, it only performs the actual encryption and decryption, using files given to the application by the user. It is then up to the user to send the encrypted message however they wish. Whilst it does not have the full features of the other applications, it is perfectly appropriate for this project, as it gives an insight into the current state of encrypted message sending applications and an example of cryptography in practice. The application is free to the public, but has a low user review rating of 1/5, submitted by a single user, whilst having between 500-1,000 installs. 
+
+\begin{figure}
+        \centering
+        \begin{subfigure}[b]{0.45\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{cat2.jpg}
+                \caption{Encrypting a message}
+                \label{fig:cat2}
+        \end{subfigure}
+	\begin{subfigure}[b]{0.45\textwidth}
+                \centering
+                \includegraphics[width=\textwidth]{cat1.jpg}
+                \caption{Decrypting a message}
+                \label{fig:cat1}
+        \end{subfigure}
+        \caption{Application usage screen captures}\label{fig:ciphercat}
+\end{figure}
+
+\section{Comparison Factors}
+
+As the third section of this project is centred around the analysis and comparison of the various cryptographic schemes implemented through the software development, research was performed in order to discover which factors contribute to how successful or useful the implemented schemes are. Most of the discovered factors were found in the article by Nirav Jobanputra, \textit{et al} \cite{ejeta}. This article studies not only the comparisons of various cryptographic techniques when implemented on a smartphone, but also Bio-information based security solutions such as finger-printing or voice recognition. However, the article was published in 2009 and has therefore the conclusions have lost some relevance due to the multitude of advancements that have been made regarding smartphones. 
+
+That comparison factors that were found that could be used when analysis and concluding the results of this project were:
+
+\begin{itemize}
+ \item \textbf{Difficulty of techniques required to break encryption} - This is very important.
+ \item \textbf{Battery usage} - This is also very important.
+\end{itemize}
+
+
+\appendix
+\chapter{Gantt Chart}\label{A}
+\includegraphics[scale=0.35, angle=270]{ProgReportChart.jpg}
 
 \bibliography{projectbib}
 

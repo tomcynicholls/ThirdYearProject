@@ -59,7 +59,6 @@
 	EDITION = {Sixth}
 	}
 
-
 @BOOK{iansommerville,
 	AUTHOR = {Sommerville, Ian},
 	TITLE = {Software Engineering},
@@ -78,18 +77,16 @@
 	URL = {http://www.ejeta.org/issue-v2-n4/ejeta-v2-n4-2.pdf}
 	}
 
-
 @misc{rsaciphercat,
 	author = {{Miasoft}},
 	title = {{RSA} Cipher Cat},
 	year = {2011},
 	howpublished={{[Online](URL }\url{https://play.google.com/store/apps/details?id=jp.co.Miasoft.RSACipher&hl=en}{)}}
-
 	}
 
 @misc{cloacksms,
 	author = {Hamish Medlin},
-	title = {Cloak {SMS} Free},
+	title = {Cloak {SMS}},
 	year = {2011},
 	howpublished={{[Online](URL }\url{https://play.google.com/store/apps/details?id=sms.encryptor.v2.free&hl=en}{)}}
 	}
@@ -157,4 +154,50 @@
 	TITLE = {Information Technology Law},
 	PUBLISHER = {Taylor and Francis},
 	YEAR = {2011}
+	}
+
+@misc{androiddevelopers,
+	author = {{Google Inc.}},
+	title = {Android Developers},
+	howpublished={{[Online](URL }\url{http://developer.android.com}{)}}
+	}
+
+@BOOK{javanetworking,
+	AUTHOR = {{Graba, J}},
+	TITLE = {An Introduction to Network Programming with Java},
+	PUBLISHER = {Springer},
+	YEAR = {2006},
+	EDITION = {Second}
+	}
+
+@misc{mysql,
+	author = {{Oracle}},
+	title = {MySQL},
+	howpublished={{[Online](URL }\url{www.mysql.com}{)}}
+	}
+
+@BOOK{jdbcmysql,
+	AUTHOR = {{Parsian, M}},
+	TITLE = {JDBC Metadata, MySQL, and Oracle Recipes: A Problem-Solution Approach},
+	PUBLISHER = {Apress},
+	YEAR = {2006}
+	}
+
+@BOOK{xmlbook,
+	AUTHOR = {Pozrikidis, C},
+	TITLE = {XML in Scientific Computing},
+	PUBLISHER = {Chapman and Hall},
+	YEAR = {2012}
+	}
+
+@misc{w3schoolsxmlexample,
+	author = {{Refsnes Data}},
+	title = {w3schools.com - XML Tree},
+	howpublished={{[Online](URL }\url{http://www.w3schools.com/xml/xml_tree.asp}{)}}
+	}
+
+@misc{aresmssafe,
+	author = {Gemalto},
+	title = {Are SMS text messages safer than emails?},
+	howpublished={{[Online](URL }\url{http://www.justaskgemalto.com/us/communicating/tips/are-sms-text-messages-safer-emails}{)}}
 	}

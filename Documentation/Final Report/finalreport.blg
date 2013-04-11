@@ -18,45 +18,63 @@ Warning--there's a month but no year in googleplay
 Warning--empty author in dataprotect
 Warning--empty author and editor in dataprotect
 Warning--missing publisher in dataprotect
-You've used 9 entries,
+Warning--empty author and editor in pcworldart
+Warning--missing publisher in pcworldart
+Warning--empty author and editor in androiddevelopers
+Warning--missing publisher in androiddevelopers
+Warning--there's a month but no year in androiddevelopers
+Warning--empty author and editor in w3schoolsxmlexample
+Warning--missing publisher in w3schoolsxmlexample
+Warning--there's a month but no year in w3schoolsxmlexample
+Warning--empty author and editor in mysql
+Warning--missing publisher in mysql
+Warning--there's a month but no year in mysql
+Warning--empty author and editor in aresmssafe
+Warning--missing publisher in aresmssafe
+Warning--there's a month but no year in aresmssafe
+Warning--empty author and editor in cloaksms
+Warning--missing publisher in cloaksms
+Warning--empty author and editor in rsaciphercat
+Warning--missing publisher in rsaciphercat
+You've used 22 entries,
             3169 wiz_defined-function locations,
-            679 strings with 5264 characters,
-and the built_in function-call counts, 5349 in all, are:
-= -- 615
-> -- 36
-< -- 3
-+ -- 21
-- -- 8
-* -- 334
-:= -- 639
-add.period$ -- 23
-call.type$ -- 9
-change.case$ -- 4
-chr.to.int$ -- 9
-cite$ -- 24
-duplicate$ -- 461
-empty$ -- 549
-format.name$ -- 8
-if$ -- 1289
+            734 strings with 6604 characters,
+and the built_in function-call counts, 12492 in all, are:
+= -- 1427
+> -- 91
+< -- 6
++ -- 48
+- -- 21
+* -- 754
+:= -- 1504
+add.period$ -- 59
+call.type$ -- 22
+change.case$ -- 8
+chr.to.int$ -- 18
+cite$ -- 55
+duplicate$ -- 1088
+empty$ -- 1285
+format.name$ -- 21
+if$ -- 3014
 int.to.chr$ -- 0
-int.to.str$ -- 9
-missing$ -- 52
-newline$ -- 42
-num.names$ -- 8
-pop$ -- 148
+int.to.str$ -- 22
+missing$ -- 129
+newline$ -- 101
+num.names$ -- 21
+pop$ -- 354
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 148
+skip$ -- 353
 stack$ -- 0
-substring$ -- 651
-swap$ -- 112
+substring$ -- 1445
+swap$ -- 283
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 15
-while$ -- 34
-width$ -- 10
-write$ -- 87
-(There were 15 warnings)
+warning$ -- 33
+while$ -- 90
+width$ -- 24
+write$ -- 215
+(There were 33 warnings)
