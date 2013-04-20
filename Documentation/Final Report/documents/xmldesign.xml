@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmlmessage>
+	<message id="1">
+		<sender>User: 4</sender>
+		<receiver>User: 8</receiver>
+		<text>Hello</text>
+		<other>null</other>
+	</message>
+</xmlmessage>

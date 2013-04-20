@@ -84,7 +84,7 @@
 	howpublished={{[Online](URL }\url{https://play.google.com/store/apps/details?id=jp.co.Miasoft.RSACipher&hl=en}{)}}
 	}
 
-@misc{cloacksms,
+@misc{cloaksms,
 	author = {Hamish Medlin},
 	title = {Cloak {SMS}},
 	year = {2011},
@@ -200,4 +200,23 @@
 	author = {Gemalto},
 	title = {Are SMS text messages safer than emails?},
 	howpublished={{[Online](URL }\url{http://www.justaskgemalto.com/us/communicating/tips/are-sms-text-messages-safer-emails}{)}}
+	}
+
+@misc{aesmixcols,
+	author = {VHDL},
+	title = {Advanced Encryption Scheme Student Wiki},
+	howpublished={{[Online](URL }\url{http://vhdl.pbworks.com/w/page/4302806/Progetto%20AA%2008-09%3A%20Advanced%20Encryption%20Standard}{)}}
+	}
+
+@misc{aesmixcolssecond,
+	author = {Flylib.com},
+	title = {The AES cipher},
+	howpublished={{[Online](URL }\url{http://flylib.com/books/en/3.190.1.55/1/#!/exjun_}{)}}
+	}
+
+@ARTICLE{rsa,
+	AUTHOR = {Rivest, R.; Shamir, A.; and Adleman, L.},
+	TITLE = {A Method for Obtaining Digital Signatures and Public Key Cryptosystems},
+	JOURNAL = {Communications of the ACM},
+	YEAR = {1978}
 	}

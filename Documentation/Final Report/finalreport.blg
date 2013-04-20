@@ -36,45 +36,51 @@ Warning--empty author and editor in cloaksms
 Warning--missing publisher in cloaksms
 Warning--empty author and editor in rsaciphercat
 Warning--missing publisher in rsaciphercat
-You've used 22 entries,
+Warning--empty author and editor in aesmixcols
+Warning--missing publisher in aesmixcols
+Warning--there's a month but no year in aesmixcols
+Warning--empty author and editor in aesmixcolssecond
+Warning--missing publisher in aesmixcolssecond
+Warning--there's a month but no year in aesmixcolssecond
+You've used 29 entries,
             3169 wiz_defined-function locations,
-            734 strings with 6604 characters,
-and the built_in function-call counts, 12492 in all, are:
-= -- 1427
-> -- 91
-< -- 6
-+ -- 48
-- -- 21
-* -- 754
-:= -- 1504
-add.period$ -- 59
-call.type$ -- 22
-change.case$ -- 8
-chr.to.int$ -- 18
-cite$ -- 55
-duplicate$ -- 1088
-empty$ -- 1285
-format.name$ -- 21
-if$ -- 3014
+            764 strings with 7376 characters,
+and the built_in function-call counts, 16846 in all, are:
+= -- 1938
+> -- 125
+< -- 8
++ -- 69
+- -- 29
+* -- 1017
+:= -- 2018
+add.period$ -- 81
+call.type$ -- 29
+change.case$ -- 12
+chr.to.int$ -- 24
+cite$ -- 68
+duplicate$ -- 1467
+empty$ -- 1728
+format.name$ -- 30
+if$ -- 4071
 int.to.chr$ -- 0
-int.to.str$ -- 22
-missing$ -- 129
-newline$ -- 101
-num.names$ -- 21
-pop$ -- 354
+int.to.str$ -- 29
+missing$ -- 171
+newline$ -- 134
+num.names$ -- 28
+pop$ -- 473
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 353
+skip$ -- 465
 stack$ -- 0
-substring$ -- 1445
-swap$ -- 283
+substring$ -- 1981
+swap$ -- 372
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 33
-while$ -- 90
-width$ -- 24
-write$ -- 215
-(There were 33 warnings)
+warning$ -- 39
+while$ -- 123
+width$ -- 31
+write$ -- 285
+(There were 39 warnings)

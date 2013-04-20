@@ -1,6 +1,36 @@
 STUFF TO ADD IN:
 
-Multi-threading to Research - Framework - System setup (and to design section)
+Multi-threading to Research - Framework - System setup (and to design and implementation section)
 Also add diagram from book to above section
 
 Other things I could have used instead of MySQL, JDBC etc
+
+More indepth discussion about various comparison factors
+
+Prime and Random number generation (prime - bruce schneier book)
+
+AES structure as Algorithm?
+
+Re-write Figure 3.8 if required
+
+Key Exp as Algorithm?
+
+Check Figure 3.14 is in the correct place.
+
+Proof of Eulers and Fermats theorems
+
+Check Figure 3.15 position
+
+Expand on Implementation of RSA mod stuff
+
+Formatting of RSA proof
+
+Discrete Logarithm in ECC
+
+Bulk-up Main System-Overview
+
+Class diagram - design
+
+Check filename structure Design - Server
+
+Check size of database class diagram

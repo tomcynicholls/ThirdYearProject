@@ -1,25 +1,74 @@
-\contentsline {chapter}{\numberline {1}Introduction}{2}
-\contentsline {section}{\numberline {1.1}Background}{2}
-\contentsline {subsection}{\numberline {1.1.1}Smartphones}{2}
-\contentsline {subsection}{\numberline {1.1.2}Cryptography}{3}
-\contentsline {section}{\numberline {1.2}Motivation}{4}
-\contentsline {section}{\numberline {1.3}Scope and Limitations}{4}
-\contentsline {section}{\numberline {1.4}Issues}{5}
-\contentsline {subsection}{\numberline {1.4.1}Legal}{5}
-\contentsline {subsection}{\numberline {1.4.2}Ethical}{6}
-\contentsline {subsection}{\numberline {1.4.3}Social and Professional}{6}
-\contentsline {section}{\numberline {1.5}Report Structure}{6}
-\contentsline {chapter}{\numberline {2}Objectives}{7}
-\contentsline {chapter}{\numberline {3}Research}{9}
-\contentsline {section}{\numberline {3.1}Framework}{9}
-\contentsline {subsection}{\numberline {3.1.1}System setup}{9}
-\contentsline {subsection}{\numberline {3.1.2}Data Communication}{10}
-\contentsline {subsection}{\numberline {3.1.3}Android Application}{11}
-\contentsline {subsection}{\numberline {3.1.4}Data Storage}{12}
-\contentsline {section}{\numberline {3.2}Available Applications}{12}
-\contentsline {subsection}{\numberline {3.2.1}Short Messaging Service}{12}
-\contentsline {subsection}{\numberline {3.2.2}Cloak SMS}{12}
-\contentsline {subsection}{\numberline {3.2.3}RSA Cipher Cat}{13}
-\contentsline {section}{\numberline {3.3}Cryptographic Techniques}{14}
-\contentsline {section}{\numberline {3.4}Comparison Factors}{14}
-\contentsline {chapter}{\numberline {A}Gantt Chart}{16}
+\contentsline {chapter}{\numberline {1}Introduction}{3}
+\contentsline {section}{\numberline {1.1}Background}{3}
+\contentsline {subsection}{\numberline {1.1.1}Smartphones}{3}
+\contentsline {subsection}{\numberline {1.1.2}Cryptography}{4}
+\contentsline {section}{\numberline {1.2}Motivation}{5}
+\contentsline {section}{\numberline {1.3}Scope and Limitations}{5}
+\contentsline {section}{\numberline {1.4}Issues}{6}
+\contentsline {subsection}{\numberline {1.4.1}Legal}{6}
+\contentsline {subsection}{\numberline {1.4.2}Ethical}{7}
+\contentsline {subsection}{\numberline {1.4.3}Social and Professional}{7}
+\contentsline {section}{\numberline {1.5}Report Structure}{7}
+\contentsline {chapter}{\numberline {2}Objectives}{8}
+\contentsline {chapter}{\numberline {3}Research}{10}
+\contentsline {section}{\numberline {3.1}Framework}{10}
+\contentsline {subsection}{\numberline {3.1.1}System setup}{10}
+\contentsline {subsection}{\numberline {3.1.2}Data Communication}{11}
+\contentsline {subsection}{\numberline {3.1.3}Android Application}{12}
+\contentsline {subsection}{\numberline {3.1.4}Data Storage}{13}
+\contentsline {section}{\numberline {3.2}Available Applications}{13}
+\contentsline {subsection}{\numberline {3.2.1}Short Messaging Service}{13}
+\contentsline {subsection}{\numberline {3.2.2}Cloak SMS}{13}
+\contentsline {subsection}{\numberline {3.2.3}RSA Cipher Cat}{14}
+\contentsline {section}{\numberline {3.3}Cryptographic Techniques}{15}
+\contentsline {subsection}{\numberline {3.3.1}Advanced Encryption Standard}{16}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Finite Field Arithmetic}{16}
+\contentsline {subsubsection}{\numberline {3.3.1.2}Structure}{17}
+\contentsline {subsubsection}{\numberline {3.3.1.3}Functions}{18}
+\contentsline {paragraph}{Sub-bytes}{18}
+\contentsline {paragraph}{ShiftRows}{19}
+\contentsline {paragraph}{MixColumns}{20}
+\contentsline {paragraph}{AddRoundKey}{21}
+\contentsline {subsubsection}{\numberline {3.3.1.4}Key Expansion}{21}
+\contentsline {subsubsection}{\numberline {3.3.1.5}Decryption}{23}
+\contentsline {subsubsection}{\numberline {3.3.1.6}Example}{23}
+\contentsline {subsubsection}{\numberline {3.3.1.7}Implementation}{24}
+\contentsline {subsubsection}{\numberline {3.3.1.8}Summary}{25}
+\contentsline {subsection}{\numberline {3.3.2}Rivest-Shamir-Aldeman Algorithm}{25}
+\contentsline {subsubsection}{\numberline {3.3.2.1}Background}{25}
+\contentsline {paragraph}{Euler's Totient Function}{26}
+\contentsline {subsubsection}{\numberline {3.3.2.2}Description}{26}
+\contentsline {paragraph}{Key Generation}{27}
+\contentsline {paragraph}{Encryption}{27}
+\contentsline {paragraph}{Decryption}{27}
+\contentsline {subsubsection}{\numberline {3.3.2.3}Example}{28}
+\contentsline {subsubsection}{\numberline {3.3.2.4}Implementation}{28}
+\contentsline {paragraph}{Exponentiation in Modular Arithmetic}{28}
+\contentsline {paragraph}{Public Key Operation}{29}
+\contentsline {paragraph}{Key Generation}{29}
+\contentsline {subsubsection}{\numberline {3.3.2.5}Proof of the RSA Algorithm}{29}
+\contentsline {subparagraph}{Proof}{30}
+\contentsline {subsubsection}{\numberline {3.3.2.6}Summary}{30}
+\contentsline {subsection}{\numberline {3.3.3}Elliptic Curve Cryptography}{30}
+\contentsline {subsubsection}{\numberline {3.3.3.1}Introduction}{30}
+\contentsline {subsubsection}{\numberline {3.3.3.2}Background}{31}
+\contentsline {paragraph}{Abelian Groups}{31}
+\contentsline {paragraph}{Elliptic Curves over Real Numbers}{31}
+\contentsline {paragraph}{Elliptic Curves over $Z_{p}$}{34}
+\contentsline {subsubsection}{\numberline {3.3.3.3}Description}{35}
+\contentsline {paragraph}{Key Generation}{36}
+\contentsline {paragraph}{Encryption}{36}
+\contentsline {paragraph}{Decryption}{36}
+\contentsline {subsubsection}{\numberline {3.3.3.4}Example}{36}
+\contentsline {subsubsection}{\numberline {3.3.3.5}Summary}{37}
+\contentsline {section}{\numberline {3.4}Comparison Factors}{37}
+\contentsline {section}{\numberline {3.5}Conclusion}{38}
+\contentsline {chapter}{\numberline {4}Design}{39}
+\contentsline {section}{\numberline {4.1}Introduction}{39}
+\contentsline {section}{\numberline {4.2}Objectives}{39}
+\contentsline {section}{\numberline {4.3}Main System}{40}
+\contentsline {subsection}{\numberline {4.3.1}Overview}{40}
+\contentsline {subsection}{\numberline {4.3.2}Server}{40}
+\contentsline {subsection}{\numberline {4.3.3}Database}{42}
+\contentsline {subsection}{\numberline {4.3.4}Clients}{42}
+\contentsline {chapter}{\numberline {A}Gantt Chart}{45}
