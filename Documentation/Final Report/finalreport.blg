@@ -42,45 +42,60 @@ Warning--there's a month but no year in aesmixcols
 Warning--empty author and editor in aesmixcolssecond
 Warning--missing publisher in aesmixcolssecond
 Warning--there's a month but no year in aesmixcolssecond
-You've used 29 entries,
+Warning--empty author and editor in candjava
+Warning--missing publisher in candjava
+Warning--there's a month but no year in candjava
+Warning--empty author and editor in eclipse
+Warning--missing publisher in eclipse
+Warning--there's a month but no year in eclipse
+Warning--empty author and editor in sthree
+Warning--missing publisher in sthree
+Warning--there's a month but no year in sthree
+Warning--empty author and editor in github
+Warning--missing publisher in github
+Warning--there's a month but no year in github
+Warning--empty author and editor in dropbox
+Warning--missing publisher in dropbox
+Warning--there's a month but no year in dropbox
+You've used 34 entries,
             3169 wiz_defined-function locations,
-            764 strings with 7376 characters,
-and the built_in function-call counts, 16846 in all, are:
-= -- 1938
-> -- 125
+            784 strings with 7902 characters,
+and the built_in function-call counts, 19666 in all, are:
+= -- 2252
+> -- 145
 < -- 8
-+ -- 69
-- -- 29
-* -- 1017
-:= -- 2018
-add.period$ -- 81
-call.type$ -- 29
++ -- 81
+- -- 34
+* -- 1203
+:= -- 2361
+add.period$ -- 91
+call.type$ -- 34
 change.case$ -- 12
 chr.to.int$ -- 24
-cite$ -- 68
-duplicate$ -- 1467
-empty$ -- 1728
-format.name$ -- 30
-if$ -- 4071
+cite$ -- 88
+duplicate$ -- 1699
+empty$ -- 2016
+format.name$ -- 35
+if$ -- 4733
 int.to.chr$ -- 0
-int.to.str$ -- 29
-missing$ -- 171
-newline$ -- 134
-num.names$ -- 28
-pop$ -- 473
+int.to.str$ -- 34
+missing$ -- 201
+newline$ -- 154
+num.names$ -- 33
+pop$ -- 545
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 465
+skip$ -- 555
 stack$ -- 0
-substring$ -- 1981
-swap$ -- 372
+substring$ -- 2337
+swap$ -- 427
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
-warning$ -- 39
-while$ -- 123
-width$ -- 31
-write$ -- 285
-(There were 39 warnings)
+warning$ -- 54
+while$ -- 143
+width$ -- 36
+write$ -- 330
+(There were 54 warnings)

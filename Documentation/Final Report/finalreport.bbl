@@ -145,4 +145,27 @@ Bui MD.
 \newblock Real-time object uniform design methodology with UML.
 \newblock Springer; 2007.
 
+\bibitem{candjava}
+Dev R. 10 major differences between C and Java;.
+\newblock {[Online](URL
+  }\url{http://www.durofy.com/programming/10-major-differences-between-c-and-j%
+ava/}{)}.
+
+\bibitem{eclipse}
+Foundation E. Eclipse;.
+\newblock {[Online](URL }\url{http://www.eclipse.org/}{)}.
+
+\bibitem{sthree}
+Electronics S. Galaxy S3 Specifications;.
+\newblock {[Online](URL
+  }\url{http://www.samsung.com/global/galaxys3/specifications.html}{)}.
+
+\bibitem{github}
+{GitHub, Inc }. GitHub - Social Coding;.
+\newblock {[Online](URL }\url{https://github.com}{)}.
+
+\bibitem{dropbox}
+{Dropbox, Inc }. Dropbox;.
+\newblock {[Online](URL }\url{https://www.dropbox.com}{)}.
+
 \end{thebibliography}

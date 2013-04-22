@@ -1315,6 +1315,132 @@ The XML file creation and parsing (data retrieval) will be managed by separate m
 \label{fig:xmlclass}
 \end{figure}
 
+\subsection{Key Exchange}
+
+The sharing of keys is required by all the encryption schemes described and used in this project. A key exchange protocol is required to ensure that the user a communication link is set up with is actually the intended user and not a malicious one. The protocol also ensures that the correct key is given to the appropriate user through the use of timestamps and identification names included with the key transfer. Figure \ref{fig:keyex} illustrates the key exchange protocol used, as described by William Stallings \cite{willstallings}, which is presented bellow.
+
+\begin{figure}[htb]
+\centering
+\includegraphics[scale=0.4]{images/keyex.jpg}
+\caption{UML Sequence diagram showing the distribution of public keys}
+\label{fig:keyex}
+\end{figure}
+ 
+\begin{enumerate}
+  \item Alice registers her public key $ K_{A} $ with Trent
+  \item Trent sends his public key $ K_{T} $ to Alice
+  \item Bob registers his public key $ K_{B} $ with Trent
+  \item Trent sends his public key $ K_{T} $ to Bob
+  \item Alice sends to Trent: $ Alice, Bob, Timestamp1 $
+  \item Trent sends to Alice: $ \{K_{B},Bob, Timestamp1\} K_{T}^{-1} $
+  \item Alice checks Trent’s signature on “$ {K_{B},Bob} $” and the timestamp, creates her nonce $ N_{A} $ at random and sends to Bob: $ \{N_{A} , Alice \}K_{B}^{-1} $
+  \item Bob decrypts the message, checks Alice’s ID and sends to Trent: $ Bob, Alice, Timestamp2 $
+  \item Trent sends to Bob: $ \{K_{A} , Alice, Timestamp2\}K_{T}^{-1} $
+  \item Bob checks Trent’s signature on “$ K_{A}, Alice $” and the timestamp, creates his nonce $ N_{B} $ at random and sends it to Alice: $ \{N_{A}, N_{B}, Bob\}K_{A}^{-1} $
+  \item Alice decrypts and sends to Bob $ \{N_{B}\}K_{B}^{-1} $
+\end{enumerate}
+
+(Steps 7, 10 and 11 passed through server and directed straight to client)
+
+The notation
+
+\[ \{M\}K_{x}^{-1} \]
+
+represents the encryption of message $M$ with the public key of user $x$, which is decrypted using the private key of user $x$.
+
+Once this protocol has been completed, each client has the other client’s public key and the communication of encrypted data can commence. Steps 1 to 4 registers the public keys of the clients with the server, which are only required when a connection is made between two clients that are new to the system or have not yet made a connection to the server. Therefore, these steps will not be required for each new session initialisation. In practice, the protocol should be completed periodically to ensure the currency of the public keys of each user. 
+
+The protocol contains various techniques to ensure smooth and correct operation. For example, the use of timestamps gives a specific time frame in which the server should respond with the required key. If the delay is larger than a specified time then an error has occurred and the key should be sent again. The inclusion of a random number (nonce), for example, in step 10 is because the only way in which Bob could return Alice's nonce $N_{A}$ is if Bob decrypted the message in which Alice included her nonce (Step 7). This message was encrypted using Bobs public key, so when Alice receives her nonce back, she knows that Bob must have sent it, as he is the only one that could have decrypted it. 
+
+\chapter{Software Development}
+
+\section{Introduction}
+
+The design section showed how a full system could be laid out to achieve encrypted data communication between two clients. The development stage of this project is concerned with creating portions of this system in order to perform tests and analysis which would allow a full conclusion to be drawn. In this chapter, the software development process will be discussed and the final system presented, including the tools used and any development choices made.
+
+\section{Development Tools}
+
+\subsection{Programming language}
+
+There were a multitude of programming languages that could be chosen to develop this project, each with their own benefits and drawbacks to certain tasks. For this project, there were two main programming languages to choose from concerning the development of the server and P.C clients, Java and C. C is a low-level, procedural based programming language. Constant, explicit management of pointers and memory allocations is required when developing in C. It also has no error handling capabilities. Java, on the other hand, is a high-level, object-orientated programming language. Pointers and memory allocations are effectively managed 'behind the scenes'. If an error occurs in Java then an exception is thrown which can be handled appropriately by the developer \cite{candjava}. It can easily be seen that, for this project, Java is the best choice of language to use. This is enforced by the fact that Android applications are developed solely in Java, so developing the server and clients in Java is the logical choice. 
+
+\subsection{Development Environment}
+
+Programming in Java can be completed using a text editor and the terminal. However, this requires the programmer to personally manage all aspects of the development, no matter how trivial or basic and can lead to unnecessary errors. Development can be made easier through the use of a software development environment, specifically in this project, Eclipse \cite{eclipse}. The benefits of using Eclipse are as follows:
+
+\begin{itemize}
+ \item Simple and visually appealing user interface
+ \item Hierarchical project file and class management
+ \item Code highlighting and completion
+ \item Real-time error checking and reporting
+ \item Integrated compiler
+ \item Built in debugger
+ \item Intelligent refactoring
+ \item Library import management
+ \item Plug-ins to allow android application development amongst others 
+\end{itemize}
+
+Therefore, the development environment Eclipse was used for the software development of this project. 
+
+\subsection{Smartphone} 
+
+Using Eclipse to develop an android applications allows the use of an in-built Android emulator to run, use and test developed android applications directly from the environment. This, however, can be slow, tideous and prone to errors due to the fact that tasks such as networking have to be completed in an entirely different way. For this project, a physical smartphone was used as it was easily available and would improve the development process. Application debugging could take place directly on the smartphone through a USB connection to the development computer. The smartphone used was a Samsung Galaxy S3 \cite{sthree} which, at the time of development, was a 'top of the range' smartphone running the Android operating system.
+
+\subsection{Version Control}
+
+As mention in the project progress report, various methods will be adopted to ensure that the project files and developed software are constantly and effectively backed up and that version control is maintained. The free services of Git/Github \cite{github} and Dropbox \cite{dropbox} were set up on every computer and workstation involved in the development of this project. This allowed a constant back up of data from wherever development and project work was taking place. The setup Git directory is a full-fledged repository with complete history and full revision tracking capabilities. These facilities operate using an external, managed, server which has secure protocols in place to ensure that data is not lost or destroyed, meaning that any data uploaded is completely safe. Furthermore, an external flash drive was dedicated to the task of providing a back up of data, in the event that an internet connection was not available. 
+
+\section{Development Process}
+
+The software development process, also know as the development life-cycle, is a structure imposed on the development of a software product. Several models for how work should be undertaken and structured exists, each with various advantages and disadvantages. Although specified in the progress report, the chosen development model for this project will be reiterated. For this project the technique of test drive development in a plan-driven setting, as described by Ian Sommerville \cite{iansommerville}, will be employed. 
+
+The other option that was considered was an agile development approach. However, this method is best suited for a project with a dedicated customer so that constant communication can be maintained. Agile development encourages the constant evolution of a system to changing ideas of specifications and restricts the amount of documentation created. On the other hand, plan-driven development has a set plan for development which is followed closely to produce the end product and a firm set of documentation. 
+
+Test-driven development combines both testing and development. The software system is developed incrementally, along with a set of tests for that increment. The next increment is not started until the previous increment is fully tested and completed. In the context of this project, the implementation of the cryptographic schemes will not be started until the multi-client server is set up and can transfer data, for example. This ensures that a complete and error-free system is present to form the base of the next section to be implemented. Also, any important issues (design or programming related) are discovered and fixed early on in the development phase which, if not identified, could lead to disaster later on. 
+
+Another method that could be used is the waterfall method, where phases of the development cycle are completed in turn before the next stage is completed. This method, however, is very restrictive as movements back up the cycle are not allowed (like a waterfall). For example, testing is only started once the complete system is developed. If an error is found in the backbone of the system, fixing this issue could result in a complete redesign on the system being required, wasting time and, in the development of a product to be sold, money. 
+
+\section{Software Development}
+
+\chapter{Further Work}
+
+Due to the nature of the project, a non-negotiable deadline forced a fixed time frame for the project, resulting in a few ideas or areas that could be developed or continued further. The project could also be taken in many different directions due to the depth and breadth of the field the project falls into. The further work that could be completed concerning this project will now be discussed. 
+
+\section{Public-Ready Product}
+
+As the resulting software of this project was developed to study and analyse the 'workings' of an encrypted data communication application, the system being appropriate for a large public user-base was not focused upon. In order for the system to cope with a larger amount of users, various changes and modifications would need to be made, some of which have already been discussed. The main changes that would need to be made would be:
+
+\begin{itemize}
+\item Added message storage database table to store message locations associated to every user.
+\item Improved user identification such as unique email address entries for each user. 
+\item Higher user security through the use of password protected user accounts. 
+\item Host the server and database on an external, paid for, server that can cope with higher demands, data security and file storage.
+\end{itemize}
+
+In terms of making the system suitable for public users, marketability and the aesthetics of the client applications should be considered. A brand would need to be created in order to market the client applications and increase product recognition and publicity. Thought would also have to be given to the monetary value of the product, including profit projections for example, and any further development required. This would however fall under more of a business development project, so research into this field would firstly be required before the further work could be started. Designing and developing an industry worthy user interface would also be a major requirement if the further work into producing a profitable product were to be completed \cite{interfacebook}. A good user interface allows the user to intuitively identify the task they want to complete and how they go about completing it, encouraging them to reuse the application and recommend it to others. An example of the factors that would need to be considered when developing an appropriate user interface would be:
+
+\begin{itemize}
+ \item Elements positioned in the location the user expects 
+ \item Colour coded buttons or sections used well
+ \item Help and suggestion tips
+ \item 'Next step' indicators
+ \item Smooth flowing page transitions and loading times.
+\end{itemize}
+
+If a piece of software developed for users that did not take these points into account when designing the user interface would result in the either the user becoming frustrated with the software not operating as they expected, which would produce erroneous results, or no results at all. The user would then be highly unlikely to use the product, or any product from that developer, again.
+ 
+\section{System Uses}
+
+The uses of the system could also be expanded upon and continued, as the operation of the system is not limited to just secure message sending. Possible continuations into the uses of the system could be:
+
+\paragraph{Bank communication} – The system could be set up to allow the communication of information to and from user bank accounts, enabling the completion of bank account related tasks such as money transfers. However, as products that perform this task exist already, a way in which the result could be original would have to be considered. Thorough and rigorous product testing and a study of the law would be required, however, as bank account management is a very sensitive area of computing as a result of fraud, theft and numerous security attacks. 
+
+\paragraph{Secret sharing} - also known as zero knowledge proofs (give and reference definition) – Verification of values/money between two users (look in marcin algo book)
+
+\section{Study of Implementation}
+
+A thorough investigation into the actual implementation of the various cryptographic schemes could provide a possible area to continue within this project. This would involve implementing a scheme, studying various computational comparison factors of the implementation and developing an improvement to the implementation. Whilst this would be a possibility for further work, the amount of original contributions that could be made as a result of this work is insignificant, due to the already well developed and studied field of algorithm implementation and improvement. 
+
 \appendix
 \chapter{Gantt Chart}\label{A}
 \includegraphics[scale=0.35, angle=270]{images/ProgReportChart.jpg}

@@ -71,4 +71,16 @@
 \contentsline {subsection}{\numberline {4.3.2}Server}{40}
 \contentsline {subsection}{\numberline {4.3.3}Database}{42}
 \contentsline {subsection}{\numberline {4.3.4}Clients}{42}
-\contentsline {chapter}{\numberline {A}Gantt Chart}{45}
+\contentsline {subsection}{\numberline {4.3.5}Key Exchange}{45}
+\contentsline {chapter}{\numberline {5}Software Development}{47}
+\contentsline {section}{\numberline {5.1}Introduction}{47}
+\contentsline {section}{\numberline {5.2}Development Tools}{47}
+\contentsline {subsection}{\numberline {5.2.1}Programming language}{47}
+\contentsline {subsection}{\numberline {5.2.2}Development Environment}{47}
+\contentsline {subsection}{\numberline {5.2.3}Smartphone}{48}
+\contentsline {subsection}{\numberline {5.2.4}Version Control}{48}
+\contentsline {section}{\numberline {5.3}Development Process}{49}
+\contentsline {section}{\numberline {5.4}Software Development}{49}
+\contentsline {chapter}{\numberline {6}Further Work}{50}
+\contentsline {section}{\numberline {6.1}Public-Ready Product}{50}
+\contentsline {chapter}{\numberline {A}Gantt Chart}{51}

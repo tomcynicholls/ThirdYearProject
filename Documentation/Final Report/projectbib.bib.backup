@@ -227,21 +227,3 @@
 	PUBLISHER = {Springer},
 	YEAR = {2007}
 	}
-
-@misc{candjava,
-	author = {Rishabh Dev},
-	title = {10 major differences between C and Java},
-	howpublished={{[Online](URL }\url{http://www.durofy.com/programming/10-major-differences-between-c-and-java/}{)}}
-	}
-
-@misc{eclipse,
-	author = {Eclipse Foundation},
-	title = {Eclipse},
-	howpublished={{[Online](URL }\url{http://www.eclipse.org/}{)}}
-	}
-
-@misc{sthree,
-	author = {Samsung Electronics},
-	title = {Galaxy S3 Specifications},
-	howpublished={{[Online](URL }\url{http://www.samsung.com/global/galaxys3/specifications.html}{)}}
-	}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.11.15)  20 APR 2013 12:17
+This is pdfTeX, Version 3.1415926-1.40.10 (TeX Live 2009/Debian) (format=pdflatex 2012.11.15)  22 APR 2013 13:42
 entering extended mode
  %&-line parsing enabled.
 **finalreport.tex
@@ -469,11 +469,31 @@ File: images/designs2.jpg Graphic file (type jpg)
 File: images/xmlclass.jpg Graphic file (type jpg)
  <use images/xmlclass.jpg>
 [44 <./images/designs2.jpg> <./images/xmlclass.jpg>]
+<images/keyex.jpg, id=190, 715.67375pt x 634.37pt>
+File: images/keyex.jpg Graphic file (type jpg)
+ <use images/keyex.jpg>
+(/usr/share/texmf-texlive/tex/latex/ucs/data/uni-32.def
+File: uni-32.def 2004/10/17 UCS: Unicode data U+2000..U+20FF
+)
+Overfull \hbox (61.1223pt too wide) in paragraph at lines 1337--1338
+[]\OT1/cmr/m/n/10 Bob de-crypts the mes-sage, checks Al-ice's ID and sends to T
+rent: $\OML/cmm/m/it/10 Bob; Alice; Timestamp\OT1/cmr/m/n/10 2$ 
+ []
+
+[45 <./images/keyex.jpg>] [46]
+Chapter 5.
+[47
+
+] [48] [49]
+Chapter 6.
+[50
+
+]
 Appendix A.
-<images/ProgReportChart.jpg, id=190, 1181.41376pt x 692.5875pt>
+<images/ProgReportChart.jpg, id=210, 1181.41376pt x 692.5875pt>
 File: images/ProgReportChart.jpg Graphic file (type jpg)
 
-<use images/ProgReportChart.jpg> (./finalreport.bbl [45
+<use images/ProgReportChart.jpg> (./finalreport.bbl [51
 
  <./images/ProgReportChart.jpg>]
 Underfull \hbox (badness 6396) in paragraph at lines 87--91
@@ -486,7 +506,7 @@ Underfull \hbox (badness 2359) in paragraph at lines 87--91
 om / us / communicating / tips /
  []
 
-[46
+[52
 
 ]
 Underfull \hbox (badness 10000) in paragraph at lines 115--119
@@ -494,12 +514,23 @@ Underfull \hbox (badness 10000) in paragraph at lines 115--119
 o % 20AA % 2008-[]09 %
  []
 
-) [47] (./finalreport.aux) ) 
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--153
+[]\OT1/cmr/m/n/10 Dev R. 10 ma-jor dif-fer-ences be-tween C and Java;.
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 149--153
+\OT1/cmr/m/n/10 [On-line](URL $\OT1/cmtt/m/n/10 http : / / www . durofy . com /
+ programming /
+ []
+
+) [53] (./finalreport.aux) ) 
 Here is how much of TeX's memory you used:
- 6695 strings out of 495061
- 92935 string characters out of 1182620
- 170641 words of memory out of 3000000
- 9753 multiletter control sequences out of 15000+50000
+ 6947 strings out of 495061
+ 95811 string characters out of 1182620
+ 170672 words of memory out of 3000000
+ 10001 multiletter control sequences out of 15000+50000
  13433 words of font info for 51 fonts, out of 3000000 for 9000
  28 hyphenation exceptions out of 8191
  36i,9n,43p,2592b,1475s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -524,9 +555,9 @@ ype1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-texlive/fonts/type1/public
 /cmti10.pfb></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt10.pfb
 ></usr/share/texmf-texlive/fonts/type1/public/amsfonts/cm/cmtt8.pfb></usr/share
 /texmf-texlive/fonts/type1/public/amsfonts/symbols/msam10.pfb>
-Output written on finalreport.pdf (49 pages, 1157675 bytes).
+Output written on finalreport.pdf (55 pages, 1201737 bytes).
 PDF statistics:
- 283 PDF objects out of 1000 (max. 8388607)
+ 303 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 106 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 111 words of extra memory for PDF output out of 10000 (max. 10000000)
 
