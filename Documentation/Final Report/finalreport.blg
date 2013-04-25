@@ -57,45 +57,45 @@ Warning--there's a month but no year in github
 Warning--empty author and editor in dropbox
 Warning--missing publisher in dropbox
 Warning--there's a month but no year in dropbox
-You've used 34 entries,
+You've used 37 entries,
             3169 wiz_defined-function locations,
-            784 strings with 7902 characters,
-and the built_in function-call counts, 19666 in all, are:
-= -- 2252
-> -- 145
+            804 strings with 8392 characters,
+and the built_in function-call counts, 23302 in all, are:
+= -- 2760
+> -- 157
 < -- 8
-+ -- 81
-- -- 34
-* -- 1203
-:= -- 2361
-add.period$ -- 91
-call.type$ -- 34
++ -- 88
+- -- 37
+* -- 1435
+:= -- 2736
+add.period$ -- 119
+call.type$ -- 37
 change.case$ -- 12
 chr.to.int$ -- 24
-cite$ -- 88
-duplicate$ -- 1699
-empty$ -- 2016
-format.name$ -- 35
-if$ -- 4733
+cite$ -- 91
+duplicate$ -- 2113
+empty$ -- 2330
+format.name$ -- 38
+if$ -- 5612
 int.to.chr$ -- 0
-int.to.str$ -- 34
-missing$ -- 201
-newline$ -- 154
-num.names$ -- 33
-pop$ -- 545
+int.to.str$ -- 37
+missing$ -- 236
+newline$ -- 187
+num.names$ -- 36
+pop$ -- 644
 preamble$ -- 1
 purify$ -- 0
 quote$ -- 0
-skip$ -- 555
+skip$ -- 585
 stack$ -- 0
-substring$ -- 2337
-swap$ -- 427
+substring$ -- 2835
+swap$ -- 498
 text.length$ -- 0
 text.prefix$ -- 0
 top$ -- 0
 type$ -- 0
 warning$ -- 54
-while$ -- 143
-width$ -- 36
-write$ -- 330
+while$ -- 157
+width$ -- 39
+write$ -- 396
 (There were 54 warnings)

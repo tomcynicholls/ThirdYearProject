@@ -1,86 +1,118 @@
-\contentsline {chapter}{\numberline {1}Introduction}{3}
-\contentsline {section}{\numberline {1.1}Background}{3}
-\contentsline {subsection}{\numberline {1.1.1}Smartphones}{3}
-\contentsline {subsection}{\numberline {1.1.2}Cryptography}{4}
-\contentsline {section}{\numberline {1.2}Motivation}{5}
-\contentsline {section}{\numberline {1.3}Scope and Limitations}{5}
-\contentsline {section}{\numberline {1.4}Issues}{6}
-\contentsline {subsection}{\numberline {1.4.1}Legal}{6}
-\contentsline {subsection}{\numberline {1.4.2}Ethical}{7}
-\contentsline {subsection}{\numberline {1.4.3}Social and Professional}{7}
-\contentsline {section}{\numberline {1.5}Report Structure}{7}
-\contentsline {chapter}{\numberline {2}Objectives}{8}
-\contentsline {chapter}{\numberline {3}Research}{10}
-\contentsline {section}{\numberline {3.1}Framework}{10}
-\contentsline {subsection}{\numberline {3.1.1}System setup}{10}
-\contentsline {subsection}{\numberline {3.1.2}Data Communication}{11}
-\contentsline {subsection}{\numberline {3.1.3}Android Application}{12}
-\contentsline {subsection}{\numberline {3.1.4}Data Storage}{13}
-\contentsline {section}{\numberline {3.2}Available Applications}{13}
-\contentsline {subsection}{\numberline {3.2.1}Short Messaging Service}{13}
-\contentsline {subsection}{\numberline {3.2.2}Cloak SMS}{13}
-\contentsline {subsection}{\numberline {3.2.3}RSA Cipher Cat}{14}
-\contentsline {section}{\numberline {3.3}Cryptographic Techniques}{15}
-\contentsline {subsection}{\numberline {3.3.1}Advanced Encryption Standard}{16}
-\contentsline {subsubsection}{\numberline {3.3.1.1}Finite Field Arithmetic}{16}
-\contentsline {subsubsection}{\numberline {3.3.1.2}Structure}{17}
-\contentsline {subsubsection}{\numberline {3.3.1.3}Functions}{18}
-\contentsline {paragraph}{Sub-bytes}{18}
-\contentsline {paragraph}{ShiftRows}{19}
-\contentsline {paragraph}{MixColumns}{20}
-\contentsline {paragraph}{AddRoundKey}{21}
-\contentsline {subsubsection}{\numberline {3.3.1.4}Key Expansion}{21}
-\contentsline {subsubsection}{\numberline {3.3.1.5}Decryption}{23}
-\contentsline {subsubsection}{\numberline {3.3.1.6}Example}{23}
-\contentsline {subsubsection}{\numberline {3.3.1.7}Implementation}{24}
-\contentsline {subsubsection}{\numberline {3.3.1.8}Summary}{25}
-\contentsline {subsection}{\numberline {3.3.2}Rivest-Shamir-Aldeman Algorithm}{25}
-\contentsline {subsubsection}{\numberline {3.3.2.1}Background}{25}
-\contentsline {paragraph}{Euler's Totient Function}{26}
-\contentsline {subsubsection}{\numberline {3.3.2.2}Description}{26}
-\contentsline {paragraph}{Key Generation}{27}
-\contentsline {paragraph}{Encryption}{27}
-\contentsline {paragraph}{Decryption}{27}
-\contentsline {subsubsection}{\numberline {3.3.2.3}Example}{28}
-\contentsline {subsubsection}{\numberline {3.3.2.4}Implementation}{28}
-\contentsline {paragraph}{Exponentiation in Modular Arithmetic}{28}
-\contentsline {paragraph}{Public Key Operation}{29}
-\contentsline {paragraph}{Key Generation}{29}
-\contentsline {subsubsection}{\numberline {3.3.2.5}Proof of the RSA Algorithm}{29}
-\contentsline {subparagraph}{Proof}{30}
-\contentsline {subsubsection}{\numberline {3.3.2.6}Summary}{30}
-\contentsline {subsection}{\numberline {3.3.3}Elliptic Curve Cryptography}{30}
-\contentsline {subsubsection}{\numberline {3.3.3.1}Introduction}{30}
-\contentsline {subsubsection}{\numberline {3.3.3.2}Background}{31}
-\contentsline {paragraph}{Abelian Groups}{31}
-\contentsline {paragraph}{Elliptic Curves over Real Numbers}{31}
-\contentsline {paragraph}{Elliptic Curves over $Z_{p}$}{34}
-\contentsline {subsubsection}{\numberline {3.3.3.3}Description}{35}
-\contentsline {paragraph}{Key Generation}{36}
-\contentsline {paragraph}{Encryption}{36}
-\contentsline {paragraph}{Decryption}{36}
-\contentsline {subsubsection}{\numberline {3.3.3.4}Example}{36}
-\contentsline {subsubsection}{\numberline {3.3.3.5}Summary}{37}
-\contentsline {section}{\numberline {3.4}Comparison Factors}{37}
-\contentsline {section}{\numberline {3.5}Conclusion}{38}
-\contentsline {chapter}{\numberline {4}Design}{39}
-\contentsline {section}{\numberline {4.1}Introduction}{39}
-\contentsline {section}{\numberline {4.2}Objectives}{39}
-\contentsline {section}{\numberline {4.3}Main System}{40}
-\contentsline {subsection}{\numberline {4.3.1}Overview}{40}
-\contentsline {subsection}{\numberline {4.3.2}Server}{40}
-\contentsline {subsection}{\numberline {4.3.3}Database}{42}
-\contentsline {subsection}{\numberline {4.3.4}Clients}{42}
-\contentsline {subsection}{\numberline {4.3.5}Key Exchange}{45}
-\contentsline {chapter}{\numberline {5}Software Development}{47}
-\contentsline {section}{\numberline {5.1}Introduction}{47}
-\contentsline {section}{\numberline {5.2}Development Tools}{47}
-\contentsline {subsection}{\numberline {5.2.1}Programming language}{47}
-\contentsline {subsection}{\numberline {5.2.2}Development Environment}{47}
-\contentsline {subsection}{\numberline {5.2.3}Smartphone}{48}
-\contentsline {subsection}{\numberline {5.2.4}Version Control}{48}
-\contentsline {section}{\numberline {5.3}Development Process}{49}
-\contentsline {section}{\numberline {5.4}Software Development}{49}
-\contentsline {chapter}{\numberline {6}Further Work}{50}
-\contentsline {section}{\numberline {6.1}Public-Ready Product}{50}
-\contentsline {chapter}{\numberline {A}Gantt Chart}{51}
+\contentsline {chapter}{\numberline {1}Introduction}{4}
+\contentsline {section}{\numberline {1.1}Background}{4}
+\contentsline {subsection}{\numberline {1.1.1}Smartphones}{4}
+\contentsline {subsection}{\numberline {1.1.2}Cryptography}{5}
+\contentsline {section}{\numberline {1.2}Motivation}{6}
+\contentsline {section}{\numberline {1.3}Scope and Limitations}{7}
+\contentsline {section}{\numberline {1.4}Issues}{8}
+\contentsline {subsection}{\numberline {1.4.1}Legal}{8}
+\contentsline {subsection}{\numberline {1.4.2}Ethical}{8}
+\contentsline {subsection}{\numberline {1.4.3}Social and Professional}{9}
+\contentsline {section}{\numberline {1.5}Report Structure}{9}
+\contentsline {chapter}{\numberline {2}Objectives}{10}
+\contentsline {chapter}{\numberline {3}Research}{12}
+\contentsline {section}{\numberline {3.1}Framework}{12}
+\contentsline {subsection}{\numberline {3.1.1}System setup}{12}
+\contentsline {subsection}{\numberline {3.1.2}Android Application}{13}
+\contentsline {subsection}{\numberline {3.1.3}Data Storage}{14}
+\contentsline {section}{\numberline {3.2}Available Applications}{15}
+\contentsline {subsection}{\numberline {3.2.1}Short Messaging Service}{15}
+\contentsline {subsection}{\numberline {3.2.2}Cloak SMS}{15}
+\contentsline {subsection}{\numberline {3.2.3}RSA Cipher Cat}{16}
+\contentsline {section}{\numberline {3.3}Cryptographic Techniques}{17}
+\contentsline {subsection}{\numberline {3.3.1}Advanced Encryption Standard}{18}
+\contentsline {subsubsection}{\numberline {3.3.1.1}Finite Field Arithmetic}{18}
+\contentsline {subsubsection}{\numberline {3.3.1.2}Structure}{19}
+\contentsline {subsubsection}{\numberline {3.3.1.3}Functions}{21}
+\contentsline {paragraph}{Sub-bytes}{21}
+\contentsline {paragraph}{ShiftRows}{22}
+\contentsline {paragraph}{MixColumns}{22}
+\contentsline {paragraph}{AddRoundKey}{23}
+\contentsline {subsubsection}{\numberline {3.3.1.4}Key Expansion}{24}
+\contentsline {subsubsection}{\numberline {3.3.1.5}Decryption}{26}
+\contentsline {subsubsection}{\numberline {3.3.1.6}Example}{26}
+\contentsline {subsubsection}{\numberline {3.3.1.7}Implementation}{27}
+\contentsline {subsubsection}{\numberline {3.3.1.8}Summary}{28}
+\contentsline {subsection}{\numberline {3.3.2}Rivest-Shamir-Aldeman Algorithm}{28}
+\contentsline {subsubsection}{\numberline {3.3.2.1}Background}{29}
+\contentsline {paragraph}{Euler's Totient Function}{29}
+\contentsline {subsubsection}{\numberline {3.3.2.2}Description}{29}
+\contentsline {paragraph}{Key Generation}{30}
+\contentsline {paragraph}{Encryption}{31}
+\contentsline {paragraph}{Decryption}{31}
+\contentsline {subsubsection}{\numberline {3.3.2.3}Example}{31}
+\contentsline {subsubsection}{\numberline {3.3.2.4}Implementation}{32}
+\contentsline {paragraph}{Exponentiation in Modular Arithmetic}{32}
+\contentsline {paragraph}{Public Key Operation}{32}
+\contentsline {paragraph}{Key Generation}{33}
+\contentsline {subsubsection}{\numberline {3.3.2.5}Proof of the RSA Algorithm}{33}
+\contentsline {subparagraph}{Proof}{34}
+\contentsline {subsubsection}{\numberline {3.3.2.6}Summary}{34}
+\contentsline {subsection}{\numberline {3.3.3}Elliptic Curve Cryptography}{35}
+\contentsline {subsubsection}{\numberline {3.3.3.1}Introduction}{35}
+\contentsline {subsubsection}{\numberline {3.3.3.2}Background}{35}
+\contentsline {paragraph}{Abelian Groups}{35}
+\contentsline {paragraph}{Elliptic Curves over Real Numbers}{36}
+\contentsline {paragraph}{Elliptic Curves over $Z_{p}$}{38}
+\contentsline {subsubsection}{\numberline {3.3.3.3}Description}{39}
+\contentsline {paragraph}{Key Generation}{40}
+\contentsline {paragraph}{Encryption}{40}
+\contentsline {paragraph}{Decryption}{41}
+\contentsline {subsubsection}{\numberline {3.3.3.4}Example}{41}
+\contentsline {subsubsection}{\numberline {3.3.3.5}Summary}{42}
+\contentsline {section}{\numberline {3.4}Comparison Factors}{42}
+\contentsline {section}{\numberline {3.5}Conclusion}{43}
+\contentsline {chapter}{\numberline {4}Design}{44}
+\contentsline {section}{\numberline {4.1}Introduction}{44}
+\contentsline {section}{\numberline {4.2}Objectives}{44}
+\contentsline {section}{\numberline {4.3}Main System}{45}
+\contentsline {subsection}{\numberline {4.3.1}Overview}{45}
+\contentsline {subsection}{\numberline {4.3.2}Server}{45}
+\contentsline {subsection}{\numberline {4.3.3}Database}{48}
+\contentsline {subsection}{\numberline {4.3.4}Clients}{49}
+\contentsline {subsection}{\numberline {4.3.5}Key Exchange}{51}
+\contentsline {chapter}{\numberline {5}Software Development}{53}
+\contentsline {section}{\numberline {5.1}Introduction}{53}
+\contentsline {section}{\numberline {5.2}Development Tools}{53}
+\contentsline {subsection}{\numberline {5.2.1}Programming language}{53}
+\contentsline {subsection}{\numberline {5.2.2}Development Environment}{54}
+\contentsline {subsection}{\numberline {5.2.3}Smartphone}{54}
+\contentsline {subsection}{\numberline {5.2.4}Version Control}{55}
+\contentsline {section}{\numberline {5.3}Development Process}{55}
+\contentsline {section}{\numberline {5.4}Software Development}{56}
+\contentsline {subsection}{\numberline {5.4.1}Overview}{56}
+\contentsline {subsection}{\numberline {5.4.2}Server and Client}{56}
+\contentsline {paragraph}{Connection}{57}
+\contentsline {paragraph}{Message Sending}{57}
+\contentsline {paragraph}{Encryption and Decryption}{57}
+\contentsline {paragraph}{Key Exchange}{59}
+\contentsline {subsection}{\numberline {5.4.3}Database}{60}
+\contentsline {subsection}{\numberline {5.4.4}Application}{62}
+\contentsline {section}{\numberline {5.5}Testing}{63}
+\contentsline {subsection}{\numberline {5.5.1}Testing tools}{64}
+\contentsline {subsection}{\numberline {5.5.2}Testing Methods}{65}
+\contentsline {chapter}{\numberline {6}Results}{67}
+\contentsline {section}{\numberline {6.1}Analysis}{67}
+\contentsline {paragraph}{Do applications that facilitate the secure transfer of messages exist?}{67}
+\contentsline {paragraph}{What are the cryptographic techniques behind these applications?}{67}
+\contentsline {paragraph}{Are there other techniques which could also be used for this purpose?}{67}
+\contentsline {paragraph}{What is the performance of these styles applications in comparison to each other?}{68}
+\contentsline {subparagraph}{Key Exchange}{68}
+\contentsline {subparagraph}{Implementation Comparison}{68}
+\contentsline {subparagraph}{Cryptographic Scheme Comparison}{70}
+\contentsline {paragraph}{Can these applications or methods be improved upon?}{70}
+\contentsline {paragraph}{Can a conclusion be made about the current state of secure message communication and its future?}{71}
+\contentsline {section}{\numberline {6.2}Conclusion}{71}
+\contentsline {chapter}{\numberline {7}Further Work}{73}
+\contentsline {section}{\numberline {7.1}Public-Ready Product}{73}
+\contentsline {section}{\numberline {7.2}System Uses}{74}
+\contentsline {paragraph}{Bank communication}{74}
+\contentsline {paragraph}{Secret sharing}{74}
+\contentsline {section}{\numberline {7.3}Study of Implementation}{75}
+\contentsline {chapter}{\numberline {8}Evaluation}{76}
+\contentsline {section}{\numberline {8.1}Positives}{76}
+\contentsline {section}{\numberline {8.2}Negatives}{76}
+\contentsline {section}{\numberline {8.3}Lessons Learnt}{77}
+\contentsline {section}{\numberline {8.4}Conclusion}{77}
+\contentsline {chapter}{\numberline {9}Acknowledgements}{78}
+\contentsline {chapter}{\numberline {A}Gantt Chart}{79}

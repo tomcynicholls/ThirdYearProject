@@ -17,10 +17,13 @@ import java.util.List;
 public class Server {
 
 	public static EncryptDecrypt encryptdecrypt;
-	public static final String SERV_PUB_KEY_LOC = "C:\\Users/Tom/TestDoc/server/keys/servpubkey.key";
-	public static final String SERV_PRIV_KEY_LOC = "C:\\Users/Tom/TestDoc/server/keys/servprivkey.key";
+	//public static final String SERV_PUB_KEY_LOC = "C:\\Users/Tom/TestDoc/server/keys/servpubkey.key";
+	//public static final String SERV_PRIV_KEY_LOC = "C:\\Users/Tom/TestDoc/server/keys/servprivkey.key";
 	public static SendReceiveSocket sendrecsock;
-	public static String pathwaystart = "C:\\Users/Tom/TestDoc/server/";
+	//public static String pathwaystart = "C:\\Users/Tom/TestDoc/server/";
+	public static final String SERV_PUB_KEY_LOC = "server/keys/servpubkey.key";
+	public static final String SERV_PRIV_KEY_LOC = "server/keys/servprivkey.key";
+	public static String pathwaystart = "server/";
 
 	public static void main(String[] args) throws IOException {
 
@@ -299,19 +302,7 @@ public class Server {
 						// actually receive file
 						sendrecsock.ReceiveViaSocket(path);
 
-						// sock.close();
-
-						// server reads ip address from file
-						// XmlManip xmlmanip = new XmlManip();
-						// String returnedresult = xmlmanip.returnRequired(path,
-						// "receiver");
-						// System.out.println("receiver is:" + returnedresult);
-
-						// and saves filename in appropriate array position
-						// int recuser = Integer.parseInt(returnedresult);
-
-						// DataOutputStream outputToClient = new
-						// DataOutputStream(sock.getOutputStream());
+						
 
 						if (con.userIDExists(receiver)) {
 							con.updateUser(receiver, "messloc1", fromfilepath);

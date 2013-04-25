@@ -23,7 +23,8 @@ public class Client {
 	public static String PRIV_KEY_LOC;
 	public static String SERV_PUB_KEY_LOC;
 	public static SendReceiveSocket sendrecsock;
-	public static String pathwaystart = "C:\\Users/Tom/TestDoc/";
+	//public static String pathwaystart = "C:\\Users/Tom/TestDoc/";
+	public static String pathwaystart = "client/";
 	public static File filesizefile;
 	public static long filesizesize;
 
@@ -122,11 +123,6 @@ public class Client {
         //System.out.println("Received acknowledgement - " + Long.toString(filesizesize) + " bytes");
         System.out.println("Acknowledgement received. 11 bytes");
 
-		/*
-		 * for (int j = 0; j < 3; j++) { System.out.println("array pos is" +
-		 * recfromserv[j] + "!!"); if (recfromserv[j] != null) {
-		 * System.out.println("DO PART " + j); } }
-		 */
 
 		if (recfromserv[0] != null) {
 			//System.out.println("DO PART 1");
@@ -143,16 +139,6 @@ public class Client {
 			in.close();
 			String[] splitted = fromfile.split(" ");
 			int otheruser = Integer.parseInt(splitted[1]);
-			//System.out.println("User " + otheruser + " wants to register with you, accept? y/n");
-			//String s;
-			//Scanner input = new Scanner(System.in);
-			//s = input.nextLine();
-			//if input n
-			//if (s.equals("n")) {
-				//send n to server
-				//show message and exit
-				//toServer.writeChar('n');
-			//} else { //if input y
 				
 				//save string1 in client/string2/string2nonce
 				BufferedWriter out = new BufferedWriter(new FileWriter(pathwaystart + Integer.toString(otheruser) + "/" + Integer.toString(otheruser) + "nonce.txt"));

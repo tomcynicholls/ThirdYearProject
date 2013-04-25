@@ -9,18 +9,22 @@
 \bibitem{appleios}
 {Apple Inc }. Apple iPhone iOS;.
 \newblock {[Online](URL }\url{http://www.apple.com/uk/ios/}{)}.
+\newblock (Accessed April 7 2013).
 
 \bibitem{windowsphone}
 {Microsoft Coporation}. Windows Phone 8;.
 \newblock {[Online](URL }\url{http://www.windowsphone.com/en-gb}{)}.
+\newblock (Accessed April 7 2013).
 
 \bibitem{googleandroid}
 {Google Inc }. Android;.
 \newblock {[Online](URL }\url{http://www.android.com/}{)}.
+\newblock (Accessed April 7 2013).
 
 \bibitem{googleplay}
 {Google Inc }. Google Play Store;.
 \newblock {[Online](URL }\url{https://play.google.com/store}{)}.
+\newblock (Accessed April 5 2013).
 
 \bibitem{richardmollin}
 Mollin RA.
@@ -39,11 +43,7 @@ Data Protection Act 1998. London: Stationery Office; 1998.
 Kirk J. UK Data Encryption Disclosure Law Takes Effect; 2007.
 \newblock {[Online](URL
   }\url{http://www.pcworld.com/article/137881/article.html}{)}.
-
-\bibitem{iansommerville}
-Sommerville I.
-\newblock Software Engineering.
-\newblock Ninth ed. Pearson; 2011.
+\newblock (Accessed April 10 2013).
 
 \bibitem{ydanielliang}
 Liang D.
@@ -58,6 +58,7 @@ Liang D.
 \bibitem{androiddevelopers}
 {Google Inc }. Android Developers;.
 \newblock {[Online](URL }\url{http://developer.android.com}{)}.
+\newblock (Accessed April 7 2013).
 
 \bibitem{markogargenta}
 Gargenta M.
@@ -72,10 +73,12 @@ Pozrikidis C.
 \bibitem{w3schoolsxmlexample}
 {Refsnes Data}. w3schools.com - XML Tree;.
 \newblock {[Online](URL }\url{http://www.w3schools.com/xml/xml_tree.asp}{)}.
+\newblock (Accessed April 9 2013).
 
 \bibitem{mysql}
 {Oracle}. MySQL;.
 \newblock {[Online](URL }\url{www.mysql.com}{)}.
+\newblock (Accessed April 9 2013).
 
 \bibitem{jdbcmysql}
 {Parsian, M}.
@@ -88,18 +91,21 @@ Gemalto. Are SMS text messages safer than emails?;.
 \newblock {[Online](URL
   }\url{http://www.justaskgemalto.com/us/communicating/tips/are-sms-text-messa%
 ges-safer-emails}{)}.
+\newblock (Accessed April 11 2013).
 
 \bibitem{cloaksms}
 Medlin H. Cloak {SMS}; 2011.
 \newblock {[Online](URL
   }\url{https://play.google.com/store/apps/details?id=sms.encryptor.v2.free&hl%
 =en}{)}.
+\newblock (Accessed April 5 2013).
 
 \bibitem{rsaciphercat}
 {Miasoft}. {RSA} Cipher Cat; 2011.
 \newblock {[Online](URL
   }\url{https://play.google.com/store/apps/details?id=jp.co.Miasoft.RSACipher&%
 hl=en}{)}.
+\newblock (Accessed April 5 2013).
 
 \bibitem{wenbomao}
 Mao W.
@@ -116,11 +122,13 @@ VHDL. Advanced Encryption Scheme Student Wiki;.
 \newblock {[Online](URL
   }\url{http://vhdl.pbworks.com/w/page/4302806/Progetto%20AA%2008-09%3A%20Adva%
 nced%20Encryption%20Standard}{)}.
+\newblock (Accessed April 13 2013).
 
 \bibitem{aesmixcolssecond}
-com F. The AES cipher;.
+{Flylib com}. The AES cipher;.
 \newblock {[Online](URL
   }\url{http://flylib.com/books/en/3.190.1.55/1/#!/exjun_}{)}.
+\newblock (Accessed April 13 2013).
 
 \bibitem{rsa}
 Rivest A R ;~Shamir, Adleman L.
@@ -150,22 +158,49 @@ Dev R. 10 major differences between C and Java;.
 \newblock {[Online](URL
   }\url{http://www.durofy.com/programming/10-major-differences-between-c-and-j%
 ava/}{)}.
+\newblock (Accessed April 15 2013).
 
 \bibitem{eclipse}
-Foundation E. Eclipse;.
+{Eclipse Foundation}. Eclipse;.
 \newblock {[Online](URL }\url{http://www.eclipse.org/}{)}.
+\newblock (Accessed April 16 2013).
 
 \bibitem{sthree}
-Electronics S. Galaxy S3 Specifications;.
+{Samsung Electronics}. Galaxy S3 Specifications;.
 \newblock {[Online](URL
   }\url{http://www.samsung.com/global/galaxys3/specifications.html}{)}.
+\newblock (Accessed April 13 2013).
 
 \bibitem{github}
 {GitHub, Inc }. GitHub - Social Coding;.
 \newblock {[Online](URL }\url{https://github.com}{)}.
+\newblock (Accessed April 10 2013).
 
 \bibitem{dropbox}
 {Dropbox, Inc }. Dropbox;.
 \newblock {[Online](URL }\url{https://www.dropbox.com}{)}.
+\newblock (Accessed April 10 2013).
+
+\bibitem{iansommerville}
+Sommerville I.
+\newblock Software Engineering.
+\newblock Ninth ed. Pearson; 2011.
+
+\bibitem{eccbetter}
+{Rebahi, Y [et al ]}.
+\newblock Performance Analysis of Identity Management in the Session Initiation
+  Protocol.
+\newblock ACS International Conference on Computer Systems and Applications.
+  2008;.
+
+\bibitem{interfacebook}
+Johnson J.
+\newblock Designing with the Mind in Mind.
+\newblock Elsevier; 2010.
+
+\bibitem{bertholdvocking}
+{Vocking, B [et al]}.
+\newblock Algorithms Unplugged.
+\newblock Springer; 2011.
 
 \end{thebibliography}

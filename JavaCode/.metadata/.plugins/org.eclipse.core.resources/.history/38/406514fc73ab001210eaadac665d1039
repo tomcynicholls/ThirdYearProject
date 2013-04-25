@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+    
+    <TextView
+        android:id="@+id/textview_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12pt"
+        android:text="@string/receive_title" />
+    
+    <TextView
+        android:id="@+id/textview_fromtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10pt"
+        android:text="@string/fromtitle" />
+    
+    <TextView
+        android:id="@+id/textview_from"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8pt"
+        android:text="@string/from" />
+    
+     <TextView
+        android:id="@+id/textview_messagetitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10pt"
+        android:text="@string/messagetitle" />
+     
+     <TextView
+        android:id="@+id/textview_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="8pt"
+        android:text="@string/message" />
+     
+     <TextView
+        android:id="@+id/textview_sendtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="12pt"
+        android:text="@string/send_title"
+        android:layout_marginTop="20dp" />
+    
+      <EditText android:id="@+id/edit_receiver"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:hint="@string/edit_receiver" />
+      
+    
+    <EditText android:id="@+id/edit_message"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:hint="@string/edit_message" />
+    
+    <RelativeLayout
+            android:id="@+id/innerrel"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal" >
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_receive"
+        android:onClick="receiveMessage"
+        android:layout_alignParentLeft="true" />
+        
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/button_send"
+        android:onClick="sendMessage"
+        android:layout_alignParentRight="true" />
+
+    </RelativeLayout>
+</LinearLayout>

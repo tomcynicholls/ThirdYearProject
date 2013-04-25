@@ -37,7 +37,7 @@
 	}
 
 @BOOK{bertholdvocking,
-	AUTHOR = {Berthold Vocking [et al]},
+	AUTHOR = {{Vocking, B [et al]}},
 	TITLE = {Algorithms Unplugged},
 	PUBLISHER = {Springer},
 	YEAR = {2011}
@@ -81,20 +81,23 @@
 	author = {{Miasoft}},
 	title = {{RSA} Cipher Cat},
 	year = {2011},
-	howpublished={{[Online](URL }\url{https://play.google.com/store/apps/details?id=jp.co.Miasoft.RSACipher&hl=en}{)}}
+	note={{[Online](URL }\url{https://play.google.com/store/apps/details?id=jp.co.Miasoft.RSACipher&hl=en}{)}},
+	howpublished = {(Accessed April 5 2013)}
 	}
 
 @misc{cloaksms,
 	author = {Hamish Medlin},
 	title = {Cloak {SMS}},
 	year = {2011},
-	howpublished={{[Online](URL }\url{https://play.google.com/store/apps/details?id=sms.encryptor.v2.free&hl=en}{)}}
+	note={{[Online](URL }\url{https://play.google.com/store/apps/details?id=sms.encryptor.v2.free&hl=en}{)}},
+	howpublished = {(Accessed April 5 2013)}
 	}
 	
 @misc{googleplay,
 	author = {{Google Inc.}},
 	title = {Google Play Store},
-	howpublished={{[Online](URL }\url{https://play.google.com/store}{)}}
+	note={{[Online](URL }\url{https://play.google.com/store}{)}},
+	howpublished = {(Accessed April 5 2013)}
 	}
 
 @misc{pcworldart,
@@ -102,7 +105,8 @@
 	title = {UK Data Encryption Disclosure Law Takes Effect},
 	month = oct,
 	year = {2007},
-	howpublished={{[Online](URL }\url{http://www.pcworld.com/article/137881/article.html}{)}}
+	note={{[Online](URL }\url{http://www.pcworld.com/article/137881/article.html}{)}},
+	howpublished = {(Accessed April 10 2013)}
 	}
 
 @MISC{dataprotect,
@@ -115,13 +119,15 @@
 @misc{dropbox,
 	author = {{Dropbox, Inc.}},
 	title = {Dropbox},
-	howpublished={{[Online](URL }\url{https://www.dropbox.com}{)}}
+	note={{[Online](URL }\url{https://www.dropbox.com}{)}},
+	howpublished = {(Accessed April 10 2013)}
 	}
 	
 @misc{github,
 	author = {{GitHub, Inc.}},
 	title = {GitHub - Social Coding},
-	howpublished={{[Online](URL }\url{https://github.com}{)}}
+	note={{[Online](URL }\url{https://github.com}{)}},
+	howpublished = {(Accessed April 10 2013)}
 	}
 
 @BOOK{whatisasmartphone,
@@ -134,19 +140,22 @@
 @misc{appleios,
 	author = {{Apple Inc.}},
 	title = {Apple iPhone iOS},
-	howpublished={{[Online](URL }\url{http://www.apple.com/uk/ios/}{)}}
+	note={{[Online](URL }\url{http://www.apple.com/uk/ios/}{)}},
+	howpublished = {(Accessed April 7 2013)}
 	}
 
 @misc{googleandroid,
 	author = {{Google Inc.}},
 	title = {Android},
-	howpublished={{[Online](URL }\url{http://www.android.com/}{)}}
+	note={{[Online](URL }\url{http://www.android.com/}{)}},
+	howpublished = {(Accessed April 7 2013)}
 	}
 
 @misc{windowsphone,
 	author = {{Microsoft Coporation}},
 	title = {Windows Phone 8},
-	howpublished={{[Online](URL }\url{http://www.windowsphone.com/en-gb}{)}}
+	note={{[Online](URL }\url{http://www.windowsphone.com/en-gb}{)}},
+	howpublished = {(Accessed April 7 2013)}
 	}
 
 @BOOK{internetlaw,
@@ -159,7 +168,8 @@
 @misc{androiddevelopers,
 	author = {{Google Inc.}},
 	title = {Android Developers},
-	howpublished={{[Online](URL }\url{http://developer.android.com}{)}}
+	note={{[Online](URL }\url{http://developer.android.com}{)}},
+	howpublished = {(Accessed April 7 2013)}
 	}
 
 @BOOK{javanetworking,
@@ -173,7 +183,8 @@
 @misc{mysql,
 	author = {{Oracle}},
 	title = {MySQL},
-	howpublished={{[Online](URL }\url{www.mysql.com}{)}}
+	note={{[Online](URL }\url{www.mysql.com}{)}},
+	howpublished = {(Accessed April 9 2013)}
 	}
 
 @BOOK{jdbcmysql,
@@ -193,25 +204,29 @@
 @misc{w3schoolsxmlexample,
 	author = {{Refsnes Data}},
 	title = {w3schools.com - XML Tree},
-	howpublished={{[Online](URL }\url{http://www.w3schools.com/xml/xml_tree.asp}{)}}
+	note={{[Online](URL }\url{http://www.w3schools.com/xml/xml_tree.asp}{)}},
+	howpublished = {(Accessed April 9 2013)}
 	}
 
 @misc{aresmssafe,
 	author = {Gemalto},
 	title = {Are SMS text messages safer than emails?},
-	howpublished={{[Online](URL }\url{http://www.justaskgemalto.com/us/communicating/tips/are-sms-text-messages-safer-emails}{)}}
+	note={{[Online](URL }\url{http://www.justaskgemalto.com/us/communicating/tips/are-sms-text-messages-safer-emails}{)}},
+	howpublished = {(Accessed April 11 2013)}
 	}
 
 @misc{aesmixcols,
 	author = {VHDL},
 	title = {Advanced Encryption Scheme Student Wiki},
-	howpublished={{[Online](URL }\url{http://vhdl.pbworks.com/w/page/4302806/Progetto%20AA%2008-09%3A%20Advanced%20Encryption%20Standard}{)}}
+	note={{[Online](URL }\url{http://vhdl.pbworks.com/w/page/4302806/Progetto%20AA%2008-09%3A%20Advanced%20Encryption%20Standard}{)}},
+	howpublished = {(Accessed April 13 2013)}
 	}
 
 @misc{aesmixcolssecond,
-	author = {Flylib.com},
+	author = {{Flylib.com}},
 	title = {The AES cipher},
-	howpublished={{[Online](URL }\url{http://flylib.com/books/en/3.190.1.55/1/#!/exjun_}{)}}
+	note={{[Online](URL }\url{http://flylib.com/books/en/3.190.1.55/1/#!/exjun_}{)}},
+	howpublished = {(Accessed April 13 2013)}
 	}
 
 @ARTICLE{rsa,
@@ -231,17 +246,34 @@
 @misc{candjava,
 	author = {Rishabh Dev},
 	title = {10 major differences between C and Java},
-	howpublished={{[Online](URL }\url{http://www.durofy.com/programming/10-major-differences-between-c-and-java/}{)}}
+	note={{[Online](URL }\url{http://www.durofy.com/programming/10-major-differences-between-c-and-java/}{)}},
+	howpublished = {(Accessed April 15 2013)}
 	}
 
 @misc{eclipse,
-	author = {Eclipse Foundation},
+	author = {{Eclipse Foundation}},
 	title = {Eclipse},
-	howpublished={{[Online](URL }\url{http://www.eclipse.org/}{)}}
+	note={{[Online](URL }\url{http://www.eclipse.org/}{)}},
+	howpublished = {(Accessed April 16 2013)}
 	}
 
 @misc{sthree,
 	author = {Samsung Electronics},
 	title = {Galaxy S3 Specifications},
-	howpublished={{[Online](URL }\url{http://www.samsung.com/global/galaxys3/specifications.html}{)}}
+	note={{[Online](URL }\url{http://www.samsung.com/global/galaxys3/specifications.html}{)}},
+	howpublished = {(Accessed April 13 2013)}
+	}
+
+@BOOK{interfacebook,
+	AUTHOR = {Jeff Johnson},
+	TITLE = {Designing with the Mind in Mind},
+	PUBLISHER = {Elsevier},
+	YEAR = {2010}
+	}
+
+@ARTICLE{eccbetter,
+	AUTHOR = {{Rebahi, Y [et al.]}},
+	TITLE = {Performance Analysis of Identity Management in the Session Initiation Protocol},
+	JOURNAL = {ACS International Conference on Computer Systems and Applications},
+	YEAR = {2008}
 	}

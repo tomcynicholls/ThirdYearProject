@@ -19,7 +19,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="10pt"
-        android:text="@string/fromtitle" />
+        android:text="@string/fromtitle"
+        android:layout_marginTop="15dp" />
     
     <TextView
         android:id="@+id/textview_from"
@@ -33,7 +34,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="10pt"
-        android:text="@string/messagetitle" />
+        android:text="@string/messagetitle"
+        android:layout_marginTop="15dp" />
      
      <TextView
         android:id="@+id/textview_message"
@@ -47,7 +49,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textSize="12pt"
-        android:text="@string/send_title" />
+        android:text="@string/send_title"
+        android:layout_marginTop="20dp" />
     
       <EditText android:id="@+id/edit_receiver"
         android:layout_height="wrap_content"
@@ -70,14 +73,16 @@
         android:layout_height="wrap_content"
         android:text="@string/button_receive"
         android:onClick="receiveMessage"
-        android:layout_alignParentLeft="true" />
+        android:layout_alignParentLeft="true"
+        android:layout_marginTop="20dp" />
         
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/button_send"
         android:onClick="sendMessage"
-        android:layout_alignParentRight="true" />
+        android:layout_alignParentRight="true" 
+        android:layout_marginTop="20dp"/>
 
     </RelativeLayout>
 </LinearLayout>

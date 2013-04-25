@@ -40,41 +40,13 @@ public class AppActivity extends Activity {
 	
 	//public ConnectionHandler conhandler = new ConnectionHandler();
 	
-	//static {
-	//	Security.addProvider(new BouncyCastleProvider());
-	//}
 	
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main);
+       setContentView(R.layout.main);
         
-       // BatteryManager battery = new BatteryManager()
-        
-       // int level = battery.getIntExtra(BatteryManager.EXTRA_LEVEL, -1);
-        //int scale = battery.getIntExtra(BatteryManager.EXTRA_SCALE, -1);
-        
-       // Log.i("Battery level",Integer.toString(level));
-      //  Log.i("Battery scale",Integer.toString(scale));
-        
-       /* try {
-        Log.i("Start - Current time: ", Long.toString(System.currentTimeMillis()));
-        ECGenParameterSpec ecParamSpec = new ECGenParameterSpec("secp224k1");
-        Log.i("Start - Current time: ", Long.toString(System.currentTimeMillis()));
-        KeyPairGenerator kpg = KeyPairGenerator.getInstance("ECDH", "SC");
-        Log.i("Start - Current time: ", Long.toString(System.currentTimeMillis()));
-        kpg.initialize(ecParamSpec);
-        Log.i("Start - Current time: ", Long.toString(System.currentTimeMillis()));
-        KeyPair kpA = kpg.generateKeyPair();
-        Log.i("Start - Current time: ", Long.toString(System.currentTimeMillis()));
-        } catch (NoSuchAlgorithmException ex) {
-        	Log.i("ERROR","No such algorithm exception");
-        } catch (InvalidAlgorithmParameterException ex) {
-        	Log.i("ERROR","Invalid Algorithm Parameter exception");
-        } catch (NoSuchProviderException ex) {
-        	Log.i("ERROR","No such provider exception");
-        }   
-        Log.i("Start - Current time: ", Long.toString(System.currentTimeMillis()));*/
+      
         gogogo = false;
         
         String pathwaystart = this.getExternalFilesDir(Environment.DIRECTORY_DOWNLOADS).getAbsolutePath();
@@ -98,8 +70,9 @@ public class AppActivity extends Activity {
       	fromserverpath = fullpathwaystart.concat(fromserverfilepath);
     	Log.i("from server path is: ",fromserverpath);
         
-    	
-       // conhandler.execute();
+    	//NOTE: UNCOMMENT ALL CONHANDLER RELATED ELEMENTS INORDER TO COMMUNICATE WITH THE SERVER
+    	//has been commented out to allow for analysis
+      //conhandler.execute();
        
         /*while (gogogo == false)
         {
@@ -108,14 +81,16 @@ public class AppActivity extends Activity {
         //Log.i("info","about to read from stream");
         //conhandler.readFromStream(fromserverpath);
         
+    	Log.d("Error","Testing error message");
         
         //get and display relevant data from received file
-       /* XmlManipApp xmlmanip = new XmlManipApp();
+       /*XmlManipApp xmlmanip = new XmlManipApp();
         String returnedresult = xmlmanip.returnRequired(fromserverpath,"text");
         Log.i("message is: " , returnedresult);
         String returnedsender = xmlmanip.returnRequired(fromserverpath,"receiver");
-        Log.i("from: " , returnedsender);*/
-        
+        Log.i("from: " , returnedsender);
+        */
+       
     }
     
     
@@ -124,7 +99,7 @@ public class AppActivity extends Activity {
         // Do something in response to button
     	
     	// Log.i("info","about to read from stream");
-        // conhandler.readFromStream(fromserverpath);
+        //conhandler.readFromStream(fromserverpath);
     	
     	Intent intent = new Intent(this, DisplayMessageActivity.class);
     	EditText editText = (EditText) findViewById(R.id.edit_message);
@@ -156,6 +131,7 @@ public class AppActivity extends Activity {
         
         //send file
         Log.i("calling:","writeToStream");
+        
         //conhandler.writeToStream(toserverpath);
     	
     	intent.putExtra(EXTRA_MESSAGE, message);
